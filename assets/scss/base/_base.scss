@@ -1,0 +1,111 @@
+@font-face {
+  font-family: "SF Pro Display";
+  src: url(../../fonts/SFPRODISPLAYREGULAR.OTF);
+}
+
+@font-face {
+  font-family: "SF Pro Text";
+  src: url(../../fonts/SFProText-Regular.ttf);
+}
+
+img {
+  vertical-align: middle;
+}
+
+// Typography
+.heading-xl {
+  font-size: 40px;
+  line-height: 44px;
+  font-family: "SF Pro Display";
+}
+
+.heading-lg {
+  font-size: 32px;
+  line-height: 40px;
+  font-family: "SF Pro Display";
+}
+
+.heading-md {
+  font-size: 28px;
+  line-height: 36px;
+  font-family: "SF Pro Display";
+}
+
+.heading-sm {
+  font-size: 24px;
+  line-height: 32px;
+  font-family: "SF Pro Display";
+}
+
+.heading-xs {
+  font-size: 20px;
+  line-height: 28px;
+  font-family: "SF Pro Display";
+}
+
+.body-text-lg {
+  font-size: 18px;
+  line-height: 24px;
+  font-family: "SF Pro Text";
+}
+
+.body-text-md {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "SF Pro Text";
+}
+
+.body-text-sm {
+  font-size: 14px;
+  line-height: 20px;
+  font-family: "SF Pro Text";
+}
+
+.body-text-xs {
+  font-size: 12px;
+  line-height: 16px;
+  font-family: "SF Pro Text";
+}
+
+.body-text-xxs {
+  font-size: 10px;
+  line-height: 12px;
+  font-family: "SF Pro Text";
+}
+
+// border-radius
+.radius-tiny {
+  border-radius: 4px;
+}
+
+.radius-xxs {
+  border-radius: 8px;
+}
+
+.radius-xs {
+  border-radius: 12px;
+}
+
+.radius-s {
+  border-radius: 16px;
+}
+
+.radius-m {
+  border-radius: 20px;
+}
+
+.radius-l {
+  border-radius: 24px;
+}
+
+.radius-xl {
+  border-radius: 32px;
+}
+
+.radius-2xl {
+  border-radius: 40px;
+}
+
+.radius-3xl {
+  border-radius: 48px;
+}
