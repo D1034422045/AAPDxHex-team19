@@ -10,7 +10,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 999;
+  z-index: 1100;
 
   p {
     font-weight: 900;
@@ -179,24 +179,23 @@
   z-index: 10;
 }
 
-// n. vmp6
 .input-wrapper {
   position: relative;
-  margin-top: 60px;
   display: inline-block;
-  padding: 12px 16px;
+  // padding: 12px 16px;
 }
 .input-img {
   position: absolute;
   top: 50%;
-  left: 28px;
+  left: 16px;
   transform: translateY(-50%);
   cursor: pointer;
 }
 .input-input {
   padding-top: 12px;
   padding-bottom: 12px;
-  padding-left: 40px;
+  padding-left: 52px;
+  padding-right: 16px;
   font-size: 16px;
   border: none;
   outline: none;
@@ -207,13 +206,17 @@
 }
 
 // 取消input瀏覽器默認的歷史搜尋紀錄背景樣式
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0 1000px white inset; /* 设置背景颜色为白色 */
-  box-shadow: 0 0 0 1000px white inset;
-  -webkit-text-fill-color: #000; /* 设置文本颜色为黑色 */
+.mapIndex {
+  .input-wrapper {
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+      -webkit-box-shadow: 0 0 0 1000px white inset; /* 设置背景颜色为白色 */
+      box-shadow: 0 0 0 1000px white inset;
+      -webkit-text-fill-color: #000; /* 设置文本颜色为黑色 */
+    }
+  }
 }
 
 //新增地圖圖標
@@ -262,7 +265,7 @@ input:-webkit-autofill:active {
   width: 50px; /* icon的宽度 */
   height: 50px; /* icon的高度 */
   left: 710px; /* icon在图片上的x坐标 */
-  top: 690px; /* icon在图片上的y坐标 */
+  top: 390px; /* icon在图片上的y坐标，原始為690px */
   display: none; /* 初始状态下不可见，等到背景移动到icon可见范围时才显示 */
   z-index: 10;
   &:hover {
@@ -275,7 +278,7 @@ input:-webkit-autofill:active {
   width: 50px; /* icon的宽度 */
   height: 50px; /* icon的高度 */
   left: 510px; /* icon在图片上的x坐标 */
-  top: 730px; /* icon在图片上的y坐标 */
+  top: 430px; /* icon在图片上的y坐标，原始為730px */
   display: none; /* 初始状态下不可见，等到背景移动到icon可见范围时才显示 */
   z-index: 10;
   &:hover {
@@ -376,8 +379,8 @@ input:-webkit-autofill:active {
 
 .hotelIcon {
   position: absolute;
-  width: 50px; /* icon的宽度 */
-  height: 50px; /* icon的高度 */
+  width: 35px; /* icon的宽度 */
+  height: 35px; /* icon的高度 */
   left: 280px; /* icon在图片上的x坐标 */
   top: 490px; /* icon在图片上的y坐标 */
   display: none; /* 初始状态下不可见，等到背景移动到icon可见范围时才显示 */
@@ -400,13 +403,45 @@ input:-webkit-autofill:active {
   }
 }
 
+// 現在位置的圓形
+.originalCircle {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  left: 510px;
+  top: 455px;
+  background: #84d3f5;
+  opacity: 0;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  animation: expandOriginalCircleFade 6s infinite; /* 应用动画 */
+}
+
+/* 定义动画 */
+@keyframes expandOriginalCircleFade {
+  0% {
+    transform: scale(0); /* 初始缩小状态 */
+    opacity: 0; /* 初始透明度 */
+  }
+
+  50% {
+    transform: scale(1); /* 扩展后状态 */
+    opacity: 0.4; /* 最终透明度 */
+  }
+
+  100% {
+    transform: scale(1); /* 扩展后状态 */
+    opacity: 0; /* 最终透明度 */
+  }
+}
+
 .bg-smallCircle {
   position: absolute;
   width: 300px;
   height: 300px;
   left: 435px;
   top: 385px;
-  display: none;
+  // display: none;
   background: #84d3f5;
   opacity: 0;
   border: 3px solid #fff;
@@ -438,7 +473,7 @@ input:-webkit-autofill:active {
   height: 600px;
   left: 275px;
   top: 235px;
-  display: none;
+  // display: none;
   background: #84d3f5;
   border: 3px solid #fff;
   border-radius: 50%;
@@ -507,6 +542,7 @@ input:-webkit-autofill:active {
 // 標籤橫向移動卷軸
 .scrollable-container {
   display: flex;
+  padding-left: 5px;
   overflow-x: auto; /* 開啟橫向滾動 */
   scroll-behavior: smooth; /* 平滑滾動 */
 }
@@ -538,7 +574,7 @@ input:-webkit-autofill:active {
 //
 .my-div {
   position: absolute;
-  top: 78%;
+  top: 68%; //78
 
   // width: 100%;
   // height: 200px;
@@ -549,10 +585,11 @@ input:-webkit-autofill:active {
 .my-div.expanded {
   top: 0; /* 當展開時，讓 div 滑動到視窗的頂部 */
   height: 100%;
+  z-index: 1050;
 }
 
 .my-div.collapsed {
-  top: 90%; /* 當收起時，讓 div 移動到 top: 300px 的位置 */
+  top: 80%; /* 當收起時，讓 div 移動到 top: 300px 的位置 */
 }
 
 //
@@ -598,6 +635,11 @@ input:-webkit-autofill:active {
 //   top: 100%;  當收起時，讓 div 移動到 top: 300px 的位置
 // }
 
+.draggable-background .modal-header {
+  border-bottom: none;
+  padding: 24px;
+}
+
 .offcanvas {
   --bs-offcanvas-height: 43vh;
   --bs-offcanvas-border-color: none;
@@ -613,23 +655,54 @@ input:-webkit-autofill:active {
   --bs-offcanvas-height: 30vh;
 }
 
-.infoAndFloatWrap {
+//
+
+.infoAndFloatWrapLeft {
   position: absolute;
-  top: 65%;
+  top: 62%;
+  left: 10px;
   z-index: 30;
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-  width: 100%;
-  padding-left: 10px;
-  padding-right: 10px;
 }
 
-.infoAndFloatWrapChangePosition {
-  top: 77%;
+.infoAndFloatWrapRight {
+  position: absolute;
+  top: 55%;
+  right: 10px;
+  z-index: 30;
 }
 
-.draggable-background .modal-header {
-  border-bottom: none;
-  padding: 24px;
+.infoAndFloatWrapLeftChangePosition {
+  top: 74%;
+}
+
+.infoAndFloatWrapRightChangePosition {
+  top: 67%;
+}
+
+// 搜尋到時的彈跳畫面
+
+@keyframes searchAnimation {
+  0% {
+    transform: translateY(0px);
+  }
+
+  25% {
+    transform: translateY(-10px);
+  }
+
+  50% {
+    transform: translateY(0px);
+  }
+
+  75% {
+    transform: translateY(-5px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.searchAnimation {
+  animation: searchAnimation 1s 1; /* 应用动画 */
 }

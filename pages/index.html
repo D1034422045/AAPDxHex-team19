@@ -7,48 +7,66 @@
     <title>首頁</title>
   </head>
   <body>
-    <%- include('./layout/header'); -%>
-
-    <section class="container">
+    <section class="container mapIndex">
       <div class="row">
         <div class="col-12">
           <div class="draggable-background">
-            <div class="d-flex scrollable-container">
-              <div class="policeStationLabelWrap">
+            <%- include('./layout/header'); -%>
+            <div class="text-center">
+              <div class="input-wrapper radius-m search-width">
                 <img
-                  src="../assets/images/policeStationLabel.png"
-                  alt="policeStationLabel"
-                  id="policeStationLabelImg"
+                  id="searchBtn"
+                  src="../assets/images/search_liner.svg"
+                  alt="搜索圖標"
+                  class="input-img"
                 />
-              </div>
-              <div class="hospitalLabelWrap">
-                <img
-                  src="../assets/images/hospitalLabel.png"
-                  alt="hospitalLabel"
-                  id="hospitalLabelImg"
-                />
-              </div>
-              <div class="pharmacyLabelWrap">
-                <img
-                  src="../assets/images/pharmacyLabel.png"
-                  alt="pharmacyLabel"
-                  id="pharmacyLabelImg"
-                />
-              </div>
-              <div class="refugeLabelWrap">
-                <img
-                  src="../assets/images/refugeLabel.png"
-                  alt="refugeLabel"
-                  id="refugeLabelImg"
-                />
-              </div>
 
-              <div class="embassyLabelWrap">
-                <img
-                  src="../assets/images/embassyLabel.png"
-                  alt="embassyLabel"
-                  id="embassyLabelImg"
+                <input
+                  type="text"
+                  id="search"
+                  placeholder="搜尋目的地"
+                  class="input-input radius-m search-width"
                 />
+              </div>
+            </div>
+
+            <div class="d-flex scrollable-container justify-content-center">
+              <div class="d-flex align-items-center" style="padding-left: 55px">
+                <div class="policeStationLabelWrap">
+                  <img
+                    src="../assets/images/policeStationLabel.png"
+                    alt="policeStationLabel"
+                    id="policeStationLabelImg"
+                  />
+                </div>
+                <div class="hospitalLabelWrap">
+                  <img
+                    src="../assets/images/hospitalLabel.png"
+                    alt="hospitalLabel"
+                    id="hospitalLabelImg"
+                  />
+                </div>
+                <div class="pharmacyLabelWrap">
+                  <img
+                    src="../assets/images/pharmacyLabel.png"
+                    alt="pharmacyLabel"
+                    id="pharmacyLabelImg"
+                  />
+                </div>
+                <div class="refugeLabelWrap">
+                  <img
+                    src="../assets/images/refugeLabel.png"
+                    alt="refugeLabel"
+                    id="refugeLabelImg"
+                  />
+                </div>
+                <div class="embassyLabelWrap">
+                  <img
+                    src="../assets/images/embassyLabel.png"
+                    alt="embassyLabel"
+                    id="embassyLabelImg"
+                  />
+                </div>
               </div>
             </div>
 
@@ -758,38 +776,150 @@
 
             <img
               src="../assets/images/pin/type=normal(selectedOn), selected=on.svg"
-              class="hotelIcon"
+              class="hotelIcon favoriteHotel"
               alt="hotel"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#akaraBangkokHotelOffcanvasBottom"
+              aria-controls="offcanvasBottom"
             />
+
+            <div
+              class="offcanvas offcanvas-bottom"
+              tabindex="-1"
+              id="akaraBangkokHotelOffcanvasBottom"
+              aria-labelledby="offcanvasBottomLabel"
+              data-bs-scroll="true"
+              data-bs-backdrop="false"
+            >
+              <div
+                class="bg-white px-6 labelDetailWrap pb-5"
+                id="Akara Bangkok Hotel"
+              >
+                <div
+                  class="d-flex justify-content-center py-3"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                >
+                  <img src="../assets/images/bar.png" alt="bar" />
+                </div>
+                <div class="d-flex align-items-center">
+                  <img
+                    src="../assets/images/icon/24px/solid/location.svg"
+                    alt="policeStation24pxsolid"
+                  />
+                  <p class="body-text-lg fw-bold ms-2 textEllipsis">
+                    Akara Bangkok Hotel
+                  </p>
+                  <img
+                    src="../assets/images/bookMark.svg"
+                    alt="bookMark"
+                    class="ms-auto favorite"
+                  />
+                </div>
+                <p class="body-text-xs text-neutrals-400 mt-1 mb-2">
+                  500公尺・24小時營業
+                </p>
+                <div class="d-flex align-items-center mt-2 mb-4">
+                  <p class="text-danger-error-200 fw-bold body-text-xs me-2">
+                    危險等級 3
+                  </p>
+                  <img
+                    src="../assets/images/progressOG.png"
+                    alt="progressOG"
+                    class="me-1 progressWidth"
+                  />
+                  <img
+                    src="../assets/images/progressOG.png"
+                    alt="progressOG"
+                    class="me-1 progressWidth"
+                  />
+                  <img
+                    src="../assets/images/progressOG.png"
+                    alt="progressOG"
+                    class="me-1 progressWidth"
+                  />
+                  <img
+                    src="../assets/images/progressGRAY.png"
+                    alt="progressGRAY"
+                    class="me-1 progressWidth"
+                  />
+                  <img
+                    src="../assets/images/progressGRAY.png"
+                    alt="progressGRAY"
+                    class="progressWidth"
+                  />
+                </div>
+                <div
+                  class="d-flex align-items-center justify-content-between mb-4"
+                >
+                  <button
+                    class="labelDetailButton text-brand-600 fw-bold body-text-sm d-flex align-items-center justify-content-center"
+                  >
+                    <img
+                      src="../assets/images/guide.svg"
+                      alt="guide"
+                      class="me-2"
+                    />
+                    路線
+                  </button>
+                  <button
+                    class="labelDetailButton text-brand-600 fw-bold body-text-sm d-flex align-items-center justify-content-center"
+                  >
+                    <img
+                      src="../assets/images/share.png"
+                      alt="guide"
+                      class="me-2"
+                    />
+                    分享
+                  </button>
+                </div>
+                <img
+                  src="../assets/images/img/Akara Bangkok.png"
+                  alt="Akara Bangkok Hotel"
+                  class="img-fluid"
+                />
+              </div>
+            </div>
+
             <img
               src="../assets/images/arrow_withShadow.svg"
               class="centerIcon"
               alt="center"
             />
+            <div class="originalCircle"></div>
             <div
-              class="bg-smallCircle text-center pt-2 text-brand-600 body-text-lg fw-bold"
+              class="bg-smallCircle text-center pt-2 text-brand-600 body-text-lg fw-bold d-none"
             >
               15 min
             </div>
             <div
-              class="bg-bigCircle text-center pt-2 text-brand-600 body-text-lg fw-bold"
+              class="bg-bigCircle text-center pt-2 text-brand-600 body-text-lg fw-bold d-none"
             >
               30 min
             </div>
             <canvas id="myCanvas" class="myCanvas"></canvas>
-            <div class="infoAndFloatWrap">
-              <img
-                src="../assets/images/left.png"
-                alt="left.png"
-                class="countryInfo"
-                data-bs-toggle="modal"
-                data-bs-target="#exampleModal"
-              />
 
-              <div class="floatWrap d-flex flex-column align-items-center">
-                <img src="../assets/images/float.png" alt="float" />
-                <img src="../assets/images/centerAim.png" alt="centerAim" />
-              </div>
+            <img
+              src="../assets/images/left.png"
+              alt="left.png"
+              class="countryInfo infoAndFloatWrapLeft"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            />
+
+            <div
+              class="floatWrap d-flex flex-column align-items-center infoAndFloatWrapRight"
+            >
+              <img
+                src="../assets/images/float.png"
+                alt="float"
+                class="floatImg"
+              />
+              <img
+                src="../assets/images/centerAim.png"
+                alt="centerAim"
+                class="centerAimImg"
+              />
             </div>
 
             <!-- Modal -->
@@ -1057,7 +1187,7 @@
       </div>
     </section>
 
-    <div id="loading" class="loading d-none">
+    <div id="loading" class="loading">
       <div class="position-relative">
         <div class="position-relative">
           <img
@@ -1084,7 +1214,8 @@
         </p>
       </div>
     </div>
-    <%- include('./layout/footer'); -%>
+
+    <%- include('./layout/footer', {page: "index"}); -%>
 
     <script type="module" src="../main.js"></script>
   </body>

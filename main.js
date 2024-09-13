@@ -58,6 +58,7 @@ const hotelIcon = document.querySelector(".hotelIcon");
 const centerIcon = document.querySelector(".centerIcon");
 const bgBigCircle = document.querySelector(".bg-bigCircle");
 const bgSmallCircle = document.querySelector(".bg-smallCircle");
+const originalCircle = document.querySelector(".originalCircle");
 
 let isDragging = false;
 let startX,
@@ -74,10 +75,10 @@ const securityLevel5icon1X = 230; // Icon 的相對背景圖 X 座標
 const securityLevel5icon1Y = 150; // Icon 的相對背景圖 Y 座標
 const securityLevel5icon2X = 500; // Icon 的相對背景圖 X 座標
 const securityLevel5icon2Y = 240; // Icon 的相對背景圖 Y 座標
-const securityLevel5icon3X = 710; //  800 Icon 的相對背景圖 X 座標
-const securityLevel5icon3Y = 690; // Icon 的相對背景圖 Y 座標
-const securityLevel5icon4X = 510; // 570 Icon 的相對背景圖 X 座標
-const securityLevel5icon4Y = 730; // 820 Icon 的相對背景圖 Y 座標
+const securityLevel5icon3X = 710; // Icon 的相對背景圖 X 座標
+const securityLevel5icon3Y = 390; // 原始為 690 Icon 的相對背景圖 Y 座標
+const securityLevel5icon4X = 510; //  Icon 的相對背景圖 X 座標
+const securityLevel5icon4Y = 430; // 原始為 730 Icon 的相對背景圖 Y 座標
 const specialWarningX = 660; // Icon 的相對背景圖 X 座標
 const specialWarningY = 510; // Icon 的相對背景圖 Y 座標
 const policeStationiconX = 230; // Icon 的相對背景圖 X 座標
@@ -100,6 +101,8 @@ const bgBigCircleX = 275; // Icon 的相對背景圖 X 座標
 const bgBigCircleY = 235; // Icon 的相對背景圖 Y 座標
 const bgSmallCircleX = 435; // Icon 的相對背景圖 X 座標
 const bgSmallCircleY = 385; // Icon 的相對背景圖 Y 座標
+const originalCircleX = 510; // Icon 的相對背景圖 X 座標
+const originalCircleY = 455; // Icon 的相對背景圖 Y 座標
 
 const canvasX = 550; // Icon 的相對背景圖 X 座標
 const canvasY = 480; // Icon 的相對背景圖 Y 座標
@@ -109,6 +112,8 @@ const bgBigCircleWidth = 600;
 const bgBigCircleHeight = 600;
 const bgSmallCircleWidth = 300;
 const bgSmallCircleHeight = 300;
+const originalCircleWidth = 150;
+const originalCircleHeight = 150;
 const hexagonWidth = 280;
 const hexagonHeight = 180;
 
@@ -144,6 +149,8 @@ function updateIconPosition() {
   const visiblebgBigCircleY = bgBigCircleY + backgroundPosY;
   const visiblebgSmallCircleX = bgSmallCircleX + backgroundPosX;
   const visiblebgSmallCircleY = bgSmallCircleY + backgroundPosY;
+  const visibleoriginalCircleX = originalCircleX + backgroundPosX;
+  const visibleoriginalCircleY = originalCircleY + backgroundPosY;
 
   const visiblecanvasX = canvasX + backgroundPosX;
   const visiblecanvasY = canvasY + backgroundPosY;
@@ -355,6 +362,19 @@ function updateIconPosition() {
   } else {
     canvas.style.display = "none";
   }
+
+  if (
+    visibleoriginalCircleX >= 0 &&
+    visibleoriginalCircleX + originalCircleWidth <= divWidth &&
+    visibleoriginalCircleY >= 0 &&
+    visibleoriginalCircleY + originalCircleHeight <= divHeight
+  ) {
+    originalCircle.style.left = `${visibleoriginalCircleX}px`;
+    originalCircle.style.top = `${visibleoriginalCircleY}px`;
+    originalCircle.style.display = "block";
+  } else {
+    originalCircle.style.display = "none";
+  }
 }
 
 // 初始化時直接設置 icon 位置
@@ -563,7 +583,8 @@ scrollableContainer.addEventListener("mousemove", (e) => {
 const myDiv = document.getElementById("myDiv");
 const closeBtn = document.getElementById("closeBtn");
 const closeBar = document.getElementById("closeBar");
-const infoAndFloatWrap = document.querySelector(".infoAndFloatWrap");
+const infoAndFloatWrapLeft = document.querySelector(".infoAndFloatWrapLeft");
+const infoAndFloatWrapRight = document.querySelector(".infoAndFloatWrapRight");
 let isExpanded = false;
 
 myDiv.addEventListener("click", () => {
@@ -575,7 +596,8 @@ myDiv.addEventListener("click", () => {
     isExpanded = true;
     closeBar.classList.remove("d-none");
   }
-  infoAndFloatWrap.classList.add("d-none");
+  infoAndFloatWrapLeft.classList.add("d-none");
+  infoAndFloatWrapRight.classList.add("d-none");
 });
 
 closeBtn.addEventListener("click", (event) => {
@@ -587,8 +609,10 @@ closeBtn.addEventListener("click", (event) => {
     isExpanded = false;
     closeBar.classList.add("d-none");
   }
-  infoAndFloatWrap.classList.remove("d-none");
-  infoAndFloatWrap.classList.add("infoAndFloatWrapChangePosition");
+  infoAndFloatWrapLeft.classList.remove("d-none");
+  infoAndFloatWrapRight.classList.remove("d-none");
+  infoAndFloatWrapLeft.classList.add("infoAndFloatWrapLeftChangePosition");
+  infoAndFloatWrapRight.classList.add("infoAndFloatWrapRightChangePosition");
 });
 
 //
@@ -711,6 +735,168 @@ document.addEventListener("click", () => {
 
 //
 
-// countryInfo.addEventListener("click", function (e) {
-//   e.stopPropagation();
+// const centerAimImg = document.querySelector(".centerAimImg");
+// const floatImg = document.querySelector(".floatImg");
+// let floatImgClick = false;
+// let centerAimClick = false;
+
+//  console.log(floatImg);
+
+// floatImg.addEventListener("click", function () {
+//   if (!floatImgClick) {
+//     floatImg.src = "../assets/images/floatClick.png";
+//     floatImgClick = true;
+//   }
 // });
+
+// document.addEventListener("click", function () {
+//   if (floatImgClick) {
+//      如果已經點擊，恢復原本的圖片
+//     floatImg.src = "../assets/images/float.png";
+//     floatImgClick = false;  更新狀態為未點擊
+//   }
+
+//   if (hospitalLabelImgIsClicked) {
+//      如果已經點擊，恢復原本的圖片
+//     hospitalLabelImg.src = "../assets/images/hospitalLabel.png";
+//     hospitalLabelImgIsClicked = false;  更新狀態為未點擊
+//   }
+// });
+
+//
+const centerAimImg = document.querySelector(".centerAimImg");
+const floatImg = document.querySelector(".floatImg");
+let floatImgClick = false;
+let centerAimClick = false;
+
+// 保存圖片的原始URL
+const originalCenterAimImgUrl = centerAimImg.src;
+const newCenterAimImgUrl = "../assets/images/centerAimClick.png"; // 當點擊 centerAimImg 時要更改的圖片 URL
+const originalfloatImgUrl = floatImg.src;
+const newfloatImgUrl = "../assets/images/floatClick.png"; // 當點擊 floatImgImg 時要更改的圖片 URL
+
+// 點擊 centerAimImg 時改變圖片 URL
+centerAimImg.addEventListener("click", function () {
+  centerAimClick = true;
+  floatImgClick = false; // 重置 floatImg 的點擊狀態
+  centerAimImg.src = newCenterAimImgUrl; // 更改圖片
+  floatImg.src = originalfloatImgUrl; // 更改圖片
+  bgSmallCircle.classList.add("d-none");
+  bgBigCircle.classList.add("d-none");
+  originalCircle.classList.remove("d-none");
+});
+
+// 點擊 floatImg 時恢復 centerAimImg 的圖片
+floatImg.addEventListener("click", function () {
+  floatImgClick = true;
+  centerAimClick = false; // 重置 centerAimImg 的點擊狀態
+  centerAimImg.src = originalCenterAimImgUrl; // 恢復原來的圖片
+  floatImg.src = newfloatImgUrl; // 更改圖片
+
+  bgSmallCircle.classList.remove("d-none");
+  bgBigCircle.classList.remove("d-none");
+  originalCircle.classList.add("d-none");
+});
+
+// 點擊其他地方時，也恢復 centerAimImg 的圖片
+document.addEventListener("click", function (event) {
+  // 確保點擊的不是 centerAimImg 或 floatImg
+  if (
+    !centerAimImg.contains(event.target) &&
+    !floatImg.contains(event.target)
+  ) {
+    floatImgClick = false;
+    centerAimClick = false;
+    centerAimImg.src = originalCenterAimImgUrl; // 恢復原來的圖片
+    floatImg.src = originalfloatImgUrl; // 恢復原來的圖片
+
+    bgSmallCircle.classList.add("d-none");
+    bgBigCircle.classList.add("d-none");
+    originalCircle.classList.remove("d-none");
+  }
+});
+// const bgBigCircle = document.querySelector(".bg-bigCircle");
+// const bgSmallCircle = document.querySelector(".bg-smallCircle");
+// const originalCircle = document.querySelector(".originalCircle");
+
+const favorite = document.querySelector(".favorite");
+const favoriteHotel = document.querySelector(".favoriteHotel");
+let isFavoriteClick = false;
+let isFavoriteClickHotelIconImg = false;
+
+// 保存原始圖片的 URL
+const originalFavoriteImg = "../assets/images/bookMark.svg";
+const clickedFavoriteImg = "../assets/images/_bookMark.png";
+const originalFavoriteHotelImg = "../assets/images/favoriteHotel.png";
+const clickedFavoriteHotelImg = "../assets/images/favoriteHotelClick.png";
+const originalHotelIconImg =
+  "../assets/images/pin/type=normal(selectedOn), selected=on.svg";
+
+// 點擊 favorite 時更換圖片或恢復原圖片
+favorite.addEventListener("click", function (event) {
+  event.stopPropagation(); // 防止事件冒泡到 document 上
+
+  if (isFavoriteClick) {
+    // 如果已經被點擊，恢復原本的圖片
+    favorite.src = originalFavoriteImg;
+    favoriteHotel.src = originalHotelIconImg;
+  } else {
+    // 如果未被點擊，則更換圖片
+    favorite.src = clickedFavoriteImg;
+    favoriteHotel.src = originalFavoriteHotelImg;
+
+    favoriteHotel.addEventListener("click", function () {
+      if (isFavoriteClickHotelIconImg) {
+        favoriteHotel.src = originalFavoriteHotelImg;
+      } else {
+        favoriteHotel.src = clickedFavoriteHotelImg;
+      }
+
+      isFavoriteClickHotelIconImg = !isFavoriteClickHotelIconImg;
+    });
+  }
+
+  // 切換點擊狀態
+  isFavoriteClick = !isFavoriteClick;
+});
+
+// 點擊 favorite 時更換圖片
+// favorite.addEventListener("click", function (event) {
+//   event.stopPropagation(); // 防止點擊事件冒泡到 document 上
+//   isFavoriteClick = true;
+//   favorite.src = "../assets/images/_bookMark.png";
+//   favoriteHotel.src = "../assets/images/favoriteHotel.png";
+// });
+
+// 點擊圖片以外的地方時恢復原來的圖片
+// document.addEventListener("click", function (event) {
+//   if (!favorite.contains(event.target)) {
+//      如果點擊的不是圖片
+//     isFavoriteClick = false;
+//     favorite.src = "../assets/images/bookMark.svg";
+//   }
+// });
+
+// 點擊 centerAimImg 時移動背景中心到 centerIcon
+centerAimImg.addEventListener("click", () => {
+  // 計算中心 Icon 應該出現在背景圖片容器的中間位置
+  const targetBackgroundPosX = -(centerIconX - divWidth / 2) - 430;
+  const targetBackgroundPosY = -(centerIconY - divHeight / 2);
+
+  // 確保背景圖片不會移動超出範圍
+  const minPosX = divWidth - imageWidth;
+  const minPosY = divHeight - imageHeight;
+
+  backgroundPosX = Math.max(minPosX, Math.min(0, targetBackgroundPosX));
+  backgroundPosY = Math.max(minPosY, Math.min(0, targetBackgroundPosY));
+
+  // 更新背景圖片的位置
+  div.style.backgroundPosition = `${backgroundPosX}px ${backgroundPosY}px`;
+  centerIcon.classList.add("searchAnimation");
+
+  centerIcon.addEventListener("animationend", function () {
+    centerIcon.classList.remove("searchAnimation");
+  });
+  // 更新圖標的位置
+  updateIconPosition();
+});
