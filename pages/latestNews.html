@@ -45,20 +45,20 @@
                     </form>
                     <!-- 標籤按鈕 -->
                     <div class="safetyButton">
-                        <ul class="nav nav-pills mb-3 justify-content-between align-items-center" id="pills-tab"
+                        <ul class="nav nav-pills mb-3 align-items-center" id="pills-tab"
                             role="tablist">
-                            <li class="nav-item" role="presentation">
+                            <li class="nav-item me-1" role="presentation">
                                 <button class="nav-link body-text-sm" id="pills-safety-tab" data-bs-toggle="pill"
                                     data-bs-target="#pills-safety" type="button" role="tab" aria-controls="pills-safety"
                                     aria-selected="true">安全<span class="ms-1 text-neutrals-400">378</span></button>
                             </li>
-                            <li class="nav-item" role="presentation">
+                            <li class="nav-item me-1" role="presentation">
                                 <button class="nav-link body-text-sm" id="pills-ordinary-tab" data-bs-toggle="pill"
                                     data-bs-target="#pills-ordinary" type="button" role="tab"
                                     aria-controls="pills-ordinary" aria-selected="false">普通<span
                                         class="ms-1 text-neutrals-400">137</span></button>
                             </li>
-                            <li class="nav-item" role="presentation">
+                            <li class="nav-item me-1" role="presentation">
                                 <button class="nav-link body-text-sm" id="pills-warning-tab" data-bs-toggle="pill"
                                     data-bs-target="#pills-warning" type="button" role="tab"
                                     aria-controls="pills-warning" aria-selected="false">留心<span
@@ -927,7 +927,7 @@
             <img src="../assets/images/icon/24px/line/add.svg" alt="add">
         </a>
         <!-- 發布評論內容 -->
-        <section class="offcanvas offcanvas-end mt-15" tabindex="-1" id="offcanvasPostComment" data-bs-backdrop="false"
+        <section class="offcanvas offcanvas-end mt-15 w-100" tabindex="-1" id="offcanvasPostComment" data-bs-backdrop="false"
             aria-labelledby="offcanvasExampleLabel">
             <div class="offcanvas-header text-center position-relative">
                 <button type="button" class="text-reset border-0 bg-white position-absolute" data-bs-dismiss="offcanvas"
@@ -936,52 +936,163 @@
                 </button>
                 <h5 class="offcanvas-title w-100" id="offcanvasSafetyCommentsLabel">發佈安全評論</h5>
             </div>
-            <div class="offcanvas-body">
-                <div class="d-flex justify-content-between align-items-center">
+            <div class="offcanvas-body d-flex flex-column">
+                <div class="d-flex justify-content-between align-items-center mb-6">
                     <div class="d-flex align-items-center">
                         <i class="bi bi-geo-alt-fill me-2 text-neutrals-600"></i>
                         <p class="fw-bold body-text-sm">選取地點</p>
                         <span class="text-danger-error-600 align-self-start">*</span>
                     </div>
                     <!-- 選取地點按鈕 -->
-                    <a class="" data-bs-toggle="offcanvas" href="#offcanvasSelectPlace" role="button"
+                    <a data-bs-toggle="offcanvas" href="#offcanvasSelectPlace" role="button"
                         aria-controls="offcanvasExample">
                         <i class="bi bi-chevron-right text-neutrals-400"></i>
                     </a>
                 </div>
+                <div class="d-flex align-items-center mb-3">
+                    <i class="bi bi-shield-shaded me-2 text-neutrals-600"></i>
+                    <p class="fw-bold body-text-sm">安全狀況</p>
+                    <span class="text-danger-error-600 align-self-start">*</span>
+                </div>
+                <div class="d-flex mb-6">
+                    <button class="btn btnSafety body-text-sm d-flex align-items-center me-2" type="button">
+                        <i class="safety fs-6 me-1"></i>
+                        安全
+                    </button>
+                    <button class="btn btnOrdinary body-text-sm d-flex align-items-center me-2" type="button">
+                        <i class="ordinary fs-6 me-1"></i>
+                        普通
+                    </button>
+                    <button class="btn btnWrining body-text-sm d-flex align-items-center" type="button">
+                        <i class="wrining fs-6 me-1"></i>
+                        留心
+                    </button>
+                </div>
+                <div class="position-relative mb-6">
+                    <label for="enterShare" class="d-flex align-items-center mb-3">
+                        <i class="bi bi-chat-right-text-fill me-2 text-neutrals-600"></i>
+                        <p class="fw-bold body-text-sm">輸入文字</p>
+                    </label>
+                    <textarea class="enterShare form-control radius-m bg-neutrals-50 border-0 py-3 px-5 body-text-sm" style="resize:none;width:100%;height:136px;" id="enterShare" placeholder="分享安全體驗"></textarea>
+                    <img class="position-absolute bottom-0 ms-5 mb-3" src="../assets/images/icon/24px/solid/img.svg" alt="photo">
+                    <img class="position-absolute bottom-0 ms-14 mb-3" src="../assets/images/icon/24px/solid/camera.svg" alt="photo">
+                    <p class="position-absolute bottom-0 end-0 me-5 mb-3 text-neutrals-400 body-text-xs">0/200</p>
+                </div>
+                <div class="d-flex align-items-center mb-3">
+                    <i class="bi bi-clock-fill me-2 text-neutrals-600"></i>
+                    <p class="fw-bold body-text-sm">何時到訪</p>
+                    <span class="text-danger-error-600 align-self-start">*</span>
+                </div>
+                <div class="d-flex mb-auto">
+                    <button class="btn btnBlue body-text-sm me-2" type="button">
+                        2024/08/05
+                    </button>
+                    <button class="btn btnBlue body-text-sm me-2" type="button">
+                        一週內
+                    </button>
+                    <button class="btn btnBlue body-text-sm me-2" type="button">
+                        上個月
+                    </button>
+                    <button class="btn btnBlue body-text-sm" type="button">
+                        半年內
+                    </button>
+                </div>
+                <button type="button" class="btn btn-neutrals-300 text-white rounded-pill" disabled>發佈評論</button>
             </div>
         </section>
          <!-- 選取地點內容 -->
-         <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasSelectPlace"
+         <div class="offcanvas offcanvas-end w-100" tabindex="-1" id="offcanvasSelectPlace"
          aria-labelledby="offcanvasExampleLabel">
          <div class="offcanvas-header text-center position-relative">
              <h5 class="offcanvas-title w-100" id="offcanvasSafetyCommentsLabel">選取地點</h5>
              <button type="button" class="text-reset border-0 bg-white position-absolute"
-             data-bs-dismiss="offcanvas" aria-label="Close">
+             data-bs-toggle="offcanvas"
+             data-bs-target="#offcanvasPostComment">
                  <img src="../assets/images/icon/24px/line/arrowLeft.svg" alt="photo">
              </button>
          </div>
          <div class="offcanvas-body">
-             <div>
-                 Some text as placeholder. In real life you can have the elements you have chosen. Like,
-                 text,
-                 images, lists, etc.
-             </div>
-             <div class="dropdown mt-3">
-                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                     data-bs-toggle="dropdown">
-                     Dropdown button
-                 </button>
-                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                     <li><a class="dropdown-item" href="#">Action</a></li>
-                     <li><a class="dropdown-item" href="#">Another action</a></li>
-                     <li><a class="dropdown-item" href="#">Something else here</a></li>
-                 </ul>
-             </div>
+            <form class="position-relative mb-4">
+                <input class="form-control rounded-pill border-0 shadow-sm py-3 ps-13" type="text"
+                    placeholder="搜尋目的地" aria-label="default input example">
+                <img class="position-absolute top-50 start-0 translate-middle-y ms-4"
+                    src="../assets/images/icon/24px/line/search.svg" alt="photo">
+            </form>
+            <section class="d-flex align-items-center w-100 mb-4">
+                <div class="bg-neutrals-50 p-2 radius-xxs me-4">
+                    <i class="bi bi-geo-alt-fill fs-4 text-neutrals-400"></i>
+                </div>
+                <div class="text-truncate">
+                    <p class="body-text-sm">Akara Bangkok Hotel</p>
+                    <p class="text-neutrals-400 body-text-xs text-truncate">20公尺<span class="mx-2">．</span>991/1 Rama I Rd, Pathum Wan, Bangkok 10330泰國</p>
+                </div>
+            </section>
+            <section class="d-flex align-items-center w-100 mb-4">
+                <div class="bg-neutrals-50 p-2 radius-xxs me-4">
+                    <i class="bi bi-geo-alt-fill fs-4 text-neutrals-400"></i>
+                </div>
+                <div class="text-truncate">
+                    <p class="body-text-sm">曼吞哇那南寺</p>
+                    <p class="text-neutrals-400 body-text-xs text-truncate">290公尺<span class="mx-2">．</span>969 Rama I Rd, Khwaeng Pathum Wan, Pathum Wan, Bangkok 10330泰國</p>
+                </div>
+            </section>
+            <section class="d-flex align-items-center w-100 mb-4">
+                <div class="bg-neutrals-50 p-2 radius-xxs me-4">
+                    <i class="bi bi-geo-alt-fill fs-4 text-neutrals-400"></i>
+                </div>
+                <div class="text-truncate">
+                    <p class="body-text-sm">曼央世界購物商場</p>
+                    <p class="text-neutrals-400 body-text-xs text-truncate">450公尺<span class="mx-2">．</span>999/9 Rama I Rd, Pathum Wan, Bangkok 10330泰國</p>
+                </div>
+            </section>
+            <section class="d-flex align-items-center w-100 mb-4">
+                <div class="bg-neutrals-50 p-2 radius-xxs me-4">
+                    <i class="bi bi-geo-alt-fill fs-4 text-neutrals-400"></i>
+                </div>
+                <div class="text-truncate">
+                    <p class="body-text-sm">曼面佛</p>
+                    <p class="text-neutrals-400 body-text-xs text-truncate">650公尺<span class="mx-2">．</span>991/1 Rama I Rd, Pathum Wan, Bangkok 10330泰國</p>
+                </div>
+            </section>
+            <section class="d-flex align-items-center w-100 mb-4">
+                <div class="bg-neutrals-50 p-2 radius-xxs me-4">
+                    <i class="bi bi-geo-alt-fill fs-4 text-neutrals-400"></i>
+                </div>
+                <div class="text-truncate">
+                    <p class="body-text-sm">曼谷彩虹雲霄酒店觀景台</p>
+                    <p class="text-neutrals-400 body-text-xs text-truncate">750公尺<span class="mx-2">．</span>222 Ratchaprarop Rd, Khwaeng Thanon Phaya Thai, Khet Ratchathewi, Krung Thep Maha Nakhon 10400泰國</p>
+                </div>
+            </section>
+            <section class="d-flex align-items-center w-100 mb-4">
+                <div class="bg-neutrals-50 p-2 radius-xxs me-4">
+                    <i class="bi bi-geo-alt-fill fs-4 text-neutrals-400"></i>
+                </div>
+                <div class="text-truncate">
+                    <p class="body-text-sm">曼谷市立藝術文化中心</p>
+                    <p class="text-neutrals-400 body-text-xs text-truncate">900公尺<span class="mx-2">．</span>939 Rama I Rd, Wang Mai, Pathum Wan, Bangkok 10330泰國</p>
+                </div>
+            </section>
+            <section class="d-flex align-items-center w-100 mb-4">
+                <div class="bg-neutrals-50 p-2 radius-xxs me-4">
+                    <i class="bi bi-geo-alt-fill fs-4 text-neutrals-400"></i>
+                </div>
+                <div class="text-truncate">
+                    <p class="body-text-sm">曼門市場 (白金時尚購物中心)</p>
+                    <p class="text-neutrals-400 body-text-xs text-truncate">1.3公里<span class="mx-2">．</span>222 Phetchaburi Rd, Thanon Phaya Thai, Ratchathewi, Bangkok 10400泰國</p>
+                </div>
+            </section>
+            <section class="d-flex align-items-center w-100 mb-30">
+                <div class="bg-neutrals-50 p-2 radius-xxs me-4">
+                    <i class="bi bi-geo-alt-fill fs-4 text-neutrals-400"></i>
+                </div>
+                <div class="text-truncate">
+                    <p class="body-text-sm">曼普生博物館</p>
+                    <p class="text-neutrals-400 body-text-xs text-truncate">1.2公里<span class="mx-2">．</span>6 Kasem San 2 Alley, Wang Mai, Pathum Wan, Bangkok 10330泰國</p>
+                </div>
+            </section>
          </div>
      </div>
-
-
+<img src="../assets/images/icon/16px/solid/emojiSad.svg" alt="">
 
         <%- include('./layout/footer', {page: "latestNews" }); -%>
 
