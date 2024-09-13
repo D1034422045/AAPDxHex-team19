@@ -43,5 +43,57 @@
 }
 
 
+.safety{
+    background: url(../assets/images/icon/16px/solid/emojiHappy-gray989898.svg) no-repeat;
+    width: 16px;
+    height: 16px;
+}
+.ordinary{
+    background: url(../assets/images/icon/16px/solid/emojiNormal-gray989898.svg) no-repeat;
+    width: 16px;
+    height: 16px;
+}
+.wrining{
+    background: url(../assets/images/icon/16px/solid/emojiSad-gray989898.svg) no-repeat;
+    width: 16px;
+    height: 16px;
+}
 
+.btnSafety,.btnOrdinary,.btnWrining,.btnBlue{
+    border: 1px solid $neutrals-200;
+    border-radius: 12px;
+}
+.btn-check:focus+.btnBlue,:not(.btn-check) + .btnBlue:active,.btnBlue.active, .btnBlue:focus{
+    background: #1AA3DD;
+    border: 1px solid #1AA3DD;
+    color: #fff;
+}
+.btn-check:focus+.btnSafety+.btn:active, .btn:first-child:active,.btn.active, .btnSafety:focus{
+    background: #F1F9FE;
+    border: 1px solid #F1F9FE;
+    color: #1AA3DD;
+    .safety{
+        background: url(../assets/images/icon/16px/solid/emojiHappy.svg) no-repeat;
+    }
+}
+.btn-check:focus+.btnOrdinary,:not(.btn-check) + .btnOrdinary:active,.btnOrdinary.active, .btnOrdinary:focus{
+    background: #E5F8E8;
+    border: 1px solid #E5F8E8;
+    color: #67C575;
+    .ordinary{
+        background: url(../assets/images/icon/16px/solid/emojiNormal.svg) no-repeat;
+    }
+}
+.btn-check:focus+.btnWrining,:not(.btn-check) + .btnWrining:active,.btnWrining.active, .btnWrining:focus{
+    background: #FFE9D4;
+    border: 1px solid #FFE9D4;
+    color: #EF8363;
+    .wrining{
+        background: url(../assets/images/icon/16px/solid/emojiSad.svg) no-repeat;
+    }
+}
+.enterShare::placeholder{
+    color: $neutrals-400;
+    font-size: 14px;
+}
 
