@@ -495,7 +495,9 @@ policeStationLabelWrap.addEventListener("click", function (event) {
 
   // 同時將 hospitalLabelWrap 的圖片恢復到原本的狀態
   if (hospitalLabelImgIsClicked) {
-    hospitalLabelImg.src = "../assets/images/hospitalLabel.png";
+    hospitalLabelImg.src = `${
+      import.meta.env.BASE_URL
+    }assets/images/hospitalLabel.png`;
     hospitalLabelImgIsClicked = false;
   }
 
