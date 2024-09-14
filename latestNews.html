@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>最新動態｜平安旅人</title>
+  <script type="module" crossorigin src="/web-layout-training-vite/assets/main-2b7d48d2.js"></script>
+  <link rel="stylesheet" href="/web-layout-training-vite/assets/main-46ef6951.css">
+</head>
+
+<body>
+     <!-- 手機電量資訊 -->
+ <header class="container sticky-top">
+    <div class="py-5 d-flex justify-content-between align-items-center">
+        <time class="fw-semibold" datetime="9:41">9:41</time>
+        <div>
+            <i class="bi bi-reception-4"></i>
+            <i class="bi bi-wifi mx-2"></i>
+            <i class="bi bi-battery-full"></i>
+        </div>
+    </div>
+</header>        <!-- navbar -->
+        <nav class="position-fixed bg-white w-100 z-3">
+            <div class="latestNews">
+                <div class="container">
+                    <ul class="nav nav-pills pt-4 mb-3 justify-content-between" id="pills-tab" role="tablist">
+                        <li class="nav-item w-50" role="presentation">
+                            <button class="nav-link active w-100 text-dark fw-bold body-text-md" id="pills-user-tab"
+                                data-bs-toggle="pill" data-bs-target="#pills-user" type="button" role="tab"
+                                aria-controls="pills-user" aria-selected="true">旅人動態</button>
+                        </li>
+                        <li class="nav-item w-50" role="presentation">
+                            <button class="nav-link w-100 text-dark fw-bold body-text-md" id="pills-official-tab"
+                                data-bs-toggle="pill" data-bs-target="#pills-official" type="button" role="tab"
+                                aria-controls="pills-official" aria-selected="false">官方動態</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="bg-white w-100 position-fixed z-3 top-0" style="height: 64px;"></div>
+        <!-- navbar內容 -->
+        <main class="container py-6 mt-15">
+            <div class="tab-content" id="pills-tabContent">
+                <!-- 旅人動態 -->
+                <div class="tab-pane fade show active" id="pills-user" role="tabpanel" aria-labelledby="pills-user-tab">
+                    <!-- 搜尋 -->
+                    <form class="position-relative mb-6">
+                        <input class="form-control rounded-pill border-0 shadow-sm py-3 ps-13" type="text"
+                            placeholder="Akara Bangkok Hotel" aria-label="default input example">
+                        <img class="position-absolute top-50 start-0 translate-middle-y ms-4"
+                            src="/web-layout-training-vite/assets/search-6dde0f49.svg" alt="photo">
+
+                    </form>
+                    <!-- 標籤按鈕 -->
+                    <div class="safetyButton">
+                        <ul class="nav nav-pills mb-3 align-items-center" id="pills-tab"
+                            role="tablist">
+                            <li class="nav-item me-1" role="presentation">
+                                <button class="nav-link body-text-sm" id="pills-safety-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-safety" type="button" role="tab" aria-controls="pills-safety"
+                                    aria-selected="true">安全<span class="ms-1 text-neutrals-400">378</span></button>
+                            </li>
+                            <li class="nav-item me-1" role="presentation">
+                                <button class="nav-link body-text-sm" id="pills-ordinary-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-ordinary" type="button" role="tab"
+                                    aria-controls="pills-ordinary" aria-selected="false">普通<span
+                                        class="ms-1 text-neutrals-400">137</span></button>
+                            </li>
+                            <li class="nav-item me-1" role="presentation">
+                                <button class="nav-link body-text-sm" id="pills-warning-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-warning" type="button" role="tab"
+                                    aria-controls="pills-warning" aria-selected="false">留心<span
+                                        class="ms-1 text-neutrals-400">62</span></button>
+                            </li>
+                            <li class="text-neutrals-400 body-text-sm" role="presentation">
+                                <button class="navNoColor body-text-sm bg-white text-neutrals-400 border-0 active show"
+                                    id="pills-allComment-tab" data-bs-toggle="pill" data-bs-target="#pills-allComment"
+                                    type="button" role="tab" aria-controls="pills-allComment"
+                                    aria-selected="false">577則評論</button>
+                            </li>
+                        </ul>
+                        <!-- 標籤按鈕內容 -->
+                        <div class="tab-content" id="pills-tabContent">
+                            <!-- 安全 -->
+                            <div class="tab-pane fade" id="pills-safety" role="tabpanel"
+                                aria-labelledby="pills-safety-tab">
+                                <section class="bg-neutrals-50 radius-m p-4 mb-6">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="d-flex bg-brand-50 rounded-pill px-3 py-2">
+                                            <img class="me-1" src="/web-layout-training-vite/assets/emojiHappy-bb064ef8.svg"
+                                                alt="photo">
+                                            <p class="body-text-sm text-brand-500">安全</p>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <p class="body-text-xs me-2 text-neutrals-700">2024 年 8 月 5 日到訪</p>
+                                            <img src="/web-layout-training-vite/assets/dot-1ff21c4e.svg" alt="icon">
+                                        </div>
+                                    </div>
+                                    <p class="my-4 body-text-sm">
+                                        之前就有聽說這家服務很讚，在帕亞泰站旁邊走路12分鐘的五星旗飯店，這裡的安全措施十分到位，讓人覺得安心。無論是24小時的保全巡邏...
+                                    </p>
+                                    <div class="d-flex align-items-center pb-4 border-bottom">
+                                        <img class="img-fluid me-2 radius-xxs" src="/web-layout-training-vite/assets/comment5-1-919367c8.png"
+                                            alt="photo" style="width: 56px;height: 56px;">
+                                        <img class="img-fluid me-2 radius-xxs" src="/web-layout-training-vite/assets/comment5-2-00dbf44e.png"
+                                            alt="photo" style="width: 56px;height: 56px;">
+                                        <img class="img-fluid me-2 radius-xxs" src="/web-layout-training-vite/assets/comment5-3-2ecc3f17.png"
+                                            alt="photo" style="width: 56px;height: 56px;">
+                                    </div>
+                                    <div class="d-flex align-items-center mt-4">
+                                        <img class="me-2" src="/web-layout-training-vite/assets/size_40x40_ img_user A-e61b6868.png"
+                                            alt="photo" style="width: 40px;height: 40px;">
+                                        <div class="fw-bold">
+                                            <p class="body-text-sm">Ashley Wang</p>
+                                            <div
+                                                class="bg-neutrals-100 rounded-pill py-1 px-2 text-center d-inline-block">
+                                                <p class="body-text-xxs text-neutrals-400">Lv.1</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex ms-auto">
+                                            <img src="/web-layout-training-vite/assets/thumb-a52bb86b.svg" alt="photo">
+                                            <p class="ms-1 text-neutrals-400">0</p>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="bg-neutrals-50 radius-m p-4 mb-6">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="d-flex bg-brand-50 rounded-pill px-3 py-2">
+                                            <img class="me-1" src="/web-layout-training-vite/assets/emojiHappy-bb064ef8.svg"
+                                                alt="photo">
+                                            <p class="body-text-sm text-brand-500">安全</p>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <p class="body-text-xs me-2 text-neutrals-700">2024 年 8 月 5 日到訪</p>
+                                            <img src="/web-layout-training-vite/assets/dot-1ff21c4e.svg" alt="icon">
+                                        </div>
+                                    </div>
+                                    <p class="my-4 body-text-sm">
+                                        保全措施非常嚴密，入口處設有安檢和24小時監控，讓人感到非常安心，這家飯店非常適合親子旅遊！下次帶爸媽來～
+                                    </p>
+                                    <div class="d-flex align-items-center pb-4 border-bottom">
+                                        <img class="img-fluid me-2 radius-xxs" src="/web-layout-training-vite/assets/comment1-1-cd807cbc.png"
+                                            alt="photo" style="width: 56px;height: 56px;">
+                                        <img class="img-fluid me-2 radius-xxs" src="/web-layout-training-vite/assets/comment1-2-3a25eec3.png"
+                                            alt="photo" style="width: 56px;height: 56px;">
+                                        <img class="img-fluid me-2 radius-xxs" src="/web-layout-training-vite/assets/comment1-3-d5b73d52.png"
+                                            alt="photo" style="width: 56px;height: 56px;">
+                                        <p class="body-text-sm text-neutrals-400 fw-bold">+5</p>
+                                    </div>
+                                    <div class="d-flex align-items-center mt-4">
+                                        <img class="me-2" src="/web-layout-training-vite/assets/size_40x40_ img_user C-6c1d72dd.png"
+                                            alt="photo" style="width: 40px;height: 40px;">
+                                        <div class="fw-bold">
+                                            <p class="body-text-sm">林孟潔</p>
+                                            <div
+                                                class="bg-neutrals-100 rounded-pill py-1 px-2 text-center d-inline-block">
+                                                <p class="body-text-xxs text-neutrals-400">Lv.1</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex ms-auto">
+                                            <img src="/web-layout-training-vite/assets/thumb-a52bb86b.svg" alt="photo">
+                                            <p class="ms-1 text-neutrals-400">66</p>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="bg-neutrals-50 radius-m p-4 mb-6">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="d-flex bg-brand-50 rounded-pill px-3 py-2">
+                                            <img class="me-1" src="/web-layout-training-vite/assets/emojiHappy-bb064ef8.svg"
+                                                alt="photo">
+                                            <p class="body-text-sm text-brand-500">安全</p>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <p class="body-text-xs me-2 text-neutrals-700">2024 年 7 月 27 日到訪</p>
+                                            <img src="/web-layout-training-vite/assets/dot-1ff21c4e.svg" alt="icon">
+                                        </div>
+                                    </div>
+                                    <p class="my-4 body-text-sm">
+                                        飯店接待櫃檯用心，等待時有飲品可自行飲用，我喝了杯冰涼的泰式奶茶，check in時旁邊有一些飯店佈置的小玩意可以看看，也有沙發可以...
+                                    </p>
+                                    <div class="d-flex align-items-center pb-4 border-bottom">
+                                        <img class="img-fluid me-2 radius-xxs" src="/web-layout-training-vite/assets/comment2-1-3023822e.png"
+                                            alt="photo" style="width: 56px;height: 56px;">
+                                        <img class="img-fluid me-2 radius-xxs" src="/web-layout-training-vite/assets/comment2-2-57c5a9b2.png"
+                                            alt="photo" style="width: 56px;height: 56px;">
+                                        <img class="img-fluid me-2 radius-xxs" src="/web-layout-training-vite/assets/comment2-3-b3c9b228.png"
+                                            alt="photo" style="width: 56px;height: 56px;">
+                                        <p class="body-text-sm text-neutrals-400 fw-bold">+2</p>
+                                    </div>
+                                    <div class="d-flex align-items-center mt-4">
+                                        <img class="me-2" src="/web-layout-training-vite/assets/size_40x40_ img_user B-8d3e8fc2.png"
+                                            alt="photo" style="width: 40px;height: 40px;">
+                                        <div class="fw-bold">
+                                            <p class="body-text-sm">Tom Chen</p>
+                                            <div
+                                                class="bg-neutrals-100 rounded-pill py-1 px-2 text-center d-inline-block">
+                                                <p class="body-text-xxs text-neutrals-400">Lv.1</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex ms-auto">
+                                            <img src="/web-layout-training-vite/assets/thumb-a52bb86b.svg" alt="photo">
+                                            <p class="ms-1 text-neutrals-400">298</p>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="bg-neutrals-50 radius-m p-4 mb-6">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="d-flex bg-brand-50 rounded-pill px-3 py-2">
+                                            <img class="me-1" src="/web-layout-training-vite/assets/emojiHappy-bb064ef8.svg"
+                                                alt="photo">
+                                            <p class="body-text-sm text-brand-500">安全</p>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <p class="body-text-xs me-2 text-neutrals-700">2024 年 5 月 14 日到訪</p>
+                                            <img src="/web-layout-training-vite/assets/dot-1ff21c4e.svg" alt="icon">
+                                        </div>
+                                    </div>
+                                    <p class="my-4 body-text-sm">
+                                        原本以為帶嬰兒去住飯店會很不方便，但看到房間裏面提供的嬰兒備品我瞬間放心了許多，房間很乾淨、浴室有乾濕分離、還有智能小管家，需要開...
+                                    </p>
+                                </section>
+                            </div>
+                            <!-- 普通 -->
+                            <div class="tab-pane fade" id="pills-ordinary" role="tabpanel"
+                                aria-labelledby="pills-ordinary-tab">
+                                <section class="bg-neutrals-50 radius-m p-4 mb-6">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="d-flex bg-success-light rounded-pill px-3 py-2">
+                                            <img class="me-1" src="/web-layout-training-vite/assets/emojiNormal-aa45d3ba.svg"
+                                                alt="photo">
+                                            <p class="body-text-sm text-success-normal">普通</p>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <p class="body-text-xs me-2 text-neutrals-700">2024 年 8 月 5 日到訪</p>
+                                            <img src="/web-layout-training-vite/assets/dot-1ff21c4e.svg" alt="icon">
+                                        </div>
+                                    </div>
+                                    <p class="my-4 body-text-sm">
+                                        保全措施非常嚴密，入口處設有安檢和24小時監控，讓人感到非常安心，這家飯店非常適合親子旅遊！下次帶爸媽來～
+                                    </p>
+                                    <div class="d-flex align-items-center pb-4 border-bottom">
+                                        <img class="img-fluid me-2 radius-xxs" src="/web-layout-training-vite/assets/comment1-1-cd807cbc.png"
+                                            alt="photo" style="width: 56px;height: 56px;">
+                                        <img class="img-fluid me-2 radius-xxs" src="/web-layout-training-vite/assets/comment1-2-3a25eec3.png"
+                                            alt="photo" style="width: 56px;height: 56px;">
+                                        <img class="img-fluid me-2 radius-xxs" src="/web-layout-training-vite/assets/comment1-3-d5b73d52.png"
+                                            alt="photo" style="width: 56px;height: 56px;">
+                                        <p class="body-text-sm text-neutrals-400 fw-bold">+5</p>
+                                    </div>
+                                    <div class="d-flex align-items-center mt-4">
+                                        <img class="me-2" src="/web-layout-training-vite/assets/size_40x40_ img_user C-6c1d72dd.png"
+                                            alt="photo" style="width: 40px;height: 40px;">
+                                        <div class="fw-bold">
+                                            <p class="body-text-sm">林孟潔</p>
+                                            <div
+                                                class="bg-neutrals-100 rounded-pill py-1 px-2 text-center d-inline-block">
+                                                <p class="body-text-xxs text-neutrals-400">Lv.1</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex ms-auto">
+                                            <img src="/web-layout-training-vite/assets/thumb-a52bb86b.svg" alt="photo">
+                                            <p class="ms-1 text-neutrals-400">66</p>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="bg-neutrals-50 radius-m p-4 mb-6">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="d-flex bg-success-light rounded-pill px-3 py-2">
+                                            <img class="me-1" src="/web-layout-training-vite/assets/emojiNormal-aa45d3ba.svg"
+                                                alt="photo">
+                                            <p class="body-text-sm text-success-normal">普通</p>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <p class="body-text-xs me-2 text-neutrals-700">2024 年 8 月 3 日到訪</p>
+                                            <img src="/web-layout-training-vite/assets/dot-1ff21c4e.svg" alt="icon">
+                                        </div>
+                                    </div>
+                                    <p class="mt-4 body-text-sm pb-4 border-bottom">
+                                        這家飯店的房間內設有電子保險箱。<br>設施有健身房、泳池、蒸氣室，環境清潔部分可以再加強，退房後到櫃台告知可以短暫寄放行...
+                                    </p>
+                                    <div class="d-flex align-items-center mt-4">
+                                        <img class="me-2" src="/web-layout-training-vite/assets/size_40x40_ img_user A-e61b6868.png"
+                                            alt="photo" style="width: 40px;height: 40px;">
+                                        <div class="fw-bold">
+                                            <p class="body-text-sm">Yu-Ting Wu</p>
+                                            <div
+                                                class="bg-neutrals-100 rounded-pill py-1 px-2 text-center d-inline-block">
+                                                <p class="body-text-xxs text-neutrals-400">Lv.4</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex ms-auto">
+                                            <img src="/web-layout-training-vite/assets/thumb-a52bb86b.svg" alt="photo">
+                                            <p class="ms-1 text-neutrals-400">96</p>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="bg-neutrals-50 radius-m p-4 mb-6">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="d-flex bg-success-light rounded-pill px-3 py-2">
+                                            <img class="me-1" src="/web-layout-training-vite/assets/emojiNormal-aa45d3ba.svg"
+                                                alt="photo">
+                                            <p class="body-text-sm text-success-normal">普通</p>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <p class="body-text-xs me-2 text-neutrals-700">2024 年 6 月 7 日到訪</p>
+                                            <img src="/web-layout-training-vite/assets/dot-1ff21c4e.svg" alt="icon">
+                                        </div>
+                                    </div>
+                                    <p class="mt-4 body-text-sm pb-4 border-bottom">
+                                        住宿二天拿了很多小零食再房間享用，今日用早餐有多增加日式餐點，燉肉，玉子燒，蒸魚等，豐富美味，服務還行。
+                                    </p>
+                                    <div class="d-flex align-items-center mt-4">
+                                        <img class="me-2" src="/web-layout-training-vite/assets/size_40x40_ img_user E-0be2ffd3.png"
+                                            alt="photo" style="width: 40px;height: 40px;">
+                                        <div class="fw-bold">
+                                            <p class="body-text-sm">連岳勝</p>
+                                            <div
+                                                class="bg-neutrals-100 rounded-pill py-1 px-2 text-center d-inline-block">
+                                                <p class="body-text-xxs text-neutrals-400">Lv.2</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex ms-auto">
+                                            <img src="/web-layout-training-vite/assets/thumb-a52bb86b.svg" alt="photo">
+                                            <p class="ms-1 text-neutrals-400">361</p>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="bg-neutrals-50 radius-m p-4 mb-6">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="d-flex bg-success-light rounded-pill px-3 py-2">
+                                            <img class="me-1" src="/web-layout-training-vite/assets/emojiNormal-aa45d3ba.svg"
+                                                alt="photo">
+                                            <p class="body-text-sm text-success-normal">普通</p>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <p class="body-text-xs me-2 text-neutrals-700">2024 年 4 月 3 日到訪</p>
+                                            <img src="/web-layout-training-vite/assets/dot-1ff21c4e.svg" alt="icon">
+                                        </div>
+                                    </div>
+                                    <p class="mt-4 body-text-sm pb-4 border-bottom">
+                                        連假等待check in 時人潮眾多，但服務不忙不亂，房客也有秩序的排隊，辛苦服務人員了，在早餐供應時間餐廳大爆滿。
+                                    </p>
+                                    <div class="d-flex align-items-center mt-4">
+                                        <img class="me-2" src="/web-layout-training-vite/assets/size_40x40_ img_user F-4b96cf72.png"
+                                            alt="photo" style="width: 40px;height: 40px;">
+                                        <div class="fw-bold">
+                                            <p class="body-text-sm">楊諾</p>
+                                            <div
+                                                class="bg-neutrals-100 rounded-pill py-1 px-2 text-center d-inline-block">
+                                                <p class="body-text-xxs text-neutrals-400">Lv.3</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex ms-auto">
+                                            <img src="/web-layout-training-vite/assets/thumb-a52bb86b.svg" alt="photo">
+                                            <p class="ms-1 text-neutrals-400">185</p>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                            <!-- 留心 -->
+                            <div class="tab-pane fade" id="pills-warning" role="tabpanel"
+                                aria-labelledby="pills-warning-tab">
+                                <section class="bg-neutrals-50 radius-m p-4 mb-6">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="d-flex bg-danger-error-50 rounded-pill px-3 py-2">
+                                            <img class="me-1" src="/web-layout-training-vite/assets/emojiSad-6bf79f28.svg"
+                                                alt="photo">
+                                            <p class="body-text-sm text-danger-error-500">留心</p>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <p class="body-text-xs me-2 text-neutrals-700">2024年8月3 到訪</p>
+                                            <img src="/web-layout-training-vite/assets/dot-1ff21c4e.svg" alt="icon">
+                                        </div>
+                                    </div>
+                                    <p class="mt-4 body-text-sm pb-4 border-bottom">
+                                        錢包放櫃檯也能被偷，有夠雷 ==
+                                    </p>
+                                    <div class="d-flex align-items-center mt-4">
+                                        <img class="me-2" src="/web-layout-training-vite/assets/size_40x40_ img_user D-0d394399.png"
+                                            alt="photo" style="width: 40px;height: 40px;">
+                                        <div class="fw-bold">
+                                            <p class="body-text-sm">程柏凱 Kyle</p>
+                                            <div
+                                                class="bg-neutrals-100 rounded-pill py-1 px-2 text-center d-inline-block">
+                                                <p class="body-text-xxs text-neutrals-400">Lv.2</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex ms-auto">
+                                            <img src="/web-layout-training-vite/assets/thumb-a52bb86b.svg" alt="photo">
+                                            <p class="ms-1 text-neutrals-400">231</p>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="bg-neutrals-50 radius-m p-4 mb-6">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="d-flex bg-danger-error-50 rounded-pill px-3 py-2">
+                                            <img class="me-1" src="/web-layout-training-vite/assets/emojiSad-6bf79f28.svg"
+                                                alt="photo">
+                                            <p class="body-text-sm text-danger-error-500">留心</p>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <p class="body-text-xs me-2 text-neutrals-700">2024 年 7 月 27 日到訪</p>
+                                            <img src="/web-layout-training-vite/assets/dot-1ff21c4e.svg" alt="icon">
+                                        </div>
+                                    </div>
+                                    <p class="mt-4 body-text-sm pb-4 border-bottom">
+                                        房間冷氣壞掉完全不會冷，跟房務人員反應了也沒有改善，非常不推這間飯店。
+                                    </p>
+                                    <div class="d-flex align-items-center mt-4">
+                                        <img class="me-2" src="data:image/png;base64,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"
+                                            alt="photo" style="width: 40px;height: 40px;">
+                                        <div class="fw-bold">
+                                            <p class="body-text-sm">邱文瑞</p>
+                                            <div
+                                                class="bg-neutrals-100 rounded-pill py-1 px-2 text-center d-inline-block">
+                                                <p class="body-text-xxs text-neutrals-400">Lv.3</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex ms-auto">
+                                            <img src="/web-layout-training-vite/assets/thumb-a52bb86b.svg" alt="photo">
+                                            <p class="ms-1 text-neutrals-400">137</p>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="bg-neutrals-50 radius-m p-4 mb-6">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="d-flex bg-danger-error-50 rounded-pill px-3 py-2">
+                                            <img class="me-1" src="/web-layout-training-vite/assets/emojiSad-6bf79f28.svg"
+                                                alt="photo">
+                                            <p class="body-text-sm text-danger-error-500">留心</p>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <p class="body-text-xs me-2 text-neutrals-700">2024 年 6 月 24 日到訪</p>
+                                            <img src="/web-layout-training-vite/assets/dot-1ff21c4e.svg" alt="icon">
+                                        </div>
+                                    </div>
+                                    <p class="my-4 body-text-sm">
+                                        缺點：硬體設備較老，電視無法連手機或看Youtube，馬桶是加裝式的免治馬桶，且有時候馬桶多沖個幾次會漏水，然後床偏硬，隔音差。
+                                    </p>
+                                    <div class="d-flex align-items-center pb-4 border-bottom">
+                                        <img class="img-fluid me-2 radius-xxs" src="/web-layout-training-vite/assets/comment3-1-3e0164c1.png"
+                                            alt="photo" style="width: 56px;height: 56px;">
+                                        <img class="img-fluid me-2 radius-xxs" src="/web-layout-training-vite/assets/comment3-2-7faf23b6.png"
+                                            alt="photo" style="width: 56px;height: 56px;">
+                                    </div>
+                                    <div class="d-flex align-items-center mt-4">
+                                        <img class="me-2" src="/web-layout-training-vite/assets/size_40x40_ img_user H-4e5f104c.png"
+                                            alt="photo" style="width: 40px;height: 40px;">
+                                        <div class="fw-bold">
+                                            <p class="body-text-sm">宋恩霖</p>
+                                            <div
+                                                class="bg-neutrals-100 rounded-pill py-1 px-2 text-center d-inline-block">
+                                                <p class="body-text-xxs text-neutrals-400">Lv.1</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex ms-auto">
+                                            <img src="/web-layout-training-vite/assets/thumb-a52bb86b.svg" alt="photo">
+                                            <p class="ms-1 text-neutrals-400">79</p>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="bg-neutrals-50 radius-m p-4 mb-6">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="d-flex bg-danger-error-50 rounded-pill px-3 py-2">
+                                            <img class="me-1" src="/web-layout-training-vite/assets/emojiSad-6bf79f28.svg"
+                                                alt="photo">
+                                            <p class="body-text-sm text-danger-error-500">留心</p>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <p class="body-text-xs me-2 text-neutrals-700">2024 年 3 月 20 日到訪</p>
+                                            <img src="/web-layout-training-vite/assets/dot-1ff21c4e.svg" alt="icon">
+                                        </div>
+                                    </div>
+                                    <p class="mt-4 body-text-sm pb-4 border-bottom">
+                                        房間冷氣壞掉完全不會冷，跟房務人員反應了也沒有改善，非常不推這間飯店。
+                                    </p>
+                                    <div class="d-flex align-items-center mt-4">
+                                        <img class="me-2" src="/web-layout-training-vite/assets/size_40x40_ img_user I-0ac0e0c1.png"
+                                            alt="photo" style="width: 40px;height: 40px;">
+                                        <div class="fw-bold">
+                                            <p class="body-text-sm">Neo Kuo</p>
+                                            <div
+                                                class="bg-neutrals-100 rounded-pill py-1 px-2 text-center d-inline-block">
+                                                <p class="body-text-xxs text-neutrals-400">Lv.2</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex ms-auto">
+                                            <img src="/web-layout-training-vite/assets/thumb-a52bb86b.svg" alt="photo">
+                                            <p class="ms-1 text-neutrals-400">72</p>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                            <!-- 起始畫面 -->
+                            <div class="tab-pane fade show active" id="pills-allComment" role="tabpanel"
+                                aria-labelledby="pills-allComment-tab">
+                                <a class="bg-neutrals-50 radius-m p-4 mb-6 d-block text-neutrals-950"
+                                    data-bs-toggle="offcanvas" href="#offcanvasSafetyComments" role="button"
+                                    aria-controls="offcanvasSafetyComments">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="d-flex bg-brand-50 rounded-pill px-3 py-2">
+                                            <img class="me-1" src="/web-layout-training-vite/assets/emojiHappy-bb064ef8.svg"
+                                                alt="photo">
+                                            <p class="body-text-sm text-brand-500">安全</p>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <p class="body-text-xs me-2 text-neutrals-700">2024 年 8 月 5 日到訪</p>
+                                            <img src="/web-layout-training-vite/assets/dot-1ff21c4e.svg" alt="icon">
+                                        </div>
+                                    </div>
+                                    <p class="my-4 body-text-sm">
+                                        保全措施非常嚴密，入口處設有安檢和24小時監控，讓人感到非常安心，這家飯店非常適合親子旅遊！下次帶爸媽來～
+                                    </p>
+                                    <div class="d-flex align-items-center pb-4 border-bottom">
+                                        <img class="img-fluid me-2 radius-xxs" src="/web-layout-training-vite/assets/comment1-1-cd807cbc.png"
+                                            alt="photo" style="width: 56px;height: 56px;">
+                                        <img class="img-fluid me-2 radius-xxs" src="/web-layout-training-vite/assets/comment1-2-3a25eec3.png"
+                                            alt="photo" style="width: 56px;height: 56px;">
+                                        <img class="img-fluid me-2 radius-xxs" src="/web-layout-training-vite/assets/comment1-3-d5b73d52.png"
+                                            alt="photo" style="width: 56px;height: 56px;">
+                                        <p class="body-text-sm text-neutrals-400 fw-bold">+5</p>
+                                    </div>
+                                    <div class="d-flex align-items-center mt-4">
+                                        <img class="me-2" src="/web-layout-training-vite/assets/size_40x40_ img_user C-6c1d72dd.png"
+                                            alt="photo" style="width: 40px;height: 40px;">
+                                        <div class="fw-bold">
+                                            <p class="body-text-sm">林孟潔</p>
+                                            <div
+                                                class="bg-neutrals-100 rounded-pill py-1 px-2 text-center d-inline-block">
+                                                <p class="body-text-xxs text-neutrals-400">Lv.1</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex ms-auto">
+                                            <img src="/web-layout-training-vite/assets/thumb-a52bb86b.svg" alt="photo">
+                                            <p class="ms-1 text-neutrals-400">66</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <section class="bg-neutrals-50 radius-m p-4 mb-6">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="d-flex bg-danger-error-50 rounded-pill px-3 py-2">
+                                            <img class="me-1" src="/web-layout-training-vite/assets/emojiSad-6bf79f28.svg"
+                                                alt="photo">
+                                            <p class="body-text-sm text-danger-error-500">留心</p>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <p class="body-text-xs me-2 text-neutrals-700">2024年8月3 到訪</p>
+                                            <img src="/web-layout-training-vite/assets/dot-1ff21c4e.svg" alt="icon">
+                                        </div>
+                                    </div>
+                                    <p class="mt-4 body-text-sm pb-4 border-bottom">
+                                        錢包放櫃檯也能被偷，有夠雷 ==
+                                    </p>
+                                    <div class="d-flex align-items-center mt-4">
+                                        <img class="me-2" src="/web-layout-training-vite/assets/size_40x40_ img_user D-0d394399.png"
+                                            alt="photo" style="width: 40px;height: 40px;">
+                                        <div class="fw-bold">
+                                            <p class="body-text-sm">程柏凱 Kyle</p>
+                                            <div
+                                                class="bg-neutrals-100 rounded-pill py-1 px-2 text-center d-inline-block">
+                                                <p class="body-text-xxs text-neutrals-400">Lv.2</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex ms-auto">
+                                            <img src="/web-layout-training-vite/assets/thumb-a52bb86b.svg" alt="photo">
+                                            <p class="ms-1 text-neutrals-400">231</p>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="bg-neutrals-50 radius-m p-4 mb-6">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="d-flex bg-success-light rounded-pill px-3 py-2">
+                                            <img class="me-1" src="/web-layout-training-vite/assets/emojiNormal-aa45d3ba.svg"
+                                                alt="photo">
+                                            <p class="body-text-sm text-success-normal">普通</p>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <p class="body-text-xs me-2 text-neutrals-700">2024年8月3 到訪</p>
+                                            <img src="/web-layout-training-vite/assets/dot-1ff21c4e.svg" alt="icon">
+                                        </div>
+                                    </div>
+                                    <p class="mt-4 body-text-sm pb-4 border-bottom">
+                                        這家飯店的房間內設有電子保險箱。<br>設施有健身房、泳池、蒸氣室，環境清潔部分可以再加強，退房後到櫃台告知可以短暫寄放行...
+                                    </p>
+                                    <div class="d-flex align-items-center mt-4">
+                                        <img class="me-2" src="/web-layout-training-vite/assets/size_40x40_ img_user A-e61b6868.png"
+                                            alt="photo" style="width: 40px;height: 40px;">
+                                        <div class="fw-bold">
+                                            <p class="body-text-sm">Yu-Ting Wu</p>
+                                            <div
+                                                class="bg-neutrals-100 rounded-pill py-1 px-2 text-center d-inline-block">
+                                                <p class="body-text-xxs text-neutrals-400">Lv.4</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex ms-auto">
+                                            <img src="/web-layout-training-vite/assets/thumb-a52bb86b.svg" alt="photo">
+                                            <p class="ms-1 text-neutrals-400">96</p>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="bg-neutrals-50 radius-m p-4">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="d-flex bg-brand-50 rounded-pill px-3 py-2">
+                                            <img class="me-1" src="/web-layout-training-vite/assets/emojiHappy-bb064ef8.svg"
+                                                alt="photo">
+                                            <p class="body-text-sm text-brand-500">安全</p>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <p class="body-text-xs me-2 text-neutrals-700">2024年7月27 到訪</p>
+                                            <img src="/web-layout-training-vite/assets/dot-1ff21c4e.svg" alt="icon">
+                                        </div>
+                                    </div>
+                                    <p class="my-4 body-text-sm">
+                                        飯店接待櫃檯用心，等待時有飲品可自行飲用，我喝了杯冰涼的泰式奶茶，check in時旁邊有一些飯店佈置的小玩意可以看看，也有沙發可以...
+                                    </p>
+                                    <div class="d-flex align-items-center pb-4 border-bottom">
+                                        <img class="img-fluid me-2 radius-xxs" src="/web-layout-training-vite/assets/comment2-1-3023822e.png"
+                                            alt="photo" style="width: 56px;height: 56px;">
+                                        <img class="img-fluid me-2 radius-xxs" src="/web-layout-training-vite/assets/comment2-2-57c5a9b2.png"
+                                            alt="photo" style="width: 56px;height: 56px;">
+                                        <img class="img-fluid me-2 radius-xxs" src="/web-layout-training-vite/assets/comment2-3-b3c9b228.png"
+                                            alt="photo" style="width: 56px;height: 56px;">
+                                        <p class="body-text-sm text-neutrals-400 fw-bold">+2</p>
+                                    </div>
+                                    <div class="d-flex align-items-center mt-4">
+                                        <img class="me-2" src="/web-layout-training-vite/assets/size_40x40_ img_user B-8d3e8fc2.png"
+                                            alt="photo" style="width: 40px;height: 40px;">
+                                        <div class="fw-bold">
+                                            <p class="body-text-sm">Tom Chen</p>
+                                            <div
+                                                class="bg-neutrals-100 rounded-pill py-1 px-2 text-center d-inline-block">
+                                                <p class="body-text-xxs text-neutrals-400">Lv.1</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex ms-auto">
+                                            <img src="/web-layout-training-vite/assets/thumb-a52bb86b.svg" alt="photo">
+                                            <p class="ms-1 text-neutrals-400">66</p>
+                                        </div>
+                                    </div>
+                                </section>
+                                <!-- 查看安全評論 -->
+                                <div class="offcanvas offcanvas-end w-100 mt-15" tabindex="-1"
+                                    id="offcanvasSafetyComments" aria-labelledby="offcanvasSafetyCommentsLabel"
+                                    style="height: calc(100vh - 50px)" data-bs-backdrop="false">
+                                    <div class="offcanvas-header text-center position-relative">
+                                        <button type="button" class="text-reset border-0 bg-white position-absolute"
+                                            data-bs-dismiss="offcanvas" aria-label="Close">
+                                            <img src="/web-layout-training-vite/assets/arrowLeft-0424e10f.svg" alt="photo">
+                                        </button>
+                                        <h5 class="offcanvas-title w-100" id="offcanvasSafetyCommentsLabel">查看安全評論</h5>
+                                    </div>
+                                    <div class="offcanvas-body">
+                                        <div class="d-flex justify-content-between">
+                                            <div class="d-flex bg-brand-50 rounded-pill px-3 py-2">
+                                                <img class="me-1" src="/web-layout-training-vite/assets/emojiHappy-bb064ef8.svg"
+                                                    alt="photo">
+                                                <p class="body-text-sm text-brand-500">安全</p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <p class="body-text-sm me-2 text-neutrals-400">2024 年 8 月 5 日到訪</p>
+                                                <img src="/web-layout-training-vite/assets/dot-1ff21c4e.svg" alt="icon">
+                                            </div>
+                                        </div>
+                                        <p class="mt-4 body-text-md pb-4 border-bottom">
+                                            保全措施非常嚴密，入口處設有安檢和24小時監控，讓人感到非常安心，這家飯店非常適合親子旅遊！下次帶爸媽來～
+                                        </p>
+                                        <div class="d-flex align-items-center mt-4 mb-6">
+                                            <img class="me-2" src="/web-layout-training-vite/assets/size_40x40_ img_user C-6c1d72dd.png"
+                                                alt="photo" style="width: 40px;height: 40px;">
+                                            <div class="fw-bold">
+                                                <p class="body-text-sm">林孟潔</p>
+                                                <div
+                                                    class="bg-neutrals-100 rounded-pill py-1 px-2 text-center d-inline-block">
+                                                    <p class="body-text-xxs text-neutrals-400">Lv.1</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex ms-auto">
+                                                <img src="/web-layout-training-vite/assets/thumb-a52bb86b.svg" alt="photo">
+                                                <p class="ms-1 text-neutrals-400">66</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center overflow-auto">
+                                            <img class="img-fluid me-4 radius-xxs"
+                                                src="/web-layout-training-vite/assets/comment1-1-cd807cbc.png" alt="photo"
+                                                style="width: 300px;height: 300px;">
+                                            <img class="img-fluid me-4 radius-xxs"
+                                                src="/web-layout-training-vite/assets/comment1-2-3a25eec3.png" alt="photo"
+                                                style="width: 300px;height: 300px;">
+                                            <img class="img-fluid radius-xxs" src="/web-layout-training-vite/assets/comment1-3-d5b73d52.png"
+                                                alt="photo" style="width: 300px;height: 300px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 官方動態 -->
+                <div class="tab-pane fade" id="pills-official" role="tabpanel" aria-labelledby="pills-official-tab">
+                    <!-- 警告 -->
+                    <a class="bg-warning-50 p-4 radius-m d-block text-neutrals-950" data-bs-toggle="offcanvas"
+                        href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-exclamation-square-fill text-warning fs-5 me-2"></i>
+                            <p class="fw-bold body-text-md">泰國反政府運動</p>
+                        </div>
+                        <p class="my-1">曼谷民主紀念碑・500公尺</p>
+                        <p>更新時間：30 分鐘前</p>
+                    </a>
+                    <!-- 警告內文 -->
+                    <div class="offcanvas offcanvas-end w-100 mt-15" tabindex="-1" id="offcanvasExample"
+                        style="height: calc(100vh - 85px)" aria-labelledby="offcanvasExampleLabel"
+                        data-bs-backdrop="false">
+                        <div class="offcanvas-header py-3 justify-content-between align-items-center">
+                            <button type="button" class="border-0 bg-white" data-bs-dismiss="offcanvas"
+                                aria-label="Close">
+                                <img src="/web-layout-training-vite/assets/arrowLeft-0424e10f.svg" alt="photo">
+                            </button>
+                            <h5 class="offcanvas-title body-text-lg" id="offcanvasExampleLabel">泰國反政府運動</h5>
+                            <button type="button" class="border-0 bg-white" data-bs-dismiss="offcanvas"
+                                aria-label="Close">
+                                <img src="/web-layout-training-vite/assets/dot-1ff21c4e.svg" alt="photo">
+                            </button>
+                        </div>
+                        <div class="offcanvas-body py-6">
+                            <p class="text-center body-text-sm text-neutrals-700 mb-4">更新時間：10 分鐘前</p>
+                            <div class="bg-neutrals-50 p-4 radius-m shadow-sm mb-4">
+                                <h6 class="mb-1 body-text-md">地區範圍</h6>
+                                <p class="body-text-sm mb-2 text-neutrals-700">曼谷民主紀念碑・500公尺</p>
+                                <div class="position-relative">
+                                    <img class="border-0 radius-m w-100" src="/web-layout-training-vite/assets/map-b7188461.png" alt="photo">
+                                    <img class="position-absolute bottom-0 end-0 m-3 bg-white rounded-circle p-1"
+                                        src="/web-layout-training-vite/assets/guide-d13afcff.svg" alt="photo">
+                                </div>
+                            </div>
+                            <div class="bg-neutrals-50 p-4 radius-m shadow-sm mb-4">
+                                <h6 class="mb-1 body-text-md">注意事項</h6>
+                                <p class="body-text-sm mb-2">曼谷進入緊戒狀態，現場許多鎮暴員警跟民眾發生衝突，泰警出動水炮車驅趕示威者，各地鐵站人滿為患，不宜前往。</p>
+                            </div>
+                            <div class="bg-neutrals-50 p-4 radius-m shadow-sm">
+                                <h6 class="mb-1 body-text-md">資訊來源</h6>
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <p class="body-text-sm">看見泰國</p>
+                                    <a class="link-neutrals-700 text-decoration-underline"
+                                        href="visionthai.net">visionthai.net</a>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <p class="body-text-sm">udn聯合新聞</p>
+                                    <a class="link-neutrals-700 text-decoration-underline"
+                                        href="travel.ettoday.net">travel.ettoday.net</a>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p class="body-text-sm">中央社</p>
+                                    <a class="link-neutrals-700 text-decoration-underline"
+                                        href="www.cna.com">www.cna.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 新聞 -->
+                    <div class="my-6">
+                        <!-- 第一則新聞 -->
+                        <a class="d-flex align-items-center mb-4" data-bs-toggle="offcanvas" href="#offcanvasNew1"
+                            role="button" aria-controls="offcanvasNew1">
+                            <img class="me-5" src="/web-layout-training-vite/assets/news1-df3dc51b.png" alt="news"
+                                style="width: 100%; max-width: 112px;">
+                            <div>
+                                <div class="d-flex align-items-center">
+                                    <img src="/web-layout-training-vite/assets/news-9bd898d9.svg" alt="news">
+                                    <p class="ms-1 body-text-xs text-neutrals-700">風傳媒</p>
+                                </div>
+                                <p class="mt-2 mb-4 text-neutrals-950 body-text-md">泰國動亂惡化 曼谷進入緊急狀態</p>
+                                <p class="body-text-xs text-neutrals-400">1 小時前</p>
+                            </div>
+                        </a>
+                        <!-- 第一則新聞內文 -->
+                        <div class="offcanvas offcanvas-end w-100 mt-15" tabindex="-1" id="offcanvasNew1"
+                            style="height: calc(100vh - 85px);" aria-labelledby="offcanvasExampleLabel"
+                            data-bs-backdrop="false">
+                            <div class="offcanvas-header py-3 justify-content-between align-items-center">
+                                <button type="button" class="border-0 bg-white" data-bs-dismiss="offcanvas"
+                                    aria-label="Close">
+                                    <img src="/web-layout-training-vite/assets/arrowLeft-0424e10f.svg" alt="photo">
+                                </button>
+                                <h5 class="offcanvas-title body-text-lg" id="offcanvasExampleLabel">相關新聞</h5>
+                                <button type="button" class="border-0 bg-white" data-bs-dismiss="offcanvas"
+                                    aria-label="Close">
+                                    <img src="/web-layout-training-vite/assets/dot-1ff21c4e.svg" alt="photo">
+                                </button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <div class="py-6">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <img src="/web-layout-training-vite/assets/news-9bd898d9.svg" alt="news">
+                                        <p class="body-text-sm text-neutrals-700">風傳媒</p>
+                                    </div>
+                                    <h4 class="heading-xs mb-2">泰國動亂惡化 曼谷進入緊急狀態</h4>
+                                    <p class="body-text-sm">2024 年 1 月 21 日・下午 7:30</p>
+                                    <img class="img-fluid my-4" src="/web-layout-training-vite/assets/news1-2-fce83c7e.png" alt="photo">
+                                    <p class="body-text-md">
+                                        泰國反政府陣營「封鎖曼谷」行動進入第9天，政府21日強硬表態，宣布自22日起，曼谷與周邊省份進入60天緊急狀態，授權安全單位實施宵禁、拘留未經起訴的嫌疑人士、進行新聞檢查、禁止5人以上的政治集會、封鎖曼谷部分市區。
+                                        <br><br>
+                                        情報發現有武器與爆炸物正運入曼谷，反政府抗議活動可能出現更多暴力事件，陸軍已提高警戒，發言人溫泰表示，一個居心不良的團體正在動員武器和炸彈，準備挑起暴力、攻擊對手。
+                                        <br><br>
+                                        針對泰國發佈進入緊急狀態，外交部決定不調整對泰旅遊警示，維持在原來的黃色。外交部發言人高安表示，由於泰國看守政府尚未公佈緊急狀態實施辦法，我駐泰代表處仍在密切關注情勢展，再回報部內做進一步決定。
+                                    </p>
+                                </div>
+                                <!-- 其他新聞 -->
+                                <p class="body-text-md fw-bold">其他相關新聞</p>
+                                <div class="py-4">
+                                    <!-- 第二則新聞 -->
+                                    <div class="d-flex align-items-center mb-4">
+                                        <img class="me-5" src="/web-layout-training-vite/assets/news2-8af8028f.png" alt="news"
+                                            style="width: 100%; max-width: 112px;">
+                                        <div>
+                                            <div class="d-flex align-items-center">
+                                                <img src="/web-layout-training-vite/assets/news-9bd898d9.svg" alt="news">
+                                                <p class="ms-1 body-text-xs text-neutrals-700">中央社</p>
+                                            </div>
+                                            <p class="mt-2 mb-4 text-neutrals-950 body-text-md">泰國連續8天反政府示威 抗議者高呼總理下台
+                                            </p>
+                                            <p class="body-text-xs text-neutrals-400">5 小時前</p>
+                                        </div>
+                                    </div>
+                                    <!-- 第三則新聞 -->
+                                    <div class="d-flex align-items-center mb-4">
+                                        <img class="me-5" src="/web-layout-training-vite/assets/news3-34efec1d.png" alt="news"
+                                            style="width: 100%; max-width: 112px;">
+                                        <div>
+                                            <div class="d-flex align-items-center">
+                                                <img src="/web-layout-training-vite/assets/news-9bd898d9.svg" alt="news">
+                                                <p class="ms-1 body-text-xs text-neutrals-700">看見泰國</p>
+                                            </div>
+                                            <p class="mt-2 mb-4 text-neutrals-950 body-text-md">泰國反政府運動被視為非法集會
+                                                總理宣布曼谷進入緊急狀態 追查對王室不敬者
+                                            </p>
+                                            <p class="body-text-xs text-neutrals-400">6 小時前</p>
+                                        </div>
+                                    </div>
+                                    <!-- 第四則新聞 -->
+                                    <div class="d-flex align-items-center mb-4">
+                                        <img class="me-5" src="/web-layout-training-vite/assets/news4-5f1de808.png" alt="news"
+                                            style="width: 100%; max-width: 112px;">
+                                        <div>
+                                            <div class="d-flex align-items-center">
+                                                <img src="/web-layout-training-vite/assets/news-9bd898d9.svg" alt="news">
+                                                <p class="ms-1 body-text-xs text-neutrals-700">香港經濟日報</p>
+                                            </div>
+                                            <p class="mt-2 mb-4 text-neutrals-950 body-text-md">單日破紀錄近2.2萬確診 爆發反政府示威</p>
+                                            <p class="body-text-xs text-neutrals-400">8 小時前</p>
+                                        </div>
+                                    </div>
+                                    <!-- 第五則新聞 -->
+                                    <div class="d-flex align-items-center">
+                                        <img class="me-5" src="/web-layout-training-vite/assets/news5-d556a16a.png" alt="news"
+                                            style="width: 100%; max-width: 112px;">
+                                        <div>
+                                            <div class="d-flex align-items-center">
+                                                <img src="/web-layout-training-vite/assets/news-9bd898d9.svg" alt="news">
+                                                <p class="ms-1 body-text-xs text-neutrals-700">青年日報</p>
+                                            </div>
+                                            <p class="mt-2 mb-4 text-neutrals-950 body-text-md">「金色眼鏡蛇24」聯演強化印太區域衝突應變
+                                            </p>
+                                            <p class="body-text-xs text-neutrals-400">1 小時前</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 第二則新聞 -->
+                        <div class="d-flex align-items-center mb-4">
+                            <img class="me-5" src="/web-layout-training-vite/assets/news2-8af8028f.png" alt="news"
+                                style="width: 100%; max-width: 112px;">
+                            <div>
+                                <div class="d-flex align-items-center">
+                                    <img src="/web-layout-training-vite/assets/news-9bd898d9.svg" alt="news">
+                                    <p class="ms-1 body-text-xs text-neutrals-700">中央社</p>
+                                </div>
+                                <p class="mt-2 mb-4 text-neutrals-950 body-text-md">泰國連續8天反政府示威 抗議者高呼總理下台</p>
+                                <p class="body-text-xs text-neutrals-400">5 小時前</p>
+                            </div>
+                        </div>
+                        <!-- 第三則新聞 -->
+                        <div class="d-flex align-items-center mb-4">
+                            <img class="me-5" src="/web-layout-training-vite/assets/news3-34efec1d.png" alt="news"
+                                style="width: 100%; max-width: 112px;">
+                            <div>
+                                <div class="d-flex align-items-center">
+                                    <img src="/web-layout-training-vite/assets/news-9bd898d9.svg" alt="news">
+                                    <p class="ms-1 body-text-xs text-neutrals-700">看見泰國</p>
+                                </div>
+                                <p class="mt-2 mb-4 text-neutrals-950 body-text-md">泰國反政府運動被視為非法集會 總理宣布曼谷進入緊急狀態 追查對王室不敬者
+                                </p>
+                                <p class="body-text-xs text-neutrals-400">6 小時前</p>
+                            </div>
+                        </div>
+                        <!-- 第四則新聞 -->
+                        <div class="d-flex align-items-center mb-4">
+                            <img class="me-5" src="/web-layout-training-vite/assets/news4-5f1de808.png" alt="news"
+                                style="width: 100%; max-width: 112px;">
+                            <div>
+                                <div class="d-flex align-items-center">
+                                    <img src="/web-layout-training-vite/assets/news-9bd898d9.svg" alt="news">
+                                    <p class="ms-1 body-text-xs text-neutrals-700">香港經濟日報</p>
+                                </div>
+                                <p class="mt-2 mb-4 text-neutrals-950 body-text-md">單日破紀錄近2.2萬確診 爆發反政府示威</p>
+                                <p class="body-text-xs text-neutrals-400">8 小時前</p>
+                            </div>
+                        </div>
+                        <!-- 第五則新聞 -->
+                        <div class="d-flex align-items-center">
+                            <img class="me-5" src="/web-layout-training-vite/assets/news5-d556a16a.png" alt="news"
+                                style="width: 100%; max-width: 112px;">
+                            <div>
+                                <div class="d-flex align-items-center">
+                                    <img src="/web-layout-training-vite/assets/news-9bd898d9.svg" alt="news">
+                                    <p class="ms-1 body-text-xs text-neutrals-700">青年日報</p>
+                                </div>
+                                <p class="mt-2 mb-4 text-neutrals-950 body-text-md">「金色眼鏡蛇24」聯演強化印太區域衝突應變</p>
+                                <p class="body-text-xs text-neutrals-400">1 小時前</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </main>
+        <!-- 發布評論 -->
+        <!-- 按鈕 -->
+        <a class="position-fixed bottom-0 end-0 bg-brand-500 rounded-circle p-4 mb-30 me-6" data-bs-toggle="offcanvas"
+            href="#offcanvasPostComment" role="button" aria-controls="offcanvasExample">
+            <img src="/web-layout-training-vite/assets/add-2c76a58a.svg" alt="add">
+        </a>
+        <!-- 發布評論內容 -->
+        <section class="offcanvas offcanvas-end mt-15 w-100" tabindex="-1" id="offcanvasPostComment" data-bs-backdrop="false"
+            aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header text-center position-relative">
+                <button type="button" class="text-reset border-0 bg-white position-absolute" data-bs-dismiss="offcanvas"
+                    aria-label="Close">
+                    <img src="/web-layout-training-vite/assets/arrowLeft-0424e10f.svg" alt="photo">
+                </button>
+                <h5 class="offcanvas-title w-100" id="offcanvasSafetyCommentsLabel">發佈安全評論</h5>
+            </div>
+            <div class="offcanvas-body d-flex flex-column">
+                <div class="d-flex justify-content-between align-items-center mb-6">
+                    <div class="d-flex align-items-center">
+                        <i class="bi bi-geo-alt-fill me-2 text-neutrals-600"></i>
+                        <p class="fw-bold body-text-sm">選取地點</p>
+                        <span class="text-danger-error-600 align-self-start">*</span>
+                    </div>
+                    <!-- 選取地點按鈕 -->
+                    <a data-bs-toggle="offcanvas" href="#offcanvasSelectPlace" role="button"
+                        aria-controls="offcanvasExample">
+                        <i class="bi bi-chevron-right text-neutrals-400"></i>
+                    </a>
+                </div>
+                <div class="d-flex align-items-center mb-3">
+                    <i class="bi bi-shield-shaded me-2 text-neutrals-600"></i>
+                    <p class="fw-bold body-text-sm">安全狀況</p>
+                    <span class="text-danger-error-600 align-self-start">*</span>
+                </div>
+                <div class="d-flex mb-6">
+                    <button class="btn btnSafety body-text-sm d-flex align-items-center me-2" type="button">
+                        <i class="safety fs-6 me-1"></i>
+                        安全
+                    </button>
+                    <button class="btn btnOrdinary body-text-sm d-flex align-items-center me-2" type="button">
+                        <i class="ordinary fs-6 me-1"></i>
+                        普通
+                    </button>
+                    <button class="btn btnWrining body-text-sm d-flex align-items-center" type="button">
+                        <i class="wrining fs-6 me-1"></i>
+                        留心
+                    </button>
+                </div>
+                <div class="position-relative mb-6">
+                    <label for="enterShare" class="d-flex align-items-center mb-3">
+                        <i class="bi bi-chat-right-text-fill me-2 text-neutrals-600"></i>
+                        <p class="fw-bold body-text-sm">輸入文字</p>
+                    </label>
+                    <textarea class="enterShare form-control radius-m bg-neutrals-50 border-0 py-3 px-5 body-text-sm" style="resize:none;width:100%;height:136px;" id="enterShare" placeholder="分享安全體驗"></textarea>
+                    <img class="position-absolute bottom-0 ms-5 mb-3" src="/web-layout-training-vite/assets/img-1f25b587.svg" alt="photo">
+                    <img class="position-absolute bottom-0 ms-14 mb-3" src="/web-layout-training-vite/assets/camera-833f51b2.svg" alt="photo">
+                    <p class="position-absolute bottom-0 end-0 me-5 mb-3 text-neutrals-400 body-text-xs">0/200</p>
+                </div>
+                <div class="d-flex align-items-center mb-3">
+                    <i class="bi bi-clock-fill me-2 text-neutrals-600"></i>
+                    <p class="fw-bold body-text-sm">何時到訪</p>
+                    <span class="text-danger-error-600 align-self-start">*</span>
+                </div>
+                <div class="d-flex mb-auto">
+                    <button class="btn btnBlue body-text-sm me-2" type="button">
+                        2024/08/05
+                    </button>
+                    <button class="btn btnBlue body-text-sm me-2" type="button">
+                        一週內
+                    </button>
+                    <button class="btn btnBlue body-text-sm me-2" type="button">
+                        上個月
+                    </button>
+                    <button class="btn btnBlue body-text-sm" type="button">
+                        半年內
+                    </button>
+                </div>
+                <button type="button" class="btn btn-neutrals-300 text-white rounded-pill" disabled>發佈評論</button>
+            </div>
+        </section>
+         <!-- 選取地點內容 -->
+         <div class="offcanvas offcanvas-end w-100" tabindex="-1" id="offcanvasSelectPlace"
+         aria-labelledby="offcanvasExampleLabel">
+         <div class="offcanvas-header text-center position-relative">
+             <h5 class="offcanvas-title w-100" id="offcanvasSafetyCommentsLabel">選取地點</h5>
+             <button type="button" class="text-reset border-0 bg-white position-absolute"
+             data-bs-toggle="offcanvas"
+             data-bs-target="#offcanvasPostComment">
+                 <img src="/web-layout-training-vite/assets/arrowLeft-0424e10f.svg" alt="photo">
+             </button>
+         </div>
+         <div class="offcanvas-body">
+            <form class="position-relative mb-4">
+                <input class="form-control rounded-pill border-0 shadow-sm py-3 ps-13" type="text"
+                    placeholder="搜尋目的地" aria-label="default input example">
+                <img class="position-absolute top-50 start-0 translate-middle-y ms-4"
+                    src="/web-layout-training-vite/assets/search-6dde0f49.svg" alt="photo">
+            </form>
+            <section class="d-flex align-items-center w-100 mb-4">
+                <div class="bg-neutrals-50 p-2 radius-xxs me-4">
+                    <i class="bi bi-geo-alt-fill fs-4 text-neutrals-400"></i>
+                </div>
+                <div class="text-truncate">
+                    <p class="body-text-sm">Akara Bangkok Hotel</p>
+                    <p class="text-neutrals-400 body-text-xs text-truncate">20公尺<span class="mx-2">．</span>991/1 Rama I Rd, Pathum Wan, Bangkok 10330泰國</p>
+                </div>
+            </section>
+            <section class="d-flex align-items-center w-100 mb-4">
+                <div class="bg-neutrals-50 p-2 radius-xxs me-4">
+                    <i class="bi bi-geo-alt-fill fs-4 text-neutrals-400"></i>
+                </div>
+                <div class="text-truncate">
+                    <p class="body-text-sm">曼吞哇那南寺</p>
+                    <p class="text-neutrals-400 body-text-xs text-truncate">290公尺<span class="mx-2">．</span>969 Rama I Rd, Khwaeng Pathum Wan, Pathum Wan, Bangkok 10330泰國</p>
+                </div>
+            </section>
+            <section class="d-flex align-items-center w-100 mb-4">
+                <div class="bg-neutrals-50 p-2 radius-xxs me-4">
+                    <i class="bi bi-geo-alt-fill fs-4 text-neutrals-400"></i>
+                </div>
+                <div class="text-truncate">
+                    <p class="body-text-sm">曼央世界購物商場</p>
+                    <p class="text-neutrals-400 body-text-xs text-truncate">450公尺<span class="mx-2">．</span>999/9 Rama I Rd, Pathum Wan, Bangkok 10330泰國</p>
+                </div>
+            </section>
+            <section class="d-flex align-items-center w-100 mb-4">
+                <div class="bg-neutrals-50 p-2 radius-xxs me-4">
+                    <i class="bi bi-geo-alt-fill fs-4 text-neutrals-400"></i>
+                </div>
+                <div class="text-truncate">
+                    <p class="body-text-sm">曼面佛</p>
+                    <p class="text-neutrals-400 body-text-xs text-truncate">650公尺<span class="mx-2">．</span>991/1 Rama I Rd, Pathum Wan, Bangkok 10330泰國</p>
+                </div>
+            </section>
+            <section class="d-flex align-items-center w-100 mb-4">
+                <div class="bg-neutrals-50 p-2 radius-xxs me-4">
+                    <i class="bi bi-geo-alt-fill fs-4 text-neutrals-400"></i>
+                </div>
+                <div class="text-truncate">
+                    <p class="body-text-sm">曼谷彩虹雲霄酒店觀景台</p>
+                    <p class="text-neutrals-400 body-text-xs text-truncate">750公尺<span class="mx-2">．</span>222 Ratchaprarop Rd, Khwaeng Thanon Phaya Thai, Khet Ratchathewi, Krung Thep Maha Nakhon 10400泰國</p>
+                </div>
+            </section>
+            <section class="d-flex align-items-center w-100 mb-4">
+                <div class="bg-neutrals-50 p-2 radius-xxs me-4">
+                    <i class="bi bi-geo-alt-fill fs-4 text-neutrals-400"></i>
+                </div>
+                <div class="text-truncate">
+                    <p class="body-text-sm">曼谷市立藝術文化中心</p>
+                    <p class="text-neutrals-400 body-text-xs text-truncate">900公尺<span class="mx-2">．</span>939 Rama I Rd, Wang Mai, Pathum Wan, Bangkok 10330泰國</p>
+                </div>
+            </section>
+            <section class="d-flex align-items-center w-100 mb-4">
+                <div class="bg-neutrals-50 p-2 radius-xxs me-4">
+                    <i class="bi bi-geo-alt-fill fs-4 text-neutrals-400"></i>
+                </div>
+                <div class="text-truncate">
+                    <p class="body-text-sm">曼門市場 (白金時尚購物中心)</p>
+                    <p class="text-neutrals-400 body-text-xs text-truncate">1.3公里<span class="mx-2">．</span>222 Phetchaburi Rd, Thanon Phaya Thai, Ratchathewi, Bangkok 10400泰國</p>
+                </div>
+            </section>
+            <section class="d-flex align-items-center w-100 mb-30">
+                <div class="bg-neutrals-50 p-2 radius-xxs me-4">
+                    <i class="bi bi-geo-alt-fill fs-4 text-neutrals-400"></i>
+                </div>
+                <div class="text-truncate">
+                    <p class="body-text-sm">曼普生博物館</p>
+                    <p class="text-neutrals-400 body-text-xs text-truncate">1.2公里<span class="mx-2">．</span>6 Kasem San 2 Alley, Wang Mai, Pathum Wan, Bangkok 10330泰國</p>
+                </div>
+            </section>
+         </div>
+     </div>
+<img src="/web-layout-training-vite/assets/emojiSad-6bf79f28.svg" alt="">
+
+        <!-- footerNavbar -->
+<nav class="footerNavbar bg-white pt-2 pb-10 fixed-bottom">
+  <div class="container">
+    <ul
+      class="nav nav-pills justify-content-between body-text-xxs"
+      id="pills-tab"
+      role="tablist"
+    >
+      <li class="nav-item" role="presentation">
+        <a
+          class="nav-link fw-bold link-neutrals-400 d-flex flex-column align-items-center fw-bold link "
+          href="index.html"
+          aria-selected="false"
+        >
+          <i class="bi bi-geo-alt-fill mb-1 fs-4"></i>
+          地圖
+        </a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a
+          class="nav-link fw-bold link-neutrals-400 d-flex flex-column align-items-center fw-bold link active"
+          href="latestNews.html"
+          aria-selected="false"
+        >
+          <i class="footIcon-barChart mb-1 fs-4"></i>
+          最新動態
+        </a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a
+          class="nav-link fw-bold link-neutrals-400 d-flex flex-column align-items-center fw-bold link "
+          href="travel.html"
+          aria-selected="false"
+        >
+          <i class="footIcon-document mb-1 fs-4"></i>
+          旅遊資訊
+        </a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a
+          class="nav-link fw-bold link-neutrals-400 d-flex flex-column align-items-center fw-bold link "
+          href="member.html"
+          aria-selected="false"
+        >
+          <i class="bi bi-person-fill mb-1 fs-4"></i>
+          會員
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<a
+  href="index.html"
+  id="pills-map"
+  role="tabpanel"
+  aria-labelledby="pills-map-tab"
+></a>
+<!-- footer -->
+<footer class="container pt-5 pb-2 fixed-bottom">
+  <div class="footerLine"></div>
+</footer>
+
+            
+</body>
+
+</html>

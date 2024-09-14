@@ -5,11 +5,1289 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>首頁</title>
-    <script type="module" crossorigin src="/AAPDxHex-team19/assets/index-ebea71a3.js"></script>
-    <link rel="stylesheet" href="/AAPDxHex-team19/assets/index-8c1ba80a.css">
+    <script type="module" crossorigin src="/web-layout-training-vite/assets/main-2b7d48d2.js"></script>
+    <link rel="stylesheet" href="/web-layout-training-vite/assets/main-46ef6951.css">
   </head>
   <body>
-     
+    <section class="container mapIndex">
+      <div class="row">
+        <div class="col-12">
+          <div class="draggable-background">
+             <!-- 手機電量資訊 -->
+ <header class="container sticky-top">
+    <div class="py-5 d-flex justify-content-between align-items-center">
+        <time class="fw-semibold" datetime="9:41">9:41</time>
+        <div>
+            <i class="bi bi-reception-4"></i>
+            <i class="bi bi-wifi mx-2"></i>
+            <i class="bi bi-battery-full"></i>
+        </div>
+    </div>
+</header>            <div class="text-center">
+              <div class="input-wrapper radius-m search-width">
+                <img
+                  id="searchBtn"
+                  src="/web-layout-training-vite/assets/search_liner-a53eb0d4.svg"
+                  alt="搜索圖標"
+                  class="input-img"
+                />
+
+                <input
+                  type="text"
+                  id="search"
+                  placeholder="搜尋目的地"
+                  class="input-input radius-m search-width"
+                />
+              </div>
+            </div>
+
+            <div class="d-flex scrollable-container justify-content-center">
+              <div class="d-flex align-items-center" style="padding-left: 55px">
+                <div class="policeStationLabelWrap">
+                  <img
+                    src="data:image/png;base64,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"
+                    alt="policeStationLabel"
+                    id="policeStationLabelImg"
+                  />
+                </div>
+                <div class="hospitalLabelWrap">
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEwAAAApCAYAAACfrs/CAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAi0SURBVHgB7VpJiFRHGP7f655pR0djUJBRyXgQHRVyESWeMrjcIiguB8HlkszBeAy4HFSSGYUc1YM3l9xE9BhBRRKQ4AJxBh0VkRGXmzij44jLdOX/yvqr/1f9uvt1jyQ68Yfqeq+qXi1f/1tV/USf6T+lSOX22RgjKar0EeqD76IK/VJKvR5TxomQ63Hl/V8jGVwmpCYpKQ7e/cSlTn2f2rZaP0j79u2LVZ96LlEAVFSl/0p/SiaK62gbMdkf90+lDR7zohLl+/fvx0Ll+2jjxo0yZrVFRLofzRkoR5/St8wFtGHDhhi51KMtEsr1OwXcSGMAsIwUR8ig9pknkeM85/K85J2dnXnkOi1evLhJ1yF3z7mwXL7R9bp/nVSbnG6rv5V56rZYgyu3a8F7NZVRD2kxicOJcWpyYDTJ88KFC5v5uVneXX0zynWdy3WZTdI+SE1hW90u6Dv1W7QHaDJf9afFAiKNhdsUu3puIsctanIFlyboNHfuXFs2Z84cXW7burKCKkttr54LUu/yxHjSbvbs2S14lrbBuBPUXAsB6Jb7AZhwmtKDmUk+SACVAlJLW1vbROScJmZIk5C7bybqZ+SSwjbVUlo7XTZjxgw/JkB1c52g/jjhwrwS04pclk8Dy/5E79szUPH169fp1atXlttOnz795apVq75ramr6Np/Pf0WfIBWLxQe8nj+nTp36G16ReJ106tQpVHsLA6aBjavVn+isnMi8sPnw8PBP3MkzM06IgRt4/vz59wG3eWMgoKWiZJL+i+gtK4bokP+RX8w4pZcvX3Y7cRW9JkagpvX03MUp75T7uAZLCNJD7/Uy1pxXnFaRw7zP5cwtkC709vZ2mP8BsXgOnjx5ss2pnyYqGbyEAfCeNX/z3pUPfK83b978ygr+R6pCr1+/JhiGp0+fUhaaPHkyjInNPyYaGRnpmTRp0s8sWcVbt24VWSyRROn77U2YW7AY6fjevXvx6OjoX3Ecf11toHPnztHAwADVQzNnzqTVq1en1l24cIFYGSfKVq5cSSdOnLDPAHrLli2+7syZMzafMmUKLV261P8RaI/3jo4OykLMZb3t7e3fPHr0qMhSNnrp0iUDwBxoJcCMU2yKwywrsiKMHz58OFJroKNHj1Ij1NXVlVq+bds22rx5M125coUWLFhAra2txHOxAGzfvp327NljcwADMNjNoTVr1tDZs2dtLgTgUT9r1iz7vmLFiqrgMQ5DzBxt5FwNlXyTcPMdMbJeXhnpejbnCcJi1q1bR+vXr29I9LDYFy9e0Pnz54kVMh04cMByy+PHjy13gqukX7wLgEIoA+hLliyxz7dv37apGjG/fIGMpcu+AwvjjqeEygDhSVrA2JWI2Dtu+ACJv6Xp06fTtGnT7HO9BE4BYEjgil27dtGRI0csYFg4gBDOAQFgAARw0v4g9IG6LPTu3buI9VjEIgmhwwkIQLNYWE/febMAygPEOqmhTWihUKDm5mab6zIsgg2INRBZSECBSAIMcBBEii2ZXfjatWsT7QEkwEU7tA+5qZY4KoqUPjbsj9odgFNXCadMK/wcK3yryxjY4VojiA4DUNVEEAvirZUHrZIOg65CW03oE2VYOMQRgBw+fNiWb926lY4fP047duygnTt3UiWCUailHhiXVs5GOUHxF5nLoMO8pUzsJRnN6P79+xG7CAYiWa/lE06qRFl0mYicEJ7BUdBjUg+COOJZcw3KoPhRfvHiRVq+fDldvXqV5s+fb8GCmEMP1qCI1+6tPjBhDgNolrkSgHGFmM8Icsw7faqHwAGXL1+2egvgiM548uSJrYOfVksksWiAAKAEFCzW6RFfJhZSCGKIdOjQIW85e3p6aPfu3VmBEjIOrMhhktiEC2D26PbmzZtAk1gkAZhhK0n1Ul9fn83nzZvnAbtz5w7dvXs3cx8AVxQ6wMLC4WIAEN1GEwDs7u62YIklDfvMaq0dhxkWR3AYirxuF8CMO3cHRay/yoxAvQQFn/aclQCQcBusIwjgVSLhIABz8ODBhD8G6u/vt+IJo1CDwGGGrSSxt2+lTu4xkFnAHMv5D4K8IQJbYwcAsCCS9RK4QbsNWQicBcUPsMSKog8ACCDBgVmJwdLnYv580Hv6riA8w495u9DPde3VOj927Fhmd0EIgGzatCm1TvRWNWuLrZMACn0n+qwe0QtJPH1WSUWWMvHy/baIUjx963dgYywN375921droGXLllE9BGvqxkglAFHL2mru08p/LBt63jf/yfrLQCWxS2FBMiU3P7H5DrlMzoFiFqdO9tR/rzWYeOVZCFZUO7YfCw0NDXXxsTV2+PDDwDxm0aJFZu/evSb1qNqU7iDlHs8eIDKX/WHGOTF33aDSAaKch1U/QHSVkbo09YeIOP8245SwtmvXrkGu5Vzf3leaZFhEGaVd2gqXFdDheASN13TDgRUeT2e+n9TA5YL7yJbBwcEfeJC/zSdOEEHcVbjLDw+WXFqrm/AycCqVlZ3CwpljvwqObYT7SbaO/iSWJ2Db53K5hHKUciHU67Zh/Ycg6Tct5xuiIVYxD/is7plrbpgpitg/Q8m7rVAxxS+tTMbJrlw1UTJoRN9+62v5FpW36Ct8KdNtdblr2xL2kZLC/nw/KeOE5YnwAyrFath1qXCIxgJTTDKkKXbg2WgdHdQhgSBBvIV9djcwGuC0YBFbF/Sj2xdUP/4btFOxFhqAQjgPSga++HgKKt0MCUhaDBvi/DB+SkfwiFHI6XAlCVYRQCXUiUpW16cgNEqHRCXCo1QUUCJ8SreX6BzdF1UOjfLBJ1QewDdmCqP69CB+CwXOU8EcidgrKQsUqs8p+UdUes6p/nJhm7BvkQRKXv37Pkx59CLRBwIsjbSO06wcpcRZ6UmVhVOG72nfh9+aKiGZ+s+VvsI+TTLmtu7QpkZJNu6JgFut+4wKzDUpTmDKd7pMh2qGFls/p4Eftk3r5zN9po+Q/gEl7TJjYlggGwAAAABJRU5ErkJggg=="
+                    alt="hospitalLabel"
+                    id="hospitalLabelImg"
+                  />
+                </div>
+                <div class="pharmacyLabelWrap">
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEwAAAApCAYAAACfrs/CAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAhzSURBVHgB7VpLi1VHEK5z7mtmZMSgIqOScSE4CmYjSlzFJ9lEUER3PjbJwscyoK4UEv9AENyq2YkoztIHkoDGF8QRjILIiC9cOepMfM3cTn09XT11+p5z7rlXSeJoQd/u012nT/d3q6qru4voM/2nFKnclo0xkqKsl9AevBdl9Esp7fqb8p0Iuf6uPP9rJB+XAalBSoqDZz9waVPvp/Lm9YO0f//+WPWpxxIFQEU5/Wf9KYUoboE3YrI/7p9K+3jMk0rUHzhwABOV96PNmzfLN/MmEel+tGSgHn1K3zIW0KZNm2Lk0g5eJNTrZwqkkd4DwAZSEiEftWUeRInzksvLkq9YsaKMXKclS5ZUdBtyVy6F9fKObtf966R4SppXvyvj1LyYg6u3c8FznslohbSaxOHAOFUcGBUpL1q0qMrlqjy79irqdZvLdZ1Nwh+kSsir+YK+U98FP0CT8ao/LRYQ6X2kTYmrlyZy0qIGV3OpQ6f58+fbunnz5ul6y+vqaqoulV+Va9Lu8sT3hG/u3LmdKAtv8N0ONdZaALqVfgAmkqbsYGGSFxJApYDU2dPT04WcU1eBNAW5e6dLl5FLCnnyUhqfrps1a5b/JkB1Y+1Qf5xIYVmpaaaUldPAsj/ROD8DFV+/fp1evXplpe3EiRNfrF279rtKpfJNuVz+kj5Cqtfr93k+v0+bNu1XPCLxPOn48eNo9isMhAZrXLP+xGaVROdFzIeHh3/kTp6ZSUIM3OCLFy++D6TNLwYCWipKJum/iN2yaogO+R/5yUxSGhkZ+dmpq9g1WQSarp5eujiVnXGf1GAJQXto3C5jzmUlaZkS5n0ut9wC6drAwECf+QSI1XPo2LFjPc78VGhiwUtdAPSWRfwsK11v3779xXwiBNXEnJ1mlQPfzKtgmFvgGOn47t278djY2B9xHH9FbdLjx4/p5s2bxMDT9OnTafHixdTd3Z3J//LlS2JDbMunTp2iOXPm0NKlS+3z1atX6dGjR7R+/Xr7PHXqVN/XlStXcsexcOHC3O+CWMoGent7v3748GGdtWzswoULhkGzidzqqfdU45vF8TorimwI4wcPHvxNbdK1a9cILgn7QHawT548sfXr1q3LHPy5c+fo6NGjtgywQbNnz7Y52xkLpjzv3LmTli1bZkHcvn27Bzak8+fPE7tDFvw8Yhyes3D0kHM1VPIswugdVWe/xEGdYtoklgZz+PBhc/v2bV/35s0bw76OOX36dNP3jxw5Ys6ePWsuX76cKCM/efJkgpclwmzdujWzL7SBpwjxnLvEjgELE5zQNDiurBK2gV2JCBOkNkgkiz9ICxYs8PXVatWq5MWLFzPfhbRAFUF9fX20e/dumzPwtg1SBfWDlEG6hO7cuUPbtm1L7RNq3gqNjo5GbMciVkloHexYHWBCAS1gzpsFUB6gwcHBtjahAhbAgc0KCbasGQEQ2BwABBJVEzChWlBdAQyAAMCDBw/SB6CI5y5lw/6o3QE4c2UaJIwna5zBb1m6BCwQgOnv77f2asaMGbaOJdYuACy9mX0ADEgRDLzYMG179u7dayVp9erVFijYQtg18O7bty+zX0goqzS1QtAQmBBdpyXIHrTdu3cPe8eIJxUz0iWWxGEqQFAJiHBIkDQx8gAQQOYZfQCFiUOqUIbkaF4AgzrkWC3ZPllpg1SiHK6Wa9asse/z/pfOnDlDzYgFqZvnPspzx0pZnzlzJuzuGDkNTEiYQ9OqJ/SYd/pUlESyQhJJw6CbgQUCGDt27LBl2C7wYpVDrldBSBekDATpAS9UFryrVq2y9aK+RVwKRcappBUmqKNRm3B/XOyOci0Tq2TEJxHm6dOnVJTyDCuAKgJWSOA9dOiQBQRJFgNpE4JUiT0DcBs2bLBJVBkq28p3nckw0BjYMFK2XSTMuHN3UOTsV2IRKDK5LNDQVhQsTBJqJP4Y1Az9oh4SxNsXWyfOK+p0O0DVagnnFvUtSpjhVZJu3bpltU7uMZB5x9WdfyUcV+TcNlLkK7znpEuXLjXUtwIWCJK0a9cuKyEARqQMgAAkAQWA7tmzx6+k4EcZSaQNZZHQLVu2WJ5mxDjgwBE2Cw4rBMa7FHjOAkzOg2LeLvzFbb1UgPQqCYKHv3LlypbUIY0wcb0NaoUAFt5r5uWDjPP02STVWcvEy/fbItKePjmwcA6mjqM72BXoNy3Q69evDU/QsN0wHxu9e/eu3x0mVuWWySTvYRPoaunyxzu8fH9rPhEaGhr6gcbPxPwZf+4VnFFHPGpP2cHI/2YmOfGpzA2aOECU87D8A0StllrKcIiI828zSQlzY/vbRxPn+va+0mSpo6O0S1t/coEOJyNoPKcbDqzweLrw/aQGrhTcR3ZCz/kjf5qPnKCCuKtwlx8eLLm0VqetDeBk1TWcwsKZY48djm2E+8nly5f7k1gegOUvlUoJZ1fqhdCuecP2D0HSb1rOx9DP2cTc37hx4zPHblgo6jh0YLCM2wrV5V6WijjvxumuXDVRMmhE337ra/lOlXfqK3yp07y63vF2hn2kpLA/30/Kd8L6RPgBTcRq2HmpcIj2AlNMMqQpduDZaB0d1CGBIEG8hS27k0sNcFqwiG0L+tH8NdWPfwd8KtZCA1ALx0HJwBcfT0ETN0MCklbDtiQ/jJ/SETyyKJR0uJIEqwigEupEE6uuT0FolA6JSoRHqSigRPiU5pfoHN0XZYdG+eATagzge28Ko/r0R/wWCpKngjkSsVdSFxhUn1Pyj8gql1R/pZAn7Fs0gZJX/74P0xi9SPSBAEsjbeO0KEcpcVZ6UA3hlOFz2vvhuyYnJFP/udJX2KdJxty2HNrULsnGPRFwq22fUYG5JsUJTHlP1+lQzXDF1uU08EPetH4+02f6H9I/w+S6jDWpeRUAAAAASUVORK5CYII="
+                    alt="pharmacyLabel"
+                    id="pharmacyLabelImg"
+                  />
+                </div>
+                <div class="refugeLabelWrap">
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAAApCAYAAACx6+5QAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAoUSURBVHgB7VtJiFRLFr0vh8pKq9VuFMSBLgXRUqQ3orSL7nbe+Bcq6kJwWP2N7bJBXSndDtBbFVeOvRMHcNeoSDcunOB/Z0WkBAcEhXLGKePfczPuy/si38t6mcrn/28diIp4MdwX78SNG0PeIhrCrwqRiSXtnNMQZTVCedAuypBLKeX2nfqeCLF9rz4H7aOU56+KQt6K2ln9AKKmDhZMHtlyRoGDbV+wbQFq/simj9+6dWtB+0KeRC0z5Ek5REaRipYk/hRafLsdCDtIWYOeC7kJNp0MNcG+vMAkJPK3bdsGYrR9tGrVKjsQUYacyMoxGk7Ih0yVrX0BVq5ciYGMy1EXAfn+mYxcCvuqcnRUIMd8L1H2DOscRuO0k5LmThc5Lvq4pPHcuXNLiG2YOXNm2ZYh9ulimK9tbLmVb4OpU7R1bdu0fqW9P+hDMSUUbPA8fDHRdvoXwg/hUPbklTU9ffr0Lk536bMv70K+LfOxzZOg9YNQDuvaeoHs1KB9mTx5ciVoY2WXbd/9c6wg1FAoS3BnJBvbE2urvsx8TMWHbhv8R3RPnDjR5ktdn1cxean1Tbqi5T5OvE/rTZgwoYq01g3e253W1/AdeFYZpp9SpgMQaHhiLaE2oMY9QWwKqdWxY8cOQ8xhWI7Qg9i3GWbTiDWEdVqFtHo2b8yYMT1WfkqdnixZ5tt0IFSxdAaHJDehlEau/KnbeWJiC1euXKF3796JNh87duwPixYt+q5cLv+tVCr9kb4B1Gq1B+/fv//fiBEj/sOPjjU6unfvnmNtrp07d06rYSWEYjrlDkhjPVZ5FhC9evUqevHiRYEFRq9fv97Y09Ozhct+T98gmLsHzMF2JvoI1Qmt+eB8Och1WY2jFLsrZgH2iDX4X24IAnChNt9zBEsgpsI513KQdMcgdtcb9iFyU8Ca/A8QbHcYLbdurnGsLPiVEg0rV69e7XNDaALb5YEjR46MBUeG5CaCE0dNc2SN974fPnz4Ny9of6cOwPabeFGkrq4uWrx4MY0ePZp+S3j79u0OXpP+SUlbrAFw8VHZrnx4xEqJuFgs/pU6xLVr14hXXyEa6Tx49OgRnTlzRtJod/HiRQm3b9+Oy3fu3Jlog/LDhw9LesuWLXG+1jt58qS0U5lIhyGUh7ao2wrd3d3fsS0O71BEw7VOyefUazRIxjaEuDEVCoU/UYdgGyXEVioVSecBr9C0a9cuGj58uDzv2bOHZs+eLR+9du1aIQNknzhxghYuXChp1AcZGBg8r1u3jnbs2EGXLl0SGTyVadasWZJ++fKlyLTAu/QdaINnvEv7kAXmq/fz588643WbppagAdfYQRS9/dUDRY/rAM+ePXPnz593Bw4ccPv373dMSlvtHz586DZv3uwuXLjgdu/eLXn8we706dOSf/z4cXlGPeDWrVvu0KFDkt6wYYPEPABShzXR8UCIHNRT+TYw6SIXbZBuB/4wUvGclcIjdNNBA/ter30RT+/We47mtoSN9+PHjxP5OKiMGzcut5zx48eLBkKjML0RAwsWLBDNhbZB01APGg2z0NfXR8uXL5cY0/vs2bM0f/580VwmVmLUB9avXx/3h3cDNHXqVEkjbzCtDfHkyZMIXPX39wtXN27c0MOGPAvB/kHVXMAN2j5fg2CQC5MAwP4CyAPJvNrmkoFpDFOB9Jo1a2S6ArCzyMOUB2AOQAhIZc2VqY8YJgKzFISiHEHJVbDGS6yDCFjTBGAgIW8QuE+fPiW4yjrJxbsHXuCKOLlxusiD8ZpyAkSeOnWKpkyZQnfv3m0qR+cnTZpEc+bMyZQBDcUHgxAE2FX9aHwsCAbRSE+bNk3yobF4N7QZmoqAZ7WnGAjkLV26VEjjoz4dPHhQ2qJMF1XMEAwWiNa6Oezw76i+g/hMjZ1EzWtx8sKdT28Ra5mcs/MuShbYjgGYdhYrVqwQ0lXDW2HZsmViHgA1DaptShrkIIamKywRqkEgadOmTUIuZIIwBbQdAeSiHDJ1UFXrc5qLxMxH2l7qJ2zw0aNHdQ8XQe35JoraAfa5q1evhnmJiQTpMBXz5s2ToGZjMOjWCaZCAe3CR6tN1TJos+4sdEqjPTRdzQrMBkwNtBTQQVTs3bu3yYzkAXPkqtWqfDOlmNT45xv/04pUwB6Yb8rc06dPKS945yDkgQC7f+SDipgNlANqn1tBtQkk6CIGMkEwAsp0+kLLVRvv3LkTpwHVYCxiVoNDzcQ7OlnggIAjUU7mMrnIUV2ttZKYCGpW/UyARJzYtPN4BnB6w+L2/PnzOG8wgFwQqvva7du3J6Y2iNY9LaB2c+PGjfFOQRc8PVQAGkP7wx0N6mIwOgFv0xy0l+9t6ObNm8hy/rfABsF1exxrtwviXJgxY4YQyduWOA8LGl6O/LzANAdpIAnTGwsOYLULxIEU3rsK4Yh5nytEIx9pfA/sNMhEHSyckIs8NROAnhJDk5EX/nudJ1evLJFsKKgz15RUv0mTix4OVb7U6HdtAgcLPVzwftTt27ev7cNGXuBgkHY40ANEWv3B8nAgyXPgwIUP1X/90AufIgW/boQHDQc7fP/+fUxtWfA+fvx4jReqXmoD7RwqvhRZdjNrwUqrH+ZhJuQBH5P/T/WtmZhCD9FcV7cK9cue+k//dW3GTkLJReDpvZu+AKNGjZLQyQLyS8ebN29O8YbA3qA5T2S8yCW2FZ71+OciPvbKlSVr8X95V/EXGkIMNg9Xe3t7/8w3arWRI0fWWCnTrisbBw3n3Y2obibI/5gnldkmfc/lD2gIAnBx/fr1VdjK8o6rxrNTOKNBNgZpTibxzdrly5f7OlnwfmtgDn5k4HYovkGjNj19EjuKwB+iOjAw8D2/5Af3jYEXtB/x2yTV/SQsueI74pJOkQkys/KikHBspvnAgINIBP8IvrSJL+P9xTPxLyCJaaL5CpTbumH514DKDeOsfqS11zQvZC/44qp/yZIlAz4r/pkeaRwo9FBB9UUu/HWoGToa6uhHSSc9691jXZGqJq5alybNs3Vtvq9bDWWkhFBeLCflPU35YR19VpepoF7sWqX+bObHTXEqNPxYV9d8cEkXVbUx4vwGotU5Tp3oAn81SWvHzGCkOeZJWSDH1q8YOXEb1DO+arFDn20XvKMrRU5XRtvQ8TAmlowDoAucvTtB6D9rPSx1ESxa1091DtQBsKNuOishcHW1Lq4Jd1fjpZlwh7X1kWfklYP3lcJ+WJfVsA+WzBRnv4ILnLTpCxF6esfTwqTFE0hH1nbGmhn10tTZoDElBy4rbd1GQ7/dJtk60yjp2xv7NNt3234bT9JYnvkGu1P46muHhbXRkXlxFPzoF4dgxJvyW7UP24ZtwrrBGtIkM1CYtD7hGwtWqVzyfzx+FtRPJY3/3SB9Dj4k7X87tG7YLvHPKi7puh/LDdJpRIV1KauNvjNol9nnIQzh28JP1gV/co+S+9YAAAAASUVORK5CYII="
+                    alt="refugeLabel"
+                    id="refugeLabelImg"
+                  />
+                </div>
+                <div class="embassyLabelWrap">
+                  <img
+                    src="data:image/png;base64,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"
+                    alt="embassyLabel"
+                    id="embassyLabelImg"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- icon -->
+            <img
+              src="/web-layout-training-vite/assets/type_securityLevel 5_ selected_off-d5ec04c5.svg"
+              class="securityLevel5icon1 clickChangeIcon"
+              alt="securityLevel 5"
+            />
+            <img
+              src="/web-layout-training-vite/assets/type_securityLevel 5_ selected_off-d5ec04c5.svg"
+              class="securityLevel5icon2 clickChangeIcon"
+              alt="securityLevel 5"
+            />
+            <img
+              src="/web-layout-training-vite/assets/type_securityLevel 5_ selected_off-d5ec04c5.svg"
+              class="securityLevel5icon3 clickChangeIcon"
+              alt="securityLevel 5"
+            />
+            <img
+              src="/web-layout-training-vite/assets/type_securityLevel 5_ selected_off-d5ec04c5.svg"
+              class="securityLevel5icon4 clickChangeIcon"
+              alt="securityLevel 5"
+            />
+            <img
+              src="/web-layout-training-vite/assets/type_specialWarning_ selected_off-f7ede151.svg"
+              class="specialWarningIcon clickChangeIcon"
+              alt="specialWarning"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#specialWarningOffcanvasBottom"
+              aria-controls="offcanvasBottom"
+            />
+
+            <div
+              class="offcanvas offcanvas-bottom specialWarningOffcanvas offcanvasForIndex"
+              tabindex="-1"
+              id="specialWarningOffcanvasBottom"
+              aria-labelledby="offcanvasBottomLabel"
+              data-bs-scroll="true"
+              data-bs-backdrop="false"
+            >
+              <div
+                class="bg-white px-6 labelDetailWrap pb-5"
+                id="specialWarning"
+              >
+                <div
+                  class="d-flex justify-content-center py-3"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                >
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAAECAYAAAATUhYeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABMSURBVHgBzdBBEcAwCETRLSAgkiohFuqsDpo6aBUhAAaSuOCd9rjzD1VtIvIAOFHPcPdLmLmj5sGtE9FPmdlQ2IqoFBH32gM1fWb2TpnvFkh48hLlAAAAAElFTkSuQmCC" alt="bar" />
+                </div>
+                <div class="d-flex align-items-center">
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAG8SURBVHgBtVVNTsJAFP5mBolGEjFh6aKYmLhR2huUG3AD9AR6BW+gJ0BvgCcAT1CCK1fWuDLRhIUJApmOb0aohDbMBOuXNJl5fX3/rx9DDmYRQiXQVkDIAA/rwDCAwoAD96VTdLOvlzCO4AmBDh1DbIZYSjR3AsQZB58R/LJAj45V/A0jkJNyQJktHMwjjwownjqhTAKdCdc3Xkzky6jOSw0+GaJlbeSWh9JhD1snyjylo8jILAjHjwg5TUDLpslrl2C7YXpn2z4EyWwQCm3OOBo2RSZyqif24ACTgW/TUtM4R/YCB3jcRUvNYidZHpwcQI6yspysNnfwNcjKisxA90C+XZmy6CfRZ8cM2HRIbf5HuJVIK9YuUDp+NgvnsGQpnDLg+2cQB51fATV99lTPb/7qt2Q9tiktb7EBLZ7eZisMTyg8WPXGG04RkRFPEtza9JKPa8j3m58LlUW+njtNETW4a/iA+qB/1yGKhEJcbqBupojIgUKCvWPuxkcyQVMfjQPNPFMtKMIJ2dC2Fryc7kGFOJS8BkrZp2oN+tpGZc7HGixPaxIRCXHDdA3S8NcHjJhpwxJ3FHV/9f03b7il66+RwNUAAAAASUVORK5CYII=" alt="notice" />
+                  <p class="body-text-lg fw-bold ms-2 textEllipsis">
+                    泰國反政府運動
+                  </p>
+                </div>
+                <p class="body-text-xs text-neutrals-400 mt-1 mb-4">
+                  500公尺・更新時間 30 分鐘前
+                </p>
+                <div class="bg-neutrals-50 p-4 radius-m">
+                  <h4 class="body-text-md fw-bold">注意事項</h4>
+
+                  <p class="body-text-sm mt-1">
+                    曼谷進入緊戒狀態，現場許多鎮暴員警跟民眾發生衝突，泰警出動水炮車驅趕示威者，各地鐵站人滿為患，不宜前往。
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <img
+              src="/web-layout-training-vite/assets/type_policeStation_ selected_off-6a3149c1.svg"
+              class="policeStationiconIcon1 clickDisplayIcon clickChangeIcon"
+              alt="policeStation"
+              id="thongLorPoliceStationIcon"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#thongLorPoliceStationIconOffcanvasBottom"
+              aria-controls="offcanvasBottom"
+            />
+            <div
+              class="offcanvas offcanvas-bottom offcanvasForIndex"
+              tabindex="-1"
+              id="thongLorPoliceStationIconOffcanvasBottom"
+              aria-labelledby="offcanvasBottomLabel"
+              data-bs-scroll="true"
+              data-bs-backdrop="false"
+            >
+              <div
+                class="bg-white px-6 labelDetailWrap pb-5"
+                id="Royal Thai Police Headquarters"
+              >
+                <div
+                  class="d-flex justify-content-center py-3"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                >
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAAECAYAAAATUhYeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABMSURBVHgBzdBBEcAwCETRLSAgkiohFuqsDpo6aBUhAAaSuOCd9rjzD1VtIvIAOFHPcPdLmLmj5sGtE9FPmdlQ2IqoFBH32gM1fWb2TpnvFkh48hLlAAAAAElFTkSuQmCC" alt="bar" />
+                </div>
+                <div class="d-flex align-items-center">
+                  <img
+                    src="/web-layout-training-vite/assets/policeStation-492b76ee.svg"
+                    alt="policeStation24pxsolid"
+                  />
+                  <p class="body-text-lg fw-bold ms-2 textEllipsis">
+                    Thong Lor Police Station
+                  </p>
+                  <img
+                    src="/web-layout-training-vite/assets/bookMark-b7fee68f.svg"
+                    alt="bookMark"
+                    class="ms-auto"
+                  />
+                </div>
+                <p class="body-text-xs text-neutrals-400 mt-1 mb-2">
+                  500公尺・24小時營業
+                </p>
+                <div class="d-flex align-items-center mt-2 mb-4">
+                  <p class="text-danger-error-200 fw-bold body-text-xs me-2">
+                    危險等級 1
+                  </p>
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAAICAYAAABQ6Rd5AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACMSURBVHgB1ZS7DcJgDAbPJqJmhIxAJqCmYwU2YIQwAWICVvipGANGyAgpKRKMHaXKBPFJllx+Jz8Ex15tDdXD273XjvXTe+oC41WObSezwJsc4RdYx3dsFKtupBQIpGa7uSjCicyoHJRpv3ITEh8yYzxdYjiTdhp+2DIUjRflIo3fRiEPPT+7x2eK/H96zic77xfDwgAAAABJRU5ErkJggg=="
+                    alt="progressOG"
+                    class="me-1 progressWidth"
+                  />
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAICAYAAAC73qx6AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACQSURBVHgB3ZTNDcMgDIXtsEBHqATcO0K6QTJCJ6mySTco3aBrIJDIBu2RG3lGyRDOJ8Gzb37yD9NOSmlk5ifCkXSwot6XtXaRhOWLMU7GmDfpJDjn5m4k51wgV1JKa+0+lFJupNiEACPTUGv90wk4RusHuZBSekf2+EF6Cd77TzeCrQ+QGe9LeljRiUUuliQb/bwsSXh6trQAAAAASUVORK5CYII="
+                    alt="progressGRAY"
+                    class="me-1 progressWidth"
+                  />
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAICAYAAAC73qx6AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACQSURBVHgB3ZTNDcMgDIXtsEBHqATcO0K6QTJCJ6mySTco3aBrIJDIBu2RG3lGyRDOJ8Gzb37yD9NOSmlk5ifCkXSwot6XtXaRhOWLMU7GmDfpJDjn5m4k51wgV1JKa+0+lFJupNiEACPTUGv90wk4RusHuZBSekf2+EF6Cd77TzeCrQ+QGe9LeljRiUUuliQb/bwsSXh6trQAAAAASUVORK5CYII="
+                    alt="progressGRAY"
+                    class="me-1 progressWidth"
+                  />
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAICAYAAAC73qx6AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACQSURBVHgB3ZTNDcMgDIXtsEBHqATcO0K6QTJCJ6mySTco3aBrIJDIBu2RG3lGyRDOJ8Gzb37yD9NOSmlk5ifCkXSwot6XtXaRhOWLMU7GmDfpJDjn5m4k51wgV1JKa+0+lFJupNiEACPTUGv90wk4RusHuZBSekf2+EF6Cd77TzeCrQ+QGe9LeljRiUUuliQb/bwsSXh6trQAAAAASUVORK5CYII="
+                    alt="progressGRAY"
+                    class="me-1 progressWidth"
+                  />
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAICAYAAAC73qx6AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACQSURBVHgB3ZTNDcMgDIXtsEBHqATcO0K6QTJCJ6mySTco3aBrIJDIBu2RG3lGyRDOJ8Gzb37yD9NOSmlk5ifCkXSwot6XtXaRhOWLMU7GmDfpJDjn5m4k51wgV1JKa+0+lFJupNiEACPTUGv90wk4RusHuZBSekf2+EF6Cd77TzeCrQ+QGe9LeljRiUUuliQb/bwsSXh6trQAAAAASUVORK5CYII="
+                    alt="progressGRAY"
+                    class="progressWidth"
+                  />
+                </div>
+                <div
+                  class="d-flex align-items-center justify-content-between mb-4"
+                >
+                  <button
+                    class="labelDetailButton text-brand-600 fw-bold body-text-sm d-flex align-items-center justify-content-center"
+                  >
+                    <img
+                      src="/web-layout-training-vite/assets/guide-f1ddb54f.svg"
+                      alt="guide"
+                      class="me-2"
+                    />
+                    路線
+                  </button>
+                  <button
+                    class="labelDetailButton text-brand-600 fw-bold body-text-sm d-flex align-items-center justify-content-center"
+                  >
+                    <img
+                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAYCAYAAAAPtVbGAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGySURBVHgB7ZRPUsIwFMbfS8tGN7BD2YDgHm4AJxAPwL8TKCdQT6CeoMoF5AbWE4hrmQEXWpYdx1FnbPNMgGIpqS3KOC74FkDymu/3ki8UYK3/JoQVKGkMkpuaW+XIGghU5A4rjVq5oVfX4ReS5hs6HADwQwJMCsDU1cmKz6H33I92kjbuy6hhExH3JCtQtp9q+ZR/YqmdjM117Uh0XJ5NEtii1eTXEHvBdZEQ/5FMuiZ/+WIKqHoTyN2b2JCMMShy3W0i8AYEj0R0L3bTJibghEV/iTMwg14LmSiPZM6fTIfxdoKYEQRIiTzw251kOoNTQnkspHK3ifET+tC7iQRcqQAiDxMUmoNw4A8Y0j25WgtcBkzn1wKQVZmp8pBi/oFVz5+JP1KOiC5nAORtq1aojB+WAIAshEiVxxgetiBtDLKaCPyxlevJ31EAqVfnOWW3SnZsiB8WByDzsGo7FVWNQYQYc5pRgIn4XagHLCmR1768CAvzQF1YBUQYnVv1QldeBHETK37Yu/PSC1sX+91FBMM3Vzv2xqParim+zK1Ov0pItirw2JKvl+1O/1aawVp/oU8EbbPqVhq/bAAAAABJRU5ErkJggg=="
+                      alt="guide"
+                      class="me-2"
+                    />
+                    分享
+                  </button>
+                </div>
+                <img
+                  src="/web-layout-training-vite/assets/Phaya Thai Police Station-7f87ca28.png"
+                  alt="Thong Lor Police Station"
+                  class="img-fluid"
+                />
+              </div>
+            </div>
+
+            <img
+              src="/web-layout-training-vite/assets/type_policeStation_ selected_off-6a3149c1.svg"
+              class="policeStationiconIcon2 clickDisplayIcon clickChangeIcon"
+              alt="policeStation"
+              id="royalThaiPoliceHeadquartersIcon"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasBottom"
+              aria-controls="offcanvasBottom"
+            />
+
+            <div
+              class="offcanvas offcanvas-bottom offcanvasForIndex"
+              tabindex="-1"
+              id="offcanvasBottom"
+              aria-labelledby="offcanvasBottomLabel"
+              data-bs-scroll="true"
+              data-bs-backdrop="false"
+            >
+              <div
+                class="bg-white px-6 labelDetailWrap pb-5"
+                id="Royal Thai Police Headquarters"
+              >
+                <div
+                  class="d-flex justify-content-center py-3"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                >
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAAECAYAAAATUhYeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABMSURBVHgBzdBBEcAwCETRLSAgkiohFuqsDpo6aBUhAAaSuOCd9rjzD1VtIvIAOFHPcPdLmLmj5sGtE9FPmdlQ2IqoFBH32gM1fWb2TpnvFkh48hLlAAAAAElFTkSuQmCC" alt="bar" />
+                </div>
+                <div class="d-flex align-items-center">
+                  <img
+                    src="/web-layout-training-vite/assets/policeStation-492b76ee.svg"
+                    alt="policeStation24pxsolid"
+                  />
+                  <p class="body-text-lg fw-bold ms-2 textEllipsis">
+                    Royal Thai Police Headquarters
+                  </p>
+                  <img
+                    src="/web-layout-training-vite/assets/bookMark-b7fee68f.svg"
+                    alt="bookMark"
+                    class="ms-auto"
+                  />
+                </div>
+                <p class="body-text-xs text-neutrals-400 mt-1 mb-2">
+                  500公尺・24小時營業
+                </p>
+                <div class="d-flex align-items-center mt-2 mb-4">
+                  <p class="text-danger-error-200 fw-bold body-text-xs me-2">
+                    危險等級 1
+                  </p>
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAAICAYAAABQ6Rd5AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACMSURBVHgB1ZS7DcJgDAbPJqJmhIxAJqCmYwU2YIQwAWICVvipGANGyAgpKRKMHaXKBPFJllx+Jz8Ex15tDdXD273XjvXTe+oC41WObSezwJsc4RdYx3dsFKtupBQIpGa7uSjCicyoHJRpv3ITEh8yYzxdYjiTdhp+2DIUjRflIo3fRiEPPT+7x2eK/H96zic77xfDwgAAAABJRU5ErkJggg=="
+                    alt="progressOG"
+                    class="me-1 progressWidth"
+                  />
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAICAYAAAC73qx6AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACQSURBVHgB3ZTNDcMgDIXtsEBHqATcO0K6QTJCJ6mySTco3aBrIJDIBu2RG3lGyRDOJ8Gzb37yD9NOSmlk5ifCkXSwot6XtXaRhOWLMU7GmDfpJDjn5m4k51wgV1JKa+0+lFJupNiEACPTUGv90wk4RusHuZBSekf2+EF6Cd77TzeCrQ+QGe9LeljRiUUuliQb/bwsSXh6trQAAAAASUVORK5CYII="
+                    alt="progressGRAY"
+                    class="me-1 progressWidth"
+                  />
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAICAYAAAC73qx6AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACQSURBVHgB3ZTNDcMgDIXtsEBHqATcO0K6QTJCJ6mySTco3aBrIJDIBu2RG3lGyRDOJ8Gzb37yD9NOSmlk5ifCkXSwot6XtXaRhOWLMU7GmDfpJDjn5m4k51wgV1JKa+0+lFJupNiEACPTUGv90wk4RusHuZBSekf2+EF6Cd77TzeCrQ+QGe9LeljRiUUuliQb/bwsSXh6trQAAAAASUVORK5CYII="
+                    alt="progressGRAY"
+                    class="me-1 progressWidth"
+                  />
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAICAYAAAC73qx6AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACQSURBVHgB3ZTNDcMgDIXtsEBHqATcO0K6QTJCJ6mySTco3aBrIJDIBu2RG3lGyRDOJ8Gzb37yD9NOSmlk5ifCkXSwot6XtXaRhOWLMU7GmDfpJDjn5m4k51wgV1JKa+0+lFJupNiEACPTUGv90wk4RusHuZBSekf2+EF6Cd77TzeCrQ+QGe9LeljRiUUuliQb/bwsSXh6trQAAAAASUVORK5CYII="
+                    alt="progressGRAY"
+                    class="me-1 progressWidth"
+                  />
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAICAYAAAC73qx6AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACQSURBVHgB3ZTNDcMgDIXtsEBHqATcO0K6QTJCJ6mySTco3aBrIJDIBu2RG3lGyRDOJ8Gzb37yD9NOSmlk5ifCkXSwot6XtXaRhOWLMU7GmDfpJDjn5m4k51wgV1JKa+0+lFJupNiEACPTUGv90wk4RusHuZBSekf2+EF6Cd77TzeCrQ+QGe9LeljRiUUuliQb/bwsSXh6trQAAAAASUVORK5CYII="
+                    alt="progressGRAY"
+                    class="progressWidth"
+                  />
+                </div>
+                <div
+                  class="d-flex align-items-center justify-content-between mb-4"
+                >
+                  <button
+                    class="labelDetailButton text-brand-600 fw-bold body-text-sm d-flex align-items-center justify-content-center"
+                  >
+                    <img
+                      src="/web-layout-training-vite/assets/guide-f1ddb54f.svg"
+                      alt="guide"
+                      class="me-2"
+                    />
+                    路線
+                  </button>
+                  <button
+                    class="labelDetailButton text-brand-600 fw-bold body-text-sm d-flex align-items-center justify-content-center"
+                  >
+                    <img
+                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAYCAYAAAAPtVbGAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGySURBVHgB7ZRPUsIwFMbfS8tGN7BD2YDgHm4AJxAPwL8TKCdQT6CeoMoF5AbWE4hrmQEXWpYdx1FnbPNMgGIpqS3KOC74FkDymu/3ki8UYK3/JoQVKGkMkpuaW+XIGghU5A4rjVq5oVfX4ReS5hs6HADwQwJMCsDU1cmKz6H33I92kjbuy6hhExH3JCtQtp9q+ZR/YqmdjM117Uh0XJ5NEtii1eTXEHvBdZEQ/5FMuiZ/+WIKqHoTyN2b2JCMMShy3W0i8AYEj0R0L3bTJibghEV/iTMwg14LmSiPZM6fTIfxdoKYEQRIiTzw251kOoNTQnkspHK3ifET+tC7iQRcqQAiDxMUmoNw4A8Y0j25WgtcBkzn1wKQVZmp8pBi/oFVz5+JP1KOiC5nAORtq1aojB+WAIAshEiVxxgetiBtDLKaCPyxlevJ31EAqVfnOWW3SnZsiB8WByDzsGo7FVWNQYQYc5pRgIn4XagHLCmR1768CAvzQF1YBUQYnVv1QldeBHETK37Yu/PSC1sX+91FBMM3Vzv2xqParim+zK1Ov0pItirw2JKvl+1O/1aawVp/oU8EbbPqVhq/bAAAAABJRU5ErkJggg=="
+                      alt="guide"
+                      class="me-2"
+                    />
+                    分享
+                  </button>
+                </div>
+                <img
+                  src="/web-layout-training-vite/assets/Royal Thai Police Headquarters-679f6587.png"
+                  alt="Royal Thai Police Headquarters"
+                  class="img-fluid"
+                />
+              </div>
+            </div>
+
+            <img
+              src="/web-layout-training-vite/assets/type_policeStation_ selected_off-6a3149c1.svg"
+              class="policeStationiconIcon3 clickDisplayIcon clickChangeIcon"
+              alt="policeStation"
+              id="lumphiniPoliceStationIcon"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#lumphiniPoliceStationOffcanvasBottom"
+              aria-controls="offcanvasBottom"
+            />
+            <div
+              class="offcanvas offcanvas-bottom offcanvasForIndex"
+              tabindex="-1"
+              id="lumphiniPoliceStationOffcanvasBottom"
+              aria-labelledby="offcanvasBottomLabel"
+              data-bs-scroll="true"
+              data-bs-backdrop="false"
+            >
+              <div
+                class="bg-white px-6 labelDetailWrap pb-5"
+                id="Royal Thai Police Headquarters"
+              >
+                <div
+                  class="d-flex justify-content-center py-3"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                >
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAAECAYAAAATUhYeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABMSURBVHgBzdBBEcAwCETRLSAgkiohFuqsDpo6aBUhAAaSuOCd9rjzD1VtIvIAOFHPcPdLmLmj5sGtE9FPmdlQ2IqoFBH32gM1fWb2TpnvFkh48hLlAAAAAElFTkSuQmCC" alt="bar" />
+                </div>
+                <div class="d-flex align-items-center">
+                  <img
+                    src="/web-layout-training-vite/assets/policeStation-492b76ee.svg"
+                    alt="policeStation24pxsolid"
+                  />
+                  <p class="body-text-lg fw-bold ms-2 textEllipsis">
+                    Lumphini Police Station
+                  </p>
+                  <img
+                    src="/web-layout-training-vite/assets/bookMark-b7fee68f.svg"
+                    alt="bookMark"
+                    class="ms-auto"
+                  />
+                </div>
+                <p class="body-text-xs text-neutrals-400 mt-1 mb-2">
+                  500公尺・24小時營業
+                </p>
+                <div class="d-flex align-items-center mt-2 mb-4">
+                  <p class="text-danger-error-200 fw-bold body-text-xs me-2">
+                    危險等級 1
+                  </p>
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAAICAYAAABQ6Rd5AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACMSURBVHgB1ZS7DcJgDAbPJqJmhIxAJqCmYwU2YIQwAWICVvipGANGyAgpKRKMHaXKBPFJllx+Jz8Ex15tDdXD273XjvXTe+oC41WObSezwJsc4RdYx3dsFKtupBQIpGa7uSjCicyoHJRpv3ITEh8yYzxdYjiTdhp+2DIUjRflIo3fRiEPPT+7x2eK/H96zic77xfDwgAAAABJRU5ErkJggg=="
+                    alt="progressOG"
+                    class="me-1 progressWidth"
+                  />
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAICAYAAAC73qx6AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACQSURBVHgB3ZTNDcMgDIXtsEBHqATcO0K6QTJCJ6mySTco3aBrIJDIBu2RG3lGyRDOJ8Gzb37yD9NOSmlk5ifCkXSwot6XtXaRhOWLMU7GmDfpJDjn5m4k51wgV1JKa+0+lFJupNiEACPTUGv90wk4RusHuZBSekf2+EF6Cd77TzeCrQ+QGe9LeljRiUUuliQb/bwsSXh6trQAAAAASUVORK5CYII="
+                    alt="progressGRAY"
+                    class="me-1 progressWidth"
+                  />
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAICAYAAAC73qx6AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACQSURBVHgB3ZTNDcMgDIXtsEBHqATcO0K6QTJCJ6mySTco3aBrIJDIBu2RG3lGyRDOJ8Gzb37yD9NOSmlk5ifCkXSwot6XtXaRhOWLMU7GmDfpJDjn5m4k51wgV1JKa+0+lFJupNiEACPTUGv90wk4RusHuZBSekf2+EF6Cd77TzeCrQ+QGe9LeljRiUUuliQb/bwsSXh6trQAAAAASUVORK5CYII="
+                    alt="progressGRAY"
+                    class="me-1 progressWidth"
+                  />
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAICAYAAAC73qx6AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACQSURBVHgB3ZTNDcMgDIXtsEBHqATcO0K6QTJCJ6mySTco3aBrIJDIBu2RG3lGyRDOJ8Gzb37yD9NOSmlk5ifCkXSwot6XtXaRhOWLMU7GmDfpJDjn5m4k51wgV1JKa+0+lFJupNiEACPTUGv90wk4RusHuZBSekf2+EF6Cd77TzeCrQ+QGe9LeljRiUUuliQb/bwsSXh6trQAAAAASUVORK5CYII="
+                    alt="progressGRAY"
+                    class="me-1 progressWidth"
+                  />
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAICAYAAAC73qx6AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACQSURBVHgB3ZTNDcMgDIXtsEBHqATcO0K6QTJCJ6mySTco3aBrIJDIBu2RG3lGyRDOJ8Gzb37yD9NOSmlk5ifCkXSwot6XtXaRhOWLMU7GmDfpJDjn5m4k51wgV1JKa+0+lFJupNiEACPTUGv90wk4RusHuZBSekf2+EF6Cd77TzeCrQ+QGe9LeljRiUUuliQb/bwsSXh6trQAAAAASUVORK5CYII="
+                    alt="progressGRAY"
+                    class="progressWidth"
+                  />
+                </div>
+                <div
+                  class="d-flex align-items-center justify-content-between mb-4"
+                >
+                  <button
+                    class="labelDetailButton text-brand-600 fw-bold body-text-sm d-flex align-items-center justify-content-center"
+                  >
+                    <img
+                      src="/web-layout-training-vite/assets/guide-f1ddb54f.svg"
+                      alt="guide"
+                      class="me-2"
+                    />
+                    路線
+                  </button>
+                  <button
+                    class="labelDetailButton text-brand-600 fw-bold body-text-sm d-flex align-items-center justify-content-center"
+                  >
+                    <img
+                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAYCAYAAAAPtVbGAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGySURBVHgB7ZRPUsIwFMbfS8tGN7BD2YDgHm4AJxAPwL8TKCdQT6CeoMoF5AbWE4hrmQEXWpYdx1FnbPNMgGIpqS3KOC74FkDymu/3ki8UYK3/JoQVKGkMkpuaW+XIGghU5A4rjVq5oVfX4ReS5hs6HADwQwJMCsDU1cmKz6H33I92kjbuy6hhExH3JCtQtp9q+ZR/YqmdjM117Uh0XJ5NEtii1eTXEHvBdZEQ/5FMuiZ/+WIKqHoTyN2b2JCMMShy3W0i8AYEj0R0L3bTJibghEV/iTMwg14LmSiPZM6fTIfxdoKYEQRIiTzw251kOoNTQnkspHK3ifET+tC7iQRcqQAiDxMUmoNw4A8Y0j25WgtcBkzn1wKQVZmp8pBi/oFVz5+JP1KOiC5nAORtq1aojB+WAIAshEiVxxgetiBtDLKaCPyxlevJ31EAqVfnOWW3SnZsiB8WByDzsGo7FVWNQYQYc5pRgIn4XagHLCmR1768CAvzQF1YBUQYnVv1QldeBHETK37Yu/PSC1sX+91FBMM3Vzv2xqParim+zK1Ov0pItirw2JKvl+1O/1aawVp/oU8EbbPqVhq/bAAAAABJRU5ErkJggg=="
+                      alt="guide"
+                      class="me-2"
+                    />
+                    分享
+                  </button>
+                </div>
+                <img
+                  src="/web-layout-training-vite/assets/Lumphini Police Station-c9b86ffe.png"
+                  alt="lumphiniPoliceStation"
+                  class="img-fluid"
+                />
+              </div>
+            </div>
+
+            <img
+              src="/web-layout-training-vite/assets/type_hospital_ selected_off-d0a75a17.svg"
+              class="hospitalIcon1 clickDisplayIcon clickChangeIcon"
+              alt="hospital"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#sukumvitHospitalOffcanvasBottom"
+              aria-controls="offcanvasBottom"
+            />
+
+            <div
+              class="offcanvas offcanvas-bottom offcanvasForIndex"
+              tabindex="-1"
+              id="sukumvitHospitalOffcanvasBottom"
+              aria-labelledby="offcanvasBottomLabel"
+              data-bs-scroll="true"
+              data-bs-backdrop="false"
+            >
+              <div class="bg-white px-6 labelDetailWrap pb-5" id="BNH Hospital">
+                <div
+                  class="d-flex justify-content-center py-3"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                >
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAAECAYAAAATUhYeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABMSURBVHgBzdBBEcAwCETRLSAgkiohFuqsDpo6aBUhAAaSuOCd9rjzD1VtIvIAOFHPcPdLmLmj5sGtE9FPmdlQ2IqoFBH32gM1fWb2TpnvFkh48hLlAAAAAElFTkSuQmCC" alt="bar" />
+                </div>
+                <div class="d-flex align-items-center">
+                  <img
+                    src="/web-layout-training-vite/assets/policeStation-492b76ee.svg"
+                    alt="policeStation24pxsolid"
+                  />
+                  <p class="body-text-lg fw-bold ms-2 textEllipsis">
+                    Sukumvit Hospital
+                  </p>
+                  <img
+                    src="/web-layout-training-vite/assets/bookMark-b7fee68f.svg"
+                    alt="bookMark"
+                    class="ms-auto"
+                  />
+                </div>
+                <p class="body-text-xs text-neutrals-400 mt-1 mb-2">
+                  500公尺・24小時營業
+                </p>
+                <div class="d-flex align-items-center mt-2 mb-4">
+                  <p class="text-danger-error-200 fw-bold body-text-xs me-2">
+                    危險等級 1
+                  </p>
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAAICAYAAABQ6Rd5AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACMSURBVHgB1ZS7DcJgDAbPJqJmhIxAJqCmYwU2YIQwAWICVvipGANGyAgpKRKMHaXKBPFJllx+Jz8Ex15tDdXD273XjvXTe+oC41WObSezwJsc4RdYx3dsFKtupBQIpGa7uSjCicyoHJRpv3ITEh8yYzxdYjiTdhp+2DIUjRflIo3fRiEPPT+7x2eK/H96zic77xfDwgAAAABJRU5ErkJggg=="
+                    alt="progressOG"
+                    class="me-1 progressWidth"
+                  />
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAICAYAAAC73qx6AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACQSURBVHgB3ZTNDcMgDIXtsEBHqATcO0K6QTJCJ6mySTco3aBrIJDIBu2RG3lGyRDOJ8Gzb37yD9NOSmlk5ifCkXSwot6XtXaRhOWLMU7GmDfpJDjn5m4k51wgV1JKa+0+lFJupNiEACPTUGv90wk4RusHuZBSekf2+EF6Cd77TzeCrQ+QGe9LeljRiUUuliQb/bwsSXh6trQAAAAASUVORK5CYII="
+                    alt="progressGRAY"
+                    class="me-1 progressWidth"
+                  />
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAICAYAAAC73qx6AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACQSURBVHgB3ZTNDcMgDIXtsEBHqATcO0K6QTJCJ6mySTco3aBrIJDIBu2RG3lGyRDOJ8Gzb37yD9NOSmlk5ifCkXSwot6XtXaRhOWLMU7GmDfpJDjn5m4k51wgV1JKa+0+lFJupNiEACPTUGv90wk4RusHuZBSekf2+EF6Cd77TzeCrQ+QGe9LeljRiUUuliQb/bwsSXh6trQAAAAASUVORK5CYII="
+                    alt="progressGRAY"
+                    class="me-1 progressWidth"
+                  />
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAICAYAAAC73qx6AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACQSURBVHgB3ZTNDcMgDIXtsEBHqATcO0K6QTJCJ6mySTco3aBrIJDIBu2RG3lGyRDOJ8Gzb37yD9NOSmlk5ifCkXSwot6XtXaRhOWLMU7GmDfpJDjn5m4k51wgV1JKa+0+lFJupNiEACPTUGv90wk4RusHuZBSekf2+EF6Cd77TzeCrQ+QGe9LeljRiUUuliQb/bwsSXh6trQAAAAASUVORK5CYII="
+                    alt="progressGRAY"
+                    class="me-1 progressWidth"
+                  />
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAICAYAAAC73qx6AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACQSURBVHgB3ZTNDcMgDIXtsEBHqATcO0K6QTJCJ6mySTco3aBrIJDIBu2RG3lGyRDOJ8Gzb37yD9NOSmlk5ifCkXSwot6XtXaRhOWLMU7GmDfpJDjn5m4k51wgV1JKa+0+lFJupNiEACPTUGv90wk4RusHuZBSekf2+EF6Cd77TzeCrQ+QGe9LeljRiUUuliQb/bwsSXh6trQAAAAASUVORK5CYII="
+                    alt="progressGRAY"
+                    class="progressWidth"
+                  />
+                </div>
+                <div
+                  class="d-flex align-items-center justify-content-between mb-4"
+                >
+                  <button
+                    class="labelDetailButton text-brand-600 fw-bold body-text-sm d-flex align-items-center justify-content-center"
+                  >
+                    <img
+                      src="/web-layout-training-vite/assets/guide-f1ddb54f.svg"
+                      alt="guide"
+                      class="me-2"
+                    />
+                    路線
+                  </button>
+                  <button
+                    class="labelDetailButton text-brand-600 fw-bold body-text-sm d-flex align-items-center justify-content-center"
+                  >
+                    <img
+                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAYCAYAAAAPtVbGAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGySURBVHgB7ZRPUsIwFMbfS8tGN7BD2YDgHm4AJxAPwL8TKCdQT6CeoMoF5AbWE4hrmQEXWpYdx1FnbPNMgGIpqS3KOC74FkDymu/3ki8UYK3/JoQVKGkMkpuaW+XIGghU5A4rjVq5oVfX4ReS5hs6HADwQwJMCsDU1cmKz6H33I92kjbuy6hhExH3JCtQtp9q+ZR/YqmdjM117Uh0XJ5NEtii1eTXEHvBdZEQ/5FMuiZ/+WIKqHoTyN2b2JCMMShy3W0i8AYEj0R0L3bTJibghEV/iTMwg14LmSiPZM6fTIfxdoKYEQRIiTzw251kOoNTQnkspHK3ifET+tC7iQRcqQAiDxMUmoNw4A8Y0j25WgtcBkzn1wKQVZmp8pBi/oFVz5+JP1KOiC5nAORtq1aojB+WAIAshEiVxxgetiBtDLKaCPyxlevJ31EAqVfnOWW3SnZsiB8WByDzsGo7FVWNQYQYc5pRgIn4XagHLCmR1768CAvzQF1YBUQYnVv1QldeBHETK37Yu/PSC1sX+91FBMM3Vzv2xqParim+zK1Ov0pItirw2JKvl+1O/1aawVp/oU8EbbPqVhq/bAAAAABJRU5ErkJggg=="
+                      alt="guide"
+                      class="me-2"
+                    />
+                    分享
+                  </button>
+                </div>
+                <img
+                  src="/web-layout-training-vite/assets/Sukumvit Hospital-a71eb0c2.png"
+                  alt="sukumvitHospital"
+                  class="img-fluid"
+                />
+              </div>
+            </div>
+            <img
+              src="/web-layout-training-vite/assets/type_hospital_ selected_off-d0a75a17.svg"
+              class="hospitalIcon2 clickDisplayIcon clickChangeIcon"
+              alt="hospital"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#bNHHospitalOffcanvasBottom"
+              aria-controls="offcanvasBottom"
+            />
+
+            <div
+              class="offcanvas offcanvas-bottom offcanvasForIndex"
+              tabindex="-1"
+              id="bNHHospitalOffcanvasBottom"
+              aria-labelledby="offcanvasBottomLabel"
+              data-bs-scroll="true"
+              data-bs-backdrop="false"
+            >
+              <div class="bg-white px-6 labelDetailWrap pb-5" id="BNH Hospital">
+                <div
+                  class="d-flex justify-content-center py-3"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                >
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAAECAYAAAATUhYeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABMSURBVHgBzdBBEcAwCETRLSAgkiohFuqsDpo6aBUhAAaSuOCd9rjzD1VtIvIAOFHPcPdLmLmj5sGtE9FPmdlQ2IqoFBH32gM1fWb2TpnvFkh48hLlAAAAAElFTkSuQmCC" alt="bar" />
+                </div>
+                <div class="d-flex align-items-center">
+                  <img
+                    src="/web-layout-training-vite/assets/policeStation-492b76ee.svg"
+                    alt="policeStation24pxsolid"
+                  />
+                  <p class="body-text-lg fw-bold ms-2 textEllipsis">
+                    BNH Hospital
+                  </p>
+                  <img
+                    src="/web-layout-training-vite/assets/bookMark-b7fee68f.svg"
+                    alt="bookMark"
+                    class="ms-auto"
+                  />
+                </div>
+                <p class="body-text-xs text-neutrals-400 mt-1 mb-2">
+                  500公尺・24小時營業
+                </p>
+                <div class="d-flex align-items-center mt-2 mb-4">
+                  <p class="text-danger-error-200 fw-bold body-text-xs me-2">
+                    危險等級 1
+                  </p>
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAAICAYAAABQ6Rd5AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACMSURBVHgB1ZS7DcJgDAbPJqJmhIxAJqCmYwU2YIQwAWICVvipGANGyAgpKRKMHaXKBPFJllx+Jz8Ex15tDdXD273XjvXTe+oC41WObSezwJsc4RdYx3dsFKtupBQIpGa7uSjCicyoHJRpv3ITEh8yYzxdYjiTdhp+2DIUjRflIo3fRiEPPT+7x2eK/H96zic77xfDwgAAAABJRU5ErkJggg=="
+                    alt="progressOG"
+                    class="me-1 progressWidth"
+                  />
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAICAYAAAC73qx6AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACQSURBVHgB3ZTNDcMgDIXtsEBHqATcO0K6QTJCJ6mySTco3aBrIJDIBu2RG3lGyRDOJ8Gzb37yD9NOSmlk5ifCkXSwot6XtXaRhOWLMU7GmDfpJDjn5m4k51wgV1JKa+0+lFJupNiEACPTUGv90wk4RusHuZBSekf2+EF6Cd77TzeCrQ+QGe9LeljRiUUuliQb/bwsSXh6trQAAAAASUVORK5CYII="
+                    alt="progressGRAY"
+                    class="me-1 progressWidth"
+                  />
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAICAYAAAC73qx6AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACQSURBVHgB3ZTNDcMgDIXtsEBHqATcO0K6QTJCJ6mySTco3aBrIJDIBu2RG3lGyRDOJ8Gzb37yD9NOSmlk5ifCkXSwot6XtXaRhOWLMU7GmDfpJDjn5m4k51wgV1JKa+0+lFJupNiEACPTUGv90wk4RusHuZBSekf2+EF6Cd77TzeCrQ+QGe9LeljRiUUuliQb/bwsSXh6trQAAAAASUVORK5CYII="
+                    alt="progressGRAY"
+                    class="me-1 progressWidth"
+                  />
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAICAYAAAC73qx6AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACQSURBVHgB3ZTNDcMgDIXtsEBHqATcO0K6QTJCJ6mySTco3aBrIJDIBu2RG3lGyRDOJ8Gzb37yD9NOSmlk5ifCkXSwot6XtXaRhOWLMU7GmDfpJDjn5m4k51wgV1JKa+0+lFJupNiEACPTUGv90wk4RusHuZBSekf2+EF6Cd77TzeCrQ+QGe9LeljRiUUuliQb/bwsSXh6trQAAAAASUVORK5CYII="
+                    alt="progressGRAY"
+                    class="me-1 progressWidth"
+                  />
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAICAYAAAC73qx6AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACQSURBVHgB3ZTNDcMgDIXtsEBHqATcO0K6QTJCJ6mySTco3aBrIJDIBu2RG3lGyRDOJ8Gzb37yD9NOSmlk5ifCkXSwot6XtXaRhOWLMU7GmDfpJDjn5m4k51wgV1JKa+0+lFJupNiEACPTUGv90wk4RusHuZBSekf2+EF6Cd77TzeCrQ+QGe9LeljRiUUuliQb/bwsSXh6trQAAAAASUVORK5CYII="
+                    alt="progressGRAY"
+                    class="progressWidth"
+                  />
+                </div>
+                <div
+                  class="d-flex align-items-center justify-content-between mb-4"
+                >
+                  <button
+                    class="labelDetailButton text-brand-600 fw-bold body-text-sm d-flex align-items-center justify-content-center"
+                  >
+                    <img
+                      src="/web-layout-training-vite/assets/guide-f1ddb54f.svg"
+                      alt="guide"
+                      class="me-2"
+                    />
+                    路線
+                  </button>
+                  <button
+                    class="labelDetailButton text-brand-600 fw-bold body-text-sm d-flex align-items-center justify-content-center"
+                  >
+                    <img
+                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAYCAYAAAAPtVbGAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGySURBVHgB7ZRPUsIwFMbfS8tGN7BD2YDgHm4AJxAPwL8TKCdQT6CeoMoF5AbWE4hrmQEXWpYdx1FnbPNMgGIpqS3KOC74FkDymu/3ki8UYK3/JoQVKGkMkpuaW+XIGghU5A4rjVq5oVfX4ReS5hs6HADwQwJMCsDU1cmKz6H33I92kjbuy6hhExH3JCtQtp9q+ZR/YqmdjM117Uh0XJ5NEtii1eTXEHvBdZEQ/5FMuiZ/+WIKqHoTyN2b2JCMMShy3W0i8AYEj0R0L3bTJibghEV/iTMwg14LmSiPZM6fTIfxdoKYEQRIiTzw251kOoNTQnkspHK3ifET+tC7iQRcqQAiDxMUmoNw4A8Y0j25WgtcBkzn1wKQVZmp8pBi/oFVz5+JP1KOiC5nAORtq1aojB+WAIAshEiVxxgetiBtDLKaCPyxlevJ31EAqVfnOWW3SnZsiB8WByDzsGo7FVWNQYQYc5pRgIn4XagHLCmR1768CAvzQF1YBUQYnVv1QldeBHETK37Yu/PSC1sX+91FBMM3Vzv2xqParim+zK1Ov0pItirw2JKvl+1O/1aawVp/oU8EbbPqVhq/bAAAAABJRU5ErkJggg=="
+                      alt="guide"
+                      class="me-2"
+                    />
+                    分享
+                  </button>
+                </div>
+                <img
+                  src="/web-layout-training-vite/assets/BNH Hospital-3bbff45b.png"
+                  alt="bNHHospital"
+                  class="img-fluid"
+                />
+              </div>
+            </div>
+
+            <img
+              src="/web-layout-training-vite/assets/type_hospital_ selected_off-d0a75a17.svg"
+              class="hospitalIcon3 clickDisplayIcon clickChangeIcon"
+              alt="hospital"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#bumrungradHospitalOffcanvasBottom"
+              aria-controls="offcanvasBottom"
+            />
+
+            <div
+              class="offcanvas offcanvas-bottom offcanvasForIndex"
+              tabindex="-1"
+              id="bumrungradHospitalOffcanvasBottom"
+              aria-labelledby="offcanvasBottomLabel"
+              data-bs-scroll="true"
+              data-bs-backdrop="false"
+            >
+              <div
+                class="bg-white px-6 labelDetailWrap pb-5"
+                id="Royal Thai Police Headquarters"
+              >
+                <div
+                  class="d-flex justify-content-center py-3"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                >
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAAECAYAAAATUhYeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABMSURBVHgBzdBBEcAwCETRLSAgkiohFuqsDpo6aBUhAAaSuOCd9rjzD1VtIvIAOFHPcPdLmLmj5sGtE9FPmdlQ2IqoFBH32gM1fWb2TpnvFkh48hLlAAAAAElFTkSuQmCC" alt="bar" />
+                </div>
+                <div class="d-flex align-items-center">
+                  <img
+                    src="/web-layout-training-vite/assets/policeStation-492b76ee.svg"
+                    alt="policeStation24pxsolid"
+                  />
+                  <p class="body-text-lg fw-bold ms-2 textEllipsis">
+                    Bumrungrad Hospital
+                  </p>
+                  <img
+                    src="/web-layout-training-vite/assets/bookMark-b7fee68f.svg"
+                    alt="bookMark"
+                    class="ms-auto"
+                  />
+                </div>
+                <p class="body-text-xs text-neutrals-400 mt-1 mb-2">
+                  500公尺・24小時營業
+                </p>
+                <div class="d-flex align-items-center mt-2 mb-4">
+                  <p class="text-danger-error-200 fw-bold body-text-xs me-2">
+                    危險等級 2
+                  </p>
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAAICAYAAABQ6Rd5AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACMSURBVHgB1ZS7DcJgDAbPJqJmhIxAJqCmYwU2YIQwAWICVvipGANGyAgpKRKMHaXKBPFJllx+Jz8Ex15tDdXD273XjvXTe+oC41WObSezwJsc4RdYx3dsFKtupBQIpGa7uSjCicyoHJRpv3ITEh8yYzxdYjiTdhp+2DIUjRflIo3fRiEPPT+7x2eK/H96zic77xfDwgAAAABJRU5ErkJggg=="
+                    alt="progressOG"
+                    class="me-1 progressWidth"
+                  />
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAAICAYAAABQ6Rd5AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACMSURBVHgB1ZS7DcJgDAbPJqJmhIxAJqCmYwU2YIQwAWICVvipGANGyAgpKRKMHaXKBPFJllx+Jz8Ex15tDdXD273XjvXTe+oC41WObSezwJsc4RdYx3dsFKtupBQIpGa7uSjCicyoHJRpv3ITEh8yYzxdYjiTdhp+2DIUjRflIo3fRiEPPT+7x2eK/H96zic77xfDwgAAAABJRU5ErkJggg=="
+                    alt="progressOG"
+                    class="me-1 progressWidth"
+                  />
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAICAYAAAC73qx6AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACQSURBVHgB3ZTNDcMgDIXtsEBHqATcO0K6QTJCJ6mySTco3aBrIJDIBu2RG3lGyRDOJ8Gzb37yD9NOSmlk5ifCkXSwot6XtXaRhOWLMU7GmDfpJDjn5m4k51wgV1JKa+0+lFJupNiEACPTUGv90wk4RusHuZBSekf2+EF6Cd77TzeCrQ+QGe9LeljRiUUuliQb/bwsSXh6trQAAAAASUVORK5CYII="
+                    alt="progressGRAY"
+                    class="me-1 progressWidth"
+                  />
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAICAYAAAC73qx6AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACQSURBVHgB3ZTNDcMgDIXtsEBHqATcO0K6QTJCJ6mySTco3aBrIJDIBu2RG3lGyRDOJ8Gzb37yD9NOSmlk5ifCkXSwot6XtXaRhOWLMU7GmDfpJDjn5m4k51wgV1JKa+0+lFJupNiEACPTUGv90wk4RusHuZBSekf2+EF6Cd77TzeCrQ+QGe9LeljRiUUuliQb/bwsSXh6trQAAAAASUVORK5CYII="
+                    alt="progressGRAY"
+                    class="me-1 progressWidth"
+                  />
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAICAYAAAC73qx6AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACQSURBVHgB3ZTNDcMgDIXtsEBHqATcO0K6QTJCJ6mySTco3aBrIJDIBu2RG3lGyRDOJ8Gzb37yD9NOSmlk5ifCkXSwot6XtXaRhOWLMU7GmDfpJDjn5m4k51wgV1JKa+0+lFJupNiEACPTUGv90wk4RusHuZBSekf2+EF6Cd77TzeCrQ+QGe9LeljRiUUuliQb/bwsSXh6trQAAAAASUVORK5CYII="
+                    alt="progressGRAY"
+                    class="progressWidth"
+                  />
+                </div>
+                <div
+                  class="d-flex align-items-center justify-content-between mb-4"
+                >
+                  <button
+                    class="labelDetailButton text-brand-600 fw-bold body-text-sm d-flex align-items-center justify-content-center"
+                  >
+                    <img
+                      src="/web-layout-training-vite/assets/guide-f1ddb54f.svg"
+                      alt="guide"
+                      class="me-2"
+                    />
+                    路線
+                  </button>
+                  <button
+                    class="labelDetailButton text-brand-600 fw-bold body-text-sm d-flex align-items-center justify-content-center"
+                  >
+                    <img
+                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAYCAYAAAAPtVbGAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGySURBVHgB7ZRPUsIwFMbfS8tGN7BD2YDgHm4AJxAPwL8TKCdQT6CeoMoF5AbWE4hrmQEXWpYdx1FnbPNMgGIpqS3KOC74FkDymu/3ki8UYK3/JoQVKGkMkpuaW+XIGghU5A4rjVq5oVfX4ReS5hs6HADwQwJMCsDU1cmKz6H33I92kjbuy6hhExH3JCtQtp9q+ZR/YqmdjM117Uh0XJ5NEtii1eTXEHvBdZEQ/5FMuiZ/+WIKqHoTyN2b2JCMMShy3W0i8AYEj0R0L3bTJibghEV/iTMwg14LmSiPZM6fTIfxdoKYEQRIiTzw251kOoNTQnkspHK3ifET+tC7iQRcqQAiDxMUmoNw4A8Y0j25WgtcBkzn1wKQVZmp8pBi/oFVz5+JP1KOiC5nAORtq1aojB+WAIAshEiVxxgetiBtDLKaCPyxlevJ31EAqVfnOWW3SnZsiB8WByDzsGo7FVWNQYQYc5pRgIn4XagHLCmR1768CAvzQF1YBUQYnVv1QldeBHETK37Yu/PSC1sX+91FBMM3Vzv2xqParim+zK1Ov0pItirw2JKvl+1O/1aawVp/oU8EbbPqVhq/bAAAAABJRU5ErkJggg=="
+                      alt="guide"
+                      class="me-2"
+                    />
+                    分享
+                  </button>
+                </div>
+                <img
+                  src="/web-layout-training-vite/assets/Bumrungrad Hospital-a89ed2f2.png"
+                  alt="bumrungradHospital"
+                  class="img-fluid"
+                />
+              </div>
+            </div>
+
+            <img
+              src="/web-layout-training-vite/assets/type_normal(selectedOn)_ selected_on-2e6227ce.svg"
+              class="hotelIcon favoriteHotel"
+              alt="hotel"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#akaraBangkokHotelOffcanvasBottom"
+              aria-controls="offcanvasBottom"
+            />
+
+            <div
+              class="offcanvas offcanvas-bottom offcanvasForIndex"
+              tabindex="-1"
+              id="akaraBangkokHotelOffcanvasBottom"
+              aria-labelledby="offcanvasBottomLabel"
+              data-bs-scroll="true"
+              data-bs-backdrop="false"
+            >
+              <div
+                class="bg-white px-6 labelDetailWrap pb-5"
+                id="Akara Bangkok Hotel"
+              >
+                <div
+                  class="d-flex justify-content-center py-3"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                >
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAAECAYAAAATUhYeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABMSURBVHgBzdBBEcAwCETRLSAgkiohFuqsDpo6aBUhAAaSuOCd9rjzD1VtIvIAOFHPcPdLmLmj5sGtE9FPmdlQ2IqoFBH32gM1fWb2TpnvFkh48hLlAAAAAElFTkSuQmCC" alt="bar" />
+                </div>
+                <div class="d-flex align-items-center">
+                  <img
+                    src="/web-layout-training-vite/assets/location-680d3193.svg"
+                    alt="policeStation24pxsolid"
+                  />
+                  <p class="body-text-lg fw-bold ms-2 textEllipsis">
+                    Akara Bangkok Hotel
+                  </p>
+                  <img
+                    src="/web-layout-training-vite/assets/bookMark-b7fee68f.svg"
+                    alt="bookMark"
+                    class="ms-auto favorite"
+                  />
+                </div>
+                <p class="body-text-xs text-neutrals-400 mt-1 mb-2">
+                  500公尺・24小時營業
+                </p>
+                <div class="d-flex align-items-center mt-2 mb-4">
+                  <p class="text-danger-error-200 fw-bold body-text-xs me-2">
+                    危險等級 3
+                  </p>
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAAICAYAAABQ6Rd5AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACMSURBVHgB1ZS7DcJgDAbPJqJmhIxAJqCmYwU2YIQwAWICVvipGANGyAgpKRKMHaXKBPFJllx+Jz8Ex15tDdXD273XjvXTe+oC41WObSezwJsc4RdYx3dsFKtupBQIpGa7uSjCicyoHJRpv3ITEh8yYzxdYjiTdhp+2DIUjRflIo3fRiEPPT+7x2eK/H96zic77xfDwgAAAABJRU5ErkJggg=="
+                    alt="progressOG"
+                    class="me-1 progressWidth"
+                  />
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAAICAYAAABQ6Rd5AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACMSURBVHgB1ZS7DcJgDAbPJqJmhIxAJqCmYwU2YIQwAWICVvipGANGyAgpKRKMHaXKBPFJllx+Jz8Ex15tDdXD273XjvXTe+oC41WObSezwJsc4RdYx3dsFKtupBQIpGa7uSjCicyoHJRpv3ITEh8yYzxdYjiTdhp+2DIUjRflIo3fRiEPPT+7x2eK/H96zic77xfDwgAAAABJRU5ErkJggg=="
+                    alt="progressOG"
+                    class="me-1 progressWidth"
+                  />
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAAICAYAAABQ6Rd5AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACMSURBVHgB1ZS7DcJgDAbPJqJmhIxAJqCmYwU2YIQwAWICVvipGANGyAgpKRKMHaXKBPFJllx+Jz8Ex15tDdXD273XjvXTe+oC41WObSezwJsc4RdYx3dsFKtupBQIpGa7uSjCicyoHJRpv3ITEh8yYzxdYjiTdhp+2DIUjRflIo3fRiEPPT+7x2eK/H96zic77xfDwgAAAABJRU5ErkJggg=="
+                    alt="progressOG"
+                    class="me-1 progressWidth"
+                  />
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAICAYAAAC73qx6AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACQSURBVHgB3ZTNDcMgDIXtsEBHqATcO0K6QTJCJ6mySTco3aBrIJDIBu2RG3lGyRDOJ8Gzb37yD9NOSmlk5ifCkXSwot6XtXaRhOWLMU7GmDfpJDjn5m4k51wgV1JKa+0+lFJupNiEACPTUGv90wk4RusHuZBSekf2+EF6Cd77TzeCrQ+QGe9LeljRiUUuliQb/bwsSXh6trQAAAAASUVORK5CYII="
+                    alt="progressGRAY"
+                    class="me-1 progressWidth"
+                  />
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAICAYAAAC73qx6AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACQSURBVHgB3ZTNDcMgDIXtsEBHqATcO0K6QTJCJ6mySTco3aBrIJDIBu2RG3lGyRDOJ8Gzb37yD9NOSmlk5ifCkXSwot6XtXaRhOWLMU7GmDfpJDjn5m4k51wgV1JKa+0+lFJupNiEACPTUGv90wk4RusHuZBSekf2+EF6Cd77TzeCrQ+QGe9LeljRiUUuliQb/bwsSXh6trQAAAAASUVORK5CYII="
+                    alt="progressGRAY"
+                    class="progressWidth"
+                  />
+                </div>
+                <div
+                  class="d-flex align-items-center justify-content-between mb-4"
+                >
+                  <button
+                    class="labelDetailButton text-brand-600 fw-bold body-text-sm d-flex align-items-center justify-content-center"
+                  >
+                    <img
+                      src="/web-layout-training-vite/assets/guide-f1ddb54f.svg"
+                      alt="guide"
+                      class="me-2"
+                    />
+                    路線
+                  </button>
+                  <button
+                    class="labelDetailButton text-brand-600 fw-bold body-text-sm d-flex align-items-center justify-content-center"
+                  >
+                    <img
+                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAYCAYAAAAPtVbGAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGySURBVHgB7ZRPUsIwFMbfS8tGN7BD2YDgHm4AJxAPwL8TKCdQT6CeoMoF5AbWE4hrmQEXWpYdx1FnbPNMgGIpqS3KOC74FkDymu/3ki8UYK3/JoQVKGkMkpuaW+XIGghU5A4rjVq5oVfX4ReS5hs6HADwQwJMCsDU1cmKz6H33I92kjbuy6hhExH3JCtQtp9q+ZR/YqmdjM117Uh0XJ5NEtii1eTXEHvBdZEQ/5FMuiZ/+WIKqHoTyN2b2JCMMShy3W0i8AYEj0R0L3bTJibghEV/iTMwg14LmSiPZM6fTIfxdoKYEQRIiTzw251kOoNTQnkspHK3ifET+tC7iQRcqQAiDxMUmoNw4A8Y0j25WgtcBkzn1wKQVZmp8pBi/oFVz5+JP1KOiC5nAORtq1aojB+WAIAshEiVxxgetiBtDLKaCPyxlevJ31EAqVfnOWW3SnZsiB8WByDzsGo7FVWNQYQYc5pRgIn4XagHLCmR1768CAvzQF1YBUQYnVv1QldeBHETK37Yu/PSC1sX+91FBMM3Vzv2xqParim+zK1Ov0pItirw2JKvl+1O/1aawVp/oU8EbbPqVhq/bAAAAABJRU5ErkJggg=="
+                      alt="guide"
+                      class="me-2"
+                    />
+                    分享
+                  </button>
+                </div>
+                <img
+                  src="/web-layout-training-vite/assets/Akara Bangkok-ed1135a4.png"
+                  alt="Akara Bangkok Hotel"
+                  class="img-fluid"
+                />
+              </div>
+            </div>
+
+            <img
+              src="/web-layout-training-vite/assets/arrow_withShadow-ac7961d3.svg"
+              class="centerIcon"
+              alt="center"
+            />
+            <div class="originalCircle"></div>
+            <div
+              class="bg-smallCircle text-center pt-2 text-brand-600 body-text-lg fw-bold d-none"
+            >
+              15 min
+            </div>
+            <div
+              class="bg-bigCircle text-center pt-2 text-brand-600 body-text-lg fw-bold d-none"
+            >
+              30 min
+            </div>
+            <canvas id="myCanvas" class="myCanvas"></canvas>
+
+            <img
+              src="data:image/png;base64,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"
+              alt="left.png"
+              class="countryInfo infoAndFloatWrapLeft"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            />
+
+            <div
+              class="floatWrap d-flex flex-column align-items-center infoAndFloatWrapRight"
+            >
+              <img
+                src="data:image/png;base64,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"
+                alt="float"
+                class="floatImg"
+              />
+              <img
+                src="data:image/png;base64,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"
+                alt="centerAim"
+                class="centerAimImg"
+              />
+            </div>
+
+            <!-- Modal -->
+            <div
+              class="modal fade"
+              id="exampleModal"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5
+                      class="modal-title me-2 heading-sm fw-bold"
+                      id="exampleModalLabel"
+                    >
+                      泰國
+                    </h5>
+                    <img
+                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAAYCAYAAABKtPtEAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAQMSURBVHgB5Zg/LGVBFMbnPk9DJCtosR3VCi0JDaWn1lLbRKUQNgoayb5KQaOg9baksQktuR2dPy2JDUFB2PnNvu9m3Lx993pC4X7Je3f+nJk55ztnzkwmMDFcXV0N5vP5wvPz82gQBJ3mcyC0toQPDw8/mpubT/2OQAVr+Je6uro5K/jdfGJY+36Wifjj6vxhfH19/a71eo/JBsLHx8chSMhRw/MZMh70WIfPUQis9zvtnj8x2cRQznp/Po3k2dmZOT8/j+p3d3dphjm5o6OjSP7y8tK8J9LqBZ6engp5mxS+pRHe3Nw0ra2tZnJy0tU3NjbM8fGxWV5efiEHSfRNTU2ZhoYGV19aWnJy1GdnZ90cvb29Th5CIEjo6OhwZFdCd3e304F1Rap+zKNvV1dXtH41WOeP5u236t7HABTS5Ht7e05JlKBtcXExkh0eHnZ9yBWLRdPf328ODw8jwlCIMfSBQqHgjFpbW4vmoK1UKlXUZWJiwgwMDLh5FEmU0QVixsbGTHt7uyungc17nfkkoYODgxcKaTEUwEAgLzQ2NkZRghx1CMTbKLa/v+/GaBxkaVsRIaurq668vr7uvtTjUYbn4wTJOdvb2y/acUhfX5+phkQCYBUv4WkUYzHCmMnpE0EYTugBviqjlBTEu3gbIsDMzIx5Ldra2lwUAMjQXACyWFf9EJyERAJ8TE9Pu+/IyIi5uLhwdYyDDNoAIa89DEEC7Si2srLiPEvooixKAwhmLtog1d/XbDuANyG6paXFkc7Y8fFxJ0875GxtbbkyUZZmK+TMK0AooxTK7+zsRPuNOgbgbbxCn8IUA1AGGfqQgwxCX4aJVCUtEi6RojxDmR9lxpJU0YP1IVu5BafgDPqQUf6phlQRwMQYigcwTiEu4zEWZeQhykpsGIpnUErhS0LkS4jq2IJcPAm0NZBjvOrMzW9hYcGtKwKZG2MVjchTTjoFQKoIQIn/hRP5QUrHZVBQhAC+Ov6UGAWiR5ldhsoA1aULRPnRo0jBKYxhGzCff295EwGw6yvrG6rwZlFBC/PF04Q9MvzIGyr70OlClFQDJCHr/3xvx9uTkLgFYJpF/SPLBwuzfyEAmdvb22ibQJy2CkSRAzgJGIOHMBZi/YsL7bpbaD3VkSOx+pcooOOzllMlkYD7+3unPGyyJ9ljcdBGWGIMchiJohxRIrASebq4+IrrLgHiWyoeHcyvyOM0qAXB9fX1SS0PHwqvNInmvaALWNqbXwWEOXsd/GVqQKV9/NFg/TcYz+NIGNzc3Aza8q7JIOyjyNdcU1PTb1sumuyhyPugOwYtE/P2E5rsICzb/O8ewNsYb2QmG5FQ1HsglSDeyxMZr0Tlh5JP8U5oE/2ptYdkXypv+Qh/AXqmqQQD+YISAAAAAElFTkSuQmCC"
+                      alt="touristSeason"
+                    />
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="px-6 pb-6">
+                    <div class="d-flex">
+                      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAICSURBVHgBrVa9kgFBEO7Zu5S6QCZxGZIjEfuNeQJc7A14Dpmq2yN3LrtEEROcCEWyiUygyJTi+ptiq25vxyy3X9XUjO2e/rp7eqYJckE0Gk0bhlE5nU5p/hmh65gIISaHw+FzsVj0nELhMBxh5Tdepuk+WOxUZj6fW38I4vF4gqcBKzzR/7DhaDLL5XJiE8BzTsm3D8ZtEraVRCSGZBFi4KNx4OmcahKxWKzE84duB0dJuVyOAoEAdTodWq1Wui2E8wCByeuKm0IwGKRisSgNp1KpX7LRaES9Xo/G47GSjAlMwYeL3CecwlqtRuVyWXqsQ7PZlMMFFiI4uUmm0yndAnbU9btBdwLp8XIOdxEgHfV6nWazmVbXE0G73ba9veQbZ5TP57V7H3UKu91OliUGqglkMI7hBcoI+BbKGVVkmqZcq4xfdOmWCPr9vrxcQDgcliQwhCicALEKyjKF591uVxq/BpxNoVBQypEiy02A3Fer1aulCBl0VECfeAiFQkleJFQkqPf9fi8jwdNx+d5qtajRaNB6vVYS8AvxJdC98JqSBiDIZrOSBBW13W51WxBBSfYDPgcQpMlfWHwRn2WZciivzLYhnwBbeKqxlgTnHprxg+Rsw+7L9kXj13NyPB6TpKgqL2Cvh7ABWzahm+K5y2G88Eho7OKfxJDnd/Z66BT+ALHH95yyjuRQAAAAAElFTkSuQmCC" alt="safety" />
+                      <p class="fw-bold body-text-md ms-2">旅遊安全指數</p>
+                    </div>
+                    <div class="d-flex mt-2 mb-4 justify-content-between">
+                      <div class="d-flex flex-column" style="width: 80px">
+                        <p class="fw-bold heading-xs">
+                          <span class="heading-xl">2.7</span>/5
+                        </p>
+                        <img
+                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAUCAYAAAAa2LrXAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAOuSURBVHgB7Zg9SCNBFMdfYlBQ0Sh+FCImhYUoXGy0sbhUFgp3ldZWNuJdpZ1GO8VCQWuv1eoOtE5qqxSKhUIigoWfERXx+95vcMIm5oJg9riD/cOyO/PezjL//b/3ZsYnedjb2/v88vLy1e/3f9FmSDyI8pH0+XzJsrKymXA4nHbafPYhlUoFn5+fp9Xxe21trdTU1EggEBAPInd3d3J/fy/n5+fy8PCweH19PdPd3Z3BZgiEvMfHx7iSFmloaBBVn3h4CxWYITGTySSVxCgk+l8N08FgMNLU1OSRVwRwg8AQWnV19TR9PlVfSMM21dra6pH3TqDEg4MDeXp6ivo1pmP19fWukXd8fGyuYnaws7OTbd/c3OTY/jXAFXWCYhvQxqfy8nJxC+vr69LZ2SmkB4ipqqrK2mgvLy9LNBqVdDptCIPIyspKY+edwcHBguPiy1jO8Zxg7JOTEwmFQuIGKLIXFxdfKLORiooKcQNWQRAE4vG4IWpsbMy0mfzk5KSZLDaI1r9qbLpcyKoXIp2YmprKEsfdjuf87vz8vLS1tRkSseeP8VG8rlBCZePj4yaESwkmsLW1JSsrK4YUVMV1eXkpyWTSkNjT02N8IAAbfVrIhGioq6uTo6Mjqp2xt7S0ZMfGV3O2jI6OSl9fn2xsbBiyeddibm7O2Pv7+w1x+PT29kqpoQoUVxd6Q0ND5m7/fmNjowwMDMjm5qZsb2+b8FpdXc2GOIBISMMXNdp8aIEvF7AKx9cJ+m3o4kuacAuuEGjJICxBfjGAWBuChLCuBAxRTBpV8szEec+SlQ/CGKDk/DyIQv8WXFMguYdwGx4ezuknnJzFBJJREKTj71RXofxnMTs7a+6oC9Ih0sLmUYs/FZpSwNWFH8TYkLNX/mSYPCRxz0dXV9ebEIZwfoIT+HBZpTMeKcL6u1WJAQpM6zYu5Ma+FxXaMHb2WTgnDLkUAyfW1tayFdwCpaE61GrJpcrSJp8uLCyYNj58mwXvxMSElBrsj80hw/7+/qJWvW+lrsTktUQi8ebvM9GRkRGjRJv7UJoFbRvmzc3NpugUgiWvWHgWSwEfxdXVFeP/8HF8pcc0cdZM3lbufWArd3h4KLe3t2F/e3t7QjuWTk9PxcP7wPpPj7eWOjo60kZyqsCYSjJ5dnZm2PVQGHBDWlACk5pCYvTlHKjq6UJMi4nJh+wI3Nri/W/QImtyHjsjfV6CvJwDVSd2d3dDKJJDBm1GxANIq/p+6QL9JynPafgNa4UDmL6xfVAAAAAASUVORK5CYII="
+                          alt="Taiwan"
+                          class="mt-auto"
+                        />
+                      </div>
+                      <div class="d-flex flex-column" style="width: 176px">
+                        <p class="body-text-sm">
+                          保持警覺，遵守當地規則，通常會很安全。
+                        </p>
+                        <p class="body-text-xxs text-neutrals-700 mt-auto">
+                          Travel-Advisory.info
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      class="px-4 py-3 radius-m"
+                      style="background-color: #ffd6001f"
+                    >
+                      <div class="d-flex">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJHSURBVHgBtVY9b9NQFD22WwkSAkGyA6JLuiUBiWZoFzokMCBVDJnohCrm/ggQCwysldhKN2CAsIMSJKYaCSPRJEokagYYIAKTKBE0acy9T9EDEps0rnsk6137XZ9zP5x3o8ADqVQqp6rqmuu6ObpN4v+wFEWx+v3+83q9XhzdVEaIk+S8SWYOwWBTUPlarWaPCWQymQVaSuQQx+HgUDb5RqNhSQGOnEryNgRyKUJcWc5EFSqKUgqRnBEflhpKOp0u0PoMRwDuB2dQ8HM4l+jhxrVvmKM1INa0RCJxi4yzozux6D4e3bWxstzClaU2zJ0oms4MpgGVKa7puv7Aa3Ovp8KsRLByqQX99D5Wr35Hu6vhXf04pkBcMwzjtt8uR9x0ZkUGjOVsR2T22johfbiMc0bPNztusosJWL/exPrqV3n/6css2h2NerNHggPxbOOJjo3Hxti7qhchR5VO/hL2SSZQXCL848pNT83/lOSMQu6HFxXG8lo838XWnY/Cru0eE0STsL0Twb3NMwcTMMmZX1giIT9yLtHL7Zjwe0NfV6ujwg+ePeASPL3/QZaAy/PCjImMmPgzCRwUvk1mkcvi+48I4qBggV1MPvODkdOcmKHz4hUZyb83CnkHixe6mAbm+yiKpVP/PBsMBhZ356GHNsIAjYCiYKIylRB8ivnBrlar8+L7ojLdpDI5CAnMxUc120JgOEPzYYgMOeRclr+QSqViUVOyZNoICIq6zBzMJQW9HIdTjq+LdC1M4OV/EmVatyjq8ujmb8Gc61u9L0N8AAAAAElFTkSuQmCC" alt="airplane" />
+                        <h4 class="body-text-md fw-bold ms-2">
+                          外交部旅遊警示
+                        </h4>
+                      </div>
+
+                      <p class="body-text-sm mt-1">
+                        特別注意旅遊安全，並檢討應否前往。
+                      </p>
+                    </div>
+
+                    <ul class="list-unstyled mt-6 mb-0">
+                      <li
+                        class="d-flex align-items-center justify-content-between pb-3"
+                      >
+                        <div class="d-flex align-items-center">
+                          <img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFmSURBVHgBlVPLbYNAEF0gJ/sQH30kFQS5gdgVJKnAPpgzSQd2BcY3xEfGHZgKTAoAkQ4owZHgxidvyOIgBFh+0mqY3Zm3b2YHgXGoqqqVZbkRBGHCBoCYiyiKummaW/IFnryCObA7AKKFbdu+SE5RFErjLIb/DusPEUDpG1mRO03ZnuM4J9ywZcN4vBK04KIkneSRGnYDDy0/tiwrgv0gByqOUDeXJGlVB2RZtqvldxF46/V6joAD1hG98LGn5XlOvovuf8EqQwpeEfACK+N2DQnPsNQfeTQaeUmS6DiXhwiahxMkV1JRwiJN0yWSl634zia24RqGEYPEw3pCWfshBV2Y41XO6EPl3OpBF2TWKA0E9edPF8EedZ9YPxQQ7ChuPB5vrgT0g3BmFwMU9WXjievPSNf1S6WIH9Dbn9nf5MWsH/Sk1IMIl37StEq0G4ZhPJvNBN4ghf3X3V5TTjTFjPhBEHz/AkS7ic3I1qnSAAAAAElFTkSuQmCC"
+                            alt="language"
+                          />
+                          <p class="body-text-xs text-neutrals-600 ms-2">
+                            主要語言
+                          </p>
+                        </div>
+                        <p class="body-text-xs text-neutrals-600">泰語、英語</p>
+                      </li>
+                      <li
+                        class="d-flex align-items-center justify-content-between py-3 border-bottom border-top border-neutrals-100"
+                      >
+                        <div class="d-flex align-items-center">
+                          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGHSURBVHgBhZPNbcJAEIX9B4rExR3EdOADd0wJqSBGAq44FSRUkOSGgMNyy82kAkgBKKQDdxBfOCEg3yCDlmWlPGmZZXbm7byZtesY6Pf78fF4XLquG5pn+NLJZDLXfZ4ZtNvtCgIdGyD+MX03BEqpksB3S76aTqebfwkEQRAowyWkc1usbzrowfBwOHwg446kUizuO2zSarXK9Xp9JeMiNsuycLvd5myTsw+CDiv0PC/Xcla+73fH43FxJYHkpZE8Qkqx3+9XRvkJvjxN0/BC0Ov1njGxFqRms9kLgSEkMfvUIInr9Xp2kYDuX4w+9y7jXNRqtW/2EfpHELT1CkFJTNPj9sRIFgzlh7E10dukqaWRLDhV53EYObeI5fbBYJBz3kbCG/bmbVBZFDh2qErzEpvQsE+CC1tgQIkbiz/i1pWjjZk+PVriNucmXo2wQgF5RybB/tVyLk+7exoj3XywPNUI3dJMs/vyRhaNRuPJ0UsUVBNJWfes+PxJy5OWivj/JcmVvBP+AMl6vzmM/E+qAAAAAElFTkSuQmCC" alt="dollar" />
+                          <p class="body-text-xs text-neutrals-600 ms-2">
+                            貨幣
+                          </p>
+                        </div>
+                        <p class="body-text-xs text-neutrals-600">泰銖 THB</p>
+                      </li>
+                      <li
+                        class="d-flex align-items-center justify-content-between py-3"
+                      >
+                        <div class="d-flex align-items-center">
+                          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEGSURBVHgBnZM7DoJAEIYHtbBTb4AnQBIKS24iJkAouYHa2Rk6AhR6AmNniZ0ND08gR9CEFnDWCCHLFqxfAjvMzv6zMxMAKHRd3xiG8aT9xGeapk37B9Bljo/I8ItVVUl9BLgYtT9s257meT4hNpai0sGCIEw7vtrA+g5lWWqsIIbQ1vO8HbGH5IUN0nDZ48YY+qEqivKOouhe92AFnGBDVbLWAiLwI7UF/uHVCOB1bsBP2gggR+AEk57I+p1CHMeZLMsznMKy53knCAK3ESAkSXLtKeL4vt/8EwK9a1mWWBTFGc0FtZXhtdeYOWw7O1NwXZcEPqBLSB9mCvxIUSRtZ8fSLqzAD+gzV573jc4jAAAAAElFTkSuQmCC" alt="plugs" />
+                          <p class="body-text-xs text-neutrals-600 ms-2">
+                            電壓
+                          </p>
+                        </div>
+                        <p class="body-text-xs text-neutrals-600">
+                          220V - 50Hz
+                        </p>
+                      </li>
+                      <li
+                        class="d-flex align-items-center justify-content-between py-3 border-bottom border-top border-neutrals-100"
+                      >
+                        <div class="d-flex align-items-center">
+                          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEsSURBVHgBjVM7boNAEGVxCgqK9Q18hCBRuPQR0qaKJT6iC+mSKsoJvG4ogMY3SJlUcQ6A4AbODUKDhISAvEVGwisczRTM8lbvzW+HaUQLw5DXdc0NwyiFEOWI61SBqqrytm1P8L++7+9GfEEhe563hdtOoLVt2zzLsk9GFPiC26h40zRLagmrORD94CSBvu/31+5IJUhzHEfouv44xZIkYeQpMMa4AhXyc0Mhn6fwoAiKCwHXdTcAX3Hk8O9xHL9JHDO/67puB2zK/0E534PQOcJJUzotI6B5t9rM+IA/pWk6ZMCCIFjJF6bRbY/mheOPjvddUpmIfJiSpS2Koqgty1oi5fU/RBnkBWk/q3fDLuR5/jEnAuIR7mCa5n0URcc58YvWjisrz+raXrM/wDlzWDgCzX0AAAAASUVORK5CYII=" alt="phone" />
+                          <p class="body-text-xs text-neutrals-600 ms-2">
+                            國際電話區號
+                          </p>
+                        </div>
+                        <p class="body-text-xs text-neutrals-600">+66</p>
+                      </li>
+                      <li
+                        class="d-flex align-items-center justify-content-between pt-3"
+                      >
+                        <div class="d-flex align-items-center">
+                          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAF/SURBVHgBjVNbboJAFGVwTPwydAe4A5dgd+AO2g81frIDcQf4ZwRS3AE7sF1B6QrKDjohkJDw6rkEzGQCrTfRuQP3nHvuA6YNmGVZRpIka13XTbo3TRNNp9PofD7HaiyTL/v93izL0maMvWjDFkwmk6NMxGRwVVU3uKaKgoIjSAl0oDtInnsS/T9wb67rBvgtQPZBsYS5E5Dsv8DIHvY+Yi0cAiStGtZl/x7AxdQ8nCfP897lF5vNZgXSW1EUTxx/S3RbzXi8XC62NmJEuN1uBSaz5gheqgF1XQv5TmPN89yYzWbCcZz2HdTFVDbXhmte4XDI3+126zRN3/DMyLKM5Av4VJoBEo0jW4yxqBw/kpoDgSVy8ikBjfNTR0A4IOKkPWAg+9KDIBCQcu3qCvHwFfOO+iBaohF8QMvUtp9zbuOIARbo/lWO8n0/hNQFXLmxVHZLPLTKJM1WiTA22hWzA99XefRjgnS522bXvPGPSSWiBet3hCY1n8/Dfgdk+wXOf9P5IcSwywAAAABJRU5ErkJggg==" alt="ISO" />
+                          <p class="body-text-xs text-neutrals-600 ms-2">
+                            國家代碼 ISO
+                          </p>
+                        </div>
+                        <p class="body-text-xs text-neutrals-600">TH</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="bg-white px-6 radius-l locationInfo my-div" id="myDiv">
+              <div
+                class="d-flex align-items-center justify-content-between py-3 d-none"
+                id="closeBar"
+              >
+                <img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAZCAYAAAArK+5dAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADTSURBVHgB7Y2xDYMwEEVt3CDRIegpERUjZIRsEI+QDcIWKRMmyAghU+AyC1hymTR2zhJIFjJwblL5Syf77Lv3CImJiWFu0zRNWxTFNc/zr5RSkMDA/qUsS55l2Usp9bFviTugtT7DcWSMPeq6PpGAAPxmjOmgeJqm7fyeLOY6qLe9UErvWMkE51PbCyGG+Y8uhwFaAfwJ18r2dhEWeoKEj+PI3X/qW8JK9uCrAowEA98UbEmw8F2BTwIZoA4YOEqwIkHB0QKPBAUPjpVAcRIT89f8AGgYdtntU9UIAAAAAElFTkSuQmCC"
+                  alt="leftIcon"
+                  id="closeBtn"
+                />
+                <img src="/web-layout-training-vite/assets/rightIcon-dd28d9c3.svg" alt="rightIcon" />
+              </div>
+
+              <div class="mb-6">
+                <div class="d-flex justify-content-center py-3">
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAAECAYAAAATUhYeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABMSURBVHgBzdBBEcAwCETRLSAgkiohFuqsDpo6aBUhAAaSuOCd9rjzD1VtIvIAOFHPcPdLmLmj5sGtE9FPmdlQ2IqoFBH32gM1fWb2TpnvFkh48hLlAAAAAElFTkSuQmCC" alt="bar" />
+                </div>
+                <div class="d-flex align-items-center">
+                  <img src="/web-layout-training-vite/assets/broadcast-eee1da5e.svg" alt="broadcast" />
+                  <h3 class="ms-2 body-text-lg fw-bold">曼谷最新資訊</h3>
+                </div>
+                <div class="d-flex align-items-center mt-2 mb-4">
+                  <p class="text-danger-error-600 fw-bold body-text-xs me-2">
+                    危險等級 5
+                  </p>
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAAICAYAAABQ6Rd5AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACaSURBVHgB3dSxDcIwEAXQf19IBKpQ0mUFJkBMQEo6VvAIsIEZgY7STICYBHe0qVAa32GLJWJeddI1d8X/guzl+nYh8xOFR4O1mDiBDICFpDiv/S3K2x06Eo+861Cf+NFxQ6P2qPOBoltK4zgT7lExIbbEH2AOxxMV06R3Njb6PEfUKRoYuPJhUMVODddfdU1fuTOZXUozlYr9ApizNKhSm0poAAAAAElFTkSuQmCC"
+                    alt="progress"
+                    class="me-1 progressWidth"
+                  />
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAAICAYAAABQ6Rd5AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACaSURBVHgB3dSxDcIwEAXQf19IBKpQ0mUFJkBMQEo6VvAIsIEZgY7STICYBHe0qVAa32GLJWJeddI1d8X/guzl+nYh8xOFR4O1mDiBDICFpDiv/S3K2x06Eo+861Cf+NFxQ6P2qPOBoltK4zgT7lExIbbEH2AOxxMV06R3Njb6PEfUKRoYuPJhUMVODddfdU1fuTOZXUozlYr9ApizNKhSm0poAAAAAElFTkSuQmCC"
+                    alt="progress"
+                    class="me-1 progressWidth"
+                  />
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAAICAYAAABQ6Rd5AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACaSURBVHgB3dSxDcIwEAXQf19IBKpQ0mUFJkBMQEo6VvAIsIEZgY7STICYBHe0qVAa32GLJWJeddI1d8X/guzl+nYh8xOFR4O1mDiBDICFpDiv/S3K2x06Eo+861Cf+NFxQ6P2qPOBoltK4zgT7lExIbbEH2AOxxMV06R3Njb6PEfUKRoYuPJhUMVODddfdU1fuTOZXUozlYr9ApizNKhSm0poAAAAAElFTkSuQmCC"
+                    alt="progress"
+                    class="me-1 progressWidth"
+                  />
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAAICAYAAABQ6Rd5AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACaSURBVHgB3dSxDcIwEAXQf19IBKpQ0mUFJkBMQEo6VvAIsIEZgY7STICYBHe0qVAa32GLJWJeddI1d8X/guzl+nYh8xOFR4O1mDiBDICFpDiv/S3K2x06Eo+861Cf+NFxQ6P2qPOBoltK4zgT7lExIbbEH2AOxxMV06R3Njb6PEfUKRoYuPJhUMVODddfdU1fuTOZXUozlYr9ApizNKhSm0poAAAAAElFTkSuQmCC"
+                    alt="progress"
+                    class="me-1 progressWidth"
+                  />
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAAICAYAAABQ6Rd5AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACaSURBVHgB3dSxDcIwEAXQf19IBKpQ0mUFJkBMQEo6VvAIsIEZgY7STICYBHe0qVAa32GLJWJeddI1d8X/guzl+nYh8xOFR4O1mDiBDICFpDiv/S3K2x06Eo+861Cf+NFxQ6P2qPOBoltK4zgT7lExIbbEH2AOxxMV06R3Njb6PEfUKRoYuPJhUMVODddfdU1fuTOZXUozlYr9ApizNKhSm0poAAAAAElFTkSuQmCC"
+                    alt="progress"
+                    class="progressWidth"
+                  />
+                </div>
+                <div class="bg-warning-50 p-4 radius-m mb-2">
+                  <div class="d-flex align-items-center">
+                    <img
+                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAG8SURBVHgBtVVNTsJAFP5mBolGEjFh6aKYmLhR2huUG3AD9AR6BW+gJ0BvgCcAT1CCK1fWuDLRhIUJApmOb0aohDbMBOuXNJl5fX3/rx9DDmYRQiXQVkDIAA/rwDCAwoAD96VTdLOvlzCO4AmBDh1DbIZYSjR3AsQZB58R/LJAj45V/A0jkJNyQJktHMwjjwownjqhTAKdCdc3Xkzky6jOSw0+GaJlbeSWh9JhD1snyjylo8jILAjHjwg5TUDLpslrl2C7YXpn2z4EyWwQCm3OOBo2RSZyqif24ACTgW/TUtM4R/YCB3jcRUvNYidZHpwcQI6yspysNnfwNcjKisxA90C+XZmy6CfRZ8cM2HRIbf5HuJVIK9YuUDp+NgvnsGQpnDLg+2cQB51fATV99lTPb/7qt2Q9tiktb7EBLZ7eZisMTyg8WPXGG04RkRFPEtza9JKPa8j3m58LlUW+njtNETW4a/iA+qB/1yGKhEJcbqBupojIgUKCvWPuxkcyQVMfjQPNPFMtKMIJ2dC2Fryc7kGFOJS8BkrZp2oN+tpGZc7HGixPaxIRCXHDdA3S8NcHjJhpwxJ3FHV/9f03b7il66+RwNUAAAAASUVORK5CYII="
+                      alt="securityLevel 5"
+                    />
+                    <h4 class="body-text-md fw-bold ms-2">泰國反政府運動</h4>
+                  </div>
+                  <p class="body-text-sm text-neutrals-700 mt-1">
+                    曼谷民主紀念碑・500公尺
+                  </p>
+                  <p class="body-text-sm text-neutrals-700 mt-1">
+                    更新時間：30 分鐘前
+                  </p>
+                </div>
+                <div class="bg-neutrals-50 p-4 radius-m">
+                  <div class="d-flex align-items-center">
+                    <img src="/web-layout-training-vite/assets/notice-d05afd94.svg" alt="notice.svg" />
+                    <h4 class="body-text-md fw-bold ms-2">旅遊日期注意事項</h4>
+                  </div>
+                  <p class="body-text-sm mt-1">
+                    曼谷 6 月至 10
+                    月為雨季，常受季風和暴雨影響，城市排水系統不足，容易發生洪水問題，建議隨身攜帶雨傘、穿著抓地力佳的布鞋。
+                  </p>
+                </div>
+              </div>
+
+              <div class="mb-6">
+                <h4 class="body-text-md fw-bold mb-4">我的安全評論</h4>
+                <div
+                  class="bg-neutrals-50 py-4 radius-m d-flex flex-column align-items-center"
+                >
+                  <p class="body-text-md mb-4">
+                    分享你對 <span class="fw-bold">泰國曼谷</span> 的看法
+                  </p>
+                  <div>
+                    <img src="data:image/png;base64,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" alt="safe" />
+                    <img
+                      src="data:image/png;base64,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"
+                      alt="normal"
+                      class="mx-4"
+                    />
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEkAAAAgCAYAAABeiFVOAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAVkSURBVHgB7ZpJLGxLGMe/do0xtWFjWLTEmOB5MYRdC2Ilr8XacLemt8YCG7F817C+WNgZ3pYIOwkRN0jM0RbYGNo8875/6TrvOLoPfdzc5Gr/5KRO1akuXb/+vq++qsNEr2h9fd3q4+NT/fj4aOWq2Xn99uL5/DCZTD/u7+//TUlJGdXra3L3YHNz828eqC0wMNAcHBxMQUFB5OfnRwyMfnc9PDzQ7e0t3dzc0MnJCV1dXdm5uS0xMbHfVf8XkLa2tixM9zvDsUZGRgo4H113d3e0s7ODcurLly9fExIS7OrnzyA5AU1GRERYAMjbdHh4SEdHR3YGVagGpUBiQGYGNO+tgKQkqNPT0z9ZDrQpAYb9tDU0NNSrAUGYf3h4uCUkJKRVtglLgptxpN+Ki4sjX19f8nYhsG9vbxN7VmFSUtKUsCSO9G0g+AnoSVjB2ZqQJthE3dn4lzesYp7IbDaDS/X8/LzZF8kicqH3WNHu7i7Nzc3RwcEBXV9fU0BAAEVFRVFycjJxoubRWBwwaWRkRNxXVVV58lEaGBigsLAwstls9F7Bmvz9/c0cm7JAJgtJohEByNjYmICkbUcbrrW1NbJarcSLgu5YDQ0NIrFDvlJUVCQuTBoXxomNjRX9cN/V1UXFxcUvxsDfAODe3l6qq6t7Nyz82JxwWkxsSYhHrZ6uagAxNDQkfvnXBKsqKysTf9SdKioqqLa2VsDBmGqo+fn5ND4+Ltqqq6sFgLy8PLdjzczMUEtLi7jv6+sjLEhGhHSAr3bDewy411sAQXDDpaUl3T5s1gICLAkgUEIo0S6hnZ2d0WsCQEAFTKOA1DIECXAWFxeVekZGBhUUFDzrU1pa+qxtYWFBWJ+e4G4QgDQ3N4t7uE5ubq7SB9BcTRzWA7hqSXd764/pToYgwTLUys7OpszMTMWdOOBRTEwMcWqv9MFm0m63uxxvdHRUxJrGxkYx0dTUVNGOODU7OyssArEJwABQDQntKysr4l4bGyE8Q/x6DyhDS9r+/v6zOmITwEhLARC0oVTL3ReFdSAeYTLSrdDW2dmpxBRcaOvu7n722YmJCQWqK+FZeXk5NTU1UU9PDxnRT8keXU3ek18OloL+9fX1L55Jt5PSBuzV1VUFoN74JSUlwiX1Ar47GYKkXc7hbnBBi8WiLNco0Q8BXio6OtrtmIhH+AwsRwoTQwCWqqmpUeIWhElL99ODhD6VlZXCXX8ZJMSa6elpxb2QMOKLoI57WAVKgFNDQiqgJwBAfFJLXddaJ56pg7orAQzSCvRD/NKmF2+RIUiIP+np6QqAwcFBAQBQ1KV6ucYK+JYvp520uq4FiKCsjVFaoQ9+MMS7jo4OjwFBhvMkrGZqy5ArnrqUloYvBpd8TdhS6ElrScPDw8pK5+qz6A9I8fHxog6LMiJf3unacXzpqWBNyIUmJydpb2/PbT+kAuinl21Lad0NeY7WetwJsBALtdsVxCC91U9PTi4Ok3ODOylpGxFWGFxI4+UGF9ucnJwcZc/1FrlLFNXPYTFGXMaIsJBcXFwUmpzHtlscjM0f4U3IzxKsiA/eHPwGJcKH4eAct9/hcNCn/tfl5SUK4evCdDgujR4fH4tjy089WRFCB5/YtqMuIOEclwF947cE9KmnIxLeUn1LS0uzo64EIX7X1MYuZ/d2UJg/pw728/PzNtmmQEJsYvMqZIpeCwrzxvzBQb5zg1685l5eXrbwce53PvO2essrJgRpAOJyigF9lW4m5fYfJvhsuoZTglZ+i2JBXoLk8aP9wwTgcB6E0sGLVzvH5n9c9Te9NuDGxoaNB7UxnD+4mkUfQ3AlB7+QxYLVj4VLr/N/iH/alJA3R9IAAAAASUVORK5CYII=" alt="takecare" />
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h4 class="body-text-md fw-bold mb-4">旅客安全評論</h4>
+
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="d-flex align-items-center">
+                    <img
+                      src="data:image/png;base64,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"
+                      alt="safeComment"
+                      class="commentWidth"
+                    />
+                    <img
+                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAgCAYAAACFM/9sAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAU4SURBVHgB7VpLTuNKFC2H8JOQnnsFz5FAAiZtVtBhBcAKSEbAKMkKCCtIGCBgRLKCDivArCDuCSA+ilnByxMMEL+8c9y3kAO2X2IYoMZHqlT5uqrsOr51762qGCoGnU7HfH5+LvV6vTwuLUlfAV0k1zCMViaTOczlcl5URSNMCOKsp6enAxRtENhEJ87IyIgb19GfBI7/8fHRguIUMPYfEHH8WwON/+rqqnR5edm5uLiottttU6VQ5AKc/IO8HFsR5G2SvNPTU0ul6AM5ITfkKLSC1ryUvGhoEt9oIuc8VTQl7/9BjqBsHXLG6wx/Hh4eqjCY23Nzc55KEQtyRMcqTlYZ4nGPpqencyrFQGB4B846Nzc3uQzc9TJkjkoxMBDOME5sTk1NlbMIFpcwfbdUAszOzhbQ3oRdqAflUPMSvtD1+fl561X9/NnZmRO4tuL6R11PfV44GHuJNtDOZrOeSgYHqWRZ1ku8aNs2y2UEoG6wIuWQ1ebn5w+0DB+O3mwzmPBSB0gdpGX1iQG/wfFZBrxvD/bPGKYxNQxZ0JVbSF5ImTiEhpYDbRsgp3dyclLkNbWSpIHMKghm9L+MVAlqahh2d3cttuOz1tfXi1q+s7NjY9VQQzEvIgf9FTc2NjxpcxTRZR39bKshQO4yKgFACB/E6bmNck5kObzoIoqelGkW+sgjxsfHy/RiLM/MzNjMSR41Tkh0KCOxUc/f29srkQiaDxVYn9dqNRPk/UTxF57zDf3xPa6FaHV3d9clmSHJRJ2uSoCsSgiGPXhoG9O38foepzTubQqhfXBdly/q+A/PZjlYF/UoI5kObCfbluT6TWRALUJWRr0VkL2Muj/0vYmJCbZxoUn6o3VRv4Hc17pKpfLy7EB/tOPdtbW1pkqAoQkUw5+XS3dycnJV5AX5kia+fkH9nsZ5yPnlfWciA1QYfBfRvG8jUb+Bdv8q2hPDOEaZU45lO+z51CLTNBeKxSLJ6bOTmKaOekUQ+vmu+k2KenWfdreqEiKpBlr8wUCPkX1D4nTloLVmmnLPrwfiTCGkJNOO5BWlj4L6vX1E+0fR31InFKJFsQCxtKur8k7ckluMqFdgnlT7iKEJlNCiCm/qExJXFy++FQhFmLeoqchfph0Jl3skjaS3RAMPVHJ48gGvkVYx1Unmm1DtvdpHJLaBIIdalQ+zc4R4O35ZL64f2ruADSSJ3+M0cBDQ4yJrsEwbiP7byI9liiuRF5i/R/uIRF44AA60EJYGJUFCFnpC2r+mlCsqAfb395eRVoMyIZMf6q+g/CO0j3gvgYQXkUJBrUWyou7DNHBgP+lM1JDArKAm1xHmLGkZCPX379DfLy37KO0jEk9hAV/YG6QivbcEzLw8RkDdYdzHsEU8e5U3QAKzpm4zzHKOUxSE0dbVJXxRYh5WtCYSH6V9fl/cIETwuTjseYesIKgprbD7jNFAxopeUci62daBtbQvoMgwI3S6k2C0T6QlEi+qIHEfCe4Ljo6OtrkcOUJMtqQSIG4zgPeCa+Q/DeAsT+6yYrzpSQ/VkIibXp98J+XdkPj1MIPlVJ1xUnoCNxx43Im91FZGNgddbg6qFANBTuYcbu/rM5EitVAflKSIBjniPiY481c2PoFyULLNs5GUxGjo8yNu1YUewMkJfCcl8S3k6Nf/x0ZsRR4a84w48gT+i4EncPofG2F/7QjdymeQiOC6qv9YwzUqz02+0p+L7u/vbS47ZSfHpZ8Im7axZyEkcmxsjKd23LjUuyVfAZ6SLbHb29v6wsJC5B7kf7gYLJtekv+hAAAAAElFTkSuQmCC"
+                      alt="normalComment"
+                      class="commentWidth mx-1"
+                    />
+                    <img
+                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEoAAAAgCAYAAAC1v+5NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAVaSURBVHgB7VpbTuNIFK2E8BTShBWMI4F4fXRYAckK0qygyQ+PryQrSLKCTj4Qj5+EFUxYQcwK4v7gIQGyZwUTCSTeMOeYqsZJbBO7P2aa5EiFq1y3KlWn7r11XUVE+MA0zfjLy0vu9fU1haIm02dCG8mIRCKNaDR6lEgkLC/BiNtLEKQ9Pz/XkE2CqEN0oo+MjBh+Hf2O4Dyfnp40KMI65riKV5xnua95Xl1d5S4vL82Li4tSq9WKiwEC54y5/4Nn3lcQJBVJ0tnZmSYGFJw7OSAXrgJKkwaZJAVFVo9m0VapckOS3kEuoDwmuWE5yj+Pj48lOLTq4uKiJYawQS64kclNTUTkDtecnZ1NiCE6wPAI3JjX19eJKLbHr3iniyF6gDCBcdbh9PR0PopgKwOzOxQhsbCwkIKaVvDUArbTwrT7D6CDo9UYMslYLGYFaYkJUgu/sS1ItvBs3N3dtfHeRKd27IX3bZm3Tk9PVzy6ikOmubS0pMMflM/Pzy0RELu7u9r29rblVV+r1ezxZLPZtggB+G9jdHRUi2C3e4V/igRpLInK3d7errFsWVbbUcctVcOukae2gYgi8mmvvqRGrVMOqQxSS6IP7O3t8dOqpBYGqGxtbRVUPQlEHR1xSr6yEH2vbWxsGCIgyFFUhAC1xf5lEDQ5OVmERjiDM2pZixnHJDxBLULirpuAVumiD+zs7CTxqGDiWZATYVuUv4KckkOM+fb4+PgMZZA/glxTaVhQhCKKIAmapvFHj7my1B6pHTTJYymmSdPsATTvLxCcUWVJmC779AW+x77jUd/c3GywTNPD76RBnOEY3yrKZWVy0H4uRhympIkQiAWUt00Fg1jHjyanpqZMaAG/vqs0HVSzrkwSIVdCmR+addU2mUxyoMWTkxOaCE8mZrr7h4bWQOCPD0wwRWKgQTTtL0ht9HWsiCOgRR3hzsTEhL0A2O5D+arAGoVVilNLOFBMZgZakKY/QplaVOUEx8bGLMpyN0X9zx0VDp+nEUm//tGGJObm5uZc5eh75Dgy0gfR1OnjmgcHB559o97WQj/H74fAGgUiqN4GTCeH1PPhiHeZ+/t7DozFP0TnYJNepqhAE4Q2VrETc2JpH9GUU2vg3CtYBNc2+/v7RVoA/NWKCInQPgo/zB+lg8wyIf+DyVE+QupeYfok/aO+YSYVkkq/113HMIRPkFJ1vpcbQY+8JImuIh02RCBCEyVBH7Qu0xeZ7DKdqVNQOvqUeHf0PaDM8vLyd8Mw2piYAfNKdcsUCgVOVqcLcL6nn+qWdZIU1uQUApteF/4W7xqiyaddxgqLLrJSSFW/oBKONq7IQdsC+nDVANRRk3PwVw0S4IiZ6kqGcRYe9J12rKd8G7S1HUazfokoriIGovJ2xlHuWHEQVO9q3jNY+KVVtCf5yhe6ArtbBRNnVG+CEEu8LZIOH1RwiFU4Fjp5Z1uYLt1CXQQEI3MTcUk66Hk4zKSOQfzp5ZxRp/HpFZXPz8/noT2MubpNaM2PJCcYPHInRdb6VdPyAs+l8AnTYnjexEleJmgHDAz9gkPW/QYfvB8C3KTIUYzxD52deNul+obz+86nPvQu838BNwM8jqLwC/xm+jZoNy79gtdYOLNrROXhlMHDKTFEB+RNjM5jYXVmnqVWqYP0Id4uXGB2eXBTZtkmSh6kV3l2PiTr5015E0SVXS9c5E2pOchkyas7+6bcV5CXfrzj87wp/aTgjYu6KXe7Unc9AmaQhSC0pP5xgcclPFf/jP+k8fDwkESQm5LBr0F/7WZuvmflJAxnS7yl4Rk5I+DPFkJYTIwlb25uKisrK55x37+KJC3S23o1VQAAAABJRU5ErkJggg=="
+                      alt="takecareComment"
+                      class="commentWidth"
+                    />
+                  </div>
+
+                  <p class="body-text-sm text-neutrals-400 text-cuswidth">
+                    577則評論
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="loading" class="loading">
+      <div class="position-relative">
+        <div class="position-relative">
+          <img
+            src="/web-layout-training-vite/assets/Star-2--Streamline-Core-20px-7615d0ae.svg"
+            alt="Star-2--Streamline-Core-20px"
+            class="change"
+          />
+          <img
+            src="/web-layout-training-vite/assets/onlyWhite_logo-9cf7520d.svg"
+            alt="onlyWhite_logo"
+            class="logoWalk"
+          />
+          <img
+            src="/web-layout-training-vite/assets/Star-2--Streamline-Core-Solid-26px-6a786cd3.svg"
+            alt="Star-2--Streamline-Core-Solid-26px"
+            class="changeSolid"
+          />
+        </div>
+
+        <p
+          class="fadeInText text-white body-text-lg text-center d-flex justify-content-between mt-5"
+        >
+          <span>平</span><span>安</span><span>旅</span><span>人</span>
+        </p>
+      </div>
+    </div>
+
+    <!-- footerNavbar -->
+<nav class="footerNavbar bg-white pt-2 pb-10 fixed-bottom">
+  <div class="container">
+    <ul
+      class="nav nav-pills justify-content-between body-text-xxs"
+      id="pills-tab"
+      role="tablist"
+    >
+      <li class="nav-item" role="presentation">
+        <a
+          class="nav-link fw-bold link-neutrals-400 d-flex flex-column align-items-center fw-bold link active"
+          href="index.html"
+          aria-selected="false"
+        >
+          <i class="bi bi-geo-alt-fill mb-1 fs-4"></i>
+          地圖
+        </a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a
+          class="nav-link fw-bold link-neutrals-400 d-flex flex-column align-items-center fw-bold link "
+          href="latestNews.html"
+          aria-selected="false"
+        >
+          <i class="footIcon-barChart mb-1 fs-4"></i>
+          最新動態
+        </a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a
+          class="nav-link fw-bold link-neutrals-400 d-flex flex-column align-items-center fw-bold link "
+          href="travel.html"
+          aria-selected="false"
+        >
+          <i class="footIcon-document mb-1 fs-4"></i>
+          旅遊資訊
+        </a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a
+          class="nav-link fw-bold link-neutrals-400 d-flex flex-column align-items-center fw-bold link "
+          href="member.html"
+          aria-selected="false"
+        >
+          <i class="bi bi-person-fill mb-1 fs-4"></i>
+          會員
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<a
+  href="index.html"
+  id="pills-map"
+  role="tabpanel"
+  aria-labelledby="pills-map-tab"
+></a>
+<!-- footer -->
+<footer class="container pt-5 pb-2 fixed-bottom">
+  <div class="footerLine"></div>
+</footer>
+
     
   </body>
 </html>
