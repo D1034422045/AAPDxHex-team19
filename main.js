@@ -478,7 +478,9 @@ let hospitalLabelImgIsClicked = false;
 policeStationLabelWrap.addEventListener("click", function (event) {
   if (!policeStationLabelImgIsClicked) {
     // 如果還沒有被點擊，切換為新的圖片
-    policeStationLabelImg.src = "../assets/images/policeStationLabelClick.png";
+    policeStationLabelImg.src = `${
+      import.meta.env.BASE_URL
+    }assets/images/policeStationLabelClick.png`;
     policeStationLabelImgIsClicked = true; // 更新狀態為已點擊
   }
 
@@ -493,7 +495,9 @@ policeStationLabelWrap.addEventListener("click", function (event) {
 
   // 同時將 hospitalLabelWrap 的圖片恢復到原本的狀態
   if (hospitalLabelImgIsClicked) {
-    hospitalLabelImg.src = "../assets/images/hospitalLabel.png";
+    hospitalLabelImg.src = `${
+      import.meta.env.BASE_URL
+    }assets/images/hospitalLabel.png`;
     hospitalLabelImgIsClicked = false;
   }
 
@@ -504,7 +508,9 @@ policeStationLabelWrap.addEventListener("click", function (event) {
 hospitalLabelWrap.addEventListener("click", function (event) {
   if (!hospitalLabelImgIsClicked) {
     // 如果還沒有被點擊，切換為新的圖片
-    hospitalLabelImg.src = "../assets/images/hospitalLabelClick.png";
+    hospitalLabelImg.src = `${
+      import.meta.env.BASE_URL
+    }assets/images/hospitalLabelClick.png`;
     hospitalLabelImgIsClicked = true; // 更新狀態為已點擊
   }
 
@@ -518,7 +524,9 @@ hospitalLabelWrap.addEventListener("click", function (event) {
 
   // 同時將 policeStationLabelWrap 的圖片恢復到原本的狀態
   if (policeStationLabelImgIsClicked) {
-    policeStationLabelImg.src = "../assets/images/policeStationLabel.png";
+    policeStationLabelImg.src = `${
+      import.meta.env.BASE_URL
+    }assets/images/policeStationLabel.png`;
     policeStationLabelImgIsClicked = false;
   }
 
@@ -530,13 +538,17 @@ hospitalLabelWrap.addEventListener("click", function (event) {
 document.addEventListener("click", function () {
   if (policeStationLabelImgIsClicked) {
     // 如果已經點擊，恢復原本的圖片
-    policeStationLabelImg.src = "../assets/images/policeStationLabel.png";
+    policeStationLabelImg.src = `${
+      import.meta.env.BASE_URL
+    }assets/images/policeStationLabel.png`;
     policeStationLabelImgIsClicked = false; // 更新狀態為未點擊
   }
 
   if (hospitalLabelImgIsClicked) {
     // 如果已經點擊，恢復原本的圖片
-    hospitalLabelImg.src = "../assets/images/hospitalLabel.png";
+    hospitalLabelImg.src = `${
+      import.meta.env.BASE_URL
+    }assets/images/hospitalLabel.png`;
     hospitalLabelImgIsClicked = false; // 更新狀態為未點擊
   }
 
@@ -706,21 +718,34 @@ let originalSrc = ""; // 保存原始圖片的 src
 
 clickChangeIcons.forEach((img) => {
   img.addEventListener("click", (e) => {
+    e.stopPropagation(); //新增的
     // 如果當前已經有被點擊的圖片，恢復該圖片的原始 src
-    if (currentClickedImg && currentClickedImg !== img) {
-      currentClickedImg.src = originalSrc;
+    // if (currentClickedImg && currentClickedImg !== img) {
+    //   currentClickedImg.src = originalSrc;
+    // }
+
+    if (currentClickedImg === img) {
+      img.src = originalSrc;
+      currentClickedImg = null; // Reset the clicked image state
+    } else {
+      // If another image is clicked, reset the previously clicked image to its original state
+      if (currentClickedImg && currentClickedImg !== img) {
+        currentClickedImg.src = originalSrc;
+      }
+
+      // 保存當前點擊的圖片及其原始 src
+      currentClickedImg = img;
+      originalSrc = img.src;
+
+      // 改變圖片的 src 為新圖片
+      // img.src = "../assets/images/pin/type=" + img.alt + ", selected=on.svg";
+      // img.src = "../assets/images/type=" + img.alt + ", selected=on.svg";
+      img.src = `${import.meta.env.BASE_URL}/assets/images/type=${
+        img.alt
+      }, selected=on.svg`;
     }
-
-    // 保存當前點擊的圖片及其原始 src
-    currentClickedImg = img;
-    originalSrc = img.src;
-
-    // 改變圖片的 src 為新圖片
-    img.src = "../assets/images/pin/type=" + img.alt + ", selected=on.svg";
-    console.log(img.src);
-
     // 停止事件冒泡，防止點擊事件傳遞到其他元素
-    e.stopPropagation();
+    // e.stopPropagation(); 原本的
   });
 });
 
@@ -771,9 +796,13 @@ let centerAimClick = false;
 
 // 保存圖片的原始URL
 const originalCenterAimImgUrl = centerAimImg.src;
-const newCenterAimImgUrl = "../assets/images/centerAimClick.png"; // 當點擊 centerAimImg 時要更改的圖片 URL
+const newCenterAimImgUrl = `${
+  import.meta.env.BASE_URL
+}assets/images/centerAimClick.png`; // 當點擊 centerAimImg 時要更改的圖片 URL
 const originalfloatImgUrl = floatImg.src;
-const newfloatImgUrl = "../assets/images/floatClick.png"; // 當點擊 floatImgImg 時要更改的圖片 URL
+const newfloatImgUrl = `${
+  import.meta.env.BASE_URL
+}assets/images/floatClick.png`; // 當點擊 floatImgImg 時要更改的圖片 URL
 
 // 點擊 centerAimImg 時改變圖片 URL
 centerAimImg.addEventListener("click", function () {
@@ -825,12 +854,21 @@ let isFavoriteClick = false;
 let isFavoriteClickHotelIconImg = false;
 
 // 保存原始圖片的 URL
-const originalFavoriteImg = "../assets/images/bookMark.svg"; //MarkA
-const clickedFavoriteImg = "../assets/images/_bookMark.png"; //MarkB
-const originalHotelIconImg =
-  "../assets/images/pin/type=normal(selectedOn), selected=on.svg"; // FavA
-const originalFavoriteHotelImg = "../assets/images/favoriteHotel.png"; // FavB
-const clickedFavoriteHotelImg = "../assets/images/favoriteHotelClick.png"; // FavC
+const originalFavoriteImg = `${
+  import.meta.env.BASE_URL
+}assets/images/bookMark.svg`; //MarkA
+const clickedFavoriteImg = `${
+  import.meta.env.BASE_URL
+}assets/images/bookMarkClick.png`; //MarkB
+const originalHotelIconImg = `${
+  import.meta.env.BASE_URL
+}assets/images/type=normal(selectedOn), selected=on.svg`; // FavA
+const originalFavoriteHotelImg = `${
+  import.meta.env.BASE_URL
+}assets/images/favoriteHotel.png`; // FavB
+const clickedFavoriteHotelImg = `${
+  import.meta.env.BASE_URL
+}assets/images/favoriteHotelClick.png`; // FavC
 
 // 點擊 favorite 時更換圖片或恢復原圖片
 favorite.addEventListener("click", function (event) {
