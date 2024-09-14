@@ -825,12 +825,12 @@ let isFavoriteClick = false;
 let isFavoriteClickHotelIconImg = false;
 
 // 保存原始圖片的 URL
-const originalFavoriteImg = "../assets/images/bookMark.svg";
-const clickedFavoriteImg = "../assets/images/_bookMark.png";
-const originalFavoriteHotelImg = "../assets/images/favoriteHotel.png";
-const clickedFavoriteHotelImg = "../assets/images/favoriteHotelClick.png";
+const originalFavoriteImg = "../assets/images/bookMark.svg"; //MarkA
+const clickedFavoriteImg = "../assets/images/_bookMark.png"; //MarkB
 const originalHotelIconImg =
-  "../assets/images/pin/type=normal(selectedOn), selected=on.svg";
+  "../assets/images/pin/type=normal(selectedOn), selected=on.svg"; // FavA
+const originalFavoriteHotelImg = "../assets/images/favoriteHotel.png"; // FavB
+const clickedFavoriteHotelImg = "../assets/images/favoriteHotelClick.png"; // FavC
 
 // 點擊 favorite 時更換圖片或恢復原圖片
 favorite.addEventListener("click", function (event) {
@@ -840,24 +840,38 @@ favorite.addEventListener("click", function (event) {
     // 如果已經被點擊，恢復原本的圖片
     favorite.src = originalFavoriteImg;
     favoriteHotel.src = originalHotelIconImg;
+    isFavoriteClickHotelIconImg = false;
   } else {
     // 如果未被點擊，則更換圖片
     favorite.src = clickedFavoriteImg;
     favoriteHotel.src = originalFavoriteHotelImg;
-
-    favoriteHotel.addEventListener("click", function () {
-      if (isFavoriteClickHotelIconImg) {
-        favoriteHotel.src = originalFavoriteHotelImg;
-      } else {
-        favoriteHotel.src = clickedFavoriteHotelImg;
-      }
-
-      isFavoriteClickHotelIconImg = !isFavoriteClickHotelIconImg;
-    });
   }
 
   // 切換點擊狀態
   isFavoriteClick = !isFavoriteClick;
+});
+
+// Click event for favoriteHotel
+favoriteHotel.addEventListener("click", function (event) {
+  event.stopPropagation();
+
+  if (favoriteHotel.src.includes("favoriteHotel.png")) {
+    // If favoriteHotel is in imgFavB, switch to imgFavC
+    favoriteHotel.src = clickedFavoriteHotelImg;
+    isFavoriteClickHotelIconImg = true; // Set the flag indicating imgFavC is active
+  } else if (favoriteHotel.src.includes("favoriteHotelClick.png")) {
+    // If favoriteHotel is in imgFavC, revert to imgFavB
+    favoriteHotel.src = originalFavoriteHotelImg;
+    isFavoriteClickHotelIconImg = false;
+  }
+});
+
+// Ensure clicking outside won't affect favoriteHotel's state
+document.addEventListener("click", function () {
+  if (isFavoriteClick && !isFavoriteClickHotelIconImg) {
+    // favoriteHotel remains in imgFavB if favorite is selected and not in imgFavC state
+    favoriteHotel.src = originalFavoriteHotelImg;
+  }
 });
 
 // 點擊 favorite 時更換圖片
