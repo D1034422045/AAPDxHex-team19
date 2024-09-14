@@ -478,7 +478,9 @@ let hospitalLabelImgIsClicked = false;
 policeStationLabelWrap.addEventListener("click", function (event) {
   if (!policeStationLabelImgIsClicked) {
     // 如果還沒有被點擊，切換為新的圖片
-    policeStationLabelImg.src = "../assets/images/policeStationLabelClick.png";
+    policeStationLabelImg.src = `${
+      import.meta.env.BASE_URL
+    }assets/images/policeStationLabelClick.png`;
     policeStationLabelImgIsClicked = true; // 更新狀態為已點擊
   }
 
