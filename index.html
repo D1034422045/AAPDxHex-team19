@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>首頁</title>
-    <script type="module" crossorigin src="/AAPDxHex-team19/assets/main-1eddc111.js"></script>
-    <link rel="stylesheet" href="/AAPDxHex-team19/assets/main-dbf4eed9.css">
+    <script type="module" crossorigin src="/AAPDxHex-team19/assets/main-99c142be.js"></script>
+    <link rel="stylesheet" href="/AAPDxHex-team19/assets/main-e5e285f2.css">
   </head>
   <body>
     <section class="mapIndex draggable-background">
@@ -139,6 +139,39 @@
             <p class="body-text-sm mt-1">
               曼谷進入緊戒狀態，現場許多鎮暴員警跟民眾發生衝突，泰警出動水炮車驅趕示威者，各地鐵站人滿為患，不宜前往。
             </p>
+          </div>
+          <div class="bg-neutrals-50 p-4 radius-m mt-4">
+            <h4 class="body-text-md fw-bold">資訊來源</h4>
+
+            <ul class="list-unstyled mb-0 mt-1">
+              <li class="d-flex align-items-center">
+                <p class="body-text-sm">看見泰國</p>
+                <a
+                  href="https://visionthai.net/"
+                  target="_blank"
+                  class="ms-auto body-text-sm text-neutrals-700 text-decoration-underline"
+                  >visionthai.net</a
+                >
+              </li>
+              <li class="d-flex align-items-center my-2">
+                <p class="body-text-sm">udn聯合新聞</p>
+                <a
+                  href="https://travel.ettoday.net/"
+                  target="_blank"
+                  class="ms-auto body-text-sm text-neutrals-700 text-decoration-underline"
+                  >travel.ettoday.net</a
+                >
+              </li>
+              <li class="d-flex align-items-center">
+                <p class="body-text-sm">中央社</p>
+                <a
+                  href="https://www.cna.com/web/guest/cna/home"
+                  target="_blank"
+                  class="ms-auto body-text-sm text-neutrals-700 text-decoration-underline"
+                  >www.cna.com</a
+                >
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -735,6 +768,12 @@
         data-bs-backdrop="false"
       >
         <div
+          class="d-flex align-items-center justify-content-between py-3 d-none"
+        >
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAZCAYAAAArK+5dAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADTSURBVHgB7Y2xDYMwEEVt3CDRIegpERUjZIRsEI+QDcIWKRMmyAghU+AyC1hymTR2zhJIFjJwblL5Syf77Lv3CImJiWFu0zRNWxTFNc/zr5RSkMDA/qUsS55l2Usp9bFviTugtT7DcWSMPeq6PpGAAPxmjOmgeJqm7fyeLOY6qLe9UErvWMkE51PbCyGG+Y8uhwFaAfwJ18r2dhEWeoKEj+PI3X/qW8JK9uCrAowEA98UbEmw8F2BTwIZoA4YOEqwIkHB0QKPBAUPjpVAcRIT89f8AGgYdtntU9UIAAAAAElFTkSuQmCC" alt="leftIcon" />
+          <img src="/AAPDxHex-team19/assets/rightIcon-dd28d9c3.svg" alt="rightIcon" />
+        </div>
+        <div
           class="bg-white px-6 labelDetailWrap pb-5"
           id="Akara Bangkok Hotel"
         >
@@ -1064,6 +1103,7 @@
                 alt="safe"
                 id="safeCommentIcon"
                 onclick="changeIconImage('safeCommentIcon')"
+                style="cursor: pointer"
               />
               <img
                 src="data:image/png;base64,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"
@@ -1071,12 +1111,14 @@
                 class="mx-4"
                 id="normalCommentIcon"
                 onclick="changeIconImage('normalCommentIcon')"
+                style="cursor: pointer"
               />
               <img
                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEkAAAAgCAYAAABeiFVOAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAVkSURBVHgB7ZpJLGxLGMe/do0xtWFjWLTEmOB5MYRdC2Ilr8XacLemt8YCG7F817C+WNgZ3pYIOwkRN0jM0RbYGNo8875/6TrvOLoPfdzc5Gr/5KRO1akuXb/+vq++qsNEr2h9fd3q4+NT/fj4aOWq2Xn99uL5/DCZTD/u7+//TUlJGdXra3L3YHNz828eqC0wMNAcHBxMQUFB5OfnRwyMfnc9PDzQ7e0t3dzc0MnJCV1dXdm5uS0xMbHfVf8XkLa2tixM9zvDsUZGRgo4H113d3e0s7ODcurLly9fExIS7OrnzyA5AU1GRERYAMjbdHh4SEdHR3YGVagGpUBiQGYGNO+tgKQkqNPT0z9ZDrQpAYb9tDU0NNSrAUGYf3h4uCUkJKRVtglLgptxpN+Ki4sjX19f8nYhsG9vbxN7VmFSUtKUsCSO9G0g+AnoSVjB2ZqQJthE3dn4lzesYp7IbDaDS/X8/LzZF8kicqH3WNHu7i7Nzc3RwcEBXV9fU0BAAEVFRVFycjJxoubRWBwwaWRkRNxXVVV58lEaGBigsLAwstls9F7Bmvz9/c0cm7JAJgtJohEByNjYmICkbUcbrrW1NbJarcSLgu5YDQ0NIrFDvlJUVCQuTBoXxomNjRX9cN/V1UXFxcUvxsDfAODe3l6qq6t7Nyz82JxwWkxsSYhHrZ6uagAxNDQkfvnXBKsqKysTf9SdKioqqLa2VsDBmGqo+fn5ND4+Ltqqq6sFgLy8PLdjzczMUEtLi7jv6+sjLEhGhHSAr3bDewy411sAQXDDpaUl3T5s1gICLAkgUEIo0S6hnZ2d0WsCQEAFTKOA1DIECXAWFxeVekZGBhUUFDzrU1pa+qxtYWFBWJ+e4G4QgDQ3N4t7uE5ubq7SB9BcTRzWA7hqSXd764/pToYgwTLUys7OpszMTMWdOOBRTEwMcWqv9MFm0m63uxxvdHRUxJrGxkYx0dTUVNGOODU7OyssArEJwABQDQntKysr4l4bGyE8Q/x6DyhDS9r+/v6zOmITwEhLARC0oVTL3ReFdSAeYTLSrdDW2dmpxBRcaOvu7n722YmJCQWqK+FZeXk5NTU1UU9PDxnRT8keXU3ek18OloL+9fX1L55Jt5PSBuzV1VUFoN74JSUlwiX1Ar47GYKkXc7hbnBBi8WiLNco0Q8BXio6OtrtmIhH+AwsRwoTQwCWqqmpUeIWhElL99ODhD6VlZXCXX8ZJMSa6elpxb2QMOKLoI57WAVKgFNDQiqgJwBAfFJLXddaJ56pg7orAQzSCvRD/NKmF2+RIUiIP+np6QqAwcFBAQBQ1KV6ucYK+JYvp520uq4FiKCsjVFaoQ9+MMS7jo4OjwFBhvMkrGZqy5ArnrqUloYvBpd8TdhS6ElrScPDw8pK5+qz6A9I8fHxog6LMiJf3unacXzpqWBNyIUmJydpb2/PbT+kAuinl21Lad0NeY7WetwJsBALtdsVxCC91U9PTi4Ok3ODOylpGxFWGFxI4+UGF9ucnJwcZc/1FrlLFNXPYTFGXMaIsJBcXFwUmpzHtlscjM0f4U3IzxKsiA/eHPwGJcKH4eAct9/hcNCn/tfl5SUK4evCdDgujR4fH4tjy089WRFCB5/YtqMuIOEclwF947cE9KmnIxLeUn1LS0uzo64EIX7X1MYuZ/d2UJg/pw728/PzNtmmQEJsYvMqZIpeCwrzxvzBQb5zg1685l5eXrbwce53PvO2essrJgRpAOJyigF9lW4m5fYfJvhsuoZTglZ+i2JBXoLk8aP9wwTgcB6E0sGLVzvH5n9c9Te9NuDGxoaNB7UxnD+4mkUfQ3AlB7+QxYLVj4VLr/N/iH/alJA3R9IAAAAASUVORK5CYII="
                 alt="takecare"
                 id="takecareCommentIcon"
                 onclick="changeIconImage('takecareCommentIcon')"
+                style="cursor: pointer"
               />
             </div>
           </div>
@@ -1092,6 +1134,7 @@
                 class="commentWidth"
                 id="safeComment"
                 onclick="changeImage('safeComment')"
+                style="cursor: pointer"
               />
               <img
                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAgCAYAAACFM/9sAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAU4SURBVHgB7VpLTuNKFC2H8JOQnnsFz5FAAiZtVtBhBcAKSEbAKMkKCCtIGCBgRLKCDivArCDuCSA+ilnByxMMEL+8c9y3kAO2X2IYoMZHqlT5uqrsOr51762qGCoGnU7HfH5+LvV6vTwuLUlfAV0k1zCMViaTOczlcl5URSNMCOKsp6enAxRtENhEJ87IyIgb19GfBI7/8fHRguIUMPYfEHH8WwON/+rqqnR5edm5uLiottttU6VQ5AKc/IO8HFsR5G2SvNPTU0ul6AM5ITfkKLSC1ryUvGhoEt9oIuc8VTQl7/9BjqBsHXLG6wx/Hh4eqjCY23Nzc55KEQtyRMcqTlYZ4nGPpqencyrFQGB4B846Nzc3uQzc9TJkjkoxMBDOME5sTk1NlbMIFpcwfbdUAszOzhbQ3oRdqAflUPMSvtD1+fl561X9/NnZmRO4tuL6R11PfV44GHuJNtDOZrOeSgYHqWRZ1ku8aNs2y2UEoG6wIuWQ1ebn5w+0DB+O3mwzmPBSB0gdpGX1iQG/wfFZBrxvD/bPGKYxNQxZ0JVbSF5ImTiEhpYDbRsgp3dyclLkNbWSpIHMKghm9L+MVAlqahh2d3cttuOz1tfXi1q+s7NjY9VQQzEvIgf9FTc2NjxpcxTRZR39bKshQO4yKgFACB/E6bmNck5kObzoIoqelGkW+sgjxsfHy/RiLM/MzNjMSR41Tkh0KCOxUc/f29srkQiaDxVYn9dqNRPk/UTxF57zDf3xPa6FaHV3d9clmSHJRJ2uSoCsSgiGPXhoG9O38foepzTubQqhfXBdly/q+A/PZjlYF/UoI5kObCfbluT6TWRALUJWRr0VkL2Muj/0vYmJCbZxoUn6o3VRv4Hc17pKpfLy7EB/tOPdtbW1pkqAoQkUw5+XS3dycnJV5AX5kia+fkH9nsZ5yPnlfWciA1QYfBfRvG8jUb+Bdv8q2hPDOEaZU45lO+z51CLTNBeKxSLJ6bOTmKaOekUQ+vmu+k2KenWfdreqEiKpBlr8wUCPkX1D4nTloLVmmnLPrwfiTCGkJNOO5BWlj4L6vX1E+0fR31InFKJFsQCxtKur8k7ckluMqFdgnlT7iKEJlNCiCm/qExJXFy++FQhFmLeoqchfph0Jl3skjaS3RAMPVHJ48gGvkVYx1Unmm1DtvdpHJLaBIIdalQ+zc4R4O35ZL64f2ruADSSJ3+M0cBDQ4yJrsEwbiP7byI9liiuRF5i/R/uIRF44AA60EJYGJUFCFnpC2r+mlCsqAfb395eRVoMyIZMf6q+g/CO0j3gvgYQXkUJBrUWyou7DNHBgP+lM1JDArKAm1xHmLGkZCPX379DfLy37KO0jEk9hAV/YG6QivbcEzLw8RkDdYdzHsEU8e5U3QAKzpm4zzHKOUxSE0dbVJXxRYh5WtCYSH6V9fl/cIETwuTjseYesIKgprbD7jNFAxopeUci62daBtbQvoMgwI3S6k2C0T6QlEi+qIHEfCe4Ljo6OtrkcOUJMtqQSIG4zgPeCa+Q/DeAsT+6yYrzpSQ/VkIibXp98J+XdkPj1MIPlVJ1xUnoCNxx43Im91FZGNgddbg6qFANBTuYcbu/rM5EitVAflKSIBjniPiY481c2PoFyULLNs5GUxGjo8yNu1YUewMkJfCcl8S3k6Nf/x0ZsRR4a84w48gT+i4EncPofG2F/7QjdymeQiOC6qv9YwzUqz02+0p+L7u/vbS47ZSfHpZ8Im7axZyEkcmxsjKd23LjUuyVfAZ6SLbHb29v6wsJC5B7kf7gYLJtekv+hAAAAAElFTkSuQmCC"
@@ -1099,6 +1142,7 @@
                 class="commentWidth mx-1"
                 id="normalComment"
                 onclick="changeImage('normalComment')"
+                style="cursor: pointer"
               />
               <img
                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEoAAAAgCAYAAAC1v+5NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAVaSURBVHgB7VpbTuNIFK2E8BTShBWMI4F4fXRYAckK0qygyQ+PryQrSLKCTj4Qj5+EFUxYQcwK4v7gIQGyZwUTCSTeMOeYqsZJbBO7P2aa5EiFq1y3KlWn7r11XUVE+MA0zfjLy0vu9fU1haIm02dCG8mIRCKNaDR6lEgkLC/BiNtLEKQ9Pz/XkE2CqEN0oo+MjBh+Hf2O4Dyfnp40KMI65riKV5xnua95Xl1d5S4vL82Li4tSq9WKiwEC54y5/4Nn3lcQJBVJ0tnZmSYGFJw7OSAXrgJKkwaZJAVFVo9m0VapckOS3kEuoDwmuWE5yj+Pj48lOLTq4uKiJYawQS64kclNTUTkDtecnZ1NiCE6wPAI3JjX19eJKLbHr3iniyF6gDCBcdbh9PR0PopgKwOzOxQhsbCwkIKaVvDUArbTwrT7D6CDo9UYMslYLGYFaYkJUgu/sS1ItvBs3N3dtfHeRKd27IX3bZm3Tk9PVzy6ikOmubS0pMMflM/Pzy0RELu7u9r29rblVV+r1ezxZLPZtggB+G9jdHRUi2C3e4V/igRpLInK3d7errFsWVbbUcctVcOukae2gYgi8mmvvqRGrVMOqQxSS6IP7O3t8dOqpBYGqGxtbRVUPQlEHR1xSr6yEH2vbWxsGCIgyFFUhAC1xf5lEDQ5OVmERjiDM2pZixnHJDxBLULirpuAVumiD+zs7CTxqGDiWZATYVuUv4KckkOM+fb4+PgMZZA/glxTaVhQhCKKIAmapvFHj7my1B6pHTTJYymmSdPsATTvLxCcUWVJmC779AW+x77jUd/c3GywTNPD76RBnOEY3yrKZWVy0H4uRhympIkQiAWUt00Fg1jHjyanpqZMaAG/vqs0HVSzrkwSIVdCmR+addU2mUxyoMWTkxOaCE8mZrr7h4bWQOCPD0wwRWKgQTTtL0ht9HWsiCOgRR3hzsTEhL0A2O5D+arAGoVVilNLOFBMZgZakKY/QplaVOUEx8bGLMpyN0X9zx0VDp+nEUm//tGGJObm5uZc5eh75Dgy0gfR1OnjmgcHB559o97WQj/H74fAGgUiqN4GTCeH1PPhiHeZ+/t7DozFP0TnYJNepqhAE4Q2VrETc2JpH9GUU2vg3CtYBNc2+/v7RVoA/NWKCInQPgo/zB+lg8wyIf+DyVE+QupeYfok/aO+YSYVkkq/113HMIRPkFJ1vpcbQY+8JImuIh02RCBCEyVBH7Qu0xeZ7DKdqVNQOvqUeHf0PaDM8vLyd8Mw2piYAfNKdcsUCgVOVqcLcL6nn+qWdZIU1uQUApteF/4W7xqiyaddxgqLLrJSSFW/oBKONq7IQdsC+nDVANRRk3PwVw0S4IiZ6kqGcRYe9J12rKd8G7S1HUazfokoriIGovJ2xlHuWHEQVO9q3jNY+KVVtCf5yhe6ArtbBRNnVG+CEEu8LZIOH1RwiFU4Fjp5Z1uYLt1CXQQEI3MTcUk66Hk4zKSOQfzp5ZxRp/HpFZXPz8/noT2MubpNaM2PJCcYPHInRdb6VdPyAs+l8AnTYnjexEleJmgHDAz9gkPW/QYfvB8C3KTIUYzxD52deNul+obz+86nPvQu838BNwM8jqLwC/xm+jZoNy79gtdYOLNrROXhlMHDKTFEB+RNjM5jYXVmnqVWqYP0Id4uXGB2eXBTZtkmSh6kV3l2PiTr5015E0SVXS9c5E2pOchkyas7+6bcV5CXfrzj87wp/aTgjYu6KXe7Unc9AmaQhSC0pP5xgcclPFf/jP+k8fDwkESQm5LBr0F/7WZuvmflJAxnS7yl4Rk5I+DPFkJYTIwlb25uKisrK55x37+KJC3S23o1VQAAAABJRU5ErkJggg=="
@@ -1106,12 +1150,45 @@
                 class="commentWidth"
                 id="takecareComment"
                 onclick="changeImage('takecareComment')"
+                style="cursor: pointer"
               />
             </div>
 
             <p class="body-text-sm text-neutrals-400 text-cuswidth">
               577則評論
             </p>
+          </div>
+
+          <div class="radius-m bg-neutrals-50 p-4 mt-4 mb-2">
+            <div class="d-flex align-items-center">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAAAgCAYAAACxSj5wAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAASzSURBVHgB7Vo/bBNXGP/e2bUMiYMNBSlxKzlDq0Z0SIZm6dAgR106EC8dQzvHEnRrsgBLMpYhmVvSrUuo1E6ACBIsZiADKBEMWAIHQYBz4iQEx77H93vJHWff2TmfkUD4fpLlu3ffPb/7vd/3596zoCbQpYyHK3RWSjkiJaW4KUWfBopC0JI0xBVD0r+JQyLfyFC4NeqvZSoUkn8yKSPUARBC/FWt0kU3orT6hlJZntU0ebdTyAHYQ37BM+s71XP112oIKu3K84aUl/gwTp2HuCbEH+DA3mi5GJSzT07Hg3n4LRENKS4UQYg5kBh1pnLcUDQMMYSYpFxMI+MCBeTYEUeSwoHYV88jCuCAEREJjaQxRgHcsWOcC4fC4jSndN/Y2DXo7wfrtPBokwrbFdX2TTxCA/yZOJmgZFeY/GCe+4xFNMqkYi3dl739zPrtdhEKiR/CTM4g+cSVfImm777i8sCoaV8pltXnWmGbsifjNP71kab9LOtvHH1c53tBbvKwk+DhE4dc+5m7r1Nhq0Irelmdt0sS3h7E+hvDl34wwzNLrzzZTg9/3lQJZ248VUqMfaY17adUMbgcMejaT186roGchfwmXR7ptfrM9He3TZIv/WOWZu8XPdvPsMrSyS7qaULA5OAxVkZUHa+wopbXyw5Sc89f09SdF4577eSYLn35VK8iCWiHJI18AAMyXQLug4HZB1HfBlsorhEQs+zqmX+4wZNQddj1REL03fGodQ7VZW89U65sJwfAMUjCtdH/H6tJ9QNfLpa5WlB+jkFA7phZxAW0x8IazfPA7G1223pg4LC1AyqZ4NjlFn+A9BddtLpZofHFp0qZpd1qU3UCpsJMlXqFL4IG/nlXNmH2EZCHeWZzazs1bea3ieWf+x197bmrbp0jOOMh7IpCH1ChqZ7xr47QQCKyR3w3E/9k27Jd4MQBskCcCdUfZ8SDSHRD2wS1AjeC7DBjTL3SRv97TBPfxj2l/MncmlJr9j2kecBXkIb0zZoHgFLgTqp24VlCDLpe2KpRD2wOwlTuBd/bU9MG18AbYyNycL2wtWud4zdXoUp6p0oQ1mo9ZcIXQWOcPudsWQyF2eTgURU3AEh5lQfdCkEmEfMPNtQxiMJEzN3TaXLoGH0o+HIxxIM0y95e3GGW0snD6hixwYxHAFS18GPywKoa8Qg2uec7rKY1pVLcO/v9iYbFYT0+ChfDoFG3TN1Zs9rwcJh9N2Q9vHIgZcNVUJ3jtaWP7aeHj6t+4XpQFxRqdxW3ChzuhTWc+swIeCXZDigIETdFPgBCZm01UT0UkewemVR3035mll6qvvZiWZTSfV2OdAzSUH/9PnSURvczFN67NsoGeR7vqV5qEUXBP3CjnfVnM02b719AH8eOTH9MxRGvqRUKOsjWi837BPOyyOtB1QuaJs5TAAew9Cqw96WVpU4BHOBl134tIQQ20RYpQC14rwxr0sGivTtqF+1xwP52kQIogAtzl9VKCdgHMoyAJHBg7okBjr15bL/yDiOyWqe5W1Epx0YO0PDPC8wl0v8Z6gCg3pFS/Or25wXR7EYVvAWdlpocE3uL+5+EqpiQPH/lpZQ3KapdQiZvZPsWQFZsvNRb8eQAAAAASUVORK5CYII=" alt="safeClick" />
+              <p class="ms-2 body-text-sm fw-bold">林孟潔</p>
+            </div>
+            <p class="body-text-sm my-4">
+              曼谷市中心車流量大，這裡的夜市價格會因為觀光客不太一樣。我是在潑水節期間來的，人很多，包包要顧好
+            </p>
+            <div class="d-flex align-items-center">
+              <p class="body-text-xs text-neutrals-700">2024 年 4 月 18 到訪</p>
+              <div class="d-flex align-items-center ms-auto">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEXSURBVHgBrZLLDYJAEIaXxQNHStAO1grUCsQO8MLjZAnaAfHA46gVaAdoBdKB2AEd4D+EIcYACegkm5ndYb55IcSPonU5wjBUuq7vNU27uq577vpOdjkQfIFSZVmekiQJBgHiOF5CTRG8hT6iCnsQQEq5g8p9378BUuCYXYBJS3bKbHFWAsCm90MNf37OpBki+qSsFpVOd8/zZgyEugDCVUxhZ4DMG0AURRbINLQrjqLyAViJFqH5AJDSfNDiqZoBHjhoA8dd9AjPhSudiIESBIFZt/OguxwKMAxDVYFSvkYBUL5CBYXjONkoAP7QBSAZ33kGN5w9VpnWGWit6Xcw9V777eaNDazHhmMN0+wpIAfgTJsQ/5I3lMJyyBc6pkwAAAAASUVORK5CYII=" alt="thumb" />
+                <p class="body-text-sm text-neutrals-400 ms-1">66</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="radius-m bg-neutrals-50 p-4">
+            <div class="d-flex align-items-center">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAAAgCAYAAACxSj5wAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAUySURBVHgB7VpNTxtHGH5nbeE1SoNpEr4EAtQPqtIK2h4Seiikh9BTyY1b0h56bcgvAP4B6rWHtrmRU8mp9AL00EKlBFChKv2Q7eLiD5LGQBSvndiT95n1Ov5YO+uNlEPsR7K8+87seOaZ533f2RkLqoGgDAb0TOs1KeWEJBog8/MSQCQFyS0i7Xshs0vd/u5Q1Zp2xmgqOiCF+IZJmaBGgKBvtZyctyNKKzfEjMS1nNA2G4YcQNJnGPOBEZspLypRUDQdn81JOUcNDE2IuW5f57x1XyAIyslSboGaACnXe/Suhfy1GXMgMdZagJogBHFN5t5DTFIxKEs01ySnGDKAJIUrYapHBKmJCmR8qXYtK8VlasIWXkOf8WoaTUlyD+OxQRuHm7R9b4eS6WNl62o9R53+DhrvHqOAr81xW9v3dsnIpul8x/sl9vXEHQq0nKa3Aq+X2EMn+zTwSl/h3vp9e8i6+gJ4hBj3ShKjeNgNtnhAP+6vqEEVI/bwUH32kn/TeM+HFQOuhn4e7Hd7N2nkzNuke3RlQ9sb8dt0dWi6pC7sy5FV6vKfo6mBT5RtI3GbJ6y0L8nMEYUfROhS30W64LAfFvD2IP4zYq7YwayCHCf4lAcwema4Zlu/MgkWkpljpZjya2CIVTTJg7WwFPpBfVskQVW32IaJwbN7yb/oUu/FEqXVA41cIJk+op8OflbXPo9PKaStaBC4hnuhDDBVZlRtDzM71P4Gne/8gL589wtlw/cVVg3IwTUGXE4OgPuRPPmxhwm1bkHdP1i9a9zH/lN9yhZm4tzAFUFr0V8KboXBoZMTPWOFctjQSUs1ppts1mwTJGNAdkQizqEMBJZD50mw1HHznyVaZyWGjvcVWSAHLrcev1NQWr3wkgvE+cctILDqXl3FCQsb7DK616di0NN6O0zaWEVbUGP4gTm7na0dXO/3Qn0Qi8/2/7vUxgE2fPIvhcl0MwSIeOpQ1YVSu/hZYOTsO+Tn++SjYxo41avIQxyKpxLkBq4IiuU7pgbIfr5cFotgWwotV9iqwco+GBDUAve0bFAWVIAyy2ZkM0ohG6wMKA7kWDFo++6OCvAgPiTNtsuTSD1wRZAdMKvTr02p60WWerF6agGpF+6IrIcsVAuoZwVsK+1DaaGTSKHOBXbDtpY2MiIrTGqf6hcUdOtFuhg6V64IBEHLz+0CYien41qAEvDclTenbctv/LlIR6yK4oxmB8QgKAgKg/LU94tWELIGAnUxVKzgeFQNVoyoBbONHduylMNBTvZ9zKo8rSYLbomYhMm8sbdIbuCKIGQTrF3SDjuNIAr3cAIMrh7AvY5qxDdMJNZC/S7XQa4IQmpFanfq1xN45Wh59sDRbqDF2esAgvBSmBOBlCpTffXb12oS4KpJnrfxbnNC+vkz8upw4Zl6XzdAUIhcbMZjjQOXwPqkmpKgnElexY6eHXbUJtrburvrqG6IXx/wmmEtHKEQuDhiULX+fIS1WV0E8eY+78OuPM/+M/wbJCEYWusSqAVxCq6o51fTjtrilFzNxVCGtVU97T0vmJdVsZ+KzvE+7Cw1UQEm6LoI3g8GWvz++9REBTQpB7XB9kE+RKNVaqIUfFZW2JMWUn6OgERN5MGb9nyQiCtFEJiSlJ2nJhQkPT1lLWx39Oo9C3xo2PAkgYPe/JkYUHE2HzEOZgR5ZhvvGEgkoZxicpTVriqOgnBWJoS4Sg0ArHc8HIft/rwgaj1o/svDM5Wj3GVhbu6/LKrCVlFISrn2WDcWBsVg1QT1BGtLf/yuSjAlAAAAAElFTkSuQmCC" alt="safeClick" />
+              <p class="ms-2 body-text-sm fw-bold">Yu-Ting Wu</p>
+            </div>
+
+            <div class="d-flex align-items-center mt-4">
+              <p class="body-text-xs text-neutrals-700">2024 年 3 月 1 到訪</p>
+              <div class="d-flex align-items-center ms-auto">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEXSURBVHgBrZLLDYJAEIaXxQNHStAO1grUCsQO8MLjZAnaAfHA46gVaAdoBdKB2AEd4D+EIcYACegkm5ndYb55IcSPonU5wjBUuq7vNU27uq577vpOdjkQfIFSZVmekiQJBgHiOF5CTRG8hT6iCnsQQEq5g8p9378BUuCYXYBJS3bKbHFWAsCm90MNf37OpBki+qSsFpVOd8/zZgyEugDCVUxhZ4DMG0AURRbINLQrjqLyAViJFqH5AJDSfNDiqZoBHjhoA8dd9AjPhSudiIESBIFZt/OguxwKMAxDVYFSvkYBUL5CBYXjONkoAP7QBSAZ33kGN5w9VpnWGWit6Xcw9V777eaNDazHhmMN0+wpIAfgTJsQ/5I3lMJyyBc6pkwAAAAASUVORK5CYII=" alt="thumb" />
+                <p class="body-text-sm text-neutrals-400 ms-1">3</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
