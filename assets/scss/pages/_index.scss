@@ -174,9 +174,8 @@
 [class*=" bi-"]::before {
   vertical-align: 0px;
 }
-
-.position-absolute {
-  z-index: 10;
+.searchAndLabel-position-zindex {
+  z-index: 50;
 }
 
 .input-wrapper {
@@ -475,6 +474,7 @@
   top: 235px;
   // display: none;
   background: #84d3f5;
+
   border: 3px solid #fff;
   border-radius: 50%;
   animation: expandBigCircleFade 6s infinite; /* 应用动画 */
@@ -489,7 +489,7 @@
 
   50% {
     transform: scale(1); /* 扩展后状态 */
-    opacity: 0.15; /* 最终透明度 */
+    opacity: 0.15; //最终透明度
   }
 
   100% {
@@ -571,34 +571,27 @@
   width: 65px;
 }
 
-//
+// 曼谷最新資訊展開
 .my-div {
   position: absolute;
-  top: 68%; //78
-
-  // width: 100%;
-  // height: 200px;
-  // background: #f0f0f0;
+  top: 61%; // 68
   transition: top 0.5s ease; /* 添加過渡效果 */
 }
 
 .my-div.expanded {
   top: 0; /* 當展開時，讓 div 滑動到視窗的頂部 */
   height: 100%;
-  z-index: 1050;
+  z-index: 1000;
+  padding-top: 64px;
+  padding-bottom: 130px;
+  border-radius: 0px;
+  height: 100vh;
+  overflow-y: scroll;
 }
 
 .my-div.collapsed {
-  top: 80%; /* 當收起時，讓 div 移動到 top: 300px 的位置 */
+  top: 76%; /* 當收起時，讓 div 移動到 top: 300px 的位置 */
 }
-
-//
-// .labelDetailWrap {
-//   position: absolute;
-//   z-index: 30;
-//   width: 100%;
-//   border-radius: 20px;
-// }
 
 .labelDetailButton {
   border: 1px solid #1aa3dd;
@@ -641,7 +634,7 @@
 }
 
 .offcanvasForIndex {
-  --bs-offcanvas-height: 43vh;
+  --bs-offcanvas-height: 53vh; //43 vh
   --bs-offcanvas-border-color: none;
   // border-radius: 50%;
   position: absolute;
@@ -652,31 +645,51 @@
 }
 
 .specialWarningOffcanvas {
-  --bs-offcanvas-height: 30vh;
+  --bs-offcanvas-height: 52vh; // 30 vh
+  overflow-y: scroll;
+  z-index: 1020;
+  padding-bottom: 100px;
 }
 
 //
 
 .infoAndFloatWrapLeft {
   position: absolute;
-  top: 62%;
+  top: 55%;
   left: 10px;
   z-index: 30;
 }
 
 .infoAndFloatWrapRight {
   position: absolute;
-  top: 55%;
+  top: 46%;
   right: 10px;
   z-index: 30;
 }
 
 .infoAndFloatWrapLeftChangePosition {
-  top: 74%;
+  top: 70%;
 }
 
 .infoAndFloatWrapRightChangePosition {
-  top: 67%;
+  top: 61%;
+}
+
+.countryInfoModalWrap {
+  --bs-modal-border-radius: 24px;
+}
+
+.countryInfoModal {
+  width: 320px;
+  margin-right: auto;
+  margin-left: auto;
+}
+// modal-dialog
+
+.countryInfoModal-dialog-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 // 搜尋到時的彈跳畫面
