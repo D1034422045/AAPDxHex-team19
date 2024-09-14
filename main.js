@@ -67,20 +67,20 @@ let startX,
   backgroundPosY = 0;
 
 const divWidth = 870;
-const divHeight = 875;
+const divHeight = 730; //725
 const imageWidth = 1290;
 const imageHeight = 875;
 
 const securityLevel5icon1X = 230; // Icon 的相對背景圖 X 座標
 const securityLevel5icon1Y = 150; // Icon 的相對背景圖 Y 座標
-const securityLevel5icon2X = 500; // Icon 的相對背景圖 X 座標
-const securityLevel5icon2Y = 240; // Icon 的相對背景圖 Y 座標
+const securityLevel5icon2X = 500; //  Icon 的相對背景圖 X 座標
+const securityLevel5icon2Y = 190; // 240 Icon 的相對背景圖 Y 座標
 const securityLevel5icon3X = 710; // Icon 的相對背景圖 X 座標
-const securityLevel5icon3Y = 390; // 原始為 690 Icon 的相對背景圖 Y 座標
+const securityLevel5icon3Y = 390; // 390 原始為 690 Icon 的相對背景圖 Y 座標
 const securityLevel5icon4X = 510; //  Icon 的相對背景圖 X 座標
-const securityLevel5icon4Y = 430; // 原始為 730 Icon 的相對背景圖 Y 座標
+const securityLevel5icon4Y = 430; // 430 原始為 730 Icon 的相對背景圖 Y 座標
 const specialWarningX = 660; // Icon 的相對背景圖 X 座標
-const specialWarningY = 510; // Icon 的相對背景圖 Y 座標
+const specialWarningY = 310; // 510 Icon 的相對背景圖 Y 座標
 const policeStationiconX = 230; // Icon 的相對背景圖 X 座標
 const policeStationiconY = 380; // Icon 的相對背景圖 Y 座標
 const policeStationicon2X = 340; // Icon 的相對背景圖 X 座標
@@ -96,16 +96,16 @@ const hospitalIcon3Y = 410; // Icon 的相對背景圖 Y 座標
 const hotelIconX = 280; // Icon 的相對背景圖 X 座標
 const hotelIconY = 490; // Icon 的相對背景圖 Y 座標
 const centerIconX = 560; // Icon 的相對背景圖 X 座標
-const centerIconY = 510; // Icon 的相對背景圖 Y 座標
+const centerIconY = 310; // 510 Icon 的相對背景圖 Y 座標
 const bgBigCircleX = 275; // Icon 的相對背景圖 X 座標
-const bgBigCircleY = 235; // Icon 的相對背景圖 Y 座標
+const bgBigCircleY = 35; // 235 Icon 的相對背景圖 Y 座標
 const bgSmallCircleX = 435; // Icon 的相對背景圖 X 座標
-const bgSmallCircleY = 385; // Icon 的相對背景圖 Y 座標
+const bgSmallCircleY = 185; // 385 Icon 的相對背景圖 Y 座標
 const originalCircleX = 510; // Icon 的相對背景圖 X 座標
-const originalCircleY = 455; // Icon 的相對背景圖 Y 座標
+const originalCircleY = 255; // 455 Icon 的相對背景圖 Y 座標
 
 const canvasX = 550; // Icon 的相對背景圖 X 座標
-const canvasY = 480; // Icon 的相對背景圖 Y 座標
+const canvasY = 280; // 480 Icon 的相對背景圖 Y 座標
 const iconWidth = 50;
 const iconHeight = 50;
 const bgBigCircleWidth = 600;
@@ -591,7 +591,7 @@ scrollableContainer.addEventListener("mousemove", (e) => {
   scrollableContainer.scrollLeft = scrollLeft - walk;
 });
 
-//
+// 曼谷最新資訊展開
 const myDiv = document.getElementById("myDiv");
 const closeBtn = document.getElementById("closeBtn");
 const closeBar = document.getElementById("closeBar");
@@ -627,90 +627,6 @@ closeBtn.addEventListener("click", (event) => {
   infoAndFloatWrapRight.classList.add("infoAndFloatWrapRightChangePosition");
 });
 
-//
-// const iconArrAll = document.querySelectorAll(".clickChangeIcon");
-
-//所有圖檔抓進來
-// console.log(iconArrAll);
-
-// for (let i = 0; i < iconArrAll.length; i++) {
-//   console.log(iconArrAll[i].attributes[0].nodeValue);
-
-//   iconArrAll[i].addEventListener("click", function () {
-// if (
-//   iconArrAll[i].attributes[0].nodeValue ===
-//   "../assets/images/pin/type=securityLevel 5, selected=off.svg"
-// ) {
-//   iconArrAll[i].attributes[0].nodeValue =
-//     "../assets/images/pin/type=securityLevel 5, selected=on.svg";
-// } else if (
-//   iconArrAll[i].attributes[0].nodeValue ===
-//   "../assets/images/pin/type=specialWarning, selected=off.svg"
-// ) {
-//   iconArrAll[i].attributes[0].nodeValue =
-//     "../assets/images/pin/type=specialWarning, selected=on.svg";
-// } else if (
-//   iconArrAll[i].attributes[0].nodeValue ===
-//   "../assets/images/pin/type=policeStation, selected=off.svg"
-// ) {
-//   iconArrAll[i].attributes[0].nodeValue =
-//     "../assets/images/pin/type=policeStation, selected=on.svg";
-// } else if (
-//   iconArrAll[i].attributes[0].nodeValue ===
-//   "../assets/images/pin/type=hospital, selected=off.svg"
-// ) {
-//   iconArrAll[i].attributes[0].nodeValue =
-//     "../assets/images/pin/type=hospital, selected=on.svg";
-// }
-
-//     if (
-//       iconArrAll[i].attributes[0].nodeValue ===
-//       "../assets/images/pin/type=securityLevel 5, selected=off.svg"
-//     ) {
-//       iconArrAll[i].attributes[0].nodeValue =
-//         "../assets/images/pin/type=securityLevel 5, selected=on.svg";
-//     } else {
-//       iconArrAll[i].attributes[0].nodeValue =
-//         "../assets/images/pin/type=securityLevel 5, selected=off.svg";
-//     }
-//   });
-// }
-
-// 圖檔路徑
-// console.log(iconArrAll[0].attributes[0].nodeValue);
-
-// iconArrAll.forEach((element) => {
-//   element.addEventListener("click", function () {
-//     console.log(element.attributes[0].nodeValue);
-//   });
-// });
-
-// iconArrAll.addEventListener("click", function () {
-//   console.log();
-// });
-
-// 點擊圖標時，跳出相關資訊
-// const royalThaiPoliceHeadquartersIcon = document.getElementById(
-//   "royalThaiPoliceHeadquartersIcon"
-// );
-
-// const labelDetailWrapAll = document.querySelectorAll(".labelDetailWrap");
-
-// const royalThaiPoliceHeadquarters = document.getElementById(
-//   "Royal Thai Police Headquarters"
-// );
-
-// royalThaiPoliceHeadquartersIcon.addEventListener("click", function () {
-//   royalThaiPoliceHeadquarters.classList.remove("d-none");
-// });
-
-// document.addEventListener("click", () => {
-//   royalThaiPoliceHeadquarters.classList.add("d-none");
-// });
-
-// console.log(labelDetailWrapAll);
-// console.log(royalThaiPoliceHeadquarters);
-
 // 點擊圖片時，改變圖片的 src
 const clickChangeIcons = document.querySelectorAll(".clickChangeIcon");
 let currentClickedImg = null; // 保存當前被點擊的圖片
@@ -719,10 +635,6 @@ let originalSrc = ""; // 保存原始圖片的 src
 clickChangeIcons.forEach((img) => {
   img.addEventListener("click", (e) => {
     e.stopPropagation(); //新增的
-    // 如果當前已經有被點擊的圖片，恢復該圖片的原始 src
-    // if (currentClickedImg && currentClickedImg !== img) {
-    //   currentClickedImg.src = originalSrc;
-    // }
 
     if (currentClickedImg === img) {
       img.src = originalSrc;
@@ -758,37 +670,7 @@ document.addEventListener("click", () => {
   }
 });
 
-//
-
-// const centerAimImg = document.querySelector(".centerAimImg");
-// const floatImg = document.querySelector(".floatImg");
-// let floatImgClick = false;
-// let centerAimClick = false;
-
-//  console.log(floatImg);
-
-// floatImg.addEventListener("click", function () {
-//   if (!floatImgClick) {
-//     floatImg.src = "../assets/images/floatClick.png";
-//     floatImgClick = true;
-//   }
-// });
-
-// document.addEventListener("click", function () {
-//   if (floatImgClick) {
-//      如果已經點擊，恢復原本的圖片
-//     floatImg.src = "../assets/images/float.png";
-//     floatImgClick = false;  更新狀態為未點擊
-//   }
-
-//   if (hospitalLabelImgIsClicked) {
-//      如果已經點擊，恢復原本的圖片
-//     hospitalLabelImg.src = "../assets/images/hospitalLabel.png";
-//     hospitalLabelImgIsClicked = false;  更新狀態為未點擊
-//   }
-// });
-
-//
+// 腳印及準心功能
 const centerAimImg = document.querySelector(".centerAimImg");
 const floatImg = document.querySelector(".floatImg");
 let floatImgClick = false;
@@ -844,9 +726,6 @@ document.addEventListener("click", function (event) {
     originalCircle.classList.remove("d-none");
   }
 });
-// const bgBigCircle = document.querySelector(".bg-bigCircle");
-// const bgSmallCircle = document.querySelector(".bg-smallCircle");
-// const originalCircle = document.querySelector(".originalCircle");
 
 const favorite = document.querySelector(".favorite");
 const favoriteHotel = document.querySelector(".favoriteHotel");
@@ -912,23 +791,6 @@ document.addEventListener("click", function () {
   }
 });
 
-// 點擊 favorite 時更換圖片
-// favorite.addEventListener("click", function (event) {
-//   event.stopPropagation(); // 防止點擊事件冒泡到 document 上
-//   isFavoriteClick = true;
-//   favorite.src = "../assets/images/_bookMark.png";
-//   favoriteHotel.src = "../assets/images/favoriteHotel.png";
-// });
-
-// 點擊圖片以外的地方時恢復原來的圖片
-// document.addEventListener("click", function (event) {
-//   if (!favorite.contains(event.target)) {
-//      如果點擊的不是圖片
-//     isFavoriteClick = false;
-//     favorite.src = "../assets/images/bookMark.svg";
-//   }
-// });
-
 // 點擊 centerAimImg 時移動背景中心到 centerIcon
 centerAimImg.addEventListener("click", () => {
   // 計算中心 Icon 應該出現在背景圖片容器的中間位置
@@ -951,4 +813,72 @@ centerAimImg.addEventListener("click", () => {
   });
   // 更新圖標的位置
   updateIconPosition();
+});
+
+// 我的安全評論 icon點擊
+
+document.addEventListener("DOMContentLoaded", function () {
+  const images = {
+    safeCommentIcon: {
+      default: `${import.meta.env.BASE_URL}assets/images/safe.png`,
+      clicked: `${import.meta.env.BASE_URL}assets/images/safeClick.png`,
+    },
+    normalCommentIcon: {
+      default: `${import.meta.env.BASE_URL}assets/images/normal.png
+`,
+      clicked: `${import.meta.env.BASE_URL}assets/images/normalClick.png`,
+    },
+    takecareCommentIcon: {
+      default: `${import.meta.env.BASE_URL}assets/images/takecare.png`,
+      clicked: `${import.meta.env.BASE_URL}assets/images/takecareClick.png`,
+    },
+  };
+
+  // Function to change the image
+  window.changeIconImage = function (clickedImageId) {
+    // Reset all images to their default state
+    for (const imgId in images) {
+      document.getElementById(imgId).src = images[imgId].default;
+    }
+
+    // Change the clicked image to its "clicked" state
+    document.getElementById(clickedImageId).src =
+      images[clickedImageId].clicked;
+  };
+});
+
+// 旅客安全評論 icon點擊
+
+document.addEventListener("DOMContentLoaded", function () {
+  const commentImages = {
+    safeComment: {
+      default: `${import.meta.env.BASE_URL}assets/images/safeComment.png`,
+      clicked: `${import.meta.env.BASE_URL}assets/images/safeCommentClick.png`,
+    },
+    normalComment: {
+      default: `${import.meta.env.BASE_URL}assets/images/normalComment.png
+`,
+      clicked: `${
+        import.meta.env.BASE_URL
+      }assets/images/normalCommentClick.png`,
+    },
+    takecareComment: {
+      default: `${import.meta.env.BASE_URL}assets/images/takecareComment.png`,
+      clicked: `${
+        import.meta.env.BASE_URL
+      }assets/images/takecareCommentClick.png`,
+    },
+  };
+
+  // Function to change the image
+  window.changeImage = function (clickedImageId) {
+    // Reset all images to their default state
+    for (const imgId in commentImages) {
+      document.getElementById(imgId).src = commentImages[imgId].default;
+    }
+
+    // Change the clicked image to its "clicked" state
+    document.getElementById(clickedImageId).src =
+      commentImages[clickedImageId].clicked;
+  };
 });
