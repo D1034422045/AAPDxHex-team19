@@ -35,16 +35,16 @@
 
 /* 給每個字母設置不同的動畫延遲時間 */
 .fadeInText span:nth-child(1) {
-  animation-delay: 1s;
+  animation-delay: 0s;
 }
 .fadeInText span:nth-child(2) {
-  animation-delay: 2s;
+  animation-delay: 0.5s;
 }
 .fadeInText span:nth-child(3) {
-  animation-delay: 3s;
+  animation-delay: 1s;
 }
 .fadeInText span:nth-child(4) {
-  animation-delay: 4s;
+  animation-delay: 1.5s;
 }
 
 // 改變實心星星的動畫
@@ -84,8 +84,8 @@
   position: absolute;
   top: -26px;
   animation-name: changeSolid;
-  animation-duration: 5s;
-  animation-delay: 1s;
+  animation-duration: 2s;
+  // animation-delay: 1s;
   animation-fill-mode: forwards;
   opacity: 0.6;
 }
@@ -128,8 +128,8 @@
   top: 50%;
   left: -38px;
   animation-name: change;
-  animation-duration: 5s;
-  animation-delay: 1s;
+  animation-duration: 2s;
+  // animation-delay: 1s;
   animation-fill-mode: forwards;
   opacity: 0.6;
 }
@@ -163,8 +163,8 @@
 
 .logoWalk {
   animation-name: logoWalk;
-  animation-duration: 5s;
-  animation-delay: 1s;
+  animation-duration: 2s;
+  // animation-delay: 1s;
   animation-fill-mode: forwards;
 }
 
