@@ -7,7 +7,1211 @@
     <title>首頁</title>
   </head>
   <body>
-    <%- include('./layout/header'); -%> <%- include('./layout/footer'); -%>
+    <section class="mapIndex draggable-background">
+      <%- include('./layout/header'); -%>
+      <div class="text-center">
+        <div
+          class="input-wrapper radius-m search-width searchAndLabel-position-zindex"
+        >
+          <img
+            id="searchBtn"
+            src="../assets/images/search_liner.svg"
+            alt="搜索圖標"
+            class="input-img"
+          />
+
+          <input
+            type="text"
+            id="search"
+            placeholder="搜尋目的地"
+            class="input-input radius-m search-width"
+          />
+        </div>
+      </div>
+
+      <div class="d-flex scrollable-container justify-content-center">
+        <div class="d-flex align-items-center" style="padding-left: 55px">
+          <div class="policeStationLabelWrap searchAndLabel-position-zindex">
+            <img
+              src="../assets/images/policeStationLabel.png"
+              alt="policeStationLabel"
+              id="policeStationLabelImg"
+            />
+          </div>
+          <div class="hospitalLabelWrap searchAndLabel-position-zindex">
+            <img
+              src="../assets/images/hospitalLabel.png"
+              alt="hospitalLabel"
+              id="hospitalLabelImg"
+            />
+          </div>
+          <div class="pharmacyLabelWrap searchAndLabel-position-zindex">
+            <img
+              src="../assets/images/pharmacyLabel.png"
+              alt="pharmacyLabel"
+              id="pharmacyLabelImg"
+            />
+          </div>
+          <div class="refugeLabelWrap searchAndLabel-position-zindex">
+            <img
+              src="../assets/images/refugeLabel.png"
+              alt="refugeLabel"
+              id="refugeLabelImg"
+            />
+          </div>
+          <div class="embassyLabelWrap searchAndLabel-position-zindex">
+            <img
+              src="../assets/images/embassyLabel.png"
+              alt="embassyLabel"
+              id="embassyLabelImg"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- icon -->
+      <img
+        src="../assets/images/pin/type=securityLevel 5, selected=off.svg"
+        class="securityLevel5icon1 clickChangeIcon"
+        alt="securityLevel 5"
+      />
+      <img
+        src="../assets/images/pin/type=securityLevel 5, selected=off.svg"
+        class="securityLevel5icon2 clickChangeIcon"
+        alt="securityLevel 5"
+      />
+      <img
+        src="../assets/images/pin/type=securityLevel 5, selected=off.svg"
+        class="securityLevel5icon3 clickChangeIcon"
+        alt="securityLevel 5"
+      />
+      <img
+        src="../assets/images/pin/type=securityLevel 5, selected=off.svg"
+        class="securityLevel5icon4 clickChangeIcon"
+        alt="securityLevel 5"
+      />
+      <img
+        src="../assets/images/pin/type=specialWarning, selected=off.svg"
+        class="specialWarningIcon clickChangeIcon"
+        alt="specialWarning"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#specialWarningOffcanvasBottom"
+        aria-controls="offcanvasBottom"
+      />
+
+      <div
+        class="offcanvas offcanvas-bottom specialWarningOffcanvas offcanvasForIndex"
+        tabindex="-1"
+        id="specialWarningOffcanvasBottom"
+        aria-labelledby="offcanvasBottomLabel"
+        data-bs-scroll="true"
+        data-bs-backdrop="false"
+      >
+        <div class="bg-white px-6 labelDetailWrap pb-5" id="specialWarning">
+          <div
+            class="d-flex justify-content-center py-3"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          >
+            <img src="../assets/images/bar.png" alt="bar" />
+          </div>
+          <div class="d-flex align-items-center">
+            <img src="../assets/images/notice.png" alt="notice" />
+            <p class="body-text-lg fw-bold ms-2 textEllipsis">泰國反政府運動</p>
+          </div>
+          <p class="body-text-xs text-neutrals-400 mt-1 mb-4">
+            500公尺・更新時間 30 分鐘前
+          </p>
+          <div class="bg-neutrals-50 p-4 radius-m">
+            <h4 class="body-text-md fw-bold">注意事項</h4>
+
+            <p class="body-text-sm mt-1">
+              曼谷進入緊戒狀態，現場許多鎮暴員警跟民眾發生衝突，泰警出動水炮車驅趕示威者，各地鐵站人滿為患，不宜前往。
+            </p>
+          </div>
+          <div class="bg-neutrals-50 p-4 radius-m mt-4">
+            <h4 class="body-text-md fw-bold">資訊來源</h4>
+
+            <ul class="list-unstyled mb-0 mt-1">
+              <li class="d-flex align-items-center">
+                <p class="body-text-sm">看見泰國</p>
+                <a
+                  href="https://visionthai.net/"
+                  target="_blank"
+                  class="ms-auto body-text-sm text-neutrals-700 text-decoration-underline"
+                  >visionthai.net</a
+                >
+              </li>
+              <li class="d-flex align-items-center my-2">
+                <p class="body-text-sm">udn聯合新聞</p>
+                <a
+                  href="https://travel.ettoday.net/"
+                  target="_blank"
+                  class="ms-auto body-text-sm text-neutrals-700 text-decoration-underline"
+                  >travel.ettoday.net</a
+                >
+              </li>
+              <li class="d-flex align-items-center">
+                <p class="body-text-sm">中央社</p>
+                <a
+                  href="https://www.cna.com/web/guest/cna/home"
+                  target="_blank"
+                  class="ms-auto body-text-sm text-neutrals-700 text-decoration-underline"
+                  >www.cna.com</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <img
+        src="../assets/images/pin/type=policeStation, selected=off.svg"
+        class="policeStationiconIcon1 clickDisplayIcon clickChangeIcon"
+        alt="policeStation"
+        id="thongLorPoliceStationIcon"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#thongLorPoliceStationIconOffcanvasBottom"
+        aria-controls="offcanvasBottom"
+      />
+      <div
+        class="offcanvas offcanvas-bottom offcanvasForIndex"
+        tabindex="-1"
+        id="thongLorPoliceStationIconOffcanvasBottom"
+        aria-labelledby="offcanvasBottomLabel"
+        data-bs-scroll="true"
+        data-bs-backdrop="false"
+      >
+        <div
+          class="bg-white px-6 labelDetailWrap pb-5"
+          id="Royal Thai Police Headquarters"
+        >
+          <div
+            class="d-flex justify-content-center py-3"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          >
+            <img src="../assets/images/bar.png" alt="bar" />
+          </div>
+          <div class="d-flex align-items-center">
+            <img
+              src="../assets/images/icon/24px/solid/policeStation.svg"
+              alt="policeStation24pxsolid"
+            />
+            <p class="body-text-lg fw-bold ms-2 textEllipsis">
+              Thong Lor Police Station
+            </p>
+            <img
+              src="../assets/images/bookMark.svg"
+              alt="bookMark"
+              class="ms-auto"
+            />
+          </div>
+          <p class="body-text-xs text-neutrals-400 mt-1 mb-2">
+            500公尺・24小時營業
+          </p>
+          <div class="d-flex align-items-center mt-2 mb-4">
+            <p class="text-danger-error-200 fw-bold body-text-xs me-2">
+              危險等級 1
+            </p>
+            <img
+              src="../assets/images/progressOG.png"
+              alt="progressOG"
+              class="me-1 progressWidth"
+            />
+            <img
+              src="../assets/images/progressGRAY.png"
+              alt="progressGRAY"
+              class="me-1 progressWidth"
+            />
+            <img
+              src="../assets/images/progressGRAY.png"
+              alt="progressGRAY"
+              class="me-1 progressWidth"
+            />
+            <img
+              src="../assets/images/progressGRAY.png"
+              alt="progressGRAY"
+              class="me-1 progressWidth"
+            />
+            <img
+              src="../assets/images/progressGRAY.png"
+              alt="progressGRAY"
+              class="progressWidth"
+            />
+          </div>
+          <div class="d-flex align-items-center justify-content-between mb-4">
+            <button
+              class="labelDetailButton text-brand-600 fw-bold body-text-sm d-flex align-items-center justify-content-center"
+            >
+              <img src="../assets/images/guide.svg" alt="guide" class="me-2" />
+              路線
+            </button>
+            <button
+              class="labelDetailButton text-brand-600 fw-bold body-text-sm d-flex align-items-center justify-content-center"
+            >
+              <img src="../assets/images/share.png" alt="guide" class="me-2" />
+              分享
+            </button>
+          </div>
+          <img
+            src="../assets/images/img/Phaya Thai Police Station.png"
+            alt="Thong Lor Police Station"
+            class="img-fluid"
+          />
+        </div>
+      </div>
+
+      <img
+        src="../assets/images/pin/type=policeStation, selected=off.svg"
+        class="policeStationiconIcon2 clickDisplayIcon clickChangeIcon"
+        alt="policeStation"
+        id="royalThaiPoliceHeadquartersIcon"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasBottom"
+        aria-controls="offcanvasBottom"
+      />
+
+      <div
+        class="offcanvas offcanvas-bottom offcanvasForIndex"
+        tabindex="-1"
+        id="offcanvasBottom"
+        aria-labelledby="offcanvasBottomLabel"
+        data-bs-scroll="true"
+        data-bs-backdrop="false"
+      >
+        <div
+          class="bg-white px-6 labelDetailWrap pb-5"
+          id="Royal Thai Police Headquarters"
+        >
+          <div
+            class="d-flex justify-content-center py-3"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          >
+            <img src="../assets/images/bar.png" alt="bar" />
+          </div>
+          <div class="d-flex align-items-center">
+            <img
+              src="../assets/images/icon/24px/solid/policeStation.svg"
+              alt="policeStation24pxsolid"
+            />
+            <p class="body-text-lg fw-bold ms-2 textEllipsis">
+              Royal Thai Police Headquarters
+            </p>
+            <img
+              src="../assets/images/bookMark.svg"
+              alt="bookMark"
+              class="ms-auto"
+            />
+          </div>
+          <p class="body-text-xs text-neutrals-400 mt-1 mb-2">
+            500公尺・24小時營業
+          </p>
+          <div class="d-flex align-items-center mt-2 mb-4">
+            <p class="text-danger-error-200 fw-bold body-text-xs me-2">
+              危險等級 1
+            </p>
+            <img
+              src="../assets/images/progressOG.png"
+              alt="progressOG"
+              class="me-1 progressWidth"
+            />
+            <img
+              src="../assets/images/progressGRAY.png"
+              alt="progressGRAY"
+              class="me-1 progressWidth"
+            />
+            <img
+              src="../assets/images/progressGRAY.png"
+              alt="progressGRAY"
+              class="me-1 progressWidth"
+            />
+            <img
+              src="../assets/images/progressGRAY.png"
+              alt="progressGRAY"
+              class="me-1 progressWidth"
+            />
+            <img
+              src="../assets/images/progressGRAY.png"
+              alt="progressGRAY"
+              class="progressWidth"
+            />
+          </div>
+          <div class="d-flex align-items-center justify-content-between mb-4">
+            <button
+              class="labelDetailButton text-brand-600 fw-bold body-text-sm d-flex align-items-center justify-content-center"
+            >
+              <img src="../assets/images/guide.svg" alt="guide" class="me-2" />
+              路線
+            </button>
+            <button
+              class="labelDetailButton text-brand-600 fw-bold body-text-sm d-flex align-items-center justify-content-center"
+            >
+              <img src="../assets/images/share.png" alt="guide" class="me-2" />
+              分享
+            </button>
+          </div>
+          <img
+            src="../assets/images/img/Royal Thai Police Headquarters.png"
+            alt="Royal Thai Police Headquarters"
+            class="img-fluid"
+          />
+        </div>
+      </div>
+
+      <img
+        src="../assets/images/pin/type=policeStation, selected=off.svg"
+        class="policeStationiconIcon3 clickDisplayIcon clickChangeIcon"
+        alt="policeStation"
+        id="lumphiniPoliceStationIcon"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#lumphiniPoliceStationOffcanvasBottom"
+        aria-controls="offcanvasBottom"
+      />
+      <div
+        class="offcanvas offcanvas-bottom offcanvasForIndex"
+        tabindex="-1"
+        id="lumphiniPoliceStationOffcanvasBottom"
+        aria-labelledby="offcanvasBottomLabel"
+        data-bs-scroll="true"
+        data-bs-backdrop="false"
+      >
+        <div
+          class="bg-white px-6 labelDetailWrap pb-5"
+          id="Royal Thai Police Headquarters"
+        >
+          <div
+            class="d-flex justify-content-center py-3"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          >
+            <img src="../assets/images/bar.png" alt="bar" />
+          </div>
+          <div class="d-flex align-items-center">
+            <img
+              src="../assets/images/icon/24px/solid/policeStation.svg"
+              alt="policeStation24pxsolid"
+            />
+            <p class="body-text-lg fw-bold ms-2 textEllipsis">
+              Lumphini Police Station
+            </p>
+            <img
+              src="../assets/images/bookMark.svg"
+              alt="bookMark"
+              class="ms-auto"
+            />
+          </div>
+          <p class="body-text-xs text-neutrals-400 mt-1 mb-2">
+            500公尺・24小時營業
+          </p>
+          <div class="d-flex align-items-center mt-2 mb-4">
+            <p class="text-danger-error-200 fw-bold body-text-xs me-2">
+              危險等級 1
+            </p>
+            <img
+              src="../assets/images/progressOG.png"
+              alt="progressOG"
+              class="me-1 progressWidth"
+            />
+            <img
+              src="../assets/images/progressGRAY.png"
+              alt="progressGRAY"
+              class="me-1 progressWidth"
+            />
+            <img
+              src="../assets/images/progressGRAY.png"
+              alt="progressGRAY"
+              class="me-1 progressWidth"
+            />
+            <img
+              src="../assets/images/progressGRAY.png"
+              alt="progressGRAY"
+              class="me-1 progressWidth"
+            />
+            <img
+              src="../assets/images/progressGRAY.png"
+              alt="progressGRAY"
+              class="progressWidth"
+            />
+          </div>
+          <div class="d-flex align-items-center justify-content-between mb-4">
+            <button
+              class="labelDetailButton text-brand-600 fw-bold body-text-sm d-flex align-items-center justify-content-center"
+            >
+              <img src="../assets/images/guide.svg" alt="guide" class="me-2" />
+              路線
+            </button>
+            <button
+              class="labelDetailButton text-brand-600 fw-bold body-text-sm d-flex align-items-center justify-content-center"
+            >
+              <img src="../assets/images/share.png" alt="guide" class="me-2" />
+              分享
+            </button>
+          </div>
+          <img
+            src="../assets/images/img/Lumphini Police Station.png"
+            alt="lumphiniPoliceStation"
+            class="img-fluid"
+          />
+        </div>
+      </div>
+
+      <img
+        src="../assets/images/pin/type=hospital, selected=off.svg"
+        class="hospitalIcon1 clickDisplayIcon clickChangeIcon"
+        alt="hospital"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#sukumvitHospitalOffcanvasBottom"
+        aria-controls="offcanvasBottom"
+      />
+
+      <div
+        class="offcanvas offcanvas-bottom offcanvasForIndex"
+        tabindex="-1"
+        id="sukumvitHospitalOffcanvasBottom"
+        aria-labelledby="offcanvasBottomLabel"
+        data-bs-scroll="true"
+        data-bs-backdrop="false"
+      >
+        <div class="bg-white px-6 labelDetailWrap pb-5" id="BNH Hospital">
+          <div
+            class="d-flex justify-content-center py-3"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          >
+            <img src="../assets/images/bar.png" alt="bar" />
+          </div>
+          <div class="d-flex align-items-center">
+            <img
+              src="../assets/images/icon/24px/solid/policeStation.svg"
+              alt="policeStation24pxsolid"
+            />
+            <p class="body-text-lg fw-bold ms-2 textEllipsis">
+              Sukumvit Hospital
+            </p>
+            <img
+              src="../assets/images/bookMark.svg"
+              alt="bookMark"
+              class="ms-auto"
+            />
+          </div>
+          <p class="body-text-xs text-neutrals-400 mt-1 mb-2">
+            500公尺・24小時營業
+          </p>
+          <div class="d-flex align-items-center mt-2 mb-4">
+            <p class="text-danger-error-200 fw-bold body-text-xs me-2">
+              危險等級 1
+            </p>
+            <img
+              src="../assets/images/progressOG.png"
+              alt="progressOG"
+              class="me-1 progressWidth"
+            />
+            <img
+              src="../assets/images/progressGRAY.png"
+              alt="progressGRAY"
+              class="me-1 progressWidth"
+            />
+            <img
+              src="../assets/images/progressGRAY.png"
+              alt="progressGRAY"
+              class="me-1 progressWidth"
+            />
+            <img
+              src="../assets/images/progressGRAY.png"
+              alt="progressGRAY"
+              class="me-1 progressWidth"
+            />
+            <img
+              src="../assets/images/progressGRAY.png"
+              alt="progressGRAY"
+              class="progressWidth"
+            />
+          </div>
+          <div class="d-flex align-items-center justify-content-between mb-4">
+            <button
+              class="labelDetailButton text-brand-600 fw-bold body-text-sm d-flex align-items-center justify-content-center"
+            >
+              <img src="../assets/images/guide.svg" alt="guide" class="me-2" />
+              路線
+            </button>
+            <button
+              class="labelDetailButton text-brand-600 fw-bold body-text-sm d-flex align-items-center justify-content-center"
+            >
+              <img src="../assets/images/share.png" alt="guide" class="me-2" />
+              分享
+            </button>
+          </div>
+          <img
+            src="../assets/images/img/Sukumvit Hospital.png"
+            alt="sukumvitHospital"
+            class="img-fluid"
+          />
+        </div>
+      </div>
+      <img
+        src="../assets/images/pin/type=hospital, selected=off.svg"
+        class="hospitalIcon2 clickDisplayIcon clickChangeIcon"
+        alt="hospital"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#bNHHospitalOffcanvasBottom"
+        aria-controls="offcanvasBottom"
+      />
+
+      <div
+        class="offcanvas offcanvas-bottom offcanvasForIndex"
+        tabindex="-1"
+        id="bNHHospitalOffcanvasBottom"
+        aria-labelledby="offcanvasBottomLabel"
+        data-bs-scroll="true"
+        data-bs-backdrop="false"
+      >
+        <div class="bg-white px-6 labelDetailWrap pb-5" id="BNH Hospital">
+          <div
+            class="d-flex justify-content-center py-3"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          >
+            <img src="../assets/images/bar.png" alt="bar" />
+          </div>
+          <div class="d-flex align-items-center">
+            <img
+              src="../assets/images/icon/24px/solid/policeStation.svg"
+              alt="policeStation24pxsolid"
+            />
+            <p class="body-text-lg fw-bold ms-2 textEllipsis">BNH Hospital</p>
+            <img
+              src="../assets/images/bookMark.svg"
+              alt="bookMark"
+              class="ms-auto"
+            />
+          </div>
+          <p class="body-text-xs text-neutrals-400 mt-1 mb-2">
+            500公尺・24小時營業
+          </p>
+          <div class="d-flex align-items-center mt-2 mb-4">
+            <p class="text-danger-error-200 fw-bold body-text-xs me-2">
+              危險等級 1
+            </p>
+            <img
+              src="../assets/images/progressOG.png"
+              alt="progressOG"
+              class="me-1 progressWidth"
+            />
+            <img
+              src="../assets/images/progressGRAY.png"
+              alt="progressGRAY"
+              class="me-1 progressWidth"
+            />
+            <img
+              src="../assets/images/progressGRAY.png"
+              alt="progressGRAY"
+              class="me-1 progressWidth"
+            />
+            <img
+              src="../assets/images/progressGRAY.png"
+              alt="progressGRAY"
+              class="me-1 progressWidth"
+            />
+            <img
+              src="../assets/images/progressGRAY.png"
+              alt="progressGRAY"
+              class="progressWidth"
+            />
+          </div>
+          <div class="d-flex align-items-center justify-content-between mb-4">
+            <button
+              class="labelDetailButton text-brand-600 fw-bold body-text-sm d-flex align-items-center justify-content-center"
+            >
+              <img src="../assets/images/guide.svg" alt="guide" class="me-2" />
+              路線
+            </button>
+            <button
+              class="labelDetailButton text-brand-600 fw-bold body-text-sm d-flex align-items-center justify-content-center"
+            >
+              <img src="../assets/images/share.png" alt="guide" class="me-2" />
+              分享
+            </button>
+          </div>
+          <img
+            src="../assets/images/img/BNH Hospital.png"
+            alt="bNHHospital"
+            class="img-fluid"
+          />
+        </div>
+      </div>
+
+      <img
+        src="../assets/images/pin/type=hospital, selected=off.svg"
+        class="hospitalIcon3 clickDisplayIcon clickChangeIcon"
+        alt="hospital"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#bumrungradHospitalOffcanvasBottom"
+        aria-controls="offcanvasBottom"
+      />
+
+      <div
+        class="offcanvas offcanvas-bottom offcanvasForIndex"
+        tabindex="-1"
+        id="bumrungradHospitalOffcanvasBottom"
+        aria-labelledby="offcanvasBottomLabel"
+        data-bs-scroll="true"
+        data-bs-backdrop="false"
+      >
+        <div
+          class="bg-white px-6 labelDetailWrap pb-5"
+          id="Royal Thai Police Headquarters"
+        >
+          <div
+            class="d-flex justify-content-center py-3"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          >
+            <img src="../assets/images/bar.png" alt="bar" />
+          </div>
+          <div class="d-flex align-items-center">
+            <img
+              src="../assets/images/icon/24px/solid/policeStation.svg"
+              alt="policeStation24pxsolid"
+            />
+            <p class="body-text-lg fw-bold ms-2 textEllipsis">
+              Bumrungrad Hospital
+            </p>
+            <img
+              src="../assets/images/bookMark.svg"
+              alt="bookMark"
+              class="ms-auto"
+            />
+          </div>
+          <p class="body-text-xs text-neutrals-400 mt-1 mb-2">
+            500公尺・24小時營業
+          </p>
+          <div class="d-flex align-items-center mt-2 mb-4">
+            <p class="text-danger-error-200 fw-bold body-text-xs me-2">
+              危險等級 2
+            </p>
+            <img
+              src="../assets/images/progressOG.png"
+              alt="progressOG"
+              class="me-1 progressWidth"
+            />
+            <img
+              src="../assets/images/progressOG.png"
+              alt="progressOG"
+              class="me-1 progressWidth"
+            />
+            <img
+              src="../assets/images/progressGRAY.png"
+              alt="progressGRAY"
+              class="me-1 progressWidth"
+            />
+            <img
+              src="../assets/images/progressGRAY.png"
+              alt="progressGRAY"
+              class="me-1 progressWidth"
+            />
+            <img
+              src="../assets/images/progressGRAY.png"
+              alt="progressGRAY"
+              class="progressWidth"
+            />
+          </div>
+          <div class="d-flex align-items-center justify-content-between mb-4">
+            <button
+              class="labelDetailButton text-brand-600 fw-bold body-text-sm d-flex align-items-center justify-content-center"
+            >
+              <img src="../assets/images/guide.svg" alt="guide" class="me-2" />
+              路線
+            </button>
+            <button
+              class="labelDetailButton text-brand-600 fw-bold body-text-sm d-flex align-items-center justify-content-center"
+            >
+              <img src="../assets/images/share.png" alt="guide" class="me-2" />
+              分享
+            </button>
+          </div>
+          <img
+            src="../assets/images/img/Bumrungrad Hospital.png"
+            alt="bumrungradHospital"
+            class="img-fluid"
+          />
+        </div>
+      </div>
+
+      <img
+        src="../assets/images/pin/type=normal(selectedOn), selected=on.svg"
+        class="hotelIcon favoriteHotel"
+        alt="hotel"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#akaraBangkokHotelOffcanvasBottom"
+        aria-controls="offcanvasBottom"
+      />
+
+      <div
+        class="offcanvas offcanvas-bottom offcanvasForIndex"
+        tabindex="-1"
+        id="akaraBangkokHotelOffcanvasBottom"
+        aria-labelledby="offcanvasBottomLabel"
+        data-bs-scroll="true"
+        data-bs-backdrop="false"
+      >
+        <div
+          class="d-flex align-items-center justify-content-between py-3 d-none"
+        >
+          <img src="../assets/images/leftIcon.png" alt="leftIcon" />
+          <img src="../assets/images/rightIcon.svg" alt="rightIcon" />
+        </div>
+        <div
+          class="bg-white px-6 labelDetailWrap pb-5"
+          id="Akara Bangkok Hotel"
+        >
+          <div
+            class="d-flex justify-content-center py-3"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          >
+            <img src="../assets/images/bar.png" alt="bar" />
+          </div>
+          <div class="d-flex align-items-center">
+            <img
+              src="../assets/images/icon/24px/solid/location.svg"
+              alt="policeStation24pxsolid"
+            />
+            <p class="body-text-lg fw-bold ms-2 textEllipsis">
+              Akara Bangkok Hotel
+            </p>
+            <img
+              src="../assets/images/bookMark.svg"
+              alt="bookMark"
+              class="ms-auto favorite"
+            />
+          </div>
+          <p class="body-text-xs text-neutrals-400 mt-1 mb-2">
+            500公尺・24小時營業
+          </p>
+          <div class="d-flex align-items-center mt-2 mb-4">
+            <p class="text-danger-error-200 fw-bold body-text-xs me-2">
+              危險等級 3
+            </p>
+            <img
+              src="../assets/images/progressOG.png"
+              alt="progressOG"
+              class="me-1 progressWidth"
+            />
+            <img
+              src="../assets/images/progressOG.png"
+              alt="progressOG"
+              class="me-1 progressWidth"
+            />
+            <img
+              src="../assets/images/progressOG.png"
+              alt="progressOG"
+              class="me-1 progressWidth"
+            />
+            <img
+              src="../assets/images/progressGRAY.png"
+              alt="progressGRAY"
+              class="me-1 progressWidth"
+            />
+            <img
+              src="../assets/images/progressGRAY.png"
+              alt="progressGRAY"
+              class="progressWidth"
+            />
+          </div>
+          <div class="d-flex align-items-center justify-content-between mb-4">
+            <button
+              class="labelDetailButton text-brand-600 fw-bold body-text-sm d-flex align-items-center justify-content-center"
+            >
+              <img src="../assets/images/guide.svg" alt="guide" class="me-2" />
+              路線
+            </button>
+            <button
+              class="labelDetailButton text-brand-600 fw-bold body-text-sm d-flex align-items-center justify-content-center"
+            >
+              <img src="../assets/images/share.png" alt="guide" class="me-2" />
+              分享
+            </button>
+          </div>
+          <img
+            src="../assets/images/img/Akara Bangkok.png"
+            alt="Akara Bangkok Hotel"
+            class="img-fluid"
+          />
+        </div>
+      </div>
+
+      <img
+        src="../assets/images/arrow_withShadow.svg"
+        class="centerIcon"
+        alt="center"
+      />
+      <div class="originalCircle"></div>
+      <div
+        class="bg-smallCircle text-center pt-2 text-brand-600 body-text-lg fw-bold d-none"
+      >
+        15 min
+      </div>
+      <div
+        class="bg-bigCircle text-center pt-2 text-brand-600 body-text-lg fw-bold d-none"
+      >
+        30 min
+      </div>
+      <canvas id="myCanvas" class="myCanvas"></canvas>
+
+      <img
+        src="../assets/images/left.png"
+        alt="left.png"
+        class="countryInfo infoAndFloatWrapLeft"
+        data-bs-toggle="modal"
+        data-bs-target="#countryInfoModal"
+      />
+
+      <div
+        class="floatWrap d-flex flex-column align-items-center infoAndFloatWrapRight"
+      >
+        <img src="../assets/images/float.png" alt="float" class="floatImg" />
+        <img
+          src="../assets/images/centerAim.png"
+          alt="centerAim"
+          class="centerAimImg"
+        />
+      </div>
+
+      <!-- Modal -->
+      <div
+        class="modal countryInfoModalWrap fade"
+        id="countryInfoModal"
+        tabindex="-1"
+        aria-labelledby="countryInfoModalLabel"
+        aria-hidden="true"
+      >
+        <div
+          class="modal-dialog modal-dialog-centered countryInfoModal countryInfoModal-dialog-centered"
+        >
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5
+                class="modal-title me-2 heading-sm fw-bold"
+                id="countryInfoModalLabel"
+              >
+                泰國
+              </h5>
+              <img
+                src="../assets/images/touristSeason.png"
+                alt="touristSeason"
+              />
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="px-6 pb-6">
+              <div class="d-flex">
+                <img src="../assets/images/safety.png" alt="safety" />
+                <p class="fw-bold body-text-md ms-2">旅遊安全指數</p>
+              </div>
+              <div class="d-flex mt-2 mb-4 justify-content-between">
+                <div class="d-flex flex-column" style="width: 80px">
+                  <p class="fw-bold heading-xs">
+                    <span class="heading-xl">2.7</span>/5
+                  </p>
+                  <img
+                    src="../assets/images/Taiwan.png"
+                    alt="Taiwan"
+                    class="mt-auto"
+                  />
+                </div>
+                <div class="d-flex flex-column" style="width: 176px">
+                  <p class="body-text-sm">
+                    保持警覺，遵守當地規則，通常會很安全。
+                  </p>
+                  <p class="body-text-xxs text-neutrals-700 mt-2">
+                    Travel-Advisory.info
+                  </p>
+                </div>
+              </div>
+              <div
+                class="px-4 py-3 radius-m"
+                style="background-color: #ffd6001f"
+              >
+                <div class="d-flex">
+                  <img src="../assets/images/icon.png" alt="airplane" />
+                  <h4 class="body-text-md fw-bold ms-2">外交部旅遊警示</h4>
+                </div>
+
+                <p class="body-text-sm mt-1">
+                  特別注意旅遊安全，並檢討應否前往。
+                </p>
+              </div>
+
+              <ul class="list-unstyled mt-6 mb-0">
+                <li
+                  class="d-flex align-items-center justify-content-between pb-3"
+                >
+                  <div class="d-flex align-items-center">
+                    <img src="../assets/images/language.png" alt="language" />
+                    <p class="body-text-xs text-neutrals-600 ms-2">主要語言</p>
+                  </div>
+                  <p class="body-text-xs text-neutrals-600">泰語、英語</p>
+                </li>
+                <li
+                  class="d-flex align-items-center justify-content-between py-3 border-bottom border-top border-neutrals-100"
+                >
+                  <div class="d-flex align-items-center">
+                    <img src="../assets/images/dollar.png" alt="dollar" />
+                    <p class="body-text-xs text-neutrals-600 ms-2">貨幣</p>
+                  </div>
+                  <p class="body-text-xs text-neutrals-600">泰銖 THB</p>
+                </li>
+                <li
+                  class="d-flex align-items-center justify-content-between py-3"
+                >
+                  <div class="d-flex align-items-center">
+                    <img src="../assets/images/plugs.png" alt="plugs" />
+                    <p class="body-text-xs text-neutrals-600 ms-2">電壓</p>
+                  </div>
+                  <p class="body-text-xs text-neutrals-600">220V - 50Hz</p>
+                </li>
+                <li
+                  class="d-flex align-items-center justify-content-between py-3 border-bottom border-top border-neutrals-100"
+                >
+                  <div class="d-flex align-items-center">
+                    <img src="../assets/images/phone.png" alt="phone" />
+                    <p class="body-text-xs text-neutrals-600 ms-2">
+                      國際電話區號
+                    </p>
+                  </div>
+                  <p class="body-text-xs text-neutrals-600">+66</p>
+                </li>
+                <li
+                  class="d-flex align-items-center justify-content-between pt-3"
+                >
+                  <div class="d-flex align-items-center">
+                    <img src="../assets/images/ISO.png" alt="ISO" />
+                    <p class="body-text-xs text-neutrals-600 ms-2">
+                      國家代碼 ISO
+                    </p>
+                  </div>
+                  <p class="body-text-xs text-neutrals-600">TH</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white px-6 radius-l locationInfo my-div" id="myDiv">
+        <div
+          class="d-flex align-items-center justify-content-between py-3 d-none"
+          id="closeBar"
+        >
+          <img
+            src="../assets/images/leftIcon.png"
+            alt="leftIcon"
+            id="closeBtn"
+          />
+          <img src="../assets/images/rightIcon.svg" alt="rightIcon" />
+        </div>
+
+        <div class="mb-6">
+          <div class="d-flex justify-content-center py-3">
+            <img src="../assets/images/bar.png" alt="bar" />
+          </div>
+          <div class="d-flex align-items-center">
+            <img src="../assets/images/broadcast.svg" alt="broadcast" />
+            <h3 class="ms-2 body-text-lg fw-bold">曼谷最新資訊</h3>
+          </div>
+          <div class="d-flex align-items-center mt-2 mb-4">
+            <p class="text-danger-error-600 fw-bold body-text-xs me-2">
+              危險等級 5
+            </p>
+            <img
+              src="../assets/images/progress.png"
+              alt="progress"
+              class="me-1 progressWidth"
+            />
+            <img
+              src="../assets/images/progress.png"
+              alt="progress"
+              class="me-1 progressWidth"
+            />
+            <img
+              src="../assets/images/progress.png"
+              alt="progress"
+              class="me-1 progressWidth"
+            />
+            <img
+              src="../assets/images/progress.png"
+              alt="progress"
+              class="me-1 progressWidth"
+            />
+            <img
+              src="../assets/images/progress.png"
+              alt="progress"
+              class="progressWidth"
+            />
+          </div>
+          <div class="bg-warning-50 p-4 radius-m mb-2">
+            <div class="d-flex align-items-center">
+              <img src="../assets/images/notice.png" alt="securityLevel 5" />
+              <h4 class="body-text-md fw-bold ms-2">泰國反政府運動</h4>
+            </div>
+            <p class="body-text-sm text-neutrals-700 mt-1">
+              曼谷民主紀念碑・500公尺
+            </p>
+            <p class="body-text-sm text-neutrals-700 mt-1">
+              更新時間：30 分鐘前
+            </p>
+          </div>
+          <div class="bg-neutrals-50 p-4 radius-m">
+            <div class="d-flex align-items-center">
+              <img src="../assets/images/notice.svg" alt="notice.svg" />
+              <h4 class="body-text-md fw-bold ms-2">旅遊日期注意事項</h4>
+            </div>
+            <p class="body-text-sm mt-1">
+              曼谷 6 月至 10
+              月為雨季，常受季風和暴雨影響，城市排水系統不足，容易發生洪水問題，建議隨身攜帶雨傘、穿著抓地力佳的布鞋。
+            </p>
+          </div>
+        </div>
+
+        <div class="mb-6">
+          <h4 class="body-text-md fw-bold mb-4">我的安全評論</h4>
+          <div
+            class="bg-neutrals-50 py-4 radius-m d-flex flex-column align-items-center"
+          >
+            <p class="body-text-md mb-4">
+              分享你對 <span class="fw-bold">泰國曼谷</span> 的看法
+            </p>
+            <div>
+              <img
+                src="../assets/images/safe.png"
+                alt="safe"
+                id="safeCommentIcon"
+                onclick="changeIconImage('safeCommentIcon')"
+                style="cursor: pointer"
+              />
+              <img
+                src="../assets/images/normal.png"
+                alt="normal"
+                class="mx-4"
+                id="normalCommentIcon"
+                onclick="changeIconImage('normalCommentIcon')"
+                style="cursor: pointer"
+              />
+              <img
+                src="../assets/images/takecare.png"
+                alt="takecare"
+                id="takecareCommentIcon"
+                onclick="changeIconImage('takecareCommentIcon')"
+                style="cursor: pointer"
+              />
+            </div>
+          </div>
+        </div>
+        <div>
+          <h4 class="body-text-md fw-bold mb-4">旅客安全評論</h4>
+
+          <div class="d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center">
+              <img
+                src="../assets/images/safeComment.png"
+                alt="safeComment"
+                class="commentWidth"
+                id="safeComment"
+                onclick="changeImage('safeComment')"
+                style="cursor: pointer"
+              />
+              <img
+                src="../assets/images/normalComment.png"
+                alt="normalComment"
+                class="commentWidth mx-1"
+                id="normalComment"
+                onclick="changeImage('normalComment')"
+                style="cursor: pointer"
+              />
+              <img
+                src="../assets/images/takecareComment.png"
+                alt="takecareComment"
+                class="commentWidth"
+                id="takecareComment"
+                onclick="changeImage('takecareComment')"
+                style="cursor: pointer"
+              />
+            </div>
+
+            <p class="body-text-sm text-neutrals-400 text-cuswidth">
+              577則評論
+            </p>
+          </div>
+
+          <div class="radius-m bg-neutrals-50 p-4 mt-4 mb-2">
+            <div class="d-flex align-items-center">
+              <img src="../assets/images/safeClick.png" alt="safeClick" />
+              <p class="ms-2 body-text-sm fw-bold">林孟潔</p>
+            </div>
+            <p class="body-text-sm my-4">
+              曼谷市中心車流量大，這裡的夜市價格會因為觀光客不太一樣。我是在潑水節期間來的，人很多，包包要顧好
+            </p>
+            <div class="d-flex align-items-center">
+              <p class="body-text-xs text-neutrals-700">2024 年 4 月 18 到訪</p>
+              <div class="d-flex align-items-center ms-auto">
+                <img src="../assets/images/thumb.png" alt="thumb" />
+                <p class="body-text-sm text-neutrals-400 ms-1">66</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="radius-m bg-neutrals-50 p-4">
+            <div class="d-flex align-items-center">
+              <img src="../assets/images/normalClick.png" alt="safeClick" />
+              <p class="ms-2 body-text-sm fw-bold">Yu-Ting Wu</p>
+            </div>
+
+            <div class="d-flex align-items-center mt-4">
+              <p class="body-text-xs text-neutrals-700">2024 年 3 月 1 到訪</p>
+              <div class="d-flex align-items-center ms-auto">
+                <img src="../assets/images/thumb.png" alt="thumb" />
+                <p class="body-text-sm text-neutrals-400 ms-1">3</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="loading" class="loading">
+      <div class="position-relative">
+        <div class="position-relative">
+          <img
+            src="../assets/images/Star-2--Streamline-Core-20px.svg"
+            alt="Star-2--Streamline-Core-20px"
+            class="change"
+          />
+          <img
+            src="../assets/images/onlyWhite_logo.svg"
+            alt="onlyWhite_logo"
+            class="logoWalk"
+          />
+          <img
+            src="../assets/images/Star-2--Streamline-Core-Solid-26px.svg"
+            alt="Star-2--Streamline-Core-Solid-26px"
+            class="changeSolid"
+          />
+        </div>
+
+        <p
+          class="fadeInText text-white body-text-lg text-center d-flex justify-content-between mt-5"
+        >
+          <span>平</span><span>安</span><span>旅</span><span>人</span>
+        </p>
+      </div>
+    </div>
+
+    <%- include('./layout/footer', {page: "index"}); -%>
 
     <script type="module" src="../main.js"></script>
   </body>

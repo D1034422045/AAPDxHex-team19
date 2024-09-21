@@ -1,0 +1,38 @@
+// footer
+
+.footerNavbar {
+  box-shadow: 0px -4px 4px 0px #0000000a;
+
+  .footIcon-barChart {
+    background: url(/AAPDxHex-team19/assets/images/barChart.svg) no-repeat;
+    width: 24px;
+    height: 24px;
+  }
+  .footIcon-document {
+    background: url(/AAPDxHex-team19/assets/images/document.svg) no-repeat;
+    width: 24px;
+    height: 24px;
+  }
+
+  .nav-pills .nav-link.active,
+  .nav-pills .show > .nav-link {
+    color: #1aa3dd !important;
+    background: white;
+    .footIcon-barChart {
+      background: url(/AAPDxHex-team19/assets/images/barChart-blue.svg)
+        no-repeat;
+    }
+    .footIcon-document {
+      background: url(/AAPDxHex-team19/assets/images/document-blue.svg)
+        no-repeat;
+    }
+  }
+}
+
+.footerLine {
+  background: #000;
+  width: 134px;
+  height: 5px;
+  border-radius: 50rem;
+  margin: 0 auto;
+}
