@@ -510,41 +510,29 @@
   transform: rotate(9deg);
 }
 
-.policeStationLabelWrap > img {
+.policeStationLabelWrap,
+.hospitalLabelWrap,
+.pharmacyLabelWrap,
+.refugeLabelWrap,
+.embassyLabelWrap {
   &:hover {
     cursor: pointer;
   }
 }
 
-.hospitalLabelWrap > img {
-  &:hover {
-    cursor: pointer;
-  }
-}
-
-.pharmacyLabelWrap > img {
-  &:hover {
-    cursor: pointer;
-  }
-}
-
-.refugeLabelWrap > img {
-  &:hover {
-    cursor: pointer;
-  }
-}
-.embassyLabelWrap > img {
-  &:hover {
-    cursor: pointer;
-  }
+.labelClickChangeStyle {
+  color: #fff;
+  background: #67c575;
 }
 
 // 標籤橫向移動卷軸
 .scrollable-container {
   display: flex;
   padding-left: 5px;
-  overflow-x: auto; /* 開啟橫向滾動 */
+  overflow-x: auto; //開啟橫向滾動
+  white-space: nowrap;
   scroll-behavior: smooth; /* 平滑滾動 */
+  padding-left: 55px;
 }
 
 .scrollable-container::-webkit-scrollbar {
