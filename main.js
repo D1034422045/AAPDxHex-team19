@@ -1,13 +1,18 @@
 import "./assets/scss/all.scss";
 import "bootstrap/dist/js/bootstrap.min.js";
 
-// 等待網頁內容和資源完全載入
 window.addEventListener("load", function () {
-  // 模擬延遲，例如動畫需要 3 秒，這裡使用 setTimeout
-  setTimeout(function () {
-    // 移除 loading 畫面
+  // 檢查 sessionStorage 是否已經存在標記
+  if (!sessionStorage.getItem("loadingShown")) {
+    setTimeout(function () {
+      document.getElementById("loading").style.display = "none";
+      // 設定標記，表示已顯示過 loading 畫面
+      sessionStorage.setItem("loadingShown", "true");
+    }, 2000);
+  } else {
+    // 如果已經顯示過 loading 畫面，直接隱藏
     document.getElementById("loading").style.display = "none";
-  }, 2000); // 延遲 7 秒
+  }
 });
 
 const canvas = document.getElementById("myCanvas");
