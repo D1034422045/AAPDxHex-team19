@@ -410,29 +410,29 @@
   left: 510px;
   top: 455px;
   background: #84d3f5;
-  opacity: 0;
+  opacity: 0.4;
   border: 3px solid #fff;
   border-radius: 50%;
-  animation: expandOriginalCircleFade 6s infinite; /* 应用动画 */
+  // animation: expandOriginalCircleFade 6s infinite;
 }
 
 /* 定义动画 */
-@keyframes expandOriginalCircleFade {
-  0% {
-    transform: scale(0); /* 初始缩小状态 */
-    opacity: 0; /* 初始透明度 */
-  }
+// @keyframes expandOriginalCircleFade {
+//   0% {
+//     transform: scale(0);
+//     opacity: 0;
+//   }
 
-  50% {
-    transform: scale(1); /* 扩展后状态 */
-    opacity: 0.4; /* 最终透明度 */
-  }
+//   50% {
+//     transform: scale(1);
+//     opacity: 0.4;
+//   }
 
-  100% {
-    transform: scale(1); /* 扩展后状态 */
-    opacity: 0; /* 最终透明度 */
-  }
-}
+//   100% {
+//     transform: scale(1);
+//     opacity: 0;
+//   }
+// }
 
 .bg-smallCircle {
   position: absolute;
@@ -442,29 +442,29 @@
   top: 385px;
   // display: none;
   background: #84d3f5;
-  opacity: 0;
+  opacity: 0.25;
   border: 3px solid #fff;
   border-radius: 50%;
-  animation: expandSmallCircleFade 6s infinite; /* 应用动画 */
+  // animation: expandSmallCircleFade 6s infinite;
 }
 
 /* 定义动画 */
-@keyframes expandSmallCircleFade {
-  0% {
-    transform: scale(0); /* 初始缩小状态 */
-    opacity: 0; /* 初始透明度 */
-  }
+// @keyframes expandSmallCircleFade {
+//   0% {
+//     transform: scale(0);
+//     opacity: 0;
+//   }
 
-  50% {
-    transform: scale(1); /* 扩展后状态 */
-    opacity: 0.25; /* 最终透明度 */
-  }
+//   50% {
+//     transform: scale(1);
+//     opacity: 0.25;
+//   }
 
-  100% {
-    transform: scale(1); /* 扩展后状态 */
-    opacity: 0; /* 最终透明度 */
-  }
-}
+//   100% {
+//     transform: scale(1);
+//     opacity: 0;
+//   }
+// }
 
 .bg-bigCircle {
   position: absolute;
@@ -474,29 +474,29 @@
   top: 235px;
   // display: none;
   background: #84d3f5;
-
+  opacity: 0.15;
   border: 3px solid #fff;
   border-radius: 50%;
-  animation: expandBigCircleFade 6s infinite; /* 应用动画 */
+  // animation: expandBigCircleFade 6s infinite;
 }
 
 /* 定义动画 */
-@keyframes expandBigCircleFade {
-  0% {
-    transform: scale(0); /* 初始缩小状态 */
-    opacity: 0; /* 初始透明度 */
-  }
+// @keyframes expandBigCircleFade {
+//   0% {
+//     transform: scale(0);
+//     opacity: 0;
+//   }
 
-  50% {
-    transform: scale(1); /* 扩展后状态 */
-    opacity: 0.15; //最终透明度
-  }
+//   50% {
+//     transform: scale(1);
+//     opacity: 0.15;
+//   }
 
-  100% {
-    transform: scale(1); /* 扩展后状态 */
-    opacity: 0; /* 最终透明度 */
-  }
-}
+//   100% {
+//     transform: scale(1);
+//     opacity: 0;
+//   }
+// }
 
 // .bg-bigCircle {
 //   animation-delay: 3s;  延迟2秒
@@ -633,18 +633,21 @@
   padding: 24px;
 }
 
-.offcanvasForIndex {
-  --bs-offcanvas-height: 53vh; //43 vh
+.offcanvas.offcanvasForIndex {
+  // --bs-offcanvas-height: 360px; 43 vh
+  // height: 360px;
   --bs-offcanvas-border-color: none;
+  height: 360px;
   // border-radius: 50%;
   position: absolute;
+  overflow-y: scroll;
 }
 
-.offcanvas-bottom {
-  bottom: 0%; /* 讓 offcanvas 從頂部開始 */
+.offcanvas.offcanvas-bottom {
+  bottom: 0; /* 讓 offcanvas 從頂部開始 */
 }
 
-.specialWarningOffcanvas {
+.offcanvas.specialWarningOffcanvas {
   --bs-offcanvas-height: 52vh; // 30 vh
   overflow-y: scroll;
   z-index: 1020;
