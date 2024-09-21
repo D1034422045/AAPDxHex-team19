@@ -113,6 +113,10 @@ const canvasX = 550; // Icon 的相對背景圖 X 座標
 const canvasY = 280; // 480 Icon 的相對背景圖 Y 座標
 const iconWidth = 50;
 const iconHeight = 50;
+
+const newIconWidth = 100; // 新的寬度  QA新增的
+const newIconHeight = 100; // 新的高度  QA新增的
+
 const bgBigCircleWidth = 600;
 const bgBigCircleHeight = 600;
 const bgSmallCircleWidth = 300;
@@ -485,7 +489,9 @@ policeStationLabelWrap.addEventListener("click", function (event) {
     // 如果還沒有被點擊，切換為新的圖片
     policeStationLabelImg.src = `${
       import.meta.env.BASE_URL
-    }assets/images/policeStationLabelClick.png`;
+    }assets/images/policeStationLabelIconClick.svg`;
+    policeStationLabelWrap.classList.remove("bg-white");
+    policeStationLabelWrap.classList.add("labelClickChangeStyle");
     policeStationLabelImgIsClicked = true; // 更新狀態為已點擊
   }
 
@@ -502,7 +508,9 @@ policeStationLabelWrap.addEventListener("click", function (event) {
   if (hospitalLabelImgIsClicked) {
     hospitalLabelImg.src = `${
       import.meta.env.BASE_URL
-    }assets/images/hospitalLabel.png`;
+    }assets/images/hospitalLabelIcon.svg`;
+    hospitalLabelWrap.classList.add("bg-white");
+    hospitalLabelWrap.classList.remove("labelClickChangeStyle");
     hospitalLabelImgIsClicked = false;
   }
 
@@ -515,7 +523,9 @@ hospitalLabelWrap.addEventListener("click", function (event) {
     // 如果還沒有被點擊，切換為新的圖片
     hospitalLabelImg.src = `${
       import.meta.env.BASE_URL
-    }assets/images/hospitalLabelClick.png`;
+    }assets/images/hopspitalLabelIconClick.svg`;
+    hospitalLabelWrap.classList.remove("bg-white");
+    hospitalLabelWrap.classList.add("labelClickChangeStyle");
     hospitalLabelImgIsClicked = true; // 更新狀態為已點擊
   }
 
@@ -531,7 +541,9 @@ hospitalLabelWrap.addEventListener("click", function (event) {
   if (policeStationLabelImgIsClicked) {
     policeStationLabelImg.src = `${
       import.meta.env.BASE_URL
-    }assets/images/policeStationLabel.png`;
+    }assets/images/policeStationLabelIcon.svg`;
+    policeStationLabelWrap.classList.add("bg-white");
+    policeStationLabelWrap.classList.remove("labelClickChangeStyle");
     policeStationLabelImgIsClicked = false;
   }
 
@@ -545,7 +557,9 @@ document.addEventListener("click", function () {
     // 如果已經點擊，恢復原本的圖片
     policeStationLabelImg.src = `${
       import.meta.env.BASE_URL
-    }assets/images/policeStationLabel.png`;
+    }assets/images/policeStationLabelIcon.svg`;
+    policeStationLabelWrap.classList.add("bg-white");
+    policeStationLabelWrap.classList.remove("labelClickChangeStyle");
     policeStationLabelImgIsClicked = false; // 更新狀態為未點擊
   }
 
@@ -553,7 +567,9 @@ document.addEventListener("click", function () {
     // 如果已經點擊，恢復原本的圖片
     hospitalLabelImg.src = `${
       import.meta.env.BASE_URL
-    }assets/images/hospitalLabel.png`;
+    }assets/images/hospitalLabelIcon.svg`;
+    hospitalLabelWrap.classList.add("bg-white");
+    hospitalLabelWrap.classList.remove("labelClickChangeStyle");
     hospitalLabelImgIsClicked = false; // 更新狀態為未點擊
   }
 
@@ -637,22 +653,45 @@ const clickChangeIcons = document.querySelectorAll(".clickChangeIcon");
 let currentClickedImg = null; // 保存當前被點擊的圖片
 let originalSrc = ""; // 保存原始圖片的 src
 
+let originalWidth = ""; // 保存原始宽度  QA新增的
+let originalHeight = ""; // 保存原始高度  QA新增的
+let originalLeft = 0; // 保存原始left  QA新增的
+let originalTop = 0; // 保存原始top  QA新增的
+
 clickChangeIcons.forEach((img) => {
   img.addEventListener("click", (e) => {
     e.stopPropagation(); //新增的
 
     if (currentClickedImg === img) {
       img.src = originalSrc;
+      img.style.width = originalWidth; // 恢复原始宽度  QA新增的
+      img.style.height = originalHeight; // 恢复原始高度  QA新增的
+      img.style.left = `${originalLeft}px`; // 恢復原始位置  QA新增的
+      img.style.top = `${originalTop}px`; // 恢復原始位置  QA新增的
       currentClickedImg = null; // Reset the clicked image state
     } else {
       // If another image is clicked, reset the previously clicked image to its original state
       if (currentClickedImg && currentClickedImg !== img) {
         currentClickedImg.src = originalSrc;
+        currentClickedImg.style.width = originalWidth; // 恢复之前图片的宽度  QA新增的
+        currentClickedImg.style.height = originalHeight; // 恢复之前图片的高度  QA新增的
+        currentClickedImg.style.left = `${originalLeft}px`; // 恢復原始位置  QA新增的
+        currentClickedImg.style.top = `${originalTop}px`; // 恢復原始位置  QA新增的
       }
 
       // 保存當前點擊的圖片及其原始 src
       currentClickedImg = img;
       originalSrc = img.src;
+
+      originalWidth = img.style.width; // 保存当前图片的原始宽度  QA新增的
+      originalHeight = img.style.height; // 保存当前图片的原始高度  QA新增的
+
+      originalLeft = parseInt(img.style.left); // 保存原始left值  QA新增的
+      originalTop = parseInt(img.style.top); // 保存原始top值  QA新增的
+
+      // 計算中心位置  QA新增的
+      const centerX = originalLeft + iconWidth / 2;
+      const centerY = originalTop + iconHeight / 2;
 
       // 改變圖片的 src 為新圖片
       // img.src = "../assets/images/pin/type=" + img.alt + ", selected=on.svg";
@@ -660,6 +699,12 @@ clickChangeIcons.forEach((img) => {
       img.src = `${import.meta.env.BASE_URL}/assets/images/type=${
         img.alt
       }, selected=on.svg`;
+
+      img.style.width = `${newIconWidth}px`; // 将宽度设为 80px  QA新增的
+      img.style.height = `${newIconHeight}px`; // 将高度设为 80px  QA新增的
+
+      img.style.left = `${centerX - newIconWidth / 2}px`; // 左邊位置  QA新增的
+      img.style.top = `${centerY - newIconHeight / 2}px`; // 上邊位置  QA新增的
     }
     // 停止事件冒泡，防止點擊事件傳遞到其他元素
     // e.stopPropagation(); 原本的
@@ -670,6 +715,12 @@ clickChangeIcons.forEach((img) => {
 document.addEventListener("click", () => {
   if (currentClickedImg) {
     currentClickedImg.src = originalSrc;
+
+    currentClickedImg.style.width = originalWidth; // 恢复原始宽度  QA新增的
+    currentClickedImg.style.height = originalHeight; // 恢复原始高度  QA新增的
+
+    currentClickedImg.style.left = `${originalLeft}px`; // 恢復原始位置  QA新增的
+    currentClickedImg.style.top = `${originalTop}px`; // 恢復原始位置  QA新增的
 
     currentClickedImg = null; // 重置當前點擊的圖片
   }
