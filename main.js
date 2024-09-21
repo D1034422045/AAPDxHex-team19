@@ -7,7 +7,7 @@ window.addEventListener("load", function () {
   setTimeout(function () {
     // 移除 loading 畫面
     document.getElementById("loading").style.display = "none";
-  }, 7000); // 延遲 7 秒
+  }, 2000); // 延遲 7 秒
 });
 
 const canvas = document.getElementById("myCanvas");
