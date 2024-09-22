@@ -728,3 +728,15 @@
 .searchAnimation {
   animation: searchAnimation 1s 1; /* 应用动画 */
 }
+
+//
+
+@media (max-width: 360px) {
+  .flex-cusWrap {
+    flex-wrap: wrap;
+  }
+  .text-cuswidth {
+    width: 100%;
+    margin-top: 8px;
+  }
+}
