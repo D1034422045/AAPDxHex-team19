@@ -622,11 +622,9 @@
 }
 
 .offcanvas.offcanvasForIndex {
-  // --bs-offcanvas-height: 360px; 43 vh
-  // height: 360px;
   --bs-offcanvas-border-color: none;
   height: 360px;
-  // border-radius: 50%;
+  border-radius: 24px;
   position: absolute;
   overflow-y: scroll;
 }
