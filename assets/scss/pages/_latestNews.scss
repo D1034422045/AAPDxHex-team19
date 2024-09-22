@@ -63,14 +63,47 @@
   width: 16px;
   height: 16px;
 }
-
 .btnSafety,
 .btnOrdinary,
 .btnWrining,
-.btnBlue {
+.btnBlue,
+.btnBlueArrival {
   border: 1px solid $neutrals-200;
   border-radius: 12px;
 }
+
+.btn-check:checked + .btnSafety, :not(.btn-check) + .btnSafety:active, .btn:first-child:active, .btnSafety.active, .btnSafety.show{
+  background: #f1f9fe;
+  border: 1px solid #f1f9fe;
+  color: #1aa3dd;
+  .safety {
+    background: url(/AAPDxHex-team19/assets/images/emojiHappy.svg) no-repeat;
+  }
+}
+.btn-check:checked + .btnOrdinary, :not(.btn-check) + .btnOrdinary:active, .btn:first-child:active, .btnOrdinary.active, .btnOrdinary.show{
+  background: #e5f8e8;
+  border: 1px solid #e5f8e8;
+  color: #67c575;
+  .ordinary {
+    background: url(/AAPDxHex-team19/assets/images/emojiNormal.svg) no-repeat;
+  }
+}
+.btn-check:checked + .btnWrining, :not(.btn-check) + .btnWrining:active, .btn:first-child:active, .btnWrining.active, .btnWrining.show{
+  background: #ffe9d4;
+  border: 1px solid #ffe9d4;
+  color: #ef8363;
+  .wrining {
+    background: url(/AAPDxHex-team19/assets/images/emojiSad.svg) no-repeat;
+  }
+}
+
+.btn-check:checked + .btnBlueArrival, :not(.btn-check) + .btnBlueArrival:active, .btn:first-child:active, .btnBlueArrival.active, .btnBlueArrival.show{
+  background: #1aa3dd;
+  border: 1px solid #1aa3dd;
+  color: #fff;
+}
+
+
 .btn-check:focus + .btnBlue,
 :not(.btn-check) + .btnBlue:active,
 .btnBlue.active,
@@ -79,40 +112,10 @@
   border: 1px solid #1aa3dd;
   color: #fff;
 }
-.btn-check:focus + .btnSafety + .btn:active,
-.btn:first-child:active,
-.btn.active,
-.btnSafety:focus {
-  background: #f1f9fe;
-  border: 1px solid #f1f9fe;
-  color: #1aa3dd;
-  .safety {
-    background: url(/AAPDxHex-team19/assets/images/emojiHappy.svg) no-repeat;
-  }
-}
-.btn-check:focus + .btnOrdinary,
-:not(.btn-check) + .btnOrdinary:active,
-.btnOrdinary.active,
-.btnOrdinary:focus {
-  background: #e5f8e8;
-  border: 1px solid #e5f8e8;
-  color: #67c575;
-  .ordinary {
-    background: url(/AAPDxHex-team19/assets/images/emojiNormal.svg) no-repeat;
-  }
-}
-.btn-check:focus + .btnWrining,
-:not(.btn-check) + .btnWrining:active,
-.btnWrining.active,
-.btnWrining:focus {
-  background: #ffe9d4;
-  border: 1px solid #ffe9d4;
-  color: #ef8363;
-  .wrining {
-    background: url(/AAPDxHex-team19/assets/images/emojiSad.svg) no-repeat;
-  }
-}
+
 .enterShare::placeholder {
   color: $neutrals-400;
   font-size: 14px;
 }
+
+
