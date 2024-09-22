@@ -9,88 +9,91 @@
 
   <body>
     <%- include('./layout/header'); -%>
-
-    <section class="container">
-      <div class="row">
-        <div class="col-12">
-          <div class="d-flex align-items-center justify-content-between mb-6">
-            <h3 class="heading-sm fw-bold">會員</h3>
-            <img src="../assets/images/notify.svg" alt="notify" />
-          </div>
-          <div
-            class="radius-m p-4"
-            style="background: linear-gradient(to right, #84d3f5, #52c1ef)"
-          >
+    <div class="px-3">
+      <section class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="d-flex align-items-center justify-content-between mb-6">
+              <h3 class="heading-sm fw-bold">會員</h3>
+              <img src="../assets/images/notify.svg" alt="notify" />
+            </div>
             <div
-              class="d-flex align-items-center border-bottom border-brand-200 pb-3"
+              class="radius-m p-4"
+              style="background: linear-gradient(to right, #84d3f5, #52c1ef)"
             >
-              <img
-                src="../assets/images/avator/size=40x40, img=default.png"
-                alt="size=40x40, img=default"
-              />
-              <div class="ms-4">
-                <p class="heading-xs fw-bold text-brand-950">Hi，旅人</p>
-                <div class="mt-1 d-flex align-items-center">
-                  <a href="#" class="body-text-xs text-brand-700">
-                    查看所有等級
-                  </a>
-                  <img
-                    src="../assets/images/arrowRightS.svg"
-                    alt="arrowRightS"
-                  />
+              <div
+                class="d-flex align-items-center border-bottom border-brand-200 pb-3"
+              >
+                <img
+                  src="../assets/images/avator/size=40x40, img=default.png"
+                  alt="size=40x40, img=default"
+                />
+                <div class="ms-4">
+                  <p class="heading-xs fw-bold text-brand-950">Hi，旅人</p>
+                  <div class="mt-1 d-flex align-items-center">
+                    <a href="#" class="body-text-xs text-brand-700">
+                      查看所有等級
+                    </a>
+                    <img
+                      src="../assets/images/arrowRightS.svg"
+                      alt="arrowRightS"
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="mt-3 d-flex align-items-center justify-content-between">
-              <p class="body-text-sm text-brand-950">
-                成為安全旅人，<br />一起讓世界旅遊更友善！
-              </p>
-              <button
-                type="button"
-                class="radius-s text-brand-500 bg-white body-text-md fw-bold py-2 px-3 border border-brand-500"
-                onclick="window.location.href='memberLogin.html';"
+              <div
+                class="mt-3 d-flex align-items-center justify-content-between"
               >
-                登入 / 註冊
-              </button>
+                <p class="body-text-sm text-brand-950">
+                  成為安全旅人，<br />一起讓世界旅遊更友善！
+                </p>
+                <button
+                  type="button"
+                  class="radius-s text-brand-500 bg-white body-text-md fw-bold py-2 px-3 border border-brand-500"
+                  onclick="window.location.href='memberLogin.html';"
+                >
+                  登入 / 註冊
+                </button>
+              </div>
             </div>
+            <ul class="list-unstyled mt-4 mb-0">
+              <li class="radius-m bg-neutrals-50 p-4 d-flex align-items-center">
+                <img src="../assets/images/mail.svg" alt="mail" />
+                <p class="body-text-sm ms-3">錯誤資訊回報</p>
+                <img
+                  src="../assets/images/arrowRight.svg"
+                  alt="arrowRight"
+                  class="ms-auto"
+                />
+              </li>
+              <li
+                class="radius-m bg-neutrals-50 p-4 d-flex align-items-center my-2"
+              >
+                <img
+                  src="../assets/images/emojiHappyMember.svg"
+                  alt="emojiHappyMember"
+                />
+                <p class="body-text-sm ms-3">關於安全旅人</p>
+                <img
+                  src="../assets/images/arrowRight.svg"
+                  alt="arrowRight"
+                  class="ms-auto"
+                />
+              </li>
+              <li class="radius-m bg-neutrals-50 p-4 d-flex align-items-center">
+                <img src="../assets/images/safe.svg" alt="safe" />
+                <p class="body-text-sm ms-3">隱私權與使用者政策</p>
+                <img
+                  src="../assets/images/arrowRight.svg"
+                  alt="arrowRight"
+                  class="ms-auto"
+                />
+              </li>
+            </ul>
           </div>
-          <ul class="list-unstyled mt-4 mb-0">
-            <li class="radius-m bg-neutrals-50 p-4 d-flex align-items-center">
-              <img src="../assets/images/mail.svg" alt="mail" />
-              <p class="body-text-sm ms-3">錯誤資訊回報</p>
-              <img
-                src="../assets/images/arrowRight.svg"
-                alt="arrowRight"
-                class="ms-auto"
-              />
-            </li>
-            <li
-              class="radius-m bg-neutrals-50 p-4 d-flex align-items-center my-2"
-            >
-              <img
-                src="../assets/images/emojiHappyMember.svg"
-                alt="emojiHappyMember"
-              />
-              <p class="body-text-sm ms-3">關於安全旅人</p>
-              <img
-                src="../assets/images/arrowRight.svg"
-                alt="arrowRight"
-                class="ms-auto"
-              />
-            </li>
-            <li class="radius-m bg-neutrals-50 p-4 d-flex align-items-center">
-              <img src="../assets/images/safe.svg" alt="safe" />
-              <p class="body-text-sm ms-3">隱私權與使用者政策</p>
-              <img
-                src="../assets/images/arrowRight.svg"
-                alt="arrowRight"
-                class="ms-auto"
-              />
-            </li>
-          </ul>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <%- include('./layout/footer', {page: "member" }); -%>
 
