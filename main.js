@@ -736,11 +736,11 @@ let centerAimClick = false;
 const originalCenterAimImgUrl = centerAimImg.src;
 const newCenterAimImgUrl = `${
   import.meta.env.BASE_URL
-}assets/images/centerAimClick.png`; // 當點擊 centerAimImg 時要更改的圖片 URL
+}assets/images/centerAimClick.svg`; // 當點擊 centerAimImg 時要更改的圖片 URL
 const originalfloatImgUrl = floatImg.src;
 const newfloatImgUrl = `${
   import.meta.env.BASE_URL
-}assets/images/floatClick.png`; // 當點擊 floatImgImg 時要更改的圖片 URL
+}assets/images/floatClick.svg`; // 當點擊 floatImgImg 時要更改的圖片 URL
 
 // 點擊 centerAimImg 時改變圖片 URL
 centerAimImg.addEventListener("click", function () {
@@ -794,16 +794,16 @@ const originalFavoriteImg = `${
 }assets/images/bookMark.svg`; //MarkA
 const clickedFavoriteImg = `${
   import.meta.env.BASE_URL
-}assets/images/bookMarkClick.png`; //MarkB
+}assets/images/bookMarkClick.svg`; //MarkB
 const originalHotelIconImg = `${
   import.meta.env.BASE_URL
 }assets/images/type=normal(selectedOn), selected=on.svg`; // FavA
 const originalFavoriteHotelImg = `${
   import.meta.env.BASE_URL
-}assets/images/favoriteHotel.png`; // FavB
+}assets/images/favoriteHotel.svg`; // FavB
 const clickedFavoriteHotelImg = `${
   import.meta.env.BASE_URL
-}assets/images/favoriteHotelClick.png`; // FavC
+}assets/images/favoriteHotelClick.svg`; // FavC
 
 // 點擊 favorite 時更換圖片或恢復原圖片
 favorite.addEventListener("click", function (event) {
@@ -828,11 +828,11 @@ favorite.addEventListener("click", function (event) {
 favoriteHotel.addEventListener("click", function (event) {
   event.stopPropagation();
 
-  if (favoriteHotel.src.includes("favoriteHotel.png")) {
+  if (favoriteHotel.src.includes("favoriteHotel.svg")) {
     // If favoriteHotel is in imgFavB, switch to imgFavC
     favoriteHotel.src = clickedFavoriteHotelImg;
     isFavoriteClickHotelIconImg = true; // Set the flag indicating imgFavC is active
-  } else if (favoriteHotel.src.includes("favoriteHotelClick.png")) {
+  } else if (favoriteHotel.src.includes("favoriteHotelClick.svg")) {
     // If favoriteHotel is in imgFavC, revert to imgFavB
     favoriteHotel.src = originalFavoriteHotelImg;
     isFavoriteClickHotelIconImg = false;
@@ -872,69 +872,159 @@ centerAimImg.addEventListener("click", () => {
 });
 
 // 我的安全評論 icon點擊
+const myselfSafeComment = document.querySelector(".myselfSafeComment");
+const myselfSafeCommentIcon = document.querySelector(".myselfSafeCommentIcon");
+const myselfNormalComment = document.querySelector(".myselfNormalComment");
+const myselfNormalCommentIcon = document.querySelector(
+  ".myselfNormalCommentIcon"
+);
+const myselfTakecareComment = document.querySelector(".myselfTakecareComment");
+const myselfTakecareCommentIcon = document.querySelector(
+  ".myselfTakecareCommentIcon"
+);
 
-document.addEventListener("DOMContentLoaded", function () {
-  const images = {
-    safeCommentIcon: {
-      default: `${import.meta.env.BASE_URL}assets/images/safe.png`,
-      clicked: `${import.meta.env.BASE_URL}assets/images/safeClick.png`,
-    },
-    normalCommentIcon: {
-      default: `${import.meta.env.BASE_URL}assets/images/normal.png
-`,
-      clicked: `${import.meta.env.BASE_URL}assets/images/normalClick.png`,
-    },
-    takecareCommentIcon: {
-      default: `${import.meta.env.BASE_URL}assets/images/takecare.png`,
-      clicked: `${import.meta.env.BASE_URL}assets/images/takecareClick.png`,
-    },
-  };
+myselfSafeComment.addEventListener("click", function (event) {
+  event.stopPropagation(); // 防止全局點擊事件觸發
+  myselfSafeComment.classList.add("myselfSafeStyle");
+  myselfSafeComment.classList.remove("border");
+  myselfSafeCommentIcon.src = `${
+    import.meta.env.BASE_URL
+  }assets/images/emojiHappyBlue.svg`;
 
-  // Function to change the image
-  window.changeIconImage = function (clickedImageId) {
-    // Reset all images to their default state
-    for (const imgId in images) {
-      document.getElementById(imgId).src = images[imgId].default;
-    }
+  myselfNormalComment.classList.remove("myselfNormalStyle");
+  myselfNormalComment.classList.add("border");
+  myselfNormalCommentIcon.src = `${
+    import.meta.env.BASE_URL
+  }assets/images/emojiNormalGray.svg`;
 
-    // Change the clicked image to its "clicked" state
-    document.getElementById(clickedImageId).src =
-      images[clickedImageId].clicked;
-  };
+  myselfTakecareComment.classList.remove("myselfTakecareStyle");
+  myselfTakecareComment.classList.add("border");
+  myselfTakecareCommentIcon.src = `${
+    import.meta.env.BASE_URL
+  }assets/images/emojiSadGray.svg`;
+});
+
+myselfNormalComment.addEventListener("click", function (event) {
+  event.stopPropagation(); // 防止全局點擊事件觸發
+  myselfNormalComment.classList.add("myselfNormalStyle");
+  myselfNormalComment.classList.remove("border");
+  myselfNormalCommentIcon.src = `${
+    import.meta.env.BASE_URL
+  }assets/images/emojiNormalGreen.svg`;
+
+  myselfSafeComment.classList.remove("myselfSafeStyle");
+  myselfSafeComment.classList.add("border");
+  myselfSafeCommentIcon.src = `${
+    import.meta.env.BASE_URL
+  }assets/images/emojiHappyGray.svg`;
+
+  myselfTakecareComment.classList.remove("myselfTakecareStyle");
+  myselfTakecareComment.classList.add("border");
+  myselfTakecareCommentIcon.src = `${
+    import.meta.env.BASE_URL
+  }assets/images/emojiSadGray.svg`;
+});
+
+myselfTakecareComment.addEventListener("click", function (event) {
+  event.stopPropagation(); // 防止全局點擊事件觸發
+  myselfTakecareComment.classList.add("myselfTakecareStyle");
+  myselfTakecareComment.classList.remove("border");
+  myselfTakecareCommentIcon.src = `${
+    import.meta.env.BASE_URL
+  }assets/images/emojiSadRed.svg`;
+
+  myselfSafeComment.classList.remove("myselfSafeStyle");
+  myselfSafeComment.classList.add("border");
+  myselfSafeCommentIcon.src = `${
+    import.meta.env.BASE_URL
+  }assets/images/emojiHappyGray.svg`;
+
+  myselfNormalComment.classList.remove("myselfNormalStyle");
+  myselfNormalComment.classList.add("border");
+  myselfNormalCommentIcon.src = `${
+    import.meta.env.BASE_URL
+  }assets/images/emojiNormalGray.svg`;
+});
+
+document.addEventListener("click", function () {
+  myselfSafeComment.classList.remove("myselfSafeStyle");
+  myselfSafeComment.classList.add("border");
+  myselfSafeCommentIcon.src = `${
+    import.meta.env.BASE_URL
+  }assets/images/emojiHappyGray.svg`;
+
+  myselfNormalComment.classList.remove("myselfNormalStyle");
+  myselfNormalComment.classList.add("border");
+  myselfNormalCommentIcon.src = `${
+    import.meta.env.BASE_URL
+  }assets/images/emojiNormalGray.svg`;
+
+  myselfTakecareComment.classList.remove("myselfTakecareStyle");
+  myselfTakecareComment.classList.add("border");
+  myselfTakecareCommentIcon.src = `${
+    import.meta.env.BASE_URL
+  }assets/images/emojiSadGray.svg`;
 });
 
 // 旅客安全評論 icon點擊
+const travelerSafeComment = document.querySelector(".travelerSafeComment");
+const travelerSafeCommentSpan = document.querySelector(
+  ".travelerSafeCommentSpan"
+);
+const travelerNormalComment = document.querySelector(".travelerNormalComment");
+const travelerNormalCommentSpan = document.querySelector(
+  ".travelerNormalCommentSpan"
+);
+const travelertakecareComment = document.querySelector(
+  ".travelertakecareComment"
+);
+const travelertakecareCommentSpan = document.querySelector(
+  ".travelertakecareCommentSpan"
+);
 
-document.addEventListener("DOMContentLoaded", function () {
-  const commentImages = {
-    safeComment: {
-      default: `${import.meta.env.BASE_URL}assets/images/safeComment.png`,
-      clicked: `${import.meta.env.BASE_URL}assets/images/safeCommentClick.png`,
-    },
-    normalComment: {
-      default: `${import.meta.env.BASE_URL}assets/images/normalComment.png
-`,
-      clicked: `${
-        import.meta.env.BASE_URL
-      }assets/images/normalCommentClick.png`,
-    },
-    takecareComment: {
-      default: `${import.meta.env.BASE_URL}assets/images/takecareComment.png`,
-      clicked: `${
-        import.meta.env.BASE_URL
-      }assets/images/takecareCommentClick.png`,
-    },
-  };
+travelerSafeComment.addEventListener("click", function (event) {
+  event.stopPropagation(); // 防止全局點擊事件觸發
+  travelerSafeComment.classList.add("travelerCommentChangeStyle");
+  travelerSafeCommentSpan.classList.remove("text-neutrals-400");
 
-  // Function to change the image
-  window.changeImage = function (clickedImageId) {
-    // Reset all images to their default state
-    for (const imgId in commentImages) {
-      document.getElementById(imgId).src = commentImages[imgId].default;
-    }
+  travelerNormalComment.classList.remove("travelerCommentChangeStyle");
+  travelerNormalCommentSpan.classList.add("text-neutrals-400");
 
-    // Change the clicked image to its "clicked" state
-    document.getElementById(clickedImageId).src =
-      commentImages[clickedImageId].clicked;
-  };
+  travelertakecareComment.classList.remove("travelerCommentChangeStyle");
+  travelertakecareCommentSpan.classList.add("text-neutrals-400");
+});
+
+travelerNormalComment.addEventListener("click", function (event) {
+  event.stopPropagation(); // 防止全局點擊事件觸發
+  travelerNormalComment.classList.add("travelerCommentChangeStyle");
+  travelerNormalCommentSpan.classList.remove("text-neutrals-400");
+
+  travelerSafeComment.classList.remove("travelerCommentChangeStyle");
+  travelerSafeCommentSpan.classList.add("text-neutrals-400");
+
+  travelertakecareComment.classList.remove("travelerCommentChangeStyle");
+  travelertakecareCommentSpan.classList.add("text-neutrals-400");
+});
+
+travelertakecareComment.addEventListener("click", function (event) {
+  event.stopPropagation(); // 防止全局點擊事件觸發
+  travelertakecareComment.classList.add("travelerCommentChangeStyle");
+  travelertakecareCommentSpan.classList.remove("text-neutrals-400");
+
+  travelerSafeComment.classList.remove("travelerCommentChangeStyle");
+  travelerSafeCommentSpan.classList.add("text-neutrals-400");
+
+  travelerNormalComment.classList.remove("travelerCommentChangeStyle");
+  travelerNormalCommentSpan.classList.add("text-neutrals-400");
+});
+
+document.addEventListener("click", function () {
+  travelerSafeComment.classList.remove("travelerCommentChangeStyle");
+  travelerSafeCommentSpan.classList.add("text-neutrals-400");
+
+  travelerNormalComment.classList.remove("travelerCommentChangeStyle");
+  travelerNormalCommentSpan.classList.add("text-neutrals-400");
+
+  travelertakecareComment.classList.remove("travelerCommentChangeStyle");
+  travelertakecareCommentSpan.classList.add("text-neutrals-400");
 });
