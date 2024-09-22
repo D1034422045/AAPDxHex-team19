@@ -10,131 +10,133 @@
   <body>
     <%- include('./layout/header'); -%>
 
-    <section class="container">
-      <div class="row">
-        <div class="col-12 pb-30">
-          <div class="d-flex align-items-center justify-content-between mb-6">
-            <h3 class="heading-sm fw-bold">會員</h3>
-            <img src="../assets/images/notifyDot.svg" alt="notifyDot" />
-          </div>
-          <div
-            class="radius-m p-4 d-flex flex-column"
-            style="background: linear-gradient(to right, #84d3f5, #52c1ef)"
-          >
+    <div class="px-3">
+      <section class="container">
+        <div class="row">
+          <div class="col-12 pb-30">
+            <div class="d-flex align-items-center justify-content-between mb-6">
+              <h3 class="heading-sm fw-bold">會員</h3>
+              <img src="../assets/images/notifyDot.svg" alt="notifyDot" />
+            </div>
             <div
-              class="d-flex align-items-center border-bottom border-brand-200 pb-3"
+              class="radius-m p-4 d-flex flex-column"
+              style="background: linear-gradient(to right, #84d3f5, #52c1ef)"
             >
-              <img
-                src="../assets/images/avator/size=40x40, img=user A.png"
-                alt="size=40x40, img=user A"
-              />
-              <div class="ms-4 d-flex flex-column align-items-start">
-                <div class="d-flex align-items-center">
-                  <p class="heading-xs fw-bold text-brand-950 me-2">
-                    Ashley Wang
+              <div
+                class="d-flex align-items-center border-bottom border-brand-200 pb-3"
+              >
+                <img
+                  src="../assets/images/avator/size=40x40, img=user A.png"
+                  alt="size=40x40, img=user A"
+                />
+                <div class="ms-4 d-flex flex-column align-items-start">
+                  <div class="d-flex align-items-center">
+                    <p class="heading-xs fw-bold text-brand-950 me-2">
+                      Ashley Wang
+                    </p>
+                    <img src="../assets/images/edit.svg" alt="edit" />
+                  </div>
+
+                  <p
+                    class="text-brand-500 py-1 px-2 fw-bold bg-brand-100 radius-xxs my-1 body-text-xs"
+                  >
+                    Lv.1 自在旅人
                   </p>
-                  <img src="../assets/images/edit.svg" alt="edit" />
-                </div>
 
-                <p
-                  class="text-brand-500 py-1 px-2 fw-bold bg-brand-100 radius-xxs my-1 body-text-xs"
-                >
-                  Lv.1 自在旅人
-                </p>
-
-                <div class="mt-1 d-flex align-items-center">
-                  <a href="#" class="body-text-xs text-brand-700">
-                    查看所有等級
-                  </a>
-                  <img
-                    src="../assets/images/arrowRightS.svg"
-                    alt="arrowRightS"
-                  />
+                  <div class="mt-1 d-flex align-items-center">
+                    <a href="#" class="body-text-xs text-brand-700">
+                      查看所有等級
+                    </a>
+                    <img
+                      src="../assets/images/arrowRightS.svg"
+                      alt="arrowRightS"
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="mt-3 d-flex flex-column align-items-start">
-              <p class="text-brand-950 fw-bold body-text-sm">
-                已累積 15 則評論
-              </p>
-              <img
-                src="../assets/images/memberProgress.svg"
-                alt="memberProgress"
-                style="width: 319px"
-                class="img-fluid"
-              />
-              <p class="text-white body-text-xs">
-                再分享 5 則評論，成為冒險旅人！
-              </p>
-            </div>
-          </div>
-          <div
-            class="d-flex align-items-center justify-content-between mt-4 mb-2"
-          >
-            <div
-              class="d-flex flex-column align-items-center justify-content-center bg-brand-50 radius-m w-100 pt-3 pb-6"
-            >
-              <img
-                src="../assets/images/memberImgLeft.svg"
-                alt="memberImgLeft"
-              />
-              <p class="body-text-sm fw-bold">我的收藏</p>
+              <div class="mt-3 d-flex flex-column align-items-start">
+                <p class="text-brand-950 fw-bold body-text-sm">
+                  已累積 15 則評論
+                </p>
+                <img
+                  src="../assets/images/memberProgress.svg"
+                  alt="memberProgress"
+                  style="width: 319px"
+                  class="img-fluid"
+                />
+                <p class="text-white body-text-xs">
+                  再分享 5 則評論，成為冒險旅人！
+                </p>
+              </div>
             </div>
             <div
-              class="d-flex flex-column align-items-center justify-content-center bg-brand-50 radius-m w-100 ms-4 pt-3 pb-6"
+              class="d-flex align-items-center justify-content-between mt-4 mb-2"
             >
-              <img
-                src="../assets/images/memberImgRight.svg"
-                alt="memberImgRight"
-              />
-              <p class="body-text-sm fw-bold">我的安全評論</p>
+              <div
+                class="d-flex flex-column align-items-center justify-content-center bg-brand-50 radius-m w-100 pt-3 pb-6"
+              >
+                <img
+                  src="../assets/images/memberImgLeft.svg"
+                  alt="memberImgLeft"
+                />
+                <p class="body-text-sm fw-bold">我的收藏</p>
+              </div>
+              <div
+                class="d-flex flex-column align-items-center justify-content-center bg-brand-50 radius-m w-100 ms-4 pt-3 pb-6"
+              >
+                <img
+                  src="../assets/images/memberImgRight.svg"
+                  alt="memberImgRight"
+                />
+                <p class="body-text-sm fw-bold">我的安全評論</p>
+              </div>
             </div>
-          </div>
-          <ul class="list-unstyled mb-0">
-            <li class="radius-m bg-neutrals-50 p-4 d-flex align-items-center">
-              <img src="../assets/images/mail.svg" alt="mail" />
-              <p class="body-text-sm ms-3">錯誤資訊回報</p>
-              <img
-                src="../assets/images/arrowRight.svg"
-                alt="arrowRight"
-                class="ms-auto"
-              />
-            </li>
-            <li
-              class="radius-m bg-neutrals-50 p-4 d-flex align-items-center my-2"
+            <ul class="list-unstyled mb-0">
+              <li class="radius-m bg-neutrals-50 p-4 d-flex align-items-center">
+                <img src="../assets/images/mail.svg" alt="mail" />
+                <p class="body-text-sm ms-3">錯誤資訊回報</p>
+                <img
+                  src="../assets/images/arrowRight.svg"
+                  alt="arrowRight"
+                  class="ms-auto"
+                />
+              </li>
+              <li
+                class="radius-m bg-neutrals-50 p-4 d-flex align-items-center my-2"
+              >
+                <img
+                  src="../assets/images/emojiHappyMember.svg"
+                  alt="emojiHappyMember"
+                />
+                <p class="body-text-sm ms-3">關於安全旅人</p>
+                <img
+                  src="../assets/images/arrowRight.svg"
+                  alt="arrowRight"
+                  class="ms-auto"
+                />
+              </li>
+              <li class="radius-m bg-neutrals-50 p-4 d-flex align-items-center">
+                <img src="../assets/images/safe.svg" alt="safe" />
+                <p class="body-text-sm ms-3">隱私權與使用者政策</p>
+                <img
+                  src="../assets/images/arrowRight.svg"
+                  alt="arrowRight"
+                  class="ms-auto"
+                />
+              </li>
+            </ul>
+            <div
+              class="d-flex align-items-center m-4"
+              style="cursor: pointer; width: 64px"
+              onclick="window.location.href='member.html';"
             >
-              <img
-                src="../assets/images/emojiHappyMember.svg"
-                alt="emojiHappyMember"
-              />
-              <p class="body-text-sm ms-3">關於安全旅人</p>
-              <img
-                src="../assets/images/arrowRight.svg"
-                alt="arrowRight"
-                class="ms-auto"
-              />
-            </li>
-            <li class="radius-m bg-neutrals-50 p-4 d-flex align-items-center">
-              <img src="../assets/images/safe.svg" alt="safe" />
-              <p class="body-text-sm ms-3">隱私權與使用者政策</p>
-              <img
-                src="../assets/images/arrowRight.svg"
-                alt="arrowRight"
-                class="ms-auto"
-              />
-            </li>
-          </ul>
-          <div
-            class="d-flex align-items-center m-4"
-            style="cursor: pointer; width: 64px"
-            onclick="window.location.href='member.html';"
-          >
-            <img src="../assets/images/logout.svg" alt="logout" />
-            <p class="body-text-sm ms-3">登出</p>
+              <img src="../assets/images/logout.svg" alt="logout" />
+              <p class="body-text-sm ms-3">登出</p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <%- include('./layout/footer', {page: "member" }); -%>
 
