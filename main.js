@@ -1,13 +1,18 @@
 import "./assets/scss/all.scss";
 import "bootstrap/dist/js/bootstrap.min.js";
 
-// 等待網頁內容和資源完全載入
 window.addEventListener("load", function () {
-  // 模擬延遲，例如動畫需要 3 秒，這裡使用 setTimeout
-  setTimeout(function () {
-    // 移除 loading 畫面
+  // 檢查 sessionStorage 是否已經存在標記
+  if (!sessionStorage.getItem("loadingShown")) {
+    setTimeout(function () {
+      document.getElementById("loading").style.display = "none";
+      // 設定標記，表示已顯示過 loading 畫面
+      sessionStorage.setItem("loadingShown", "true");
+    }, 2000);
+  } else {
+    // 如果已經顯示過 loading 畫面，直接隱藏
     document.getElementById("loading").style.display = "none";
-  }, 7000); // 延遲 7 秒
+  }
 });
 
 const canvas = document.getElementById("myCanvas");
@@ -108,6 +113,10 @@ const canvasX = 550; // Icon 的相對背景圖 X 座標
 const canvasY = 280; // 480 Icon 的相對背景圖 Y 座標
 const iconWidth = 50;
 const iconHeight = 50;
+
+const newIconWidth = 100; // 新的寬度  QA新增的
+const newIconHeight = 100; // 新的高度  QA新增的
+
 const bgBigCircleWidth = 600;
 const bgBigCircleHeight = 600;
 const bgSmallCircleWidth = 300;
@@ -480,7 +489,9 @@ policeStationLabelWrap.addEventListener("click", function (event) {
     // 如果還沒有被點擊，切換為新的圖片
     policeStationLabelImg.src = `${
       import.meta.env.BASE_URL
-    }assets/images/policeStationLabelClick.png`;
+    }assets/images/policeStationLabelIconClick.svg`;
+    policeStationLabelWrap.classList.remove("bg-white");
+    policeStationLabelWrap.classList.add("labelClickChangeStyle");
     policeStationLabelImgIsClicked = true; // 更新狀態為已點擊
   }
 
@@ -497,7 +508,9 @@ policeStationLabelWrap.addEventListener("click", function (event) {
   if (hospitalLabelImgIsClicked) {
     hospitalLabelImg.src = `${
       import.meta.env.BASE_URL
-    }assets/images/hospitalLabel.png`;
+    }assets/images/hospitalLabelIcon.svg`;
+    hospitalLabelWrap.classList.add("bg-white");
+    hospitalLabelWrap.classList.remove("labelClickChangeStyle");
     hospitalLabelImgIsClicked = false;
   }
 
@@ -510,7 +523,9 @@ hospitalLabelWrap.addEventListener("click", function (event) {
     // 如果還沒有被點擊，切換為新的圖片
     hospitalLabelImg.src = `${
       import.meta.env.BASE_URL
-    }assets/images/hospitalLabelClick.png`;
+    }assets/images/hopspitalLabelIconClick.svg`;
+    hospitalLabelWrap.classList.remove("bg-white");
+    hospitalLabelWrap.classList.add("labelClickChangeStyle");
     hospitalLabelImgIsClicked = true; // 更新狀態為已點擊
   }
 
@@ -526,7 +541,9 @@ hospitalLabelWrap.addEventListener("click", function (event) {
   if (policeStationLabelImgIsClicked) {
     policeStationLabelImg.src = `${
       import.meta.env.BASE_URL
-    }assets/images/policeStationLabel.png`;
+    }assets/images/policeStationLabelIcon.svg`;
+    policeStationLabelWrap.classList.add("bg-white");
+    policeStationLabelWrap.classList.remove("labelClickChangeStyle");
     policeStationLabelImgIsClicked = false;
   }
 
@@ -540,7 +557,9 @@ document.addEventListener("click", function () {
     // 如果已經點擊，恢復原本的圖片
     policeStationLabelImg.src = `${
       import.meta.env.BASE_URL
-    }assets/images/policeStationLabel.png`;
+    }assets/images/policeStationLabelIcon.svg`;
+    policeStationLabelWrap.classList.add("bg-white");
+    policeStationLabelWrap.classList.remove("labelClickChangeStyle");
     policeStationLabelImgIsClicked = false; // 更新狀態為未點擊
   }
 
@@ -548,7 +567,9 @@ document.addEventListener("click", function () {
     // 如果已經點擊，恢復原本的圖片
     hospitalLabelImg.src = `${
       import.meta.env.BASE_URL
-    }assets/images/hospitalLabel.png`;
+    }assets/images/hospitalLabelIcon.svg`;
+    hospitalLabelWrap.classList.add("bg-white");
+    hospitalLabelWrap.classList.remove("labelClickChangeStyle");
     hospitalLabelImgIsClicked = false; // 更新狀態為未點擊
   }
 
@@ -632,22 +653,45 @@ const clickChangeIcons = document.querySelectorAll(".clickChangeIcon");
 let currentClickedImg = null; // 保存當前被點擊的圖片
 let originalSrc = ""; // 保存原始圖片的 src
 
+let originalWidth = ""; // 保存原始宽度  QA新增的
+let originalHeight = ""; // 保存原始高度  QA新增的
+let originalLeft = 0; // 保存原始left  QA新增的
+let originalTop = 0; // 保存原始top  QA新增的
+
 clickChangeIcons.forEach((img) => {
   img.addEventListener("click", (e) => {
     e.stopPropagation(); //新增的
 
     if (currentClickedImg === img) {
       img.src = originalSrc;
+      img.style.width = originalWidth; // 恢复原始宽度  QA新增的
+      img.style.height = originalHeight; // 恢复原始高度  QA新增的
+      img.style.left = `${originalLeft}px`; // 恢復原始位置  QA新增的
+      img.style.top = `${originalTop}px`; // 恢復原始位置  QA新增的
       currentClickedImg = null; // Reset the clicked image state
     } else {
       // If another image is clicked, reset the previously clicked image to its original state
       if (currentClickedImg && currentClickedImg !== img) {
         currentClickedImg.src = originalSrc;
+        currentClickedImg.style.width = originalWidth; // 恢复之前图片的宽度  QA新增的
+        currentClickedImg.style.height = originalHeight; // 恢复之前图片的高度  QA新增的
+        currentClickedImg.style.left = `${originalLeft}px`; // 恢復原始位置  QA新增的
+        currentClickedImg.style.top = `${originalTop}px`; // 恢復原始位置  QA新增的
       }
 
       // 保存當前點擊的圖片及其原始 src
       currentClickedImg = img;
       originalSrc = img.src;
+
+      originalWidth = img.style.width; // 保存当前图片的原始宽度  QA新增的
+      originalHeight = img.style.height; // 保存当前图片的原始高度  QA新增的
+
+      originalLeft = parseInt(img.style.left); // 保存原始left值  QA新增的
+      originalTop = parseInt(img.style.top); // 保存原始top值  QA新增的
+
+      // 計算中心位置  QA新增的
+      const centerX = originalLeft + iconWidth / 2;
+      const centerY = originalTop + iconHeight / 2;
 
       // 改變圖片的 src 為新圖片
       // img.src = "../assets/images/pin/type=" + img.alt + ", selected=on.svg";
@@ -655,6 +699,12 @@ clickChangeIcons.forEach((img) => {
       img.src = `${import.meta.env.BASE_URL}/assets/images/type=${
         img.alt
       }, selected=on.svg`;
+
+      img.style.width = `${newIconWidth}px`; // 将宽度设为 80px  QA新增的
+      img.style.height = `${newIconHeight}px`; // 将高度设为 80px  QA新增的
+
+      img.style.left = `${centerX - newIconWidth / 2}px`; // 左邊位置  QA新增的
+      img.style.top = `${centerY - newIconHeight / 2}px`; // 上邊位置  QA新增的
     }
     // 停止事件冒泡，防止點擊事件傳遞到其他元素
     // e.stopPropagation(); 原本的
@@ -665,6 +715,12 @@ clickChangeIcons.forEach((img) => {
 document.addEventListener("click", () => {
   if (currentClickedImg) {
     currentClickedImg.src = originalSrc;
+
+    currentClickedImg.style.width = originalWidth; // 恢复原始宽度  QA新增的
+    currentClickedImg.style.height = originalHeight; // 恢复原始高度  QA新增的
+
+    currentClickedImg.style.left = `${originalLeft}px`; // 恢復原始位置  QA新增的
+    currentClickedImg.style.top = `${originalTop}px`; // 恢復原始位置  QA新增的
 
     currentClickedImg = null; // 重置當前點擊的圖片
   }
@@ -680,11 +736,11 @@ let centerAimClick = false;
 const originalCenterAimImgUrl = centerAimImg.src;
 const newCenterAimImgUrl = `${
   import.meta.env.BASE_URL
-}assets/images/centerAimClick.png`; // 當點擊 centerAimImg 時要更改的圖片 URL
+}assets/images/centerAimClick.svg`; // 當點擊 centerAimImg 時要更改的圖片 URL
 const originalfloatImgUrl = floatImg.src;
 const newfloatImgUrl = `${
   import.meta.env.BASE_URL
-}assets/images/floatClick.png`; // 當點擊 floatImgImg 時要更改的圖片 URL
+}assets/images/floatClick.svg`; // 當點擊 floatImgImg 時要更改的圖片 URL
 
 // 點擊 centerAimImg 時改變圖片 URL
 centerAimImg.addEventListener("click", function () {
@@ -738,16 +794,16 @@ const originalFavoriteImg = `${
 }assets/images/bookMark.svg`; //MarkA
 const clickedFavoriteImg = `${
   import.meta.env.BASE_URL
-}assets/images/bookMarkClick.png`; //MarkB
+}assets/images/bookMarkClick.svg`; //MarkB
 const originalHotelIconImg = `${
   import.meta.env.BASE_URL
 }assets/images/type=normal(selectedOn), selected=on.svg`; // FavA
 const originalFavoriteHotelImg = `${
   import.meta.env.BASE_URL
-}assets/images/favoriteHotel.png`; // FavB
+}assets/images/favoriteHotel.svg`; // FavB
 const clickedFavoriteHotelImg = `${
   import.meta.env.BASE_URL
-}assets/images/favoriteHotelClick.png`; // FavC
+}assets/images/favoriteHotelClick.svg`; // FavC
 
 // 點擊 favorite 時更換圖片或恢復原圖片
 favorite.addEventListener("click", function (event) {
@@ -772,11 +828,11 @@ favorite.addEventListener("click", function (event) {
 favoriteHotel.addEventListener("click", function (event) {
   event.stopPropagation();
 
-  if (favoriteHotel.src.includes("favoriteHotel.png")) {
+  if (favoriteHotel.src.includes("favoriteHotel.svg")) {
     // If favoriteHotel is in imgFavB, switch to imgFavC
     favoriteHotel.src = clickedFavoriteHotelImg;
     isFavoriteClickHotelIconImg = true; // Set the flag indicating imgFavC is active
-  } else if (favoriteHotel.src.includes("favoriteHotelClick.png")) {
+  } else if (favoriteHotel.src.includes("favoriteHotelClick.svg")) {
     // If favoriteHotel is in imgFavC, revert to imgFavB
     favoriteHotel.src = originalFavoriteHotelImg;
     isFavoriteClickHotelIconImg = false;
@@ -816,69 +872,159 @@ centerAimImg.addEventListener("click", () => {
 });
 
 // 我的安全評論 icon點擊
+const myselfSafeComment = document.querySelector(".myselfSafeComment");
+const myselfSafeCommentIcon = document.querySelector(".myselfSafeCommentIcon");
+const myselfNormalComment = document.querySelector(".myselfNormalComment");
+const myselfNormalCommentIcon = document.querySelector(
+  ".myselfNormalCommentIcon"
+);
+const myselfTakecareComment = document.querySelector(".myselfTakecareComment");
+const myselfTakecareCommentIcon = document.querySelector(
+  ".myselfTakecareCommentIcon"
+);
 
-document.addEventListener("DOMContentLoaded", function () {
-  const images = {
-    safeCommentIcon: {
-      default: `${import.meta.env.BASE_URL}assets/images/safe.png`,
-      clicked: `${import.meta.env.BASE_URL}assets/images/safeClick.png`,
-    },
-    normalCommentIcon: {
-      default: `${import.meta.env.BASE_URL}assets/images/normal.png
-`,
-      clicked: `${import.meta.env.BASE_URL}assets/images/normalClick.png`,
-    },
-    takecareCommentIcon: {
-      default: `${import.meta.env.BASE_URL}assets/images/takecare.png`,
-      clicked: `${import.meta.env.BASE_URL}assets/images/takecareClick.png`,
-    },
-  };
+myselfSafeComment.addEventListener("click", function (event) {
+  event.stopPropagation(); // 防止全局點擊事件觸發
+  myselfSafeComment.classList.add("myselfSafeStyle");
+  myselfSafeComment.classList.remove("border");
+  myselfSafeCommentIcon.src = `${
+    import.meta.env.BASE_URL
+  }assets/images/emojiHappyBlue.svg`;
 
-  // Function to change the image
-  window.changeIconImage = function (clickedImageId) {
-    // Reset all images to their default state
-    for (const imgId in images) {
-      document.getElementById(imgId).src = images[imgId].default;
-    }
+  myselfNormalComment.classList.remove("myselfNormalStyle");
+  myselfNormalComment.classList.add("border");
+  myselfNormalCommentIcon.src = `${
+    import.meta.env.BASE_URL
+  }assets/images/emojiNormalGray.svg`;
 
-    // Change the clicked image to its "clicked" state
-    document.getElementById(clickedImageId).src =
-      images[clickedImageId].clicked;
-  };
+  myselfTakecareComment.classList.remove("myselfTakecareStyle");
+  myselfTakecareComment.classList.add("border");
+  myselfTakecareCommentIcon.src = `${
+    import.meta.env.BASE_URL
+  }assets/images/emojiSadGray.svg`;
+});
+
+myselfNormalComment.addEventListener("click", function (event) {
+  event.stopPropagation(); // 防止全局點擊事件觸發
+  myselfNormalComment.classList.add("myselfNormalStyle");
+  myselfNormalComment.classList.remove("border");
+  myselfNormalCommentIcon.src = `${
+    import.meta.env.BASE_URL
+  }assets/images/emojiNormalGreen.svg`;
+
+  myselfSafeComment.classList.remove("myselfSafeStyle");
+  myselfSafeComment.classList.add("border");
+  myselfSafeCommentIcon.src = `${
+    import.meta.env.BASE_URL
+  }assets/images/emojiHappyGray.svg`;
+
+  myselfTakecareComment.classList.remove("myselfTakecareStyle");
+  myselfTakecareComment.classList.add("border");
+  myselfTakecareCommentIcon.src = `${
+    import.meta.env.BASE_URL
+  }assets/images/emojiSadGray.svg`;
+});
+
+myselfTakecareComment.addEventListener("click", function (event) {
+  event.stopPropagation(); // 防止全局點擊事件觸發
+  myselfTakecareComment.classList.add("myselfTakecareStyle");
+  myselfTakecareComment.classList.remove("border");
+  myselfTakecareCommentIcon.src = `${
+    import.meta.env.BASE_URL
+  }assets/images/emojiSadRed.svg`;
+
+  myselfSafeComment.classList.remove("myselfSafeStyle");
+  myselfSafeComment.classList.add("border");
+  myselfSafeCommentIcon.src = `${
+    import.meta.env.BASE_URL
+  }assets/images/emojiHappyGray.svg`;
+
+  myselfNormalComment.classList.remove("myselfNormalStyle");
+  myselfNormalComment.classList.add("border");
+  myselfNormalCommentIcon.src = `${
+    import.meta.env.BASE_URL
+  }assets/images/emojiNormalGray.svg`;
+});
+
+document.addEventListener("click", function () {
+  myselfSafeComment.classList.remove("myselfSafeStyle");
+  myselfSafeComment.classList.add("border");
+  myselfSafeCommentIcon.src = `${
+    import.meta.env.BASE_URL
+  }assets/images/emojiHappyGray.svg`;
+
+  myselfNormalComment.classList.remove("myselfNormalStyle");
+  myselfNormalComment.classList.add("border");
+  myselfNormalCommentIcon.src = `${
+    import.meta.env.BASE_URL
+  }assets/images/emojiNormalGray.svg`;
+
+  myselfTakecareComment.classList.remove("myselfTakecareStyle");
+  myselfTakecareComment.classList.add("border");
+  myselfTakecareCommentIcon.src = `${
+    import.meta.env.BASE_URL
+  }assets/images/emojiSadGray.svg`;
 });
 
 // 旅客安全評論 icon點擊
+const travelerSafeComment = document.querySelector(".travelerSafeComment");
+const travelerSafeCommentSpan = document.querySelector(
+  ".travelerSafeCommentSpan"
+);
+const travelerNormalComment = document.querySelector(".travelerNormalComment");
+const travelerNormalCommentSpan = document.querySelector(
+  ".travelerNormalCommentSpan"
+);
+const travelertakecareComment = document.querySelector(
+  ".travelertakecareComment"
+);
+const travelertakecareCommentSpan = document.querySelector(
+  ".travelertakecareCommentSpan"
+);
 
-document.addEventListener("DOMContentLoaded", function () {
-  const commentImages = {
-    safeComment: {
-      default: `${import.meta.env.BASE_URL}assets/images/safeComment.png`,
-      clicked: `${import.meta.env.BASE_URL}assets/images/safeCommentClick.png`,
-    },
-    normalComment: {
-      default: `${import.meta.env.BASE_URL}assets/images/normalComment.png
-`,
-      clicked: `${
-        import.meta.env.BASE_URL
-      }assets/images/normalCommentClick.png`,
-    },
-    takecareComment: {
-      default: `${import.meta.env.BASE_URL}assets/images/takecareComment.png`,
-      clicked: `${
-        import.meta.env.BASE_URL
-      }assets/images/takecareCommentClick.png`,
-    },
-  };
+travelerSafeComment.addEventListener("click", function (event) {
+  event.stopPropagation(); // 防止全局點擊事件觸發
+  travelerSafeComment.classList.add("travelerCommentChangeStyle");
+  travelerSafeCommentSpan.classList.remove("text-neutrals-400");
 
-  // Function to change the image
-  window.changeImage = function (clickedImageId) {
-    // Reset all images to their default state
-    for (const imgId in commentImages) {
-      document.getElementById(imgId).src = commentImages[imgId].default;
-    }
+  travelerNormalComment.classList.remove("travelerCommentChangeStyle");
+  travelerNormalCommentSpan.classList.add("text-neutrals-400");
 
-    // Change the clicked image to its "clicked" state
-    document.getElementById(clickedImageId).src =
-      commentImages[clickedImageId].clicked;
-  };
+  travelertakecareComment.classList.remove("travelerCommentChangeStyle");
+  travelertakecareCommentSpan.classList.add("text-neutrals-400");
+});
+
+travelerNormalComment.addEventListener("click", function (event) {
+  event.stopPropagation(); // 防止全局點擊事件觸發
+  travelerNormalComment.classList.add("travelerCommentChangeStyle");
+  travelerNormalCommentSpan.classList.remove("text-neutrals-400");
+
+  travelerSafeComment.classList.remove("travelerCommentChangeStyle");
+  travelerSafeCommentSpan.classList.add("text-neutrals-400");
+
+  travelertakecareComment.classList.remove("travelerCommentChangeStyle");
+  travelertakecareCommentSpan.classList.add("text-neutrals-400");
+});
+
+travelertakecareComment.addEventListener("click", function (event) {
+  event.stopPropagation(); // 防止全局點擊事件觸發
+  travelertakecareComment.classList.add("travelerCommentChangeStyle");
+  travelertakecareCommentSpan.classList.remove("text-neutrals-400");
+
+  travelerSafeComment.classList.remove("travelerCommentChangeStyle");
+  travelerSafeCommentSpan.classList.add("text-neutrals-400");
+
+  travelerNormalComment.classList.remove("travelerCommentChangeStyle");
+  travelerNormalCommentSpan.classList.add("text-neutrals-400");
+});
+
+document.addEventListener("click", function () {
+  travelerSafeComment.classList.remove("travelerCommentChangeStyle");
+  travelerSafeCommentSpan.classList.add("text-neutrals-400");
+
+  travelerNormalComment.classList.remove("travelerCommentChangeStyle");
+  travelerNormalCommentSpan.classList.add("text-neutrals-400");
+
+  travelertakecareComment.classList.remove("travelerCommentChangeStyle");
+  travelertakecareCommentSpan.classList.add("text-neutrals-400");
 });
