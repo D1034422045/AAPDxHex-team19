@@ -8,23 +8,34 @@
     width: 24px;
     height: 24px;
   }
+
   .footIcon-document {
     background: url(/AAPDxHex-team19/assets/images/document.svg) no-repeat;
     width: 24px;
     height: 24px;
   }
 
+  .footIcon-map {
+    background: url(/AAPDxHex-team19/assets/images/Subtract.svg) no-repeat;
+    width: 24px;
+    height: 24px;
+  }
+
   .nav-pills .nav-link.active,
-  .nav-pills .show > .nav-link {
+  .nav-pills .show>.nav-link {
     color: #1aa3dd !important;
     background: white;
+
     .footIcon-barChart {
-      background: url(/AAPDxHex-team19/assets/images/barChart-blue.svg)
-        no-repeat;
+      background: url(/AAPDxHex-team19/assets/images/barChart-blue.svg) no-repeat;
     }
+
     .footIcon-document {
-      background: url(/AAPDxHex-team19/assets/images/document-blue.svg)
-        no-repeat;
+      background: url(/AAPDxHex-team19/assets/images/document-blue.svg) no-repeat;
+    }
+
+    .footIcon-map {
+      background: url(/AAPDxHex-team19/assets/images/SubtractBlue.svg) no-repeat;
     }
   }
 }
