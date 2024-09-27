@@ -175,7 +175,7 @@
   vertical-align: 0px;
 }
 .searchAndLabel-position-zindex {
-  z-index: 50;
+  z-index: 100;
 }
 
 .input-wrapper {
@@ -201,7 +201,7 @@
 }
 
 .search-width {
-  width: 327px;
+  width: 100%;
   max-width: 100%;
 }
 
@@ -220,295 +220,151 @@
 }
 
 //新增地圖圖標
-.draggable-background {
-  // width: 375px;
-  height: 100vh; /* 设置div的高度，可以根据需要调整 */
-  background-image: url(/AAPDxHex-team19/assets/images/bgMapAll.png);
-  // background-size: 1000px 1000px;
-  background-size: cover;
-  background-position: -430px 0;
-  background-repeat: no-repeat; /* 防止背景重复 */
-  // border: 1px solid #000;
-  cursor: grab;
-  position: relative; /* 让icon能相对于div定位 */
-  overflow: hidden; /* 隐藏超出div的部分 */
+.mapWrap {
+  height: 100vh;
+  background-image: url(/AAPDxHex-team19/assets/images/bgMapAll_resized_2000x1200.png);
+  background-repeat: repeat;
+  overflow: hidden;
+  position: relative;
+  // z-index: 1;
 }
 
-.securityLevel5icon1 {
+.specialWarningOffIcon {
+  vertical-align: middle;
   position: absolute;
-  width: 50px; /* icon的宽度 */
-  height: 50px; /* icon的高度 */
-  left: 230px; /* icon在图片上的x坐标 */
-  top: 150px; /* icon在图片上的y坐标 */
-  display: none; /* 初始状态下不可见，等到背景移动到icon可见范围时才显示 */
-  z-index: 10;
-  &:hover {
+  left: 0;
+  top: 0;
+  z-index: 60;
+}
+
+.securityLevel5OffIcon {
+  vertical-align: middle;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 60;
+}
+
+.iconContainer {
+  width: 40px; /* Width of the larger icon */
+  height: 44px; /* Height of the larger icon */
+  display: inline-block; /* Prevents layout shifts */
+  // overflow: hidden;
+  & > img {
     cursor: pointer;
   }
 }
 
-.securityLevel5icon2 {
+.test {
   position: absolute;
-  width: 50px; /* icon的宽度 */
-  height: 50px; /* icon的高度 */
-  left: 500px; /* icon在图片上的x坐标 */
-  top: 240px; /* icon在图片上的y坐标 */
-  display: none; /* 初始状态下不可见，等到背景移动到icon可见范围时才显示 */
-  z-index: 10;
-  &:hover {
-    cursor: pointer;
-  }
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.securityLevel5icon3 {
+.test2 {
   position: absolute;
-  width: 50px; /* icon的宽度 */
-  height: 50px; /* icon的高度 */
-  left: 710px; /* icon在图片上的x坐标 */
-  top: 390px; /* icon在图片上的y坐标，原始為690px */
-  display: none; /* 初始状态下不可见，等到背景移动到icon可见范围时才显示 */
-  z-index: 10;
-  &:hover {
-    cursor: pointer;
-  }
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
 }
 
-.securityLevel5icon4 {
-  position: absolute;
-  width: 50px; /* icon的宽度 */
-  height: 50px; /* icon的高度 */
-  left: 510px; /* icon在图片上的x坐标 */
-  top: 430px; /* icon在图片上的y坐标，原始為730px */
-  display: none; /* 初始状态下不可见，等到背景移动到icon可见范围时才显示 */
-  z-index: 10;
-  &:hover {
-    cursor: pointer;
-  }
+.iconOriginWidthHeight {
+  width: 24px;
+  height: 27px;
 }
 
-.specialWarningIcon {
+.iconChangeWidthHeight {
+  width: 40px;
+  height: 44px;
   position: absolute;
-  width: 50px; /* icon的宽度 */
-  height: 50px; /* icon的高度 */
-  left: 660px; /* icon在图片上的x坐标 */
-  top: 510px; /* icon在图片上的y坐标 */
-  display: none; /* 初始状态下不可见，等到背景移动到icon可见范围时才显示 */
-  z-index: 10;
-  &:hover {
-    cursor: pointer;
-  }
+  bottom: 0;
+  left: 50%;
 }
 
-.policeStationiconIcon1 {
+.policeStationOffIcon {
+  vertical-align: middle;
   position: absolute;
-  width: 50px; /* icon的宽度 */
-  height: 50px; /* icon的高度 */
-  left: 230px; /* icon在图片上的x坐标 */
-  top: 380px; /* icon在图片上的y坐标 */
-  display: none; /* 初始状态下不可见，等到背景移动到icon可见范围时才显示 */
-  z-index: 10;
-  &:hover {
-    cursor: pointer;
-  }
+  left: 0;
+  top: 0;
+  // cursor: pointer;
+  z-index: 60;
 }
 
-.policeStationiconIcon2 {
+.hospitalOffIcon {
+  vertical-align: middle;
   position: absolute;
-  width: 50px; /* icon的宽度 */
-  height: 50px; /* icon的高度 */
-  left: 340px; /* icon在图片上的x坐标 */
-  top: 400px; /* icon在图片上的y坐标 */
-  display: none; /* 初始状态下不可见，等到背景移动到icon可见范围时才显示 */
-  z-index: 10;
-  &:hover {
-    cursor: pointer;
-  }
-}
-
-.policeStationiconIcon3 {
-  position: absolute;
-  width: 50px; /* icon的宽度 */
-  height: 50px; /* icon的高度 */
-  left: 260px; /* icon在图片上的x坐标 */
-  top: 530px; /* icon在图片上的y坐标 */
-  display: none; /* 初始状态下不可见，等到背景移动到icon可见范围时才显示 */
-  z-index: 10;
-  &:hover {
-    cursor: pointer;
-  }
-}
-
-.hospitalIcon1 {
-  position: absolute;
-  width: 50px; /* icon的宽度 */
-  height: 50px; /* icon的高度 */
-  left: 90px; /* icon在图片上的x坐标 */
-  top: 560px; /* icon在图片上的y坐标 */
-  display: none; /* 初始状态下不可见，等到背景移动到icon可见范围时才显示 */
-  z-index: 10;
-  &:hover {
-    cursor: pointer;
-  }
-}
-
-.hospitalIcon2 {
-  position: absolute;
-  width: 50px; /* icon的宽度 */
-  height: 50px; /* icon的高度 */
-  left: 140px; /* icon在图片上的x坐标 */
-  top: 420px; /* icon在图片上的y坐标 */
-  display: none; /* 初始状态下不可见，等到背景移动到icon可见范围时才显示 */
-  z-index: 10;
-  &:hover {
-    cursor: pointer;
-  }
-}
-
-.hospitalIcon3 {
-  position: absolute;
-  width: 50px; /* icon的宽度 */
-  height: 50px; /* icon的高度 */
-  left: 290px; /* icon在图片上的x坐标 */
-  top: 410px; /* icon在图片上的y坐标 */
-  display: none; /* 初始状态下不可见，等到背景移动到icon可见范围时才显示 */
-  z-index: 10;
-  &:hover {
-    cursor: pointer;
-  }
+  left: 0;
+  top: 0;
+  cursor: pointer;
+  z-index: 60;
 }
 
 .hotelIcon {
+  vertical-align: middle;
   position: absolute;
-  width: 35px; /* icon的宽度 */
-  height: 35px; /* icon的高度 */
-  left: 280px; /* icon在图片上的x坐标 */
-  top: 490px; /* icon在图片上的y坐标 */
-  display: none; /* 初始状态下不可见，等到背景移动到icon可见范围时才显示 */
-  z-index: 10;
-  &:hover {
-    cursor: pointer;
-  }
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 44px;
+  cursor: pointer;
+  z-index: 60;
 }
 
-.centerIcon {
+.centerArrowWrap {
+  display: inline-block;
+  // position: relative;
   position: absolute;
-  width: 50px; /* icon的宽度 */
-  height: 50px; /* icon的高度 */
-  left: 560px; /* icon在图片上的x坐标 */
-  top: 510px; /* icon在图片上的y坐标 */
-  display: none; /* 初始状态下不可见，等到背景移动到icon可见范围时才显示 */
-  z-index: 10;
-  &:hover {
-    cursor: pointer;
-  }
+  left: 0;
+  top: 0;
+  z-index: 30;
 }
 
-// 現在位置的圓形
-.originalCircle {
-  position: absolute;
-  width: 150px;
-  height: 150px;
-  left: 510px;
-  top: 455px;
-  background: #84d3f5;
-  opacity: 0.4;
-  border: 3px solid #fff;
-  border-radius: 50%;
-  // animation: expandOriginalCircleFade 6s infinite;
+.centerArrowIcon {
+  vertical-align: middle;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  z-index: 60;
 }
 
-/* 定义动画 */
-// @keyframes expandOriginalCircleFade {
-//   0% {
-//     transform: scale(0);
-//     opacity: 0;
-//   }
-
-//   50% {
-//     transform: scale(1);
-//     opacity: 0.4;
-//   }
-
-//   100% {
-//     transform: scale(1);
-//     opacity: 0;
-//   }
-// }
-
-.bg-smallCircle {
+.circleOriginal {
   position: absolute;
-  width: 300px;
-  height: 300px;
-  left: 435px;
-  top: 385px;
-  // display: none;
-  background: #84d3f5;
-  opacity: 0.25;
-  border: 3px solid #fff;
-  border-radius: 50%;
-  // animation: expandSmallCircleFade 6s infinite;
+  left: 0;
+  top: 0;
+  transform: translate(-50%, -50%) translate(12px, 9px);
+  z-index: 40;
 }
 
-/* 定义动画 */
-// @keyframes expandSmallCircleFade {
-//   0% {
-//     transform: scale(0);
-//     opacity: 0;
-//   }
-
-//   50% {
-//     transform: scale(1);
-//     opacity: 0.25;
-//   }
-
-//   100% {
-//     transform: scale(1);
-//     opacity: 0;
-//   }
-// }
-
-.bg-bigCircle {
+.circleSmall {
   position: absolute;
-  width: 600px;
-  height: 600px;
-  left: 275px;
-  top: 235px;
-  // display: none;
-  background: #84d3f5;
-  opacity: 0.15;
-  border: 3px solid #fff;
-  border-radius: 50%;
-  // animation: expandBigCircleFade 6s infinite;
+  left: 0;
+  top: 0;
+  transform: translate(-50%, -50%) translate(12px, 9px);
+  z-index: 50;
 }
 
-/* 定义动画 */
-// @keyframes expandBigCircleFade {
-//   0% {
-//     transform: scale(0);
-//     opacity: 0;
-//   }
+.circleBig {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-50%, -50%) translate(12px, 9px);
+  z-index: 40;
+}
 
-//   50% {
-//     transform: scale(1);
-//     opacity: 0.15;
-//   }
-
-//   100% {
-//     transform: scale(1);
-//     opacity: 0;
-//   }
-// }
-
-// .bg-bigCircle {
-//   animation-delay: 3s;  延迟2秒
-// }
+.canvasWrap {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
 
 .myCanvas {
-  width: 250px; /* 可以根据需要调整大小 */
-  height: 160px; /* 由边长计算得出 */
+  width: 300px;
+  height: 250px;
   opacity: 0.1;
   position: absolute;
   transform: rotate(9deg);
+  z-index: 5;
 }
 
 .policeStationLabelWrap,
@@ -521,6 +377,51 @@
   }
 }
 
+.countryInfoWrap {
+  display: inline-block;
+  padding: 6px 8px;
+  background-color: #fff;
+  width: 104px;
+  box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.04);
+  cursor: pointer;
+  position: absolute;
+  top: 61%;
+  left: 24px;
+  transform: translateY(-100%) translateY(-16px);
+  z-index: 100;
+}
+
+.infoAndFloatWrapLeftChangePosition {
+  top: 100%;
+  transform: translateY(-100%) translateY(-174px);
+}
+
+.walkAndCenterAimWrapContainer {
+  position: absolute;
+  top: 61%;
+  right: 24px;
+  transform: translateY(-100%) translateY(-16px);
+  z-index: 100;
+}
+
+.infoAndFloatWrapRightChangePosition {
+  top: 100%;
+  transform: translateY(-100%) translateY(-174px);
+}
+
+.walkAndCenterAimWrap {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+
+  box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.04);
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
 .labelClickChangeStyle {
   color: #fff;
   background: #67c575;
@@ -529,11 +430,24 @@
 // 標籤橫向移動卷軸
 .scrollable-container {
   display: flex;
-  padding-left: 5px;
+
   overflow-x: auto; //開啟橫向滾動
   white-space: nowrap;
   scroll-behavior: smooth; /* 平滑滾動 */
-  padding-left: 55px;
+  // padding-left: 55px;
+  // padding-left: 100px;
+}
+
+@media screen and (max-width: 395px) {
+  .scrollable-container {
+    padding-left: 55px;
+  }
+}
+
+@media screen and (max-width: 345px) {
+  .scrollable-container {
+    padding-left: 85px;
+  }
 }
 
 .scrollable-container::-webkit-scrollbar {
@@ -585,13 +499,15 @@
   position: absolute;
   top: 61%; // 68
   transition: top 0.5s ease; /* 添加過渡效果 */
+  z-index: 100;
 }
 
 .my-div.expanded {
   top: 0; /* 當展開時，讓 div 滑動到視窗的頂部 */
   height: 100%;
   z-index: 1000;
-  padding-top: 64px;
+  // padding-top: 64px;
+  padding-top: 113px;
   padding-bottom: 130px;
   border-radius: 0px;
   height: 100vh;
@@ -599,7 +515,8 @@
 }
 
 .my-div.collapsed {
-  top: 76%; /* 當收起時，讓 div 移動到 top: 300px 的位置 */
+  top: 100%;
+  transform: translateY(-158px);
 }
 
 .labelDetailButton {
@@ -612,10 +529,15 @@
 }
 
 .textEllipsis {
-  width: 240px; /* 設定寬度 */
   white-space: nowrap; /* 防止文本換行 */
   overflow: hidden; /* 隱藏超出寬度的部分 */
   text-overflow: ellipsis; /* 將多餘的文字顯示為省略號 */
+}
+
+@media screen and (max-width: 352px) {
+  .textEllipsis {
+    width: 240px; /* 設定寬度 */
+  }
 }
 
 // 資訊展開
@@ -663,27 +585,19 @@
 
 //
 
-.infoAndFloatWrapLeft {
-  position: absolute;
-  top: 55%;
-  left: 10px;
-  z-index: 30;
-}
+// .infoAndFloatWrapLeft {
+//   position: absolute;
+//   top: 55%;
+//   left: 10px;
+//   z-index: 30;
+// }
 
-.infoAndFloatWrapRight {
-  position: absolute;
-  top: 46%;
-  right: 10px;
-  z-index: 30;
-}
-
-.infoAndFloatWrapLeftChangePosition {
-  top: 70%;
-}
-
-.infoAndFloatWrapRightChangePosition {
-  top: 61%;
-}
+// .infoAndFloatWrapRight {
+//   position: absolute;
+//   top: 46%;
+//   right: 10px;
+//   z-index: 30;
+// }
 
 .countryInfoModalWrap {
   --bs-modal-border-radius: 24px;
@@ -694,41 +608,42 @@
   margin-right: auto;
   margin-left: auto;
 }
+
 // modal-dialog
 
-.countryInfoModal-dialog-centered {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+// .countryInfoModal-dialog-centered {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
 
 // 搜尋到時的彈跳畫面
 
-@keyframes searchAnimation {
-  0% {
-    transform: translateY(0px);
-  }
+// @keyframes searchAnimation {
+//   0% {
+//     transform: translateY(0px);
+//   }
 
-  25% {
-    transform: translateY(-10px);
-  }
+//   25% {
+//     transform: translateY(-10px);
+//   }
 
-  50% {
-    transform: translateY(0px);
-  }
+//   50% {
+//     transform: translateY(0px);
+//   }
 
-  75% {
-    transform: translateY(-5px);
-  }
+//   75% {
+//     transform: translateY(-5px);
+//   }
 
-  100% {
-    transform: translateY(0px);
-  }
-}
+//   100% {
+//     transform: translateY(0px);
+//   }
+// }
 
-.searchAnimation {
-  animation: searchAnimation 1s 1; /* 应用动画 */
-}
+// .searchAnimation {
+//   animation: searchAnimation 1s 1; /* 应用动画 */
+// }
 
 //
 
@@ -740,4 +655,14 @@
     width: 100%;
     margin-top: 8px;
   }
+}
+
+.cus-fixed {
+  position: fixed;
+  width: calc(100% - 48px);
+  // height: 49px;
+  height: 113px;
+  // top: 64px;
+  top: 0;
+  background-color: #fff;
 }
