@@ -175,7 +175,7 @@
   vertical-align: 0px;
 }
 .searchAndLabel-position-zindex {
-  z-index: 50;
+  z-index: 100;
 }
 
 .input-wrapper {
@@ -201,7 +201,7 @@
 }
 
 .search-width {
-  width: 327px;
+  width: 100%;
   max-width: 100%;
 }
 
@@ -222,7 +222,7 @@
 //新增地圖圖標
 .mapWrap {
   height: 100vh;
-  background-image: url("../assets/images/bgMapAll_resized_2000x1200.png");
+  background-image: url(/AAPDxHex-team19/assets/images/bgMapAll_resized_2000x1200.png);
   background-repeat: repeat;
   overflow: hidden;
   position: relative;
@@ -427,18 +427,27 @@
   background: #67c575;
 }
 
-.searchAndLabel-position-zindex {
-  z-index: 100;
-}
-
 // 標籤橫向移動卷軸
 .scrollable-container {
   display: flex;
-  padding-left: 5px;
+
   overflow-x: auto; //開啟橫向滾動
   white-space: nowrap;
   scroll-behavior: smooth; /* 平滑滾動 */
-  padding-left: 55px;
+  // padding-left: 55px;
+  // padding-left: 100px;
+}
+
+@media screen and (max-width: 395px) {
+  .scrollable-container {
+    padding-left: 55px;
+  }
+}
+
+@media screen and (max-width: 345px) {
+  .scrollable-container {
+    padding-left: 85px;
+  }
 }
 
 .scrollable-container::-webkit-scrollbar {
