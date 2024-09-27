@@ -10,96 +10,87 @@
     <section class="mapWrap draggable-background">
       <%- include('./layout/header'); -%>
 
-      <div class="px-3">
-        <section class="container">
-          <div class="row">
-            <div class="col-12">
-              <div class="text-center">
-                <div
-                  class="input-wrapper radius-m search-width searchAndLabel-position-zindex"
-                >
-                  <img
-                    id="searchBtn"
-                    src="../assets/images/search_liner.svg"
-                    alt="搜索圖標"
-                    class="input-img"
-                  />
+      <div class="px-6">
+        <div
+          class="input-wrapper radius-m search-width searchAndLabel-position-zindex"
+        >
+          <img
+            id="searchBtn"
+            src="../assets/images/search_liner.svg"
+            alt="搜索圖標"
+            class="input-img"
+          />
 
-                  <input
-                    type="text"
-                    id="search"
-                    placeholder="搜尋目的地"
-                    class="input-input radius-m w-100"
-                  />
-                </div>
-              </div>
-
-              <div
-                class="d-flex scrollable-container justify-content-center mt-2"
-              >
-                <div
-                  class="d-flex align-items-center px-2 py-1 bg-white radius-xxs policeStationLabelWrap searchAndLabel-position-zindex"
-                  style="box-shadow: 0px 0px 8px 0 #0000001a"
-                >
-                  <img
-                    src="../assets/images/policeStationLabelIcon.svg"
-                    alt="policeStationLabel"
-                    id="policeStationLabelImg"
-                  />
-                  <p class="body-text-xs ms-1">警察局</p>
-                </div>
-
-                <div
-                  class="d-flex align-items-center px-2 py-1 bg-white radius-xxs ms-2 hospitalLabelWrap searchAndLabel-position-zindex"
-                  style="box-shadow: 0px 0px 8px 0 #0000001a"
-                >
-                  <img
-                    src="../assets/images/hopspitalLabelIcon.svg"
-                    alt="hospitalLabel"
-                    id="hospitalLabelImg"
-                  />
-                  <p class="body-text-xs ms-1">醫院</p>
-                </div>
-
-                <div
-                  class="d-flex align-items-center px-2 py-1 bg-white radius-xxs ms-2 pharmacyLabelWrap searchAndLabel-position-zindex"
-                  style="box-shadow: 0px 0px 8px 0 #0000001a"
-                >
-                  <img
-                    src="../assets/images/pharmacyLabelIcon.svg"
-                    alt="pharmacyLabel"
-                    id="pharmacyLabelImg"
-                  />
-                  <p class="body-text-xs ms-1">藥局</p>
-                </div>
-
-                <div
-                  class="d-flex align-items-center px-2 py-1 bg-white radius-xxs ms-2 refugeLabelWrap searchAndLabel-position-zindex"
-                  style="box-shadow: 0px 0px 8px 0 #0000001a"
-                >
-                  <img
-                    src="../assets/images/refugeLabelIcon.svg"
-                    alt="refugeLabel"
-                    id="refugeLabelImg"
-                  />
-                  <p class="body-text-xs ms-1">避難所</p>
-                </div>
-
-                <div
-                  class="d-flex align-items-center px-2 py-1 bg-white radius-xxs ms-2 embassyLabelWrap searchAndLabel-position-zindex"
-                  style="box-shadow: 0px 0px 8px 0 #0000001a"
-                >
-                  <img
-                    src="../assets/images/embassyLabelIcon.svg"
-                    alt="embassyLabel"
-                    id="embassyLabelImg"
-                  />
-                  <p class="body-text-xs ms-1">大使館</p>
-                </div>
-              </div>
-            </div>
+          <input
+            type="text"
+            id="search"
+            placeholder="搜尋目的地"
+            class="input-input radius-m w-100"
+          />
+        </div>
+      </div>
+      <div class="ps-6">
+        <div class="d-flex scrollable-container justify-content-center mt-2">
+          <div
+            class="d-flex align-items-center px-2 py-1 bg-white radius-xxs policeStationLabelWrap searchAndLabel-position-zindex"
+            style="box-shadow: 0px 0px 8px 0 #0000001a"
+          >
+            <img
+              src="../assets/images/policeStationLabelIcon.svg"
+              alt="policeStationLabel"
+              id="policeStationLabelImg"
+            />
+            <p class="body-text-xs ms-1">警察局</p>
           </div>
-        </section>
+
+          <div
+            class="d-flex align-items-center px-2 py-1 bg-white radius-xxs ms-2 hospitalLabelWrap searchAndLabel-position-zindex"
+            style="box-shadow: 0px 0px 8px 0 #0000001a"
+          >
+            <img
+              src="../assets/images/hopspitalLabelIcon.svg"
+              alt="hospitalLabel"
+              id="hospitalLabelImg"
+            />
+            <p class="body-text-xs ms-1">醫院</p>
+          </div>
+
+          <div
+            class="d-flex align-items-center px-2 py-1 bg-white radius-xxs ms-2 pharmacyLabelWrap searchAndLabel-position-zindex"
+            style="box-shadow: 0px 0px 8px 0 #0000001a"
+          >
+            <img
+              src="../assets/images/pharmacyLabelIcon.svg"
+              alt="pharmacyLabel"
+              id="pharmacyLabelImg"
+            />
+            <p class="body-text-xs ms-1">藥局</p>
+          </div>
+
+          <div
+            class="d-flex align-items-center px-2 py-1 bg-white radius-xxs ms-2 refugeLabelWrap searchAndLabel-position-zindex"
+            style="box-shadow: 0px 0px 8px 0 #0000001a"
+          >
+            <img
+              src="../assets/images/refugeLabelIcon.svg"
+              alt="refugeLabel"
+              id="refugeLabelImg"
+            />
+            <p class="body-text-xs ms-1">避難所</p>
+          </div>
+
+          <div
+            class="d-flex align-items-center px-2 py-1 bg-white radius-xxs ms-2 embassyLabelWrap searchAndLabel-position-zindex"
+            style="box-shadow: 0px 0px 8px 0 #0000001a"
+          >
+            <img
+              src="../assets/images/embassyLabelIcon.svg"
+              alt="embassyLabel"
+              id="embassyLabelImg"
+            />
+            <p class="body-text-xs ms-1">大使館</p>
+          </div>
+        </div>
       </div>
 
       <!-- icon -->
