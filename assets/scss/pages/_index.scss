@@ -529,10 +529,15 @@
 }
 
 .textEllipsis {
-  width: 240px; /* 設定寬度 */
   white-space: nowrap; /* 防止文本換行 */
   overflow: hidden; /* 隱藏超出寬度的部分 */
   text-overflow: ellipsis; /* 將多餘的文字顯示為省略號 */
+}
+
+@media screen and (max-width: 352px) {
+  .textEllipsis {
+    width: 240px; /* 設定寬度 */
+  }
 }
 
 // 資訊展開
