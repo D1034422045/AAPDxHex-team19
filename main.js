@@ -15,19 +15,46 @@ window.addEventListener("load", function () {
   }
 });
 
+const mapWrap = document.querySelector(".mapWrap");
+const centerArrowWrap = document.querySelector(".centerArrowWrap");
+const specialWarningOffIcon = document.querySelector(".specialWarningOffIcon");
+const securityLevel5OffIcon1 = document.querySelector(
+  ".securityLevel5OffIcon1"
+);
+const securityLevel5OffIcon2 = document.querySelector(
+  ".securityLevel5OffIcon2"
+);
+const securityLevel5OffIcon3 = document.querySelector(
+  ".securityLevel5OffIcon3"
+);
+const securityLevel5OffIcon4 = document.querySelector(
+  ".securityLevel5OffIcon4"
+);
+
+const policeStationOffIcon1 = document.querySelector(".policeStationOffIcon1");
+
+const policeStationOffIcon2 = document.querySelector(".policeStationOffIcon2");
+
+const policeStationOffIcon3 = document.querySelector(".policeStationOffIcon3");
+
+const hospitalOffIcon1 = document.querySelector(".hospitalOffIcon1");
+const hospitalOffIcon2 = document.querySelector(".hospitalOffIcon2");
+const hospitalOffIcon3 = document.querySelector(".hospitalOffIcon3");
+
+const hotelIcon = document.querySelector(".hotelIcon");
+
 const canvas = document.getElementById("myCanvas");
 const ctx = canvas.getContext("2d");
-// 設置畫布大小
-canvas.width = 250;
-canvas.height = 160;
+canvas.width = 300;
+canvas.height = 250;
 
 ctx.beginPath();
 ctx.moveTo(0, 0); // 設置起點
-ctx.lineTo(250, 0); // 畫一條線到(150, 300)
-ctx.lineTo(250, 160); // 畫一條線到(50, 300)
-ctx.lineTo(100, 160); // 畫一條線到(50, 300)
-ctx.lineTo(100, 110); // 畫一條線到(50, 300)
-ctx.lineTo(0, 110); // 畫一條線到(50, 300)
+ctx.lineTo(290, 10); // 畫一條線到(150, 300)
+ctx.lineTo(300, 250); // 畫一條線到(50, 300)
+ctx.lineTo(130, 250); // 畫一條線到(50, 300)
+ctx.lineTo(130, 170); // 畫一條線到(50, 300)
+ctx.lineTo(10, 170); // 畫一條線到(50, 300)
 ctx.closePath(); // 關閉路徑
 ctx.stroke(); // 繪製線條
 
@@ -40,543 +67,324 @@ ctx.strokeStyle = "#cc9f00"; // 黑色邊框
 ctx.lineWidth = 3; // 邊框寬度
 ctx.stroke(); // 繪製邊框
 
-//
-const div = document.querySelector(".draggable-background");
-const securityLevel5icon1 = document.querySelector(".securityLevel5icon1");
-const securityLevel5icon2 = document.querySelector(".securityLevel5icon2");
-const securityLevel5icon3 = document.querySelector(".securityLevel5icon3");
-const securityLevel5icon4 = document.querySelector(".securityLevel5icon4");
-const specialWarningIcon = document.querySelector(".specialWarningIcon");
-const policeStationiconIcon1 = document.querySelector(
-  ".policeStationiconIcon1"
-);
-const policeStationiconIcon2 = document.querySelector(
-  ".policeStationiconIcon2"
-);
-const policeStationiconIcon3 = document.querySelector(
-  ".policeStationiconIcon3"
-);
-const hospitalIcon1 = document.querySelector(".hospitalIcon1");
-const hospitalIcon2 = document.querySelector(".hospitalIcon2");
-const hospitalIcon3 = document.querySelector(".hospitalIcon3");
-const hotelIcon = document.querySelector(".hotelIcon");
-const centerIcon = document.querySelector(".centerIcon");
-const bgBigCircle = document.querySelector(".bg-bigCircle");
-const bgSmallCircle = document.querySelector(".bg-smallCircle");
-const originalCircle = document.querySelector(".originalCircle");
-
 let isDragging = false;
-let startX,
-  startY,
-  backgroundPosX = -430,
-  backgroundPosY = 0;
+let startX, startY;
+let bgPosX = 0,
+  bgPosY = 0;
 
-const divWidth = 870;
-const divHeight = 730; //725
-const imageWidth = 1290;
-const imageHeight = 875;
+// 設置背景圖片的原始尺寸
+const bgWidth = 2000; // 背景圖片寬度
+const bgHeight = 1800; // 背景圖片高度
 
-const securityLevel5icon1X = 230; // Icon 的相對背景圖 X 座標
-const securityLevel5icon1Y = 150; // Icon 的相對背景圖 Y 座標
-const securityLevel5icon2X = 500; //  Icon 的相對背景圖 X 座標
-const securityLevel5icon2Y = 190; // 240 Icon 的相對背景圖 Y 座標
-const securityLevel5icon3X = 710; // Icon 的相對背景圖 X 座標
-const securityLevel5icon3Y = 390; // 390 原始為 690 Icon 的相對背景圖 Y 座標
-const securityLevel5icon4X = 510; //  Icon 的相對背景圖 X 座標
-const securityLevel5icon4Y = 430; // 430 原始為 730 Icon 的相對背景圖 Y 座標
-const specialWarningX = 660; // Icon 的相對背景圖 X 座標
-const specialWarningY = 310; // 510 Icon 的相對背景圖 Y 座標
-const policeStationiconX = 230; // Icon 的相對背景圖 X 座標
-const policeStationiconY = 380; // Icon 的相對背景圖 Y 座標
-const policeStationicon2X = 340; // Icon 的相對背景圖 X 座標
-const policeStationicon2Y = 400; // Icon 的相對背景圖 Y 座標
-const policeStationicon3X = 260; // Icon 的相對背景圖 X 座標
-const policeStationicon3Y = 530; // Icon 的相對背景圖 Y 座標
-const hospitalIcon1X = 90; // Icon 的相對背景圖 X 座標
-const hospitalIcon1Y = 560; // Icon 的相對背景圖 Y 座標
-const hospitalIcon2X = 140; // Icon 的相對背景圖 X 座標
-const hospitalIcon2Y = 420; // Icon 的相對背景圖 Y 座標
-const hospitalIcon3X = 290; // Icon 的相對背景圖 X 座標
-const hospitalIcon3Y = 410; // Icon 的相對背景圖 Y 座標
-const hotelIconX = 280; // Icon 的相對背景圖 X 座標
-const hotelIconY = 490; // Icon 的相對背景圖 Y 座標
-const centerIconX = 560; // Icon 的相對背景圖 X 座標
-const centerIconY = 310; // 510 Icon 的相對背景圖 Y 座標
-const bgBigCircleX = 275; // Icon 的相對背景圖 X 座標
-const bgBigCircleY = 35; // 235 Icon 的相對背景圖 Y 座標
-const bgSmallCircleX = 435; // Icon 的相對背景圖 X 座標
-const bgSmallCircleY = 185; // 385 Icon 的相對背景圖 Y 座標
-const originalCircleX = 510; // Icon 的相對背景圖 X 座標
-const originalCircleY = 255; // 455 Icon 的相對背景圖 Y 座標
+const arrowOffsetX = 650; // 中心位置的 X 偏移
+const arrowOffsetY = 760; // 中心位置的 Y 偏移
 
-const canvasX = 550; // Icon 的相對背景圖 X 座標
-const canvasY = 280; // 480 Icon 的相對背景圖 Y 座標
-const iconWidth = 50;
-const iconHeight = 50;
+const specialWarningOffIconOffsetX = 770; // 黃色危險圖標的 X 偏移
+const specialWarningOffIconOffsetY = 780; // 黃色危險圖標的 Y 偏移
 
-const newIconWidth = 100; // 新的寬度  QA新增的
-const newIconHeight = 100; // 新的高度  QA新增的
+const securityLevel5OffIcon1OffsetX = 250; // 紅色危險圖標1的 X 偏移
+const securityLevel5OffIcon1OffsetY = 220; // 紅色危險圖標1的 Y 偏移
 
-const bgBigCircleWidth = 600;
-const bgBigCircleHeight = 600;
-const bgSmallCircleWidth = 300;
-const bgSmallCircleHeight = 300;
-const originalCircleWidth = 150;
-const originalCircleHeight = 150;
-const hexagonWidth = 280;
-const hexagonHeight = 180;
+const securityLevel5OffIcon2OffsetX = 600; // 紅色危險圖標2的 X 偏移
+const securityLevel5OffIcon2OffsetY = 400; // 紅色危險圖標2的 Y 偏移
 
-// 計算並設置 icon 位置的函數
-function updateIconPosition() {
-  const visiblesecurityLevel5icon1X = securityLevel5icon1X + backgroundPosX;
-  const visiblesecurityLevel5icon1Y = securityLevel5icon1Y + backgroundPosY;
-  const visiblesecurityLevel5icon2X = securityLevel5icon2X + backgroundPosX;
-  const visiblesecurityLevel5icon2Y = securityLevel5icon2Y + backgroundPosY;
-  const visiblesecurityLevel5icon3X = securityLevel5icon3X + backgroundPosX;
-  const visiblesecurityLevel5icon3Y = securityLevel5icon3Y + backgroundPosY;
-  const visiblesecurityLevel5icon4X = securityLevel5icon4X + backgroundPosX;
-  const visiblesecurityLevel5icon4Y = securityLevel5icon4Y + backgroundPosY;
-  const visiblespecialWarningX = specialWarningX + backgroundPosX;
-  const visiblespecialWarningY = specialWarningY + backgroundPosY;
-  const visiblepoliceStationiconX = policeStationiconX + backgroundPosX;
-  const visiblepoliceStationiconY = policeStationiconY + backgroundPosY;
-  const visiblepoliceStationicon2X = policeStationicon2X + backgroundPosX;
-  const visiblepoliceStationicon2Y = policeStationicon2Y + backgroundPosY;
-  const visiblepoliceStationicon3X = policeStationicon3X + backgroundPosX;
-  const visiblepoliceStationicon3Y = policeStationicon3Y + backgroundPosY;
-  const visiblehospitalIcon1X = hospitalIcon1X + backgroundPosX;
-  const visiblehospitalIcon1Y = hospitalIcon1Y + backgroundPosY;
-  const visiblehospitalIcon2X = hospitalIcon2X + backgroundPosX;
-  const visiblehospitalIcon2Y = hospitalIcon2Y + backgroundPosY;
-  const visiblehospitalIcon3X = hospitalIcon3X + backgroundPosX;
-  const visiblehospitalIcon3Y = hospitalIcon3Y + backgroundPosY;
-  const visiblehotelIconX = hotelIconX + backgroundPosX;
-  const visiblehotelIconY = hotelIconY + backgroundPosY;
-  const visiblecenterIconX = centerIconX + backgroundPosX;
-  const visiblecenterIconY = centerIconY + backgroundPosY;
-  const visiblebgBigCircleX = bgBigCircleX + backgroundPosX;
-  const visiblebgBigCircleY = bgBigCircleY + backgroundPosY;
-  const visiblebgSmallCircleX = bgSmallCircleX + backgroundPosX;
-  const visiblebgSmallCircleY = bgSmallCircleY + backgroundPosY;
-  const visibleoriginalCircleX = originalCircleX + backgroundPosX;
-  const visibleoriginalCircleY = originalCircleY + backgroundPosY;
+const securityLevel5OffIcon3OffsetX = 820; // 紅色危險圖標3的 X 偏移
+const securityLevel5OffIcon3OffsetY = 1050; // 紅色危險圖標3的 Y 偏移
 
-  const visiblecanvasX = canvasX + backgroundPosX;
-  const visiblecanvasY = canvasY + backgroundPosY;
+const securityLevel5OffIcon4OffsetX = 590; // 紅色危險圖標3的 X 偏移
+const securityLevel5OffIcon4OffsetY = 1120; // 紅色危險圖標3的 Y 偏移
 
-  if (
-    visiblesecurityLevel5icon1X >= 0 &&
-    visiblesecurityLevel5icon1X + iconWidth <= divWidth &&
-    visiblesecurityLevel5icon1Y >= 0 &&
-    visiblesecurityLevel5icon1Y + iconHeight <= divHeight
-  ) {
-    securityLevel5icon1.style.left = `${visiblesecurityLevel5icon1X}px`;
-    securityLevel5icon1.style.top = `${visiblesecurityLevel5icon1Y}px`;
-    securityLevel5icon1.style.display = "block";
-  } else {
-    securityLevel5icon1.style.display = "none";
-  }
+const policeStationOffIcon1OffsetX = 240; // 警察圖標1的 X 偏移
+const policeStationOffIcon1OffsetY = 530; // 警察圖標1的 Y 偏移
 
-  if (
-    visiblesecurityLevel5icon2X >= 0 &&
-    visiblesecurityLevel5icon2X + iconWidth <= divWidth &&
-    visiblesecurityLevel5icon2Y >= 0 &&
-    visiblesecurityLevel5icon2Y + iconHeight <= divHeight
-  ) {
-    securityLevel5icon2.style.left = `${visiblesecurityLevel5icon2X}px`;
-    securityLevel5icon2.style.top = `${visiblesecurityLevel5icon2Y}px`;
-    securityLevel5icon2.style.display = "block";
-  } else {
-    securityLevel5icon2.style.display = "none";
-  }
+const policeStationOffIcon2OffsetX = 350; // 警察圖標2的 X 偏移
+const policeStationOffIcon2OffsetY = 560; // 警察圖標2的 Y 偏移
 
-  if (
-    visiblesecurityLevel5icon3X >= 0 &&
-    visiblesecurityLevel5icon3X + iconWidth <= divWidth &&
-    visiblesecurityLevel5icon3Y >= 0 &&
-    visiblesecurityLevel5icon3Y + iconHeight <= divHeight
-  ) {
-    securityLevel5icon3.style.left = `${visiblesecurityLevel5icon3X}px`;
-    securityLevel5icon3.style.top = `${visiblesecurityLevel5icon3Y}px`;
-    securityLevel5icon3.style.display = "block";
-  } else {
-    securityLevel5icon3.style.display = "none";
-  }
+const policeStationOffIcon3OffsetX = 280; // 警察圖標3的 X 偏移
+const policeStationOffIcon3OffsetY = 740; // 警察圖標3的 Y 偏移
 
-  if (
-    visiblesecurityLevel5icon4X >= 0 &&
-    visiblesecurityLevel5icon4X + iconWidth <= divWidth &&
-    visiblesecurityLevel5icon4Y >= 0 &&
-    visiblesecurityLevel5icon4Y + iconHeight <= divHeight
-  ) {
-    securityLevel5icon4.style.left = `${visiblesecurityLevel5icon4X}px`;
-    securityLevel5icon4.style.top = `${visiblesecurityLevel5icon4Y}px`;
-    securityLevel5icon4.style.display = "block";
-  } else {
-    securityLevel5icon4.style.display = "none";
-  }
+const hospitalOffIcon1OffsetX = 100; // 醫院圖標1的 X 偏移
+const hospitalOffIcon1OffsetY = 770; // 醫院圖標1的 Y 偏移
 
-  if (
-    visiblespecialWarningX >= 0 &&
-    visiblespecialWarningX + iconWidth <= divWidth &&
-    visiblespecialWarningY >= 0 &&
-    visiblespecialWarningY + iconHeight <= divHeight
-  ) {
-    specialWarningIcon.style.left = `${visiblespecialWarningX}px`;
-    specialWarningIcon.style.top = `${visiblespecialWarningY}px`;
-    specialWarningIcon.style.display = "block";
-  } else {
-    specialWarningIcon.style.display = "none";
-  }
+const hospitalOffIcon2OffsetX = 140; // 醫院圖標2的 X 偏移
+const hospitalOffIcon2OffsetY = 600; // 醫院圖標2的 Y 偏移
 
-  if (
-    visiblepoliceStationiconX >= 0 &&
-    visiblepoliceStationiconX + iconWidth <= divWidth &&
-    visiblepoliceStationiconY >= 0 &&
-    visiblepoliceStationiconY + iconHeight <= divHeight
-  ) {
-    policeStationiconIcon1.style.left = `${visiblepoliceStationiconX}px`;
-    policeStationiconIcon1.style.top = `${visiblepoliceStationiconY}px`;
-    policeStationiconIcon1.style.display = "block";
-  } else {
-    policeStationiconIcon1.style.display = "none";
-  }
+const hospitalOffIcon3OffsetX = 310; // 醫院圖標3的 X 偏移
+const hospitalOffIcon3OffsetY = 570; // 醫院圖標3的 Y 偏移
 
-  if (
-    visiblepoliceStationicon2X >= 0 &&
-    visiblepoliceStationicon2X + iconWidth <= divWidth &&
-    visiblepoliceStationicon2Y >= 0 &&
-    visiblepoliceStationicon2Y + iconHeight <= divHeight
-  ) {
-    policeStationiconIcon2.style.left = `${visiblepoliceStationicon2X}px`;
-    policeStationiconIcon2.style.top = `${visiblepoliceStationicon2Y}px`;
-    policeStationiconIcon2.style.display = "block";
-  } else {
-    policeStationiconIcon2.style.display = "none";
-  }
+const hotelIconOffsetX = 290; // 飯店圖標的 X 偏移
+const hotelIconOffsetY = 670; // 飯店圖標的 Y 偏移
 
-  if (
-    visiblepoliceStationicon3X >= 0 &&
-    visiblepoliceStationicon3X + iconWidth <= divWidth &&
-    visiblepoliceStationicon3Y >= 0 &&
-    visiblepoliceStationicon3Y + iconHeight <= divHeight
-  ) {
-    policeStationiconIcon3.style.left = `${visiblepoliceStationicon3X}px`;
-    policeStationiconIcon3.style.top = `${visiblepoliceStationicon3Y}px`;
-    policeStationiconIcon3.style.display = "block";
-  } else {
-    policeStationiconIcon3.style.display = "none";
-  }
+const canvasOffsetX = 610; // 危險區域的 X 偏移
+const canvasOffsetY = 685; // 危險區域的 Y 偏移
 
-  if (
-    visiblehospitalIcon1X >= 0 &&
-    visiblehospitalIcon1X + iconWidth <= divWidth &&
-    visiblehospitalIcon1Y >= 0 &&
-    visiblehospitalIcon1Y + iconHeight <= divHeight
-  ) {
-    hospitalIcon1.style.left = `${visiblehospitalIcon1X}px`;
-    hospitalIcon1.style.top = `${visiblehospitalIcon1Y}px`;
-    hospitalIcon1.style.display = "block";
-  } else {
-    hospitalIcon1.style.display = "none";
-  }
+// 更新 centerArrowWrap 位置相對於背景位置的函數
+const updateArrowPosition = () => {
+  const style = window.getComputedStyle(mapWrap);
+  const backgroundPosition = style.backgroundPosition.split(" ");
+  const currentPosX = parseFloat(backgroundPosition[0]);
+  const currentPosY = parseFloat(backgroundPosition[1]);
 
-  if (
-    visiblehospitalIcon2X >= 0 &&
-    visiblehospitalIcon2X + iconWidth <= divWidth &&
-    visiblehospitalIcon2Y >= 0 &&
-    visiblehospitalIcon2Y + iconHeight <= divHeight
-  ) {
-    hospitalIcon2.style.left = `${visiblehospitalIcon2X}px`;
-    hospitalIcon2.style.top = `${visiblehospitalIcon2Y}px`;
-    hospitalIcon2.style.display = "block";
-  } else {
-    hospitalIcon2.style.display = "none";
-  }
+  const arrowX = arrowOffsetX + currentPosX;
+  const arrowY = arrowOffsetY + currentPosY;
 
-  if (
-    visiblehospitalIcon3X >= 0 &&
-    visiblehospitalIcon3X + iconWidth <= divWidth &&
-    visiblehospitalIcon3Y >= 0 &&
-    visiblehospitalIcon3Y + iconHeight <= divHeight
-  ) {
-    hospitalIcon3.style.left = `${visiblehospitalIcon3X}px`;
-    hospitalIcon3.style.top = `${visiblehospitalIcon3Y}px`;
-    hospitalIcon3.style.display = "block";
-  } else {
-    hospitalIcon3.style.display = "none";
-  }
+  const specialWarningOffIconX = specialWarningOffIconOffsetX + currentPosX;
+  const specialWarningOffIconY = specialWarningOffIconOffsetY + currentPosY;
 
-  if (
-    visiblehotelIconX >= 0 &&
-    visiblehotelIconX + iconWidth <= divWidth &&
-    visiblehotelIconY >= 0 &&
-    visiblehotelIconY + iconHeight <= divHeight
-  ) {
-    hotelIcon.style.left = `${visiblehotelIconX}px`;
-    hotelIcon.style.top = `${visiblehotelIconY}px`;
-    hotelIcon.style.display = "block";
-  } else {
-    hotelIcon.style.display = "none";
-  }
+  const securityLevel5OffIcon1X = securityLevel5OffIcon1OffsetX + currentPosX;
+  const securityLevel5OffIcon1Y = securityLevel5OffIcon1OffsetY + currentPosY;
 
-  if (
-    visiblecenterIconX >= 0 &&
-    visiblecenterIconX + iconWidth <= divWidth &&
-    visiblecenterIconY >= 0 &&
-    visiblecenterIconY + iconHeight <= divHeight
-  ) {
-    centerIcon.style.left = `${visiblecenterIconX}px`;
-    centerIcon.style.top = `${visiblecenterIconY}px`;
-    centerIcon.style.display = "block";
-  } else {
-    centerIcon.style.display = "none";
-  }
+  const securityLevel5OffIcon2X = securityLevel5OffIcon2OffsetX + currentPosX;
+  const securityLevel5OffIcon2Y = securityLevel5OffIcon2OffsetY + currentPosY;
 
-  if (
-    visiblebgBigCircleX >= 0 &&
-    visiblebgBigCircleX + bgBigCircleWidth <= divWidth &&
-    visiblebgBigCircleY >= 0 &&
-    visiblebgBigCircleY + bgBigCircleHeight <= divHeight
-  ) {
-    bgBigCircle.style.left = `${visiblebgBigCircleX}px`;
-    bgBigCircle.style.top = `${visiblebgBigCircleY}px`;
-    bgBigCircle.style.display = "block";
-  } else {
-    bgBigCircle.style.display = "none";
-  }
+  const securityLevel5OffIcon3X = securityLevel5OffIcon3OffsetX + currentPosX;
+  const securityLevel5OffIcon3Y = securityLevel5OffIcon3OffsetY + currentPosY;
 
-  if (
-    visiblebgSmallCircleX >= 0 &&
-    visiblebgSmallCircleX + bgSmallCircleWidth <= divWidth &&
-    visiblebgSmallCircleY >= 0 &&
-    visiblebgSmallCircleY + bgSmallCircleHeight <= divHeight
-  ) {
-    bgSmallCircle.style.left = `${visiblebgSmallCircleX}px`;
-    bgSmallCircle.style.top = `${visiblebgSmallCircleY}px`;
-    bgSmallCircle.style.display = "block";
-  } else {
-    bgSmallCircle.style.display = "none";
-  }
+  const securityLevel5OffIcon4X = securityLevel5OffIcon4OffsetX + currentPosX;
+  const securityLevel5OffIcon4Y = securityLevel5OffIcon4OffsetY + currentPosY;
 
-  if (
-    visiblecanvasX >= 0 &&
-    visiblecanvasX + hexagonWidth <= divWidth &&
-    visiblecanvasY >= 0 &&
-    visiblecanvasY + hexagonHeight <= divHeight
-  ) {
-    canvas.style.left = `${visiblecanvasX}px`;
-    canvas.style.top = `${visiblecanvasY}px`;
-    canvas.style.display = "block";
-  } else {
-    canvas.style.display = "none";
-  }
+  const policeStationOffIcon1X = policeStationOffIcon1OffsetX + currentPosX;
+  const policeStationOffIcon1Y = policeStationOffIcon1OffsetY + currentPosY;
 
-  if (
-    visibleoriginalCircleX >= 0 &&
-    visibleoriginalCircleX + originalCircleWidth <= divWidth &&
-    visibleoriginalCircleY >= 0 &&
-    visibleoriginalCircleY + originalCircleHeight <= divHeight
-  ) {
-    originalCircle.style.left = `${visibleoriginalCircleX}px`;
-    originalCircle.style.top = `${visibleoriginalCircleY}px`;
-    originalCircle.style.display = "block";
-  } else {
-    originalCircle.style.display = "none";
-  }
-}
+  const policeStationOffIcon2X = policeStationOffIcon2OffsetX + currentPosX;
+  const policeStationOffIcon2Y = policeStationOffIcon2OffsetY + currentPosY;
 
-// 初始化時直接設置 icon 位置
-updateIconPosition();
+  const policeStationOffIcon3X = policeStationOffIcon3OffsetX + currentPosX;
+  const policeStationOffIcon3Y = policeStationOffIcon3OffsetY + currentPosY;
 
-div.addEventListener("mousedown", (e) => {
+  const hospitalOffIcon1X = hospitalOffIcon1OffsetX + currentPosX;
+  const hospitalOffIcon1Y = hospitalOffIcon1OffsetY + currentPosY;
+
+  const hospitalOffIcon2X = hospitalOffIcon2OffsetX + currentPosX;
+  const hospitalOffIcon2Y = hospitalOffIcon2OffsetY + currentPosY;
+
+  const hospitalOffIcon3X = hospitalOffIcon3OffsetX + currentPosX;
+  const hospitalOffIcon3Y = hospitalOffIcon3OffsetY + currentPosY;
+
+  const hotelIconX = hotelIconOffsetX + currentPosX;
+  const hotelIconY = hotelIconOffsetY + currentPosY;
+
+  const canvasX = canvasOffsetX + currentPosX;
+  const canvasY = canvasOffsetY + currentPosY;
+
+  centerArrowWrap.style.transform = `translate(${arrowX}px, ${arrowY}px)`;
+  specialWarningOffIcon.style.transform = `translate(${specialWarningOffIconX}px, ${specialWarningOffIconY}px)`;
+
+  securityLevel5OffIcon1.style.transform = `translate(${securityLevel5OffIcon1X}px, ${securityLevel5OffIcon1Y}px)`;
+
+  securityLevel5OffIcon2.style.transform = `translate(${securityLevel5OffIcon2X}px, ${securityLevel5OffIcon2Y}px)`;
+
+  securityLevel5OffIcon3.style.transform = `translate(${securityLevel5OffIcon3X}px, ${securityLevel5OffIcon3Y}px)`;
+
+  securityLevel5OffIcon4.style.transform = `translate(${securityLevel5OffIcon4X}px, ${securityLevel5OffIcon4Y}px)`;
+
+  policeStationOffIcon1.style.transform = `translate(${policeStationOffIcon1X}px, ${policeStationOffIcon1Y}px)`;
+
+  policeStationOffIcon2.style.transform = `translate(${policeStationOffIcon2X}px, ${policeStationOffIcon2Y}px)`;
+
+  policeStationOffIcon3.style.transform = `translate(${policeStationOffIcon3X}px, ${policeStationOffIcon3Y}px)`;
+
+  hospitalOffIcon1.style.transform = `translate(${hospitalOffIcon1X}px, ${hospitalOffIcon1Y}px)`;
+
+  hospitalOffIcon2.style.transform = `translate(${hospitalOffIcon2X}px, ${hospitalOffIcon2Y}px)`;
+
+  hospitalOffIcon3.style.transform = `translate(${hospitalOffIcon3X}px, ${hospitalOffIcon3Y}px)`;
+
+  hotelIcon.style.transform = `translate(${hotelIconX}px, ${hotelIconY}px)`;
+
+  canvas.style.transform = `translate(${canvasX}px, ${canvasY}px) rotate(9deg)`;
+};
+
+// 計算初始背景位置，使 centerArrowWrap 出現在視窗中心
+const centerBackgroundToArrow = () => {
+  const containerWidth = mapWrap.clientWidth;
+  const containerHeight = mapWrap.clientHeight;
+
+  const centerPosX = containerWidth / 2 - arrowOffsetX;
+  const centerPosY = containerHeight / 2 - arrowOffsetY - 220;
+
+  mapWrap.style.backgroundPosition = `${centerPosX}px ${centerPosY}px`;
+
+  // 設定初始的背景位置
+  bgPosX = centerPosX;
+  bgPosY = centerPosY;
+
+  updateArrowPosition();
+};
+
+// 開始拖曳的函數
+const startDrag = (e) => {
   isDragging = true;
-  startX = e.clientX;
-  startY = e.clientY;
-  div.style.cursor = "grabbing";
-});
+  mapWrap.style.cursor = "grabbing";
+  startX = e.clientX || e.touches[0].clientX; // 獲取X坐標
+  startY = e.clientY || e.touches[0].clientY; // 獲取Y坐標
 
-div.addEventListener("mousemove", (e) => {
-  if (isDragging) {
-    const deltaX = e.clientX - startX;
-    const deltaY = e.clientY - startY;
+  // 獲取當前背景位置
+  const style = window.getComputedStyle(mapWrap);
+  const backgroundPosition = style.backgroundPosition.split(" ");
+  bgPosX = parseFloat(backgroundPosition[0]);
+  bgPosY = parseFloat(backgroundPosition[1]);
+};
 
-    backgroundPosX += deltaX;
-    backgroundPosY += deltaY;
+// 更新背景位置的函數
+const dragMove = (e) => {
+  if (!isDragging) return;
 
-    const minPosX = divWidth - imageWidth;
-    const minPosY = divHeight - imageHeight;
+  const dx = (e.clientX || e.touches[0].clientX) - startX; // 計算X方向的移動距離
+  const dy = (e.clientY || e.touches[0].clientY) - startY; // 計算Y方向的移動距離
 
-    if (backgroundPosX > 0) backgroundPosX = 0;
-    if (backgroundPosY > 0) backgroundPosY = 0;
-    if (backgroundPosX < minPosX) backgroundPosX = minPosX;
-    if (backgroundPosY < minPosY) backgroundPosY = minPosY;
+  // 計算新的背景位置
+  let newPosX = bgPosX + dx;
+  let newPosY = bgPosY + dy;
 
-    // 更新背景圖片位置
-    div.style.backgroundPosition = `${backgroundPosX}px ${backgroundPosY}px`;
+  // 取得視窗的寬高
+  const containerWidth = mapWrap.clientWidth; // 100vw
+  const containerHeight = mapWrap.clientHeight; // 100vh
 
-    startX = e.clientX;
-    startY = e.clientY;
+  // 限制水平拖曳不超過背景圖片的邊緣
+  const maxPosX = 0; // 左邊界
+  const minPosX = containerWidth - bgWidth; // 右邊界
 
-    // 拖動後更新 icon 位置
-    updateIconPosition();
-  }
-});
+  // 限制垂直拖曳不超過背景圖片的邊緣
+  const maxPosY = 0; // 上邊界
+  const minPosY = containerHeight - bgHeight; // 下邊界
 
-document.addEventListener("mouseup", () => {
+  // 限制背景圖片的拖動範圍
+  newPosX = Math.max(minPosX, Math.min(newPosX, maxPosX));
+  newPosY = Math.max(minPosY, Math.min(newPosY, maxPosY));
+
+  // 更新背景圖片位置
+  mapWrap.style.backgroundPosition = `${newPosX}px ${newPosY}px`;
+
+  // 更新 centerArrowWrap 相對於新背景位置的位置
+  updateArrowPosition();
+};
+
+// 停止拖曳的函數
+const stopDrag = () => {
   isDragging = false;
-  div.style.cursor = "grab";
-});
+  mapWrap.style.cursor = "grab";
+};
 
-// 兼容觸控設備
-div.addEventListener("touchstart", (e) => {
-  if (e.touches.length === 1) {
-    isDragging = true;
-    startX = e.touches[0].clientX;
-    startY = e.touches[0].clientY;
-    div.style.cursor = "grabbing";
-  }
-});
+// 註冊滑鼠事件
+mapWrap.addEventListener("mousedown", startDrag);
+document.addEventListener("mousemove", dragMove);
+document.addEventListener("mouseup", stopDrag);
 
-div.addEventListener("touchmove", (e) => {
-  if (isDragging && e.touches.length === 1) {
-    const deltaX = e.touches[0].clientX - startX;
-    const deltaY = e.touches[0].clientY - startY;
+// 註冊觸控事件
+mapWrap.addEventListener("touchstart", startDrag);
+mapWrap.addEventListener("touchmove", dragMove);
+mapWrap.addEventListener("touchend", stopDrag);
 
-    backgroundPosX += deltaX;
-    backgroundPosY += deltaY;
+// 確保視窗大小變更時，背景圖片仍然按比例拖曳
+window.addEventListener("resize", centerBackgroundToArrow);
 
-    const minPosX = divWidth - imageWidth;
-    const minPosY = divHeight - imageHeight;
+// 初始化時將背景圖和 centerArrowWrap 放置於視窗中心
+centerBackgroundToArrow();
 
-    if (backgroundPosX > 0) backgroundPosX = 0;
-    if (backgroundPosY > 0) backgroundPosY = 0;
-    if (backgroundPosX < minPosX) backgroundPosX = minPosX;
-    if (backgroundPosY < minPosY) backgroundPosY = minPosY;
-
-    div.style.backgroundPosition = `${backgroundPosX}px ${backgroundPosY}px`;
-
-    startX = e.touches[0].clientX;
-    startY = e.touches[0].clientY;
-
-    updateIconPosition();
-  }
-});
-
-document.addEventListener("touchend", () => {
-  if (isDragging) {
-    isDragging = false;
-    div.style.cursor = "grab";
-  }
-});
-
-// 點擊標籤顯示相對應的icon
+// 選擇所有必要的元素
 const policeStationLabelWrap = document.querySelector(
   ".policeStationLabelWrap"
 );
 const hospitalLabelWrap = document.querySelector(".hospitalLabelWrap");
+
+const policeStationOffIcons = document.querySelectorAll(
+  ".policeStationOffIcon"
+);
+const hospitalOffIcons = document.querySelectorAll(".hospitalOffIcon");
+const specialWarningOffIcons = document.querySelectorAll(
+  ".specialWarningOffIcon"
+);
+const securityLevelOffIcons = document.querySelectorAll(
+  ".securityLevel5OffIcon"
+);
+
 const policeStationLabelImg = document.querySelector("#policeStationLabelImg");
 const hospitalLabelImg = document.querySelector("#hospitalLabelImg");
+// const hotelIcon = document.querySelector('.hotelIcon');
 
-const allImages = document.querySelectorAll(".clickDisplayIcon"); // 取得所有 img 元素
+// 切換標籤的狀態追蹤
+let currentLabel = null;
 
-// 記錄圖片是否已經被點擊
-let policeStationLabelImgIsClicked = false;
-let hospitalLabelImgIsClicked = false;
+// Original image sources and styles
+const originalPoliceStationImg = `${
+  import.meta.env.BASE_URL
+}assets/images/policeStationLabelIcon.svg`;
+const activePoliceStationImg = `${
+  import.meta.env.BASE_URL
+}assets/images/policeStationLabelIconClick.svg`; // Change to the active image path
+const originalHospitalImg = `${
+  import.meta.env.BASE_URL
+}assets/images/hopspitalLabelIcon.svg`;
+const activeHospitalImg = `${
+  import.meta.env.BASE_URL
+}assets/images/hopspitalLabelIconClick.svg`; // Change to the active image path
 
-policeStationLabelWrap.addEventListener("click", function (event) {
-  if (!policeStationLabelImgIsClicked) {
-    // 如果還沒有被點擊，切換為新的圖片
-    policeStationLabelImg.src = `${
-      import.meta.env.BASE_URL
-    }assets/images/policeStationLabelIconClick.svg`;
-    policeStationLabelWrap.classList.remove("bg-white");
-    policeStationLabelWrap.classList.add("labelClickChangeStyle");
-    policeStationLabelImgIsClicked = true; // 更新狀態為已點擊
+// 隱藏所有圖示的輔助功能
+function hideAllIcons() {
+  policeStationOffIcons.forEach((icon) => icon.classList.add("hidden"));
+  hospitalOffIcons.forEach((icon) => icon.classList.add("hidden"));
+  specialWarningOffIcons.forEach((icon) => icon.classList.add("hidden"));
+  securityLevelOffIcons.forEach((icon) => icon.classList.add("hidden"));
+  hotelIcon.classList.add("hidden");
+}
+
+// 顯示所有圖示的輔助功能
+function showAllIcons() {
+  policeStationOffIcons.forEach((icon) => icon.classList.remove("hidden"));
+  hospitalOffIcons.forEach((icon) => icon.classList.remove("hidden"));
+  specialWarningOffIcons.forEach((icon) => icon.classList.remove("hidden"));
+  securityLevelOffIcons.forEach((icon) => icon.classList.remove("hidden"));
+  hotelIcon.classList.remove("hidden");
+}
+
+function resetLabels() {
+  policeStationLabelImg.src = originalPoliceStationImg;
+  hospitalLabelImg.src = originalHospitalImg;
+  policeStationLabelWrap.classList.add("bg-white");
+  policeStationLabelWrap.classList.remove("labelClickChangeStyle");
+
+  hospitalLabelWrap.classList.add("bg-white");
+  hospitalLabelWrap.classList.remove("labelClickChangeStyle");
+}
+
+// 處理標籤點擊的函數
+function handleLabelClick(label, targetIcons, labelImg, activeImg) {
+  if (currentLabel === label) {
+    // 如果同一標籤被點擊兩次，則顯示所有圖示
+    resetLabels();
+    showAllIcons();
+    currentLabel = null; // 重置狀態
+  } else {
+    resetLabels(); // Reset the other label styles and images
+    // 如果按一下不同的標籤，請先隱藏所有圖標
+    hideAllIcons();
+    labelImg.src = activeImg; // Change to the active image
+    label.classList.add("labelClickChangeStyle");
+    label.classList.remove("bg-white");
+    // 顯示與單擊的標籤相關的圖標
+    targetIcons.forEach((icon) => icon.classList.remove("hidden"));
+    currentLabel = label; // 將目前標籤設定為按一下的標籤
   }
+}
 
-  // 隱藏其他圖片，顯示 policeStation 的圖片
-  allImages.forEach((img) => {
-    if (img.alt.includes("policeStation")) {
-      img.style.display = "block"; // 顯示 policeStation 的圖片
-    } else {
-      img.style.display = "none"; // 隱藏其他圖片
-    }
-  });
-
-  // 同時將 hospitalLabelWrap 的圖片恢復到原本的狀態
-  if (hospitalLabelImgIsClicked) {
-    hospitalLabelImg.src = `${
-      import.meta.env.BASE_URL
-    }assets/images/hospitalLabelIcon.svg`;
-    hospitalLabelWrap.classList.add("bg-white");
-    hospitalLabelWrap.classList.remove("labelClickChangeStyle");
-    hospitalLabelImgIsClicked = false;
-  }
-
-  // 防止點擊 .policeStationLabelWrap 時觸發全局點擊事件
-  event.stopPropagation();
+// 為標籤新增事件監聽器
+policeStationLabelWrap.addEventListener("click", function () {
+  handleLabelClick(
+    policeStationLabelWrap,
+    policeStationOffIcons,
+    policeStationLabelImg,
+    activePoliceStationImg
+  );
 });
 
-hospitalLabelWrap.addEventListener("click", function (event) {
-  if (!hospitalLabelImgIsClicked) {
-    // 如果還沒有被點擊，切換為新的圖片
-    hospitalLabelImg.src = `${
-      import.meta.env.BASE_URL
-    }assets/images/hopspitalLabelIconClick.svg`;
-    hospitalLabelWrap.classList.remove("bg-white");
-    hospitalLabelWrap.classList.add("labelClickChangeStyle");
-    hospitalLabelImgIsClicked = true; // 更新狀態為已點擊
-  }
-
-  allImages.forEach((img) => {
-    if (img.alt.includes("hospital")) {
-      img.style.display = "block"; // 顯示 hospital 的圖片
-    } else {
-      img.style.display = "none"; // 隱藏其他圖片
-    }
-  });
-
-  // 同時將 policeStationLabelWrap 的圖片恢復到原本的狀態
-  if (policeStationLabelImgIsClicked) {
-    policeStationLabelImg.src = `${
-      import.meta.env.BASE_URL
-    }assets/images/policeStationLabelIcon.svg`;
-    policeStationLabelWrap.classList.add("bg-white");
-    policeStationLabelWrap.classList.remove("labelClickChangeStyle");
-    policeStationLabelImgIsClicked = false;
-  }
-
-  // 防止點擊 .policeStationLabelWrap 時觸發全局點擊事件
-  event.stopPropagation();
-});
-
-// 全局監聽點擊事件（點擊任何地方恢復圖片）
-document.addEventListener("click", function () {
-  if (policeStationLabelImgIsClicked) {
-    // 如果已經點擊，恢復原本的圖片
-    policeStationLabelImg.src = `${
-      import.meta.env.BASE_URL
-    }assets/images/policeStationLabelIcon.svg`;
-    policeStationLabelWrap.classList.add("bg-white");
-    policeStationLabelWrap.classList.remove("labelClickChangeStyle");
-    policeStationLabelImgIsClicked = false; // 更新狀態為未點擊
-  }
-
-  if (hospitalLabelImgIsClicked) {
-    // 如果已經點擊，恢復原本的圖片
-    hospitalLabelImg.src = `${
-      import.meta.env.BASE_URL
-    }assets/images/hospitalLabelIcon.svg`;
-    hospitalLabelWrap.classList.add("bg-white");
-    hospitalLabelWrap.classList.remove("labelClickChangeStyle");
-    hospitalLabelImgIsClicked = false; // 更新狀態為未點擊
-  }
-
-  // 恢復所有圖片的顯示
-  allImages.forEach((img) => {
-    img.style.display = "block";
-  });
+hospitalLabelWrap.addEventListener("click", function () {
+  handleLabelClick(
+    hospitalLabelWrap,
+    hospitalOffIcons,
+    hospitalLabelImg,
+    activeHospitalImg
+  );
 });
 
 // 左右移動標籤
@@ -616,8 +424,10 @@ scrollableContainer.addEventListener("mousemove", (e) => {
 const myDiv = document.getElementById("myDiv");
 const closeBtn = document.getElementById("closeBtn");
 const closeBar = document.getElementById("closeBar");
-const infoAndFloatWrapLeft = document.querySelector(".infoAndFloatWrapLeft");
-const infoAndFloatWrapRight = document.querySelector(".infoAndFloatWrapRight");
+const countryInfoWrap = document.querySelector(".countryInfoWrap");
+const walkAndCenterAimWrapContainer = document.querySelector(
+  ".walkAndCenterAimWrapContainer"
+);
 let isExpanded = false;
 
 myDiv.addEventListener("click", () => {
@@ -629,8 +439,8 @@ myDiv.addEventListener("click", () => {
     isExpanded = true;
     closeBar.classList.remove("d-none");
   }
-  infoAndFloatWrapLeft.classList.add("d-none");
-  infoAndFloatWrapRight.classList.add("d-none");
+  countryInfoWrap.classList.add("d-none");
+  walkAndCenterAimWrapContainer.classList.add("d-none");
 });
 
 closeBtn.addEventListener("click", (event) => {
@@ -642,236 +452,166 @@ closeBtn.addEventListener("click", (event) => {
     isExpanded = false;
     closeBar.classList.add("d-none");
   }
-  infoAndFloatWrapLeft.classList.remove("d-none");
-  infoAndFloatWrapRight.classList.remove("d-none");
-  infoAndFloatWrapLeft.classList.add("infoAndFloatWrapLeftChangePosition");
-  infoAndFloatWrapRight.classList.add("infoAndFloatWrapRightChangePosition");
+  countryInfoWrap.classList.remove("d-none");
+  walkAndCenterAimWrapContainer.classList.remove("d-none");
+  countryInfoWrap.classList.add("infoAndFloatWrapLeftChangePosition");
+  walkAndCenterAimWrapContainer.classList.add(
+    "infoAndFloatWrapRightChangePosition"
+  );
 });
 
 // 點擊圖片時，改變圖片的 src
 const clickChangeIcons = document.querySelectorAll(".clickChangeIcon");
-let currentClickedImg = null; // 保存當前被點擊的圖片
-let originalSrc = ""; // 保存原始圖片的 src
-
-let originalWidth = ""; // 保存原始宽度  QA新增的
-let originalHeight = ""; // 保存原始高度  QA新增的
-let originalLeft = 0; // 保存原始left  QA新增的
-let originalTop = 0; // 保存原始top  QA新增的
+let currentClickedImg = null;
+let originalSrc = "";
 
 clickChangeIcons.forEach((img) => {
   img.addEventListener("click", (e) => {
-    e.stopPropagation(); //新增的
-
+    e.stopPropagation();
     if (currentClickedImg === img) {
       img.src = originalSrc;
-      img.style.width = originalWidth; // 恢复原始宽度  QA新增的
-      img.style.height = originalHeight; // 恢复原始高度  QA新增的
-      img.style.left = `${originalLeft}px`; // 恢復原始位置  QA新增的
-      img.style.top = `${originalTop}px`; // 恢復原始位置  QA新增的
-      currentClickedImg = null; // Reset the clicked image state
+      img.classList.add("iconOriginWidthHeight");
+      img.classList.remove("iconChangeWidthHeight");
+      currentClickedImg = null;
     } else {
-      // If another image is clicked, reset the previously clicked image to its original state
-      if (currentClickedImg && currentClickedImg !== img) {
+      if (currentClickedImg) {
         currentClickedImg.src = originalSrc;
-        currentClickedImg.style.width = originalWidth; // 恢复之前图片的宽度  QA新增的
-        currentClickedImg.style.height = originalHeight; // 恢复之前图片的高度  QA新增的
-        currentClickedImg.style.left = `${originalLeft}px`; // 恢復原始位置  QA新增的
-        currentClickedImg.style.top = `${originalTop}px`; // 恢復原始位置  QA新增的
+        currentClickedImg.classList.add("iconOriginWidthHeight");
+        currentClickedImg.classList.remove("iconChangeWidthHeight");
       }
-
-      // 保存當前點擊的圖片及其原始 src
       currentClickedImg = img;
       originalSrc = img.src;
-
-      originalWidth = img.style.width; // 保存当前图片的原始宽度  QA新增的
-      originalHeight = img.style.height; // 保存当前图片的原始高度  QA新增的
-
-      originalLeft = parseInt(img.style.left); // 保存原始left值  QA新增的
-      originalTop = parseInt(img.style.top); // 保存原始top值  QA新增的
-
-      // 計算中心位置  QA新增的
-      const centerX = originalLeft + iconWidth / 2;
-      const centerY = originalTop + iconHeight / 2;
-
-      // 改變圖片的 src 為新圖片
-      // img.src = "../assets/images/pin/type=" + img.alt + ", selected=on.svg";
-      // img.src = "../assets/images/type=" + img.alt + ", selected=on.svg";
-      img.src = `${import.meta.env.BASE_URL}/assets/images/type=${
-        img.alt
-      }, selected=on.svg`;
-
-      img.style.width = `${newIconWidth}px`; // 将宽度设为 80px  QA新增的
-      img.style.height = `${newIconHeight}px`; // 将高度设为 80px  QA新增的
-
-      img.style.left = `${centerX - newIconWidth / 2}px`; // 左邊位置  QA新增的
-      img.style.top = `${centerY - newIconHeight / 2}px`; // 上邊位置  QA新增的
+      img.src = `${import.meta.env.BASE_URL}assets/images/${img.alt}On.svg`;
+      img.classList.remove("iconOriginWidthHeight");
+      img.classList.add("iconChangeWidthHeight");
     }
-    // 停止事件冒泡，防止點擊事件傳遞到其他元素
-    // e.stopPropagation(); 原本的
   });
 });
 
-// 當點擊其他地方時，恢復當前被選中的圖片為原始狀態
-document.addEventListener("click", () => {
-  if (currentClickedImg) {
-    currentClickedImg.src = originalSrc;
-
-    currentClickedImg.style.width = originalWidth; // 恢复原始宽度  QA新增的
-    currentClickedImg.style.height = originalHeight; // 恢复原始高度  QA新增的
-
-    currentClickedImg.style.left = `${originalLeft}px`; // 恢復原始位置  QA新增的
-    currentClickedImg.style.top = `${originalTop}px`; // 恢復原始位置  QA新增的
-
-    currentClickedImg = null; // 重置當前點擊的圖片
-  }
-});
-
-// 腳印及準心功能
-const centerAimImg = document.querySelector(".centerAimImg");
-const floatImg = document.querySelector(".floatImg");
-let floatImgClick = false;
-let centerAimClick = false;
-
-// 保存圖片的原始URL
-const originalCenterAimImgUrl = centerAimImg.src;
-const newCenterAimImgUrl = `${
+// 點擊腳印及準心
+const centerAimIcon = document.querySelector(".centerAimIcon");
+const walkIcon = document.querySelector(".walkIcon");
+const circleOriginal = document.querySelector(".circleOriginal");
+const circleSmall = document.querySelector(".circleSmall");
+const circleBig = document.querySelector(".circleBig");
+let walkIconClick = false;
+let centerAimIconClick = false;
+const originalcenterAimIconUrl = centerAimIcon.src;
+const newcenterAimIconUrl = `${
   import.meta.env.BASE_URL
-}assets/images/centerAimClick.svg`; // 當點擊 centerAimImg 時要更改的圖片 URL
-const originalfloatImgUrl = floatImg.src;
-const newfloatImgUrl = `${
-  import.meta.env.BASE_URL
-}assets/images/floatClick.svg`; // 當點擊 floatImgImg 時要更改的圖片 URL
+}assets/images/centerAimBlue.svg`;
+const originalwalkIconUrl = walkIcon.src;
+const newwalkIconUrl = `${import.meta.env.BASE_URL}assets/images/walkBlue.svg`;
 
-// 點擊 centerAimImg 時改變圖片 URL
-centerAimImg.addEventListener("click", function () {
-  centerAimClick = true;
-  floatImgClick = false; // 重置 floatImg 的點擊狀態
-  centerAimImg.src = newCenterAimImgUrl; // 更改圖片
-  floatImg.src = originalfloatImgUrl; // 更改圖片
-  bgSmallCircle.classList.add("d-none");
-  bgBigCircle.classList.add("d-none");
-  originalCircle.classList.remove("d-none");
-});
-
-// 點擊 floatImg 時恢復 centerAimImg 的圖片
-floatImg.addEventListener("click", function () {
-  floatImgClick = true;
-  centerAimClick = false; // 重置 centerAimImg 的點擊狀態
-  centerAimImg.src = originalCenterAimImgUrl; // 恢復原來的圖片
-  floatImg.src = newfloatImgUrl; // 更改圖片
-
-  bgSmallCircle.classList.remove("d-none");
-  bgBigCircle.classList.remove("d-none");
-  originalCircle.classList.add("d-none");
-});
-
-// 點擊其他地方時，也恢復 centerAimImg 的圖片
-document.addEventListener("click", function (event) {
-  // 確保點擊的不是 centerAimImg 或 floatImg
-  if (
-    !centerAimImg.contains(event.target) &&
-    !floatImg.contains(event.target)
-  ) {
-    floatImgClick = false;
-    centerAimClick = false;
-    centerAimImg.src = originalCenterAimImgUrl; // 恢復原來的圖片
-    floatImg.src = originalfloatImgUrl; // 恢復原來的圖片
-
-    bgSmallCircle.classList.add("d-none");
-    bgBigCircle.classList.add("d-none");
-    originalCircle.classList.remove("d-none");
-  }
-});
-
-const favorite = document.querySelector(".favorite");
-const favoriteHotel = document.querySelector(".favoriteHotel");
-let isFavoriteClick = false;
-let isFavoriteClickHotelIconImg = false;
-
-// 保存原始圖片的 URL
-const originalFavoriteImg = `${
-  import.meta.env.BASE_URL
-}assets/images/bookMark.svg`; //MarkA
-const clickedFavoriteImg = `${
-  import.meta.env.BASE_URL
-}assets/images/bookMarkClick.svg`; //MarkB
-const originalHotelIconImg = `${
-  import.meta.env.BASE_URL
-}assets/images/type=normal(selectedOn), selected=on.svg`; // FavA
-const originalFavoriteHotelImg = `${
-  import.meta.env.BASE_URL
-}assets/images/favoriteHotel.svg`; // FavB
-const clickedFavoriteHotelImg = `${
-  import.meta.env.BASE_URL
-}assets/images/favoriteHotelClick.svg`; // FavC
-
-// 點擊 favorite 時更換圖片或恢復原圖片
-favorite.addEventListener("click", function (event) {
-  event.stopPropagation(); // 防止事件冒泡到 document 上
-
-  if (isFavoriteClick) {
-    // 如果已經被點擊，恢復原本的圖片
-    favorite.src = originalFavoriteImg;
-    favoriteHotel.src = originalHotelIconImg;
-    isFavoriteClickHotelIconImg = false;
+centerAimIcon.addEventListener("click", function () {
+  if (centerAimIconClick) {
+    // Revert to original state when clicked again
+    centerAimIcon.src = originalcenterAimIconUrl;
+    circleSmall.classList.add("d-none");
+    circleBig.classList.add("d-none");
+    circleOriginal.classList.remove("d-none");
   } else {
-    // 如果未被點擊，則更換圖片
-    favorite.src = clickedFavoriteImg;
-    favoriteHotel.src = originalFavoriteHotelImg;
+    // Change to new state when clicked for the first time
+    centerAimIcon.src = newcenterAimIconUrl;
+    walkIcon.src = originalwalkIconUrl;
+    circleSmall.classList.add("d-none");
+    circleBig.classList.add("d-none");
+    circleOriginal.classList.remove("d-none");
+
+    // 點擊時觸發滾動到 centerArrowWrap
   }
-
-  // 切換點擊狀態
-  isFavoriteClick = !isFavoriteClick;
+  // Toggle the state
+  centerAimIconClick = !centerAimIconClick;
+  walkIconClick = false; // Reset walkIconClick
 });
 
-// Click event for favoriteHotel
-favoriteHotel.addEventListener("click", function (event) {
-  event.stopPropagation();
-
-  if (favoriteHotel.src.includes("favoriteHotel.svg")) {
-    // If favoriteHotel is in imgFavB, switch to imgFavC
-    favoriteHotel.src = clickedFavoriteHotelImg;
-    isFavoriteClickHotelIconImg = true; // Set the flag indicating imgFavC is active
-  } else if (favoriteHotel.src.includes("favoriteHotelClick.svg")) {
-    // If favoriteHotel is in imgFavC, revert to imgFavB
-    favoriteHotel.src = originalFavoriteHotelImg;
-    isFavoriteClickHotelIconImg = false;
+walkIcon.addEventListener("click", function () {
+  if (walkIconClick) {
+    // Revert to original state when clicked again
+    walkIcon.src = originalwalkIconUrl;
+    circleSmall.classList.add("d-none");
+    circleBig.classList.add("d-none");
+    circleOriginal.classList.remove("d-none");
+  } else {
+    // Change to new state when clicked for the first time
+    walkIcon.src = newwalkIconUrl;
+    centerAimIcon.src = originalcenterAimIconUrl;
+    circleSmall.classList.remove("d-none");
+    circleBig.classList.remove("d-none");
+    circleOriginal.classList.add("d-none");
   }
+  // Toggle the state
+  walkIconClick = !walkIconClick;
+  centerAimIconClick = false; // Reset centerAimIconClick
 });
 
-// Ensure clicking outside won't affect favoriteHotel's state
-document.addEventListener("click", function () {
-  if (isFavoriteClick && !isFavoriteClickHotelIconImg) {
-    // favoriteHotel remains in imgFavB if favorite is selected and not in imgFavC state
-    favoriteHotel.src = originalFavoriteHotelImg;
-  }
-});
+// 收藏
+// const favorite = document.querySelector(".favorite");
+// const favoriteHotel = document.querySelector(".favoriteHotel");
+// let isFavoriteClick = false;
+// let isFavoriteClickHotelIconImg = false;
 
-// 點擊 centerAimImg 時移動背景中心到 centerIcon
-centerAimImg.addEventListener("click", () => {
-  // 計算中心 Icon 應該出現在背景圖片容器的中間位置
-  const targetBackgroundPosX = -(centerIconX - divWidth / 2) - 430;
-  const targetBackgroundPosY = -(centerIconY - divHeight / 2);
+// // 保存原始圖片的 URL
+// const originalFavoriteImg = `${
+//   import.meta.env.BASE_URL
+// }assets/images/bookMark.svg`; //MarkA
+// const clickedFavoriteImg = `${
+//   import.meta.env.BASE_URL
+// }assets/images/bookMarkClick.svg`; //MarkB
+// const originalHotelIconImg = `${
+//   import.meta.env.BASE_URL
+// }assets/images/type=normal(selectedOn), selected=on.svg`; // FavA
+// const originalFavoriteHotelImg = `${
+//   import.meta.env.BASE_URL
+// }assets/images/favoriteHotel.svg`; // FavB
+// const clickedFavoriteHotelImg = `${
+//   import.meta.env.BASE_URL
+// }assets/images/favoriteHotelClick.svg`; // FavC
 
-  // 確保背景圖片不會移動超出範圍
-  const minPosX = divWidth - imageWidth;
-  const minPosY = divHeight - imageHeight;
+// // 點擊 favorite 時更換圖片或恢復原圖片
+// favorite.addEventListener("click", function (event) {
+//   event.stopPropagation(); // 防止事件冒泡到 document 上
 
-  backgroundPosX = Math.max(minPosX, Math.min(0, targetBackgroundPosX));
-  backgroundPosY = Math.max(minPosY, Math.min(0, targetBackgroundPosY));
+//   if (isFavoriteClick) {
+//     // 如果已經被點擊，恢復原本的圖片
+//     favorite.src = originalFavoriteImg;
+//     favoriteHotel.src = originalHotelIconImg;
+//     isFavoriteClickHotelIconImg = false;
+//   } else {
+//     // 如果未被點擊，則更換圖片
+//     favorite.src = clickedFavoriteImg;
+//     favoriteHotel.src = originalFavoriteHotelImg;
+//   }
 
-  // 更新背景圖片的位置
-  div.style.backgroundPosition = `${backgroundPosX}px ${backgroundPosY}px`;
-  centerIcon.classList.add("searchAnimation");
+//   // 切換點擊狀態
+//   isFavoriteClick = !isFavoriteClick;
+// });
 
-  centerIcon.addEventListener("animationend", function () {
-    centerIcon.classList.remove("searchAnimation");
-  });
-  // 更新圖標的位置
-  updateIconPosition();
-});
+// // Click event for favoriteHotel
+// favoriteHotel.addEventListener("click", function (event) {
+//   event.stopPropagation();
+
+//   if (favoriteHotel.src.includes("favoriteHotel.svg")) {
+//     // If favoriteHotel is in imgFavB, switch to imgFavC
+//     favoriteHotel.src = clickedFavoriteHotelImg;
+//     isFavoriteClickHotelIconImg = true; // Set the flag indicating imgFavC is active
+//   } else if (favoriteHotel.src.includes("favoriteHotelClick.svg")) {
+//     // If favoriteHotel is in imgFavC, revert to imgFavB
+//     favoriteHotel.src = originalFavoriteHotelImg;
+//     isFavoriteClickHotelIconImg = false;
+//   }
+// });
+
+// // Ensure clicking outside won't affect favoriteHotel's state
+// document.addEventListener("click", function () {
+//   if (isFavoriteClick && !isFavoriteClickHotelIconImg) {
+//     // favoriteHotel remains in imgFavB if favorite is selected and not in imgFavC state
+//     favoriteHotel.src = originalFavoriteHotelImg;
+//   }
+// });
 
 // 我的安全評論 icon點擊
+
 const myselfSafeComment = document.querySelector(".myselfSafeComment");
 const myselfSafeCommentIcon = document.querySelector(".myselfSafeCommentIcon");
 const myselfNormalComment = document.querySelector(".myselfNormalComment");
@@ -882,9 +622,12 @@ const myselfTakecareComment = document.querySelector(".myselfTakecareComment");
 const myselfTakecareCommentIcon = document.querySelector(
   ".myselfTakecareCommentIcon"
 );
+console.log(myselfSafeComment);
+console.log(myselfSafeCommentIcon);
 
 myselfSafeComment.addEventListener("click", function (event) {
   event.stopPropagation(); // 防止全局點擊事件觸發
+
   myselfSafeComment.classList.add("myselfSafeStyle");
   myselfSafeComment.classList.remove("border");
   myselfSafeCommentIcon.src = `${
