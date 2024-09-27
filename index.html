@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>首頁</title>
-    <script type="module" crossorigin src="/AAPDxHex-team19/assets/main-22ca31d0.js"></script>
-    <link rel="stylesheet" href="/AAPDxHex-team19/assets/main-579a967d.css">
+    <script type="module" crossorigin src="/AAPDxHex-team19/assets/main-e5e4f759.js"></script>
+    <link rel="stylesheet" href="/AAPDxHex-team19/assets/main-f3d06469.css">
   </head>
   <body>
-    <section class="mapIndex draggable-background">
+    <section class="mapWrap draggable-background">
       <!-- 手機電量資訊 -->
 <header class="container px-6 sticky-top">
   <div class="py-5 d-flex justify-content-between align-items-center">
@@ -45,6 +45,7 @@
                   />
                 </div>
               </div>
+
               <div
                 class="d-flex scrollable-container justify-content-center mt-2"
               >
@@ -114,35 +115,41 @@
       </div>
 
       <!-- icon -->
-      <img
-        src="/AAPDxHex-team19/assets/type_securityLevel 5_ selected_off-d5ec04c5.svg"
-        class="securityLevel5icon1 clickChangeIcon"
-        alt="securityLevel 5"
-      />
-      <img
-        src="/AAPDxHex-team19/assets/type_securityLevel 5_ selected_off-d5ec04c5.svg"
-        class="securityLevel5icon2 clickChangeIcon"
-        alt="securityLevel 5"
-      />
-      <img
-        src="/AAPDxHex-team19/assets/type_securityLevel 5_ selected_off-d5ec04c5.svg"
-        class="securityLevel5icon3 clickChangeIcon"
-        alt="securityLevel 5"
-      />
-      <img
-        src="/AAPDxHex-team19/assets/type_securityLevel 5_ selected_off-d5ec04c5.svg"
-        class="securityLevel5icon4 clickChangeIcon"
-        alt="securityLevel 5"
-      />
-      <img
-        src="/AAPDxHex-team19/assets/type_specialWarning_ selected_off-f7ede151.svg"
-        class="specialWarningIcon clickChangeIcon"
-        alt="specialWarning"
-        data-bs-toggle="offcanvas"
-        data-bs-target="#specialWarningOffcanvasBottom"
-        aria-controls="offcanvasBottom"
-      />
+      <div class="centerArrowWrap">
+        <img
+          src="/AAPDxHex-team19/assets/centerArrow-8db67ed1.svg"
+          alt="centerArrow.svg"
+          class="centerArrowIcon"
+        />
 
+        <img
+          src="/AAPDxHex-team19/assets/circleOriginal-8b4f3e6a.svg"
+          alt="circleOriginal.svg"
+          class="circleOriginal"
+        />
+
+        <img
+          src="/AAPDxHex-team19/assets/circleSmall-ba2a1d22.svg"
+          alt="circleSmall.svg"
+          class="circleSmall d-none"
+        />
+
+        <img
+          src="/AAPDxHex-team19/assets/circleBig-7d495ad5.svg"
+          alt="circleBig.svg"
+          class="circleBig d-none"
+        />
+      </div>
+      <div class="iconContainer specialWarningOffIcon">
+        <img
+          src="/AAPDxHex-team19/assets/specialWarningOff-f5ba6fe8.svg"
+          alt="specialWarning"
+          class="clickDisplayIcon clickChangeIcon iconOriginWidthHeight test"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#specialWarningOffcanvasBottom"
+          aria-controls="offcanvasBottom"
+        />
+      </div>
       <div
         class="offcanvas offcanvas-bottom specialWarningOffcanvas offcanvasForIndex"
         tabindex="-1"
@@ -212,15 +219,46 @@
         </div>
       </div>
 
-      <img
-        src="/AAPDxHex-team19/assets/type_policeStation_ selected_off-6a3149c1.svg"
-        class="policeStationiconIcon1 clickDisplayIcon clickChangeIcon"
-        alt="policeStation"
-        id="thongLorPoliceStationIcon"
-        data-bs-toggle="offcanvas"
-        data-bs-target="#thongLorPoliceStationIconOffcanvasBottom"
-        aria-controls="offcanvasBottom"
-      />
+      <div class="iconContainer securityLevel5OffIcon securityLevel5OffIcon1">
+        <img
+          src="/AAPDxHex-team19/assets/securityLevel5Off-724302ca.svg"
+          alt="securityLevel5"
+          class="clickDisplayIcon clickChangeIcon iconOriginWidthHeight test"
+        />
+      </div>
+      <div class="iconContainer securityLevel5OffIcon securityLevel5OffIcon2">
+        <img
+          src="/AAPDxHex-team19/assets/securityLevel5Off-724302ca.svg"
+          alt="securityLevel5"
+          class="clickDisplayIcon clickChangeIcon iconOriginWidthHeight test"
+        />
+      </div>
+      <div class="iconContainer securityLevel5OffIcon securityLevel5OffIcon3">
+        <img
+          src="/AAPDxHex-team19/assets/securityLevel5Off-724302ca.svg"
+          alt="securityLevel5"
+          class="clickDisplayIcon clickChangeIcon iconOriginWidthHeight test"
+        />
+      </div>
+      <div class="iconContainer securityLevel5OffIcon securityLevel5OffIcon4">
+        <img
+          src="/AAPDxHex-team19/assets/securityLevel5Off-724302ca.svg"
+          alt="securityLevel5"
+          class="clickDisplayIcon clickChangeIcon iconOriginWidthHeight test"
+        />
+      </div>
+
+      <div class="iconContainer policeStationOffIcon policeStationOffIcon1">
+        <img
+          src="/AAPDxHex-team19/assets/policeStationOff-d476f911.svg"
+          alt="policeStation"
+          class="clickDisplayIcon clickChangeIcon iconOriginWidthHeight test2"
+          id="thongLorPoliceStationIcon"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#thongLorPoliceStationIconOffcanvasBottom"
+          aria-controls="offcanvasBottom"
+        />
+      </div>
       <div
         class="offcanvas offcanvas-bottom offcanvasForIndex"
         tabindex="-1"
@@ -312,16 +350,17 @@
         </footer>
       </div>
 
-      <img
-        src="/AAPDxHex-team19/assets/type_policeStation_ selected_off-6a3149c1.svg"
-        class="policeStationiconIcon2 clickDisplayIcon clickChangeIcon"
-        alt="policeStation"
-        id="royalThaiPoliceHeadquartersIcon"
-        data-bs-toggle="offcanvas"
-        data-bs-target="#offcanvasBottom"
-        aria-controls="offcanvasBottom"
-      />
-
+      <div class="iconContainer policeStationOffIcon policeStationOffIcon2">
+        <img
+          src="/AAPDxHex-team19/assets/policeStationOff-d476f911.svg"
+          alt="policeStation"
+          class="clickDisplayIcon clickChangeIcon iconOriginWidthHeight test2"
+          id="royalThaiPoliceHeadquartersIcon"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasBottom"
+          aria-controls="offcanvasBottom"
+        />
+      </div>
       <div
         class="offcanvas offcanvas-bottom offcanvasForIndex"
         tabindex="-1"
@@ -413,15 +452,17 @@
         </footer>
       </div>
 
-      <img
-        src="/AAPDxHex-team19/assets/type_policeStation_ selected_off-6a3149c1.svg"
-        class="policeStationiconIcon3 clickDisplayIcon clickChangeIcon"
-        alt="policeStation"
-        id="lumphiniPoliceStationIcon"
-        data-bs-toggle="offcanvas"
-        data-bs-target="#lumphiniPoliceStationOffcanvasBottom"
-        aria-controls="offcanvasBottom"
-      />
+      <div class="iconContainer policeStationOffIcon policeStationOffIcon3">
+        <img
+          src="/AAPDxHex-team19/assets/policeStationOff-d476f911.svg"
+          alt="policeStation"
+          class="clickDisplayIcon clickChangeIcon iconOriginWidthHeight test2"
+          id="lumphiniPoliceStationIcon"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#lumphiniPoliceStationOffcanvasBottom"
+          aria-controls="offcanvasBottom"
+        />
+      </div>
       <div
         class="offcanvas offcanvas-bottom offcanvasForIndex"
         tabindex="-1"
@@ -513,15 +554,16 @@
         </footer>
       </div>
 
-      <img
-        src="/AAPDxHex-team19/assets/type_hospital_ selected_off-d0a75a17.svg"
-        class="hospitalIcon1 clickDisplayIcon clickChangeIcon"
-        alt="hospital"
-        data-bs-toggle="offcanvas"
-        data-bs-target="#sukumvitHospitalOffcanvasBottom"
-        aria-controls="offcanvasBottom"
-      />
-
+      <div class="iconContainer hospitalOffIcon hospitalOffIcon1">
+        <img
+          src="/AAPDxHex-team19/assets/hospitalOff-63da0aad.svg"
+          alt="hospital"
+          class="clickDisplayIcon clickChangeIcon iconOriginWidthHeight test2"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#sukumvitHospitalOffcanvasBottom"
+          aria-controls="offcanvasBottom"
+        />
+      </div>
       <div
         class="offcanvas offcanvas-bottom offcanvasForIndex"
         tabindex="-1"
@@ -609,15 +651,17 @@
           <div class="footerLine"></div>
         </footer>
       </div>
-      <img
-        src="/AAPDxHex-team19/assets/type_hospital_ selected_off-d0a75a17.svg"
-        class="hospitalIcon2 clickDisplayIcon clickChangeIcon"
-        alt="hospital"
-        data-bs-toggle="offcanvas"
-        data-bs-target="#bNHHospitalOffcanvasBottom"
-        aria-controls="offcanvasBottom"
-      />
 
+      <div class="iconContainer hospitalOffIcon hospitalOffIcon2">
+        <img
+          src="/AAPDxHex-team19/assets/hospitalOff-63da0aad.svg"
+          alt="hospital"
+          class="clickDisplayIcon clickChangeIcon iconOriginWidthHeight test2"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#bNHHospitalOffcanvasBottom"
+          aria-controls="offcanvasBottom"
+        />
+      </div>
       <div
         class="offcanvas offcanvas-bottom offcanvasForIndex"
         tabindex="-1"
@@ -704,15 +748,16 @@
         </footer>
       </div>
 
-      <img
-        src="/AAPDxHex-team19/assets/type_hospital_ selected_off-d0a75a17.svg"
-        class="hospitalIcon3 clickDisplayIcon clickChangeIcon"
-        alt="hospital"
-        data-bs-toggle="offcanvas"
-        data-bs-target="#bumrungradHospitalOffcanvasBottom"
-        aria-controls="offcanvasBottom"
-      />
-
+      <div class="iconContainer hospitalOffIcon hospitalOffIcon3">
+        <img
+          src="/AAPDxHex-team19/assets/hospitalOff-63da0aad.svg"
+          alt="hospital"
+          class="clickDisplayIcon clickChangeIcon iconOriginWidthHeight test2"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#bumrungradHospitalOffcanvasBottom"
+          aria-controls="offcanvasBottom"
+        />
+      </div>
       <div
         class="offcanvas offcanvas-bottom offcanvasForIndex"
         tabindex="-1"
@@ -805,9 +850,9 @@
       </div>
 
       <img
-        src="/AAPDxHex-team19/assets/type_normal(selectedOn)_ selected_on-2e6227ce.svg"
-        class="hotelIcon favoriteHotel"
+        src="/AAPDxHex-team19/assets/hotel-90bb6f78.svg"
         alt="hotel"
+        class="hotelIcon clickDisplayIcon"
         data-bs-toggle="offcanvas"
         data-bs-target="#akaraBangkokHotelOffcanvasBottom"
         aria-controls="offcanvasBottom"
@@ -903,42 +948,29 @@
           <div class="footerLine"></div>
         </footer>
       </div>
-
-      <img
-        src="/AAPDxHex-team19/assets/arrow_withShadow-ac7961d3.svg"
-        class="centerIcon"
-        alt="center"
-      />
-      <div class="originalCircle"></div>
-      <div
-        class="bg-smallCircle text-center pt-2 text-brand-600 body-text-lg fw-bold d-none"
-      >
-        15 min
+      <div class="canvasWrap">
+        <canvas id="myCanvas" class="myCanvas"></canvas>
       </div>
-      <div
-        class="bg-bigCircle text-center pt-2 text-brand-600 body-text-lg fw-bold d-none"
-      >
-        30 min
-      </div>
-      <canvas id="myCanvas" class="myCanvas"></canvas>
 
-      <img
-        src="/AAPDxHex-team19/assets/left-99782231.svg"
-        alt="left.svg"
-        class="countryInfo infoAndFloatWrapLeft"
+      <div
+        class="d-flex align-items-center countryInfoWrap radius-xs"
         data-bs-toggle="modal"
         data-bs-target="#countryInfoModal"
-      />
-
-      <div
-        class="floatWrap d-flex flex-column align-items-center infoAndFloatWrapRight"
       >
-        <img src="/AAPDxHex-team19/assets/float-a0ae42b0.svg" alt="float" class="floatImg" />
-        <img
-          src="/AAPDxHex-team19/assets/centerAim-c9267691.svg"
-          alt="centerAim"
-          class="centerAimImg"
-        />
+        <img src="/AAPDxHex-team19/assets/countryInfo-1c7aa71c.svg" alt="" />
+        <p class="ms-2 body-text-sm">國家資訊</p>
+      </div>
+      <div class="walkAndCenterAimWrapContainer" style="width: 40px">
+        <div class="p-2 bg-white walkAndCenterAimWrap mb-4">
+          <img src="/AAPDxHex-team19/assets/walk-faa4f39d.svg" alt="walk" class="walkIcon" />
+        </div>
+        <div class="p-2 bg-white walkAndCenterAimWrap">
+          <img
+            src="/AAPDxHex-team19/assets/centerAim-942732af.svg"
+            alt="centerAim"
+            class="centerAimIcon"
+          />
+        </div>
       </div>
 
       <!-- Modal -->
@@ -1066,9 +1098,10 @@
           </div>
         </div>
       </div>
+
       <div class="bg-white px-6 radius-l locationInfo my-div" id="myDiv">
         <div
-          class="d-flex align-items-center justify-content-between py-3 d-none"
+          class="d-flex align-items-end justify-content-between py-3 d-none cus-fixed"
           id="closeBar"
         >
           <img
