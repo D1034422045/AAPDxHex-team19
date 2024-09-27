@@ -1,19 +1,19 @@
 import "./assets/scss/all.scss";
 import "bootstrap/dist/js/bootstrap.min.js";
 
-window.addEventListener("load", function () {
-  // 檢查 sessionStorage 是否已經存在標記
-  if (!sessionStorage.getItem("loadingShown")) {
-    setTimeout(function () {
-      document.getElementById("loading").style.display = "none";
-      // 設定標記，表示已顯示過 loading 畫面
-      sessionStorage.setItem("loadingShown", "true");
-    }, 2000);
-  } else {
-    // 如果已經顯示過 loading 畫面，直接隱藏
-    document.getElementById("loading").style.display = "none";
-  }
-});
+// window.addEventListener("load", function () {
+//   // 檢查 sessionStorage 是否已經存在標記
+//   if (!sessionStorage.getItem("loadingShown")) {
+//     setTimeout(function () {
+//       document.getElementById("loading").style.display = "none";
+//       // 設定標記，表示已顯示過 loading 畫面
+//       sessionStorage.setItem("loadingShown", "true");
+//     }, 2000);
+//   } else {
+//     // 如果已經顯示過 loading 畫面，直接隱藏
+//     document.getElementById("loading").style.display = "none";
+//   }
+// });
 
 const mapWrap = document.querySelector(".mapWrap");
 const centerArrowWrap = document.querySelector(".centerArrowWrap");
@@ -43,80 +43,55 @@ const hospitalOffIcon3 = document.querySelector(".hospitalOffIcon3");
 
 const hotelIcon = document.querySelector(".hotelIcon");
 
-const canvas = document.getElementById("myCanvas");
-const ctx = canvas.getContext("2d");
-canvas.width = 300;
-canvas.height = 250;
-
-ctx.beginPath();
-ctx.moveTo(0, 0); // 設置起點
-ctx.lineTo(290, 10); // 畫一條線到(150, 300)
-ctx.lineTo(300, 250); // 畫一條線到(50, 300)
-ctx.lineTo(130, 250); // 畫一條線到(50, 300)
-ctx.lineTo(130, 170); // 畫一條線到(50, 300)
-ctx.lineTo(10, 170); // 畫一條線到(50, 300)
-ctx.closePath(); // 關閉路徑
-ctx.stroke(); // 繪製線條
-
-// 設置填充顏色
-ctx.fillStyle = "#fad200"; // 橙色
-ctx.fill(); // 填充圖形
-
-// 設置邊框樣式並繪製邊框
-ctx.strokeStyle = "#cc9f00"; // 黑色邊框
-ctx.lineWidth = 3; // 邊框寬度
-ctx.stroke(); // 繪製邊框
-
 let isDragging = false;
 let startX, startY;
 let bgPosX = 0,
   bgPosY = 0;
 
-// 設置背景圖片的原始尺寸
+// // 設置背景圖片的原始尺寸
 const bgWidth = 2000; // 背景圖片寬度
-const bgHeight = 1800; // 背景圖片高度
+// const bgHeight = 1800;  背景圖片高度
+const bgHeight = 3200;
+// 背景圖片高度;
 
-const arrowOffsetX = 650; // 中心位置的 X 偏移
-const arrowOffsetY = 760; // 中心位置的 Y 偏移
+const arrowOffsetX = 980; // 中心位置的 X 偏移
+const arrowOffsetY = 1950; // 中心位置的 Y 偏移
 
-const specialWarningOffIconOffsetX = 770; // 黃色危險圖標的 X 偏移
-const specialWarningOffIconOffsetY = 780; // 黃色危險圖標的 Y 偏移
+const specialWarningOffIconOffsetX = 1240; // 黃色危險圖標的 X 偏移
+const specialWarningOffIconOffsetY = 1980; // 黃色危險圖標的 Y 偏移
 
-const securityLevel5OffIcon1OffsetX = 250; // 紅色危險圖標1的 X 偏移
-const securityLevel5OffIcon1OffsetY = 220; // 紅色危險圖標1的 Y 偏移
+const securityLevel5OffIcon1OffsetX = 100; // 紅色危險圖標1的 X 偏移
+const securityLevel5OffIcon1OffsetY = 1000; // 紅色危險圖標1的 Y 偏移
 
-const securityLevel5OffIcon2OffsetX = 600; // 紅色危險圖標2的 X 偏移
-const securityLevel5OffIcon2OffsetY = 400; // 紅色危險圖標2的 Y 偏移
+const securityLevel5OffIcon2OffsetX = 850; // 紅色危險圖標2的 X 偏移
+const securityLevel5OffIcon2OffsetY = 1300; // 紅色危險圖標2的 Y 偏移
 
-const securityLevel5OffIcon3OffsetX = 820; // 紅色危險圖標3的 X 偏移
-const securityLevel5OffIcon3OffsetY = 1050; // 紅色危險圖標3的 Y 偏移
+const securityLevel5OffIcon3OffsetX = 1350; // 紅色危險圖標3的 X 偏移
+const securityLevel5OffIcon3OffsetY = 2410; // 紅色危險圖標3的 Y 偏移
 
-const securityLevel5OffIcon4OffsetX = 590; // 紅色危險圖標3的 X 偏移
-const securityLevel5OffIcon4OffsetY = 1120; // 紅色危險圖標3的 Y 偏移
+const securityLevel5OffIcon4OffsetX = 840; // 紅色危險圖標3的 X 偏移
+const securityLevel5OffIcon4OffsetY = 2550; // 紅色危險圖標3的 Y 偏移
 
-const policeStationOffIcon1OffsetX = 240; // 警察圖標1的 X 偏移
-const policeStationOffIcon1OffsetY = 530; // 警察圖標1的 Y 偏移
+const policeStationOffIcon1OffsetX = 70; // 警察圖標1的 X 偏移
+const policeStationOffIcon1OffsetY = 1530; // 警察圖標1的 Y 偏移
 
-const policeStationOffIcon2OffsetX = 350; // 警察圖標2的 X 偏移
-const policeStationOffIcon2OffsetY = 560; // 警察圖標2的 Y 偏移
+const policeStationOffIcon2OffsetX = 320; // 警察圖標2的 X 偏移
+const policeStationOffIcon2OffsetY = 1580; // 警察圖標2的 Y 偏移
 
-const policeStationOffIcon3OffsetX = 280; // 警察圖標3的 X 偏移
-const policeStationOffIcon3OffsetY = 740; // 警察圖標3的 Y 偏移
+const policeStationOffIcon3OffsetX = 160; // 警察圖標3的 X 偏移
+const policeStationOffIcon3OffsetY = 1880; // 警察圖標3的 Y 偏移
 
-const hospitalOffIcon1OffsetX = 100; // 醫院圖標1的 X 偏移
-const hospitalOffIcon1OffsetY = 770; // 醫院圖標1的 Y 偏移
+const hospitalOffIcon1OffsetX = 20; // 醫院圖標1的 X 偏移
+const hospitalOffIcon1OffsetY = 1800; // 醫院圖標1的 Y 偏移
 
-const hospitalOffIcon2OffsetX = 140; // 醫院圖標2的 X 偏移
-const hospitalOffIcon2OffsetY = 600; // 醫院圖標2的 Y 偏移
+const hospitalOffIcon2OffsetX = 210; // 醫院圖標2的 X 偏移
+const hospitalOffIcon2OffsetY = 1590; // 醫院圖標2的 Y 偏移
 
-const hospitalOffIcon3OffsetX = 310; // 醫院圖標3的 X 偏移
-const hospitalOffIcon3OffsetY = 570; // 醫院圖標3的 Y 偏移
+const hospitalOffIcon3OffsetX = 40; // 醫院圖標3的 X 偏移
+const hospitalOffIcon3OffsetY = 1650; // 醫院圖標3的 Y 偏移
 
-const hotelIconOffsetX = 290; // 飯店圖標的 X 偏移
-const hotelIconOffsetY = 670; // 飯店圖標的 Y 偏移
-
-const canvasOffsetX = 610; // 危險區域的 X 偏移
-const canvasOffsetY = 685; // 危險區域的 Y 偏移
+const hotelIconOffsetX = 190; // 飯店圖標的 X 偏移
+const hotelIconOffsetY = 1800; // 飯店圖標的 Y 偏移
 
 // 更新 centerArrowWrap 位置相對於背景位置的函數
 const updateArrowPosition = () => {
@@ -164,9 +139,6 @@ const updateArrowPosition = () => {
   const hotelIconX = hotelIconOffsetX + currentPosX;
   const hotelIconY = hotelIconOffsetY + currentPosY;
 
-  const canvasX = canvasOffsetX + currentPosX;
-  const canvasY = canvasOffsetY + currentPosY;
-
   centerArrowWrap.style.transform = `translate(${arrowX}px, ${arrowY}px)`;
   specialWarningOffIcon.style.transform = `translate(${specialWarningOffIconX}px, ${specialWarningOffIconY}px)`;
 
@@ -191,8 +163,6 @@ const updateArrowPosition = () => {
   hospitalOffIcon3.style.transform = `translate(${hospitalOffIcon3X}px, ${hospitalOffIcon3Y}px)`;
 
   hotelIcon.style.transform = `translate(${hotelIconX}px, ${hotelIconY}px)`;
-
-  canvas.style.transform = `translate(${canvasX}px, ${canvasY}px) rotate(9deg)`;
 };
 
 // 計算初始背景位置，使 centerArrowWrap 出現在視窗中心
@@ -201,7 +171,7 @@ const centerBackgroundToArrow = () => {
   const containerHeight = mapWrap.clientHeight;
 
   const centerPosX = containerWidth / 2 - arrowOffsetX;
-  const centerPosY = containerHeight / 2 - arrowOffsetY - 220;
+  const centerPosY = containerHeight / 2 - arrowOffsetY - 50; //-220
 
   mapWrap.style.backgroundPosition = `${centerPosX}px ${centerPosY}px`;
 
@@ -282,7 +252,7 @@ window.addEventListener("resize", centerBackgroundToArrow);
 // 初始化時將背景圖和 centerArrowWrap 放置於視窗中心
 centerBackgroundToArrow();
 
-// 選擇所有必要的元素
+// // 選擇所有必要的元素
 const policeStationLabelWrap = document.querySelector(
   ".policeStationLabelWrap"
 );
@@ -387,38 +357,38 @@ hospitalLabelWrap.addEventListener("click", function () {
   );
 });
 
-// 左右移動標籤
-const scrollableContainer = document.querySelector(".scrollable-container");
+// // 左右移動標籤
+// const scrollableContainer = document.querySelector(".scrollable-container");
 
-let isDown = false;
-let scrollbarStartX;
-let scrollLeft;
+// let isDown = false;
+// let scrollbarStartX;
+// let scrollLeft;
 
-scrollableContainer.addEventListener("mousedown", (e) => {
-  isDown = true;
-  scrollableContainer.classList.add("active");
-  scrollbarStartX = e.pageX - scrollableContainer.offsetLeft;
-  scrollLeft = scrollableContainer.scrollLeft;
-});
+// scrollableContainer.addEventListener("mousedown", (e) => {
+//   isDown = true;
+//   scrollableContainer.classList.add("active");
+//   scrollbarStartX = e.pageX - scrollableContainer.offsetLeft;
+//   scrollLeft = scrollableContainer.scrollLeft;
+// });
 
-scrollableContainer.addEventListener("mouseleave", () => {
-  isDown = false;
-  scrollableContainer.classList.remove("active");
-});
+// scrollableContainer.addEventListener("mouseleave", () => {
+//   isDown = false;
+//   scrollableContainer.classList.remove("active");
+// });
 
-scrollableContainer.addEventListener("mouseup", () => {
-  isDown = false;
-  scrollableContainer.classList.remove("active");
-});
+// scrollableContainer.addEventListener("mouseup", () => {
+//   isDown = false;
+//   scrollableContainer.classList.remove("active");
+// });
 
-scrollableContainer.addEventListener("mousemove", (e) => {
-  if (!isDown) return;
-  e.preventDefault();
+// scrollableContainer.addEventListener("mousemove", (e) => {
+//   if (!isDown) return;
+//   e.preventDefault();
 
-  const x = e.pageX - scrollableContainer.offsetLeft;
-  const walk = (x - scrollbarStartX) * 2; // 移動的距離
-  scrollableContainer.scrollLeft = scrollLeft - walk;
-});
+//   const x = e.pageX - scrollableContainer.offsetLeft;
+//   const walk = (x - scrollbarStartX) * 2; // 移動的距離
+//   scrollableContainer.scrollLeft = scrollLeft - walk;
+// });
 
 // 曼谷最新資訊展開
 const myDiv = document.getElementById("myDiv");
@@ -545,70 +515,70 @@ walkIcon.addEventListener("click", function () {
   centerAimIconClick = false; // Reset centerAimIconClick
 });
 
-// 收藏
-// const favorite = document.querySelector(".favorite");
-// const favoriteHotel = document.querySelector(".favoriteHotel");
-// let isFavoriteClick = false;
-// let isFavoriteClickHotelIconImg = false;
+// // 收藏
+// // const favorite = document.querySelector(".favorite");
+// // const favoriteHotel = document.querySelector(".favoriteHotel");
+// // let isFavoriteClick = false;
+// // let isFavoriteClickHotelIconImg = false;
 
-// // 保存原始圖片的 URL
-// const originalFavoriteImg = `${
-//   import.meta.env.BASE_URL
-// }assets/images/bookMark.svg`; //MarkA
-// const clickedFavoriteImg = `${
-//   import.meta.env.BASE_URL
-// }assets/images/bookMarkClick.svg`; //MarkB
-// const originalHotelIconImg = `${
-//   import.meta.env.BASE_URL
-// }assets/images/type=normal(selectedOn), selected=on.svg`; // FavA
-// const originalFavoriteHotelImg = `${
-//   import.meta.env.BASE_URL
-// }assets/images/favoriteHotel.svg`; // FavB
-// const clickedFavoriteHotelImg = `${
-//   import.meta.env.BASE_URL
-// }assets/images/favoriteHotelClick.svg`; // FavC
+// // // 保存原始圖片的 URL
+// // const originalFavoriteImg = `${
+// //   import.meta.env.BASE_URL
+// // }assets/images/bookMark.svg`; //MarkA
+// // const clickedFavoriteImg = `${
+// //   import.meta.env.BASE_URL
+// // }assets/images/bookMarkClick.svg`; //MarkB
+// // const originalHotelIconImg = `${
+// //   import.meta.env.BASE_URL
+// // }assets/images/type=normal(selectedOn), selected=on.svg`; // FavA
+// // const originalFavoriteHotelImg = `${
+// //   import.meta.env.BASE_URL
+// // }assets/images/favoriteHotel.svg`; // FavB
+// // const clickedFavoriteHotelImg = `${
+// //   import.meta.env.BASE_URL
+// // }assets/images/favoriteHotelClick.svg`; // FavC
 
-// // 點擊 favorite 時更換圖片或恢復原圖片
-// favorite.addEventListener("click", function (event) {
-//   event.stopPropagation(); // 防止事件冒泡到 document 上
+// // // 點擊 favorite 時更換圖片或恢復原圖片
+// // favorite.addEventListener("click", function (event) {
+// //   event.stopPropagation(); // 防止事件冒泡到 document 上
 
-//   if (isFavoriteClick) {
-//     // 如果已經被點擊，恢復原本的圖片
-//     favorite.src = originalFavoriteImg;
-//     favoriteHotel.src = originalHotelIconImg;
-//     isFavoriteClickHotelIconImg = false;
-//   } else {
-//     // 如果未被點擊，則更換圖片
-//     favorite.src = clickedFavoriteImg;
-//     favoriteHotel.src = originalFavoriteHotelImg;
-//   }
+// //   if (isFavoriteClick) {
+// //     // 如果已經被點擊，恢復原本的圖片
+// //     favorite.src = originalFavoriteImg;
+// //     favoriteHotel.src = originalHotelIconImg;
+// //     isFavoriteClickHotelIconImg = false;
+// //   } else {
+// //     // 如果未被點擊，則更換圖片
+// //     favorite.src = clickedFavoriteImg;
+// //     favoriteHotel.src = originalFavoriteHotelImg;
+// //   }
 
-//   // 切換點擊狀態
-//   isFavoriteClick = !isFavoriteClick;
-// });
+// //   // 切換點擊狀態
+// //   isFavoriteClick = !isFavoriteClick;
+// // });
 
-// // Click event for favoriteHotel
-// favoriteHotel.addEventListener("click", function (event) {
-//   event.stopPropagation();
+// // // Click event for favoriteHotel
+// // favoriteHotel.addEventListener("click", function (event) {
+// //   event.stopPropagation();
 
-//   if (favoriteHotel.src.includes("favoriteHotel.svg")) {
-//     // If favoriteHotel is in imgFavB, switch to imgFavC
-//     favoriteHotel.src = clickedFavoriteHotelImg;
-//     isFavoriteClickHotelIconImg = true; // Set the flag indicating imgFavC is active
-//   } else if (favoriteHotel.src.includes("favoriteHotelClick.svg")) {
-//     // If favoriteHotel is in imgFavC, revert to imgFavB
-//     favoriteHotel.src = originalFavoriteHotelImg;
-//     isFavoriteClickHotelIconImg = false;
-//   }
-// });
+// //   if (favoriteHotel.src.includes("favoriteHotel.svg")) {
+// //     // If favoriteHotel is in imgFavB, switch to imgFavC
+// //     favoriteHotel.src = clickedFavoriteHotelImg;
+// //     isFavoriteClickHotelIconImg = true; // Set the flag indicating imgFavC is active
+// //   } else if (favoriteHotel.src.includes("favoriteHotelClick.svg")) {
+// //     // If favoriteHotel is in imgFavC, revert to imgFavB
+// //     favoriteHotel.src = originalFavoriteHotelImg;
+// //     isFavoriteClickHotelIconImg = false;
+// //   }
+// // });
 
-// // Ensure clicking outside won't affect favoriteHotel's state
-// document.addEventListener("click", function () {
-//   if (isFavoriteClick && !isFavoriteClickHotelIconImg) {
-//     // favoriteHotel remains in imgFavB if favorite is selected and not in imgFavC state
-//     favoriteHotel.src = originalFavoriteHotelImg;
-//   }
-// });
+// // // Ensure clicking outside won't affect favoriteHotel's state
+// // document.addEventListener("click", function () {
+// //   if (isFavoriteClick && !isFavoriteClickHotelIconImg) {
+// //     // favoriteHotel remains in imgFavB if favorite is selected and not in imgFavC state
+// //     favoriteHotel.src = originalFavoriteHotelImg;
+// //   }
+// // });
 
 // 我的安全評論 icon點擊
 

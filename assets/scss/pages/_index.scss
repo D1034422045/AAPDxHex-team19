@@ -1,174 +1,174 @@
-// APP進入頁 登入畫面 -- 倫倫
+// // APP進入頁 登入畫面 -- 倫倫
 
-.loading {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #52c1ef;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1100;
+// .loading {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   background-color: #52c1ef;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   z-index: 1100;
 
-  p {
-    font-weight: 900;
-  }
-}
+//   p {
+//     font-weight: 900;
+//   }
+// }
 
-/* 定義字母逐個顯示的樣式 */
-.fadeInText span {
-  opacity: 0; /* 初始狀態下文字不可見 */
-  animation: fadeIn 0.5s forwards; /* 使用fadeIn動畫，逐個字母顯示 */
-}
+// /* 定義字母逐個顯示的樣式 */
+// .fadeInText span {
+//   opacity: 0; /* 初始狀態下文字不可見 */
+//   animation: fadeIn 0.5s forwards; /* 使用fadeIn動畫，逐個字母顯示 */
+// }
 
-/* 定義動畫的逐漸顯現效果 */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
+// /* 定義動畫的逐漸顯現效果 */
+// @keyframes fadeIn {
+//   0% {
+//     opacity: 0;
+//   }
+//   100% {
+//     opacity: 1;
+//   }
+// }
 
-/* 給每個字母設置不同的動畫延遲時間 */
-.fadeInText span:nth-child(1) {
-  animation-delay: 0s;
-}
-.fadeInText span:nth-child(2) {
-  animation-delay: 0.5s;
-}
-.fadeInText span:nth-child(3) {
-  animation-delay: 1s;
-}
-.fadeInText span:nth-child(4) {
-  animation-delay: 1.5s;
-}
+// /* 給每個字母設置不同的動畫延遲時間 */
+// .fadeInText span:nth-child(1) {
+//   animation-delay: 0s;
+// }
+// .fadeInText span:nth-child(2) {
+//   animation-delay: 0.5s;
+// }
+// .fadeInText span:nth-child(3) {
+//   animation-delay: 1s;
+// }
+// .fadeInText span:nth-child(4) {
+//   animation-delay: 1.5s;
+// }
 
-// 改變實心星星的動畫
+// // 改變實心星星的動畫
 
-@keyframes changeSolid {
-  0% {
-    transform: scale(1); //26px
-  }
-  17% {
-    transform: scale(0.8); //20px
-    opacity: 0.6;
-  }
-  34% {
-    transform: scale(1.2); //32px
-    opacity: 0.9;
-  }
-  51% {
-    transform: scale(0.8); //20px
-    opacity: 0.6;
-  }
-  68% {
-    transform: scale(0.9); //22px
-    opacity: 0.9;
-  }
+// @keyframes changeSolid {
+//   0% {
+//     transform: scale(1); //26px
+//   }
+//   17% {
+//     transform: scale(0.8); //20px
+//     opacity: 0.6;
+//   }
+//   34% {
+//     transform: scale(1.2); //32px
+//     opacity: 0.9;
+//   }
+//   51% {
+//     transform: scale(0.8); //20px
+//     opacity: 0.6;
+//   }
+//   68% {
+//     transform: scale(0.9); //22px
+//     opacity: 0.9;
+//   }
 
-  85% {
-    transform: scale(0.8); //20px
-    opacity: 0.6;
-  }
-  100% {
-    transform: scale(1); //26px
-    opacity: 0.9;
-  }
-}
+//   85% {
+//     transform: scale(0.8); //20px
+//     opacity: 0.6;
+//   }
+//   100% {
+//     transform: scale(1); //26px
+//     opacity: 0.9;
+//   }
+// }
 
-.changeSolid {
-  position: absolute;
-  top: -26px;
-  animation-name: changeSolid;
-  animation-duration: 2s;
-  // animation-delay: 1s;
-  animation-fill-mode: forwards;
-  opacity: 0.6;
-}
+// .changeSolid {
+//   position: absolute;
+//   top: -26px;
+//   animation-name: changeSolid;
+//   animation-duration: 2s;
+//   // animation-delay: 1s;
+//   animation-fill-mode: forwards;
+//   opacity: 0.6;
+// }
 
-// 改變空心星星的動畫
+// // 改變空心星星的動畫
 
-@keyframes change {
-  0% {
-    transform: scale(1); //20px
-  }
-  17% {
-    transform: scale(1.2); //24px
-    opacity: 0.6;
-  }
-  34% {
-    transform: scale(1); //20px
-    opacity: 0.9;
-  }
-  51% {
-    transform: scale(1.5); //30px
-    opacity: 0.9;
-  }
-  68% {
-    transform: scale(1); //20px
-    opacity: 0.6;
-  }
+// @keyframes change {
+//   0% {
+//     transform: scale(1); //20px
+//   }
+//   17% {
+//     transform: scale(1.2); //24px
+//     opacity: 0.6;
+//   }
+//   34% {
+//     transform: scale(1); //20px
+//     opacity: 0.9;
+//   }
+//   51% {
+//     transform: scale(1.5); //30px
+//     opacity: 0.9;
+//   }
+//   68% {
+//     transform: scale(1); //20px
+//     opacity: 0.6;
+//   }
 
-  85% {
-    transform: scale(1.5); //30px
-    opacity: 0.9;
-  }
-  100% {
-    transform: scale(1); //20px
-    opacity: 0.6;
-  }
-}
+//   85% {
+//     transform: scale(1.5); //30px
+//     opacity: 0.9;
+//   }
+//   100% {
+//     transform: scale(1); //20px
+//     opacity: 0.6;
+//   }
+// }
 
-.change {
-  position: absolute;
-  top: 50%;
-  left: -38px;
-  animation-name: change;
-  animation-duration: 2s;
-  // animation-delay: 1s;
-  animation-fill-mode: forwards;
-  opacity: 0.6;
-}
+// .change {
+//   position: absolute;
+//   top: 50%;
+//   left: -38px;
+//   animation-name: change;
+//   animation-duration: 2s;
+//   // animation-delay: 1s;
+//   animation-fill-mode: forwards;
+//   opacity: 0.6;
+// }
 
-// logo走路
+// // logo走路
 
-@keyframes logoWalk {
-  0% {
-    transform: rotate(0); // 角度沒變
-  }
-  17% {
-    transform: rotate(8.38deg); // 角度 8.38
-  }
-  34% {
-    transform: rotate(-1.19deg); // 角度 -1.19
-  }
-  51% {
-    transform: rotate(5.4deg); // 角度 5.4
-  }
-  68% {
-    transform: rotate(-0.28deg); // 角度 -0.28
-  }
+// @keyframes logoWalk {
+//   0% {
+//     transform: rotate(0); // 角度沒變
+//   }
+//   17% {
+//     transform: rotate(8.38deg); // 角度 8.38
+//   }
+//   34% {
+//     transform: rotate(-1.19deg); // 角度 -1.19
+//   }
+//   51% {
+//     transform: rotate(5.4deg); // 角度 5.4
+//   }
+//   68% {
+//     transform: rotate(-0.28deg); // 角度 -0.28
+//   }
 
-  85% {
-    transform: rotate(5.4deg); // 角度 5.4
-  }
-  100% {
-    transform: rotate(-0.28deg); // 角度 -0.28
-  }
-}
+//   85% {
+//     transform: rotate(5.4deg); // 角度 5.4
+//   }
+//   100% {
+//     transform: rotate(-0.28deg); // 角度 -0.28
+//   }
+// }
 
-.logoWalk {
-  animation-name: logoWalk;
-  animation-duration: 2s;
-  // animation-delay: 1s;
-  animation-fill-mode: forwards;
-}
+// .logoWalk {
+//   animation-name: logoWalk;
+//   animation-duration: 2s;
+//   // animation-delay: 1s;
+//   animation-fill-mode: forwards;
+// }
 
-//
+// 搜尋欄位樣式
 
 .bi::before,
 [class*=" bi-"]::before {
@@ -222,11 +222,10 @@
 //新增地圖圖標
 .mapWrap {
   height: 100vh;
-  background-image: url(/AAPDxHex-team19/assets/images/bgMapAll_resized_2000x1200.png);
-  background-repeat: repeat;
+  background-image: url(/AAPDxHex-team19/assets/images/map.svg);
+  background-repeat: no-repeat;
   overflow: hidden;
   position: relative;
-  // z-index: 1;
 }
 
 .specialWarningOffIcon {
@@ -255,18 +254,11 @@
   }
 }
 
-.test {
+.clickChangeIconMiddle {
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-}
-
-.test2 {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, 50%);
 }
 
 .iconOriginWidthHeight {
@@ -287,7 +279,7 @@
   position: absolute;
   left: 0;
   top: 0;
-  // cursor: pointer;
+
   z-index: 60;
 }
 
@@ -296,7 +288,7 @@
   position: absolute;
   left: 0;
   top: 0;
-  cursor: pointer;
+
   z-index: 60;
 }
 
@@ -323,8 +315,8 @@
 .centerArrowIcon {
   vertical-align: middle;
   position: relative;
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
   z-index: 60;
 }
 
@@ -332,7 +324,7 @@
   position: absolute;
   left: 0;
   top: 0;
-  transform: translate(-50%, -50%) translate(12px, 9px);
+  transform: translate(-50%, -50%) translate(16px, 12px);
   z-index: 40;
 }
 
@@ -340,7 +332,7 @@
   position: absolute;
   left: 0;
   top: 0;
-  transform: translate(-50%, -50%) translate(12px, 9px);
+  transform: translate(-50%, -50%) translate(16px, 12px);
   z-index: 50;
 }
 
@@ -348,23 +340,8 @@
   position: absolute;
   left: 0;
   top: 0;
-  transform: translate(-50%, -50%) translate(12px, 9px);
+  transform: translate(-50%, -50%) translate(16px, 12px);
   z-index: 40;
-}
-
-.canvasWrap {
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
-.myCanvas {
-  width: 300px;
-  height: 250px;
-  opacity: 0.1;
-  position: absolute;
-  transform: rotate(9deg);
-  z-index: 5;
 }
 
 .policeStationLabelWrap,
@@ -454,16 +431,9 @@
   display: none; /* 隱藏滾動條 */
 }
 
-//
 .locationInfo {
-  // position: absolute;
   width: 100%;
   z-index: 30;
-}
-
-.commentWidth {
-  width: 70px;
-  height: 29px;
 }
 
 .travelerCommentChangeStyle {
@@ -540,25 +510,6 @@
   }
 }
 
-// 資訊展開
-
-// .labelDetailWrap {
-//   position: absolute;
-//   top: 100%;
-//   display: none;
-//   transition: top 0.5s ease;
-// }
-
-// .labelDetailWrap.detailexpanded {
-//   top: 0;當展開時，讓 div 滑動到視窗的頂部
-//   height: 100%;
-//   display: block;
-// }
-
-// .labelDetailWrap.detailcollapsed {
-//   top: 100%;  當收起時，讓 div 移動到 top: 300px 的位置
-// }
-
 .draggable-background .modal-header {
   border-bottom: none;
   padding: 24px;
@@ -583,22 +534,6 @@
   padding-bottom: 100px;
 }
 
-//
-
-// .infoAndFloatWrapLeft {
-//   position: absolute;
-//   top: 55%;
-//   left: 10px;
-//   z-index: 30;
-// }
-
-// .infoAndFloatWrapRight {
-//   position: absolute;
-//   top: 46%;
-//   right: 10px;
-//   z-index: 30;
-// }
-
 .countryInfoModalWrap {
   --bs-modal-border-radius: 24px;
 }
@@ -609,53 +544,49 @@
   margin-left: auto;
 }
 
-// modal-dialog
-
-// .countryInfoModal-dialog-centered {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-// }
-
-// 搜尋到時的彈跳畫面
-
-// @keyframes searchAnimation {
-//   0% {
-//     transform: translateY(0px);
-//   }
-
-//   25% {
-//     transform: translateY(-10px);
-//   }
-
-//   50% {
-//     transform: translateY(0px);
-//   }
-
-//   75% {
-//     transform: translateY(-5px);
-//   }
-
-//   100% {
-//     transform: translateY(0px);
-//   }
-// }
-
-// .searchAnimation {
-//   animation: searchAnimation 1s 1; /* 应用动画 */
-// }
-
-//
-
-@media (max-width: 360px) {
-  .flex-cusWrap {
-    flex-wrap: wrap;
-  }
-  .text-cuswidth {
-    width: 100%;
-    margin-top: 8px;
-  }
+.countryInfoModal-dialog-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+// // 搜尋到時的彈跳畫面
+
+// // @keyframes searchAnimation {
+// //   0% {
+// //     transform: translateY(0px);
+// //   }
+
+// //   25% {
+// //     transform: translateY(-10px);
+// //   }
+
+// //   50% {
+// //     transform: translateY(0px);
+// //   }
+
+// //   75% {
+// //     transform: translateY(-5px);
+// //   }
+
+// //   100% {
+// //     transform: translateY(0px);
+// //   }
+// // }
+
+// // .searchAnimation {
+// //   animation: searchAnimation 1s 1; /* 应用动画 */
+// // }
+
+// @media (max-width: 360px) {
+//   .flex-cusWrap {
+//     flex-wrap: wrap;
+//   }
+//   .text-cuswidth {
+//     width: 100%;
+//     margin-top: 8px;
+//   }
+// }
 
 .cus-fixed {
   position: fixed;
