@@ -7,7 +7,7 @@
     <title>首頁</title>
   </head>
   <body>
-    <section class="mapIndex draggable-background">
+    <section class="mapWrap draggable-background">
       <%- include('./layout/header'); -%>
 
       <div class="px-3">
@@ -33,6 +33,7 @@
                   />
                 </div>
               </div>
+
               <div
                 class="d-flex scrollable-container justify-content-center mt-2"
               >
@@ -102,35 +103,41 @@
       </div>
 
       <!-- icon -->
-      <img
-        src="../assets/images/pin/type=securityLevel 5, selected=off.svg"
-        class="securityLevel5icon1 clickChangeIcon"
-        alt="securityLevel 5"
-      />
-      <img
-        src="../assets/images/pin/type=securityLevel 5, selected=off.svg"
-        class="securityLevel5icon2 clickChangeIcon"
-        alt="securityLevel 5"
-      />
-      <img
-        src="../assets/images/pin/type=securityLevel 5, selected=off.svg"
-        class="securityLevel5icon3 clickChangeIcon"
-        alt="securityLevel 5"
-      />
-      <img
-        src="../assets/images/pin/type=securityLevel 5, selected=off.svg"
-        class="securityLevel5icon4 clickChangeIcon"
-        alt="securityLevel 5"
-      />
-      <img
-        src="../assets/images/pin/type=specialWarning, selected=off.svg"
-        class="specialWarningIcon clickChangeIcon"
-        alt="specialWarning"
-        data-bs-toggle="offcanvas"
-        data-bs-target="#specialWarningOffcanvasBottom"
-        aria-controls="offcanvasBottom"
-      />
+      <div class="centerArrowWrap">
+        <img
+          src="../assets/images/centerArrow.svg"
+          alt="centerArrow.svg"
+          class="centerArrowIcon"
+        />
 
+        <img
+          src="../assets/images/circleOriginal.svg"
+          alt="circleOriginal.svg"
+          class="circleOriginal"
+        />
+
+        <img
+          src="../assets/images/circleSmall.svg"
+          alt="circleSmall.svg"
+          class="circleSmall d-none"
+        />
+
+        <img
+          src="../assets/images/circleBig.svg"
+          alt="circleBig.svg"
+          class="circleBig d-none"
+        />
+      </div>
+      <div class="iconContainer specialWarningOffIcon">
+        <img
+          src="../assets/images/specialWarningOff.svg"
+          alt="specialWarning"
+          class="clickDisplayIcon clickChangeIcon iconOriginWidthHeight test"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#specialWarningOffcanvasBottom"
+          aria-controls="offcanvasBottom"
+        />
+      </div>
       <div
         class="offcanvas offcanvas-bottom specialWarningOffcanvas offcanvasForIndex"
         tabindex="-1"
@@ -200,15 +207,46 @@
         </div>
       </div>
 
-      <img
-        src="../assets/images/pin/type=policeStation, selected=off.svg"
-        class="policeStationiconIcon1 clickDisplayIcon clickChangeIcon"
-        alt="policeStation"
-        id="thongLorPoliceStationIcon"
-        data-bs-toggle="offcanvas"
-        data-bs-target="#thongLorPoliceStationIconOffcanvasBottom"
-        aria-controls="offcanvasBottom"
-      />
+      <div class="iconContainer securityLevel5OffIcon securityLevel5OffIcon1">
+        <img
+          src="../assets/images/securityLevel5Off.svg"
+          alt="securityLevel5"
+          class="clickDisplayIcon clickChangeIcon iconOriginWidthHeight test"
+        />
+      </div>
+      <div class="iconContainer securityLevel5OffIcon securityLevel5OffIcon2">
+        <img
+          src="../assets/images/securityLevel5Off.svg"
+          alt="securityLevel5"
+          class="clickDisplayIcon clickChangeIcon iconOriginWidthHeight test"
+        />
+      </div>
+      <div class="iconContainer securityLevel5OffIcon securityLevel5OffIcon3">
+        <img
+          src="../assets/images/securityLevel5Off.svg"
+          alt="securityLevel5"
+          class="clickDisplayIcon clickChangeIcon iconOriginWidthHeight test"
+        />
+      </div>
+      <div class="iconContainer securityLevel5OffIcon securityLevel5OffIcon4">
+        <img
+          src="../assets/images/securityLevel5Off.svg"
+          alt="securityLevel5"
+          class="clickDisplayIcon clickChangeIcon iconOriginWidthHeight test"
+        />
+      </div>
+
+      <div class="iconContainer policeStationOffIcon policeStationOffIcon1">
+        <img
+          src="../assets/images/policeStationOff.svg"
+          alt="policeStation"
+          class="clickDisplayIcon clickChangeIcon iconOriginWidthHeight test2"
+          id="thongLorPoliceStationIcon"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#thongLorPoliceStationIconOffcanvasBottom"
+          aria-controls="offcanvasBottom"
+        />
+      </div>
       <div
         class="offcanvas offcanvas-bottom offcanvasForIndex"
         tabindex="-1"
@@ -300,16 +338,17 @@
         </footer>
       </div>
 
-      <img
-        src="../assets/images/pin/type=policeStation, selected=off.svg"
-        class="policeStationiconIcon2 clickDisplayIcon clickChangeIcon"
-        alt="policeStation"
-        id="royalThaiPoliceHeadquartersIcon"
-        data-bs-toggle="offcanvas"
-        data-bs-target="#offcanvasBottom"
-        aria-controls="offcanvasBottom"
-      />
-
+      <div class="iconContainer policeStationOffIcon policeStationOffIcon2">
+        <img
+          src="../assets/images/policeStationOff.svg"
+          alt="policeStation"
+          class="clickDisplayIcon clickChangeIcon iconOriginWidthHeight test2"
+          id="royalThaiPoliceHeadquartersIcon"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasBottom"
+          aria-controls="offcanvasBottom"
+        />
+      </div>
       <div
         class="offcanvas offcanvas-bottom offcanvasForIndex"
         tabindex="-1"
@@ -401,15 +440,17 @@
         </footer>
       </div>
 
-      <img
-        src="../assets/images/pin/type=policeStation, selected=off.svg"
-        class="policeStationiconIcon3 clickDisplayIcon clickChangeIcon"
-        alt="policeStation"
-        id="lumphiniPoliceStationIcon"
-        data-bs-toggle="offcanvas"
-        data-bs-target="#lumphiniPoliceStationOffcanvasBottom"
-        aria-controls="offcanvasBottom"
-      />
+      <div class="iconContainer policeStationOffIcon policeStationOffIcon3">
+        <img
+          src="../assets/images/policeStationOff.svg"
+          alt="policeStation"
+          class="clickDisplayIcon clickChangeIcon iconOriginWidthHeight test2"
+          id="lumphiniPoliceStationIcon"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#lumphiniPoliceStationOffcanvasBottom"
+          aria-controls="offcanvasBottom"
+        />
+      </div>
       <div
         class="offcanvas offcanvas-bottom offcanvasForIndex"
         tabindex="-1"
@@ -501,15 +542,16 @@
         </footer>
       </div>
 
-      <img
-        src="../assets/images/pin/type=hospital, selected=off.svg"
-        class="hospitalIcon1 clickDisplayIcon clickChangeIcon"
-        alt="hospital"
-        data-bs-toggle="offcanvas"
-        data-bs-target="#sukumvitHospitalOffcanvasBottom"
-        aria-controls="offcanvasBottom"
-      />
-
+      <div class="iconContainer hospitalOffIcon hospitalOffIcon1">
+        <img
+          src="../assets/images/hospitalOff.svg"
+          alt="hospital"
+          class="clickDisplayIcon clickChangeIcon iconOriginWidthHeight test2"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#sukumvitHospitalOffcanvasBottom"
+          aria-controls="offcanvasBottom"
+        />
+      </div>
       <div
         class="offcanvas offcanvas-bottom offcanvasForIndex"
         tabindex="-1"
@@ -597,15 +639,17 @@
           <div class="footerLine"></div>
         </footer>
       </div>
-      <img
-        src="../assets/images/pin/type=hospital, selected=off.svg"
-        class="hospitalIcon2 clickDisplayIcon clickChangeIcon"
-        alt="hospital"
-        data-bs-toggle="offcanvas"
-        data-bs-target="#bNHHospitalOffcanvasBottom"
-        aria-controls="offcanvasBottom"
-      />
 
+      <div class="iconContainer hospitalOffIcon hospitalOffIcon2">
+        <img
+          src="../assets/images/hospitalOff.svg"
+          alt="hospital"
+          class="clickDisplayIcon clickChangeIcon iconOriginWidthHeight test2"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#bNHHospitalOffcanvasBottom"
+          aria-controls="offcanvasBottom"
+        />
+      </div>
       <div
         class="offcanvas offcanvas-bottom offcanvasForIndex"
         tabindex="-1"
@@ -692,15 +736,16 @@
         </footer>
       </div>
 
-      <img
-        src="../assets/images/pin/type=hospital, selected=off.svg"
-        class="hospitalIcon3 clickDisplayIcon clickChangeIcon"
-        alt="hospital"
-        data-bs-toggle="offcanvas"
-        data-bs-target="#bumrungradHospitalOffcanvasBottom"
-        aria-controls="offcanvasBottom"
-      />
-
+      <div class="iconContainer hospitalOffIcon hospitalOffIcon3">
+        <img
+          src="../assets/images/hospitalOff.svg"
+          alt="hospital"
+          class="clickDisplayIcon clickChangeIcon iconOriginWidthHeight test2"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#bumrungradHospitalOffcanvasBottom"
+          aria-controls="offcanvasBottom"
+        />
+      </div>
       <div
         class="offcanvas offcanvas-bottom offcanvasForIndex"
         tabindex="-1"
@@ -793,9 +838,9 @@
       </div>
 
       <img
-        src="../assets/images/pin/type=normal(selectedOn), selected=on.svg"
-        class="hotelIcon favoriteHotel"
+        src="../assets/images/hotel.svg"
         alt="hotel"
+        class="hotelIcon clickDisplayIcon"
         data-bs-toggle="offcanvas"
         data-bs-target="#akaraBangkokHotelOffcanvasBottom"
         aria-controls="offcanvasBottom"
@@ -891,42 +936,29 @@
           <div class="footerLine"></div>
         </footer>
       </div>
-
-      <img
-        src="../assets/images/arrow_withShadow.svg"
-        class="centerIcon"
-        alt="center"
-      />
-      <div class="originalCircle"></div>
-      <div
-        class="bg-smallCircle text-center pt-2 text-brand-600 body-text-lg fw-bold d-none"
-      >
-        15 min
+      <div class="canvasWrap">
+        <canvas id="myCanvas" class="myCanvas"></canvas>
       </div>
-      <div
-        class="bg-bigCircle text-center pt-2 text-brand-600 body-text-lg fw-bold d-none"
-      >
-        30 min
-      </div>
-      <canvas id="myCanvas" class="myCanvas"></canvas>
 
-      <img
-        src="../assets/images/left.svg"
-        alt="left.svg"
-        class="countryInfo infoAndFloatWrapLeft"
+      <div
+        class="d-flex align-items-center countryInfoWrap radius-xs"
         data-bs-toggle="modal"
         data-bs-target="#countryInfoModal"
-      />
-
-      <div
-        class="floatWrap d-flex flex-column align-items-center infoAndFloatWrapRight"
       >
-        <img src="../assets/images/float.svg" alt="float" class="floatImg" />
-        <img
-          src="../assets/images/centerAim.svg"
-          alt="centerAim"
-          class="centerAimImg"
-        />
+        <img src="../assets/images/countryInfo.svg" alt="" />
+        <p class="ms-2 body-text-sm">國家資訊</p>
+      </div>
+      <div class="walkAndCenterAimWrapContainer" style="width: 40px">
+        <div class="p-2 bg-white walkAndCenterAimWrap mb-4">
+          <img src="../assets/images/walk.svg" alt="walk" class="walkIcon" />
+        </div>
+        <div class="p-2 bg-white walkAndCenterAimWrap">
+          <img
+            src="../assets/images/centerAim.svg"
+            alt="centerAim"
+            class="centerAimIcon"
+          />
+        </div>
       </div>
 
       <!-- Modal -->
@@ -1054,9 +1086,10 @@
           </div>
         </div>
       </div>
+
       <div class="bg-white px-6 radius-l locationInfo my-div" id="myDiv">
         <div
-          class="d-flex align-items-center justify-content-between py-3 d-none"
+          class="d-flex align-items-end justify-content-between py-3 d-none cus-fixed"
           id="closeBar"
         >
           <img
