@@ -14,13 +14,19 @@
       <section class="container">
         <div class="row">
           <div class="col-12 pb-30">
-            <div class="d-flex align-items-center justify-content-between mb-6">
+            <div
+              class="d-flex align-items-center justify-content-between mb-6 pt-3"
+              style="padding-bottom: 6px"
+            >
               <h3 class="heading-sm fw-bold">會員</h3>
               <img src="../assets/images/notifyDot.svg" alt="notifyDot" />
             </div>
             <div
               class="radius-m p-4 d-flex flex-column"
-              style="background: linear-gradient(to right, #84d3f5, #52c1ef)"
+              style="
+                background: linear-gradient(to right, #84d3f5, #52c1ef);
+                box-shadow: 0px 4px 12px 0px #52c1ef66;
+              "
             >
               <div
                 class="d-flex align-items-center border-bottom border-brand-200 pb-3"
@@ -38,7 +44,8 @@
                   </div>
 
                   <p
-                    class="text-brand-500 py-1 px-2 fw-bold bg-brand-100 radius-xxs my-1 body-text-xs"
+                    class="text-brand-500 py-1 px-2 fw-bold bg-brand-100 radius-xxs my-1 body-text-xs border border-brand-500"
+                    style="box-shadow: 0px 4px 4px 0px #0000000a"
                   >
                     Lv.1 自在旅人
                   </p>
@@ -126,8 +133,8 @@
               </li>
             </ul>
             <div
-              class="d-flex align-items-center m-4"
-              style="cursor: pointer; width: 64px"
+              class="d-flex align-items-center p-4 mt-2"
+              style="cursor: pointer"
               onclick="window.location.href='member.html';"
             >
               <img src="../assets/images/logout.svg" alt="logout" />
