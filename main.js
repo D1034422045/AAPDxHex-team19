@@ -388,39 +388,6 @@ window.onload = function () {
       );
     });
 
-    // // 左右移動標籤
-    // const scrollableContainer = document.querySelector(".scrollable-container");
-
-    // let isDown = false;
-    // let scrollbarStartX;
-    // let scrollLeft;
-
-    // scrollableContainer.addEventListener("mousedown", (e) => {
-    //   isDown = true;
-    //   scrollableContainer.classList.add("active");
-    //   scrollbarStartX = e.pageX - scrollableContainer.offsetLeft;
-    //   scrollLeft = scrollableContainer.scrollLeft;
-    // });
-
-    // scrollableContainer.addEventListener("mouseleave", () => {
-    //   isDown = false;
-    //   scrollableContainer.classList.remove("active");
-    // });
-
-    // scrollableContainer.addEventListener("mouseup", () => {
-    //   isDown = false;
-    //   scrollableContainer.classList.remove("active");
-    // });
-
-    // scrollableContainer.addEventListener("mousemove", (e) => {
-    //   if (!isDown) return;
-    //   e.preventDefault();
-
-    //   const x = e.pageX - scrollableContainer.offsetLeft;
-    //   const walk = (x - scrollbarStartX) * 2; // 移動的距離
-    //   scrollableContainer.scrollLeft = scrollLeft - walk;
-    // });
-
     // 曼谷最新資訊展開
     const myDiv = document.getElementById("myDiv");
     const closeBtn = document.getElementById("closeBtn");
@@ -547,71 +514,6 @@ window.onload = function () {
       walkIconClick = !walkIconClick;
       centerAimIconClick = false; // Reset centerAimIconClick
     });
-
-    // // 收藏
-    // // const favorite = document.querySelector(".favorite");
-    // // const favoriteHotel = document.querySelector(".favoriteHotel");
-    // // let isFavoriteClick = false;
-    // // let isFavoriteClickHotelIconImg = false;
-
-    // // // 保存原始圖片的 URL
-    // // const originalFavoriteImg = `${
-    // //   import.meta.env.BASE_URL
-    // // }assets/images/bookMark.svg`; //MarkA
-    // // const clickedFavoriteImg = `${
-    // //   import.meta.env.BASE_URL
-    // // }assets/images/bookMarkClick.svg`; //MarkB
-    // // const originalHotelIconImg = `${
-    // //   import.meta.env.BASE_URL
-    // // }assets/images/type=normal(selectedOn), selected=on.svg`; // FavA
-    // // const originalFavoriteHotelImg = `${
-    // //   import.meta.env.BASE_URL
-    // // }assets/images/favoriteHotel.svg`; // FavB
-    // // const clickedFavoriteHotelImg = `${
-    // //   import.meta.env.BASE_URL
-    // // }assets/images/favoriteHotelClick.svg`; // FavC
-
-    // // // 點擊 favorite 時更換圖片或恢復原圖片
-    // // favorite.addEventListener("click", function (event) {
-    // //   event.stopPropagation(); // 防止事件冒泡到 document 上
-
-    // //   if (isFavoriteClick) {
-    // //     // 如果已經被點擊，恢復原本的圖片
-    // //     favorite.src = originalFavoriteImg;
-    // //     favoriteHotel.src = originalHotelIconImg;
-    // //     isFavoriteClickHotelIconImg = false;
-    // //   } else {
-    // //     // 如果未被點擊，則更換圖片
-    // //     favorite.src = clickedFavoriteImg;
-    // //     favoriteHotel.src = originalFavoriteHotelImg;
-    // //   }
-
-    // //   // 切換點擊狀態
-    // //   isFavoriteClick = !isFavoriteClick;
-    // // });
-
-    // // // Click event for favoriteHotel
-    // // favoriteHotel.addEventListener("click", function (event) {
-    // //   event.stopPropagation();
-
-    // //   if (favoriteHotel.src.includes("favoriteHotel.svg")) {
-    // //     // If favoriteHotel is in imgFavB, switch to imgFavC
-    // //     favoriteHotel.src = clickedFavoriteHotelImg;
-    // //     isFavoriteClickHotelIconImg = true; // Set the flag indicating imgFavC is active
-    // //   } else if (favoriteHotel.src.includes("favoriteHotelClick.svg")) {
-    // //     // If favoriteHotel is in imgFavC, revert to imgFavB
-    // //     favoriteHotel.src = originalFavoriteHotelImg;
-    // //     isFavoriteClickHotelIconImg = false;
-    // //   }
-    // // });
-
-    // // // Ensure clicking outside won't affect favoriteHotel's state
-    // // document.addEventListener("click", function () {
-    // //   if (isFavoriteClick && !isFavoriteClickHotelIconImg) {
-    // //     // favoriteHotel remains in imgFavB if favorite is selected and not in imgFavC state
-    // //     favoriteHotel.src = originalFavoriteHotelImg;
-    // //   }
-    // // });
 
     // 我的安全評論 icon點擊
 
@@ -780,3 +682,68 @@ window.onload = function () {
     });
   }
 };
+
+// // 收藏
+// // const favorite = document.querySelector(".favorite");
+// // const favoriteHotel = document.querySelector(".favoriteHotel");
+// // let isFavoriteClick = false;
+// // let isFavoriteClickHotelIconImg = false;
+
+// // // 保存原始圖片的 URL
+// // const originalFavoriteImg = `${
+// //   import.meta.env.BASE_URL
+// // }assets/images/bookMark.svg`; //MarkA
+// // const clickedFavoriteImg = `${
+// //   import.meta.env.BASE_URL
+// // }assets/images/bookMarkClick.svg`; //MarkB
+// // const originalHotelIconImg = `${
+// //   import.meta.env.BASE_URL
+// // }assets/images/type=normal(selectedOn), selected=on.svg`; // FavA
+// // const originalFavoriteHotelImg = `${
+// //   import.meta.env.BASE_URL
+// // }assets/images/favoriteHotel.svg`; // FavB
+// // const clickedFavoriteHotelImg = `${
+// //   import.meta.env.BASE_URL
+// // }assets/images/favoriteHotelClick.svg`; // FavC
+
+// // // 點擊 favorite 時更換圖片或恢復原圖片
+// // favorite.addEventListener("click", function (event) {
+// //   event.stopPropagation(); // 防止事件冒泡到 document 上
+
+// //   if (isFavoriteClick) {
+// //     // 如果已經被點擊，恢復原本的圖片
+// //     favorite.src = originalFavoriteImg;
+// //     favoriteHotel.src = originalHotelIconImg;
+// //     isFavoriteClickHotelIconImg = false;
+// //   } else {
+// //     // 如果未被點擊，則更換圖片
+// //     favorite.src = clickedFavoriteImg;
+// //     favoriteHotel.src = originalFavoriteHotelImg;
+// //   }
+
+// //   // 切換點擊狀態
+// //   isFavoriteClick = !isFavoriteClick;
+// // });
+
+// // // Click event for favoriteHotel
+// // favoriteHotel.addEventListener("click", function (event) {
+// //   event.stopPropagation();
+
+// //   if (favoriteHotel.src.includes("favoriteHotel.svg")) {
+// //     // If favoriteHotel is in imgFavB, switch to imgFavC
+// //     favoriteHotel.src = clickedFavoriteHotelImg;
+// //     isFavoriteClickHotelIconImg = true; // Set the flag indicating imgFavC is active
+// //   } else if (favoriteHotel.src.includes("favoriteHotelClick.svg")) {
+// //     // If favoriteHotel is in imgFavC, revert to imgFavB
+// //     favoriteHotel.src = originalFavoriteHotelImg;
+// //     isFavoriteClickHotelIconImg = false;
+// //   }
+// // });
+
+// // // Ensure clicking outside won't affect favoriteHotel's state
+// // document.addEventListener("click", function () {
+// //   if (isFavoriteClick && !isFavoriteClickHotelIconImg) {
+// //     // favoriteHotel remains in imgFavB if favorite is selected and not in imgFavC state
+// //     favoriteHotel.src = originalFavoriteHotelImg;
+// //   }
+// // });

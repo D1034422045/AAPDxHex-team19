@@ -410,24 +410,16 @@
 
 // 標籤橫向移動卷軸
 .scrollable-container {
-  display: flex;
-
   overflow-x: auto; //開啟橫向滾動
   white-space: nowrap;
   scroll-behavior: smooth; /* 平滑滾動 */
-  // padding-left: 55px;
-  // padding-left: 100px;
+  display: flex;
+  justify-content: center;
 }
 
-@media screen and (max-width: 395px) {
+@media screen and (max-width: 440px) {
   .scrollable-container {
-    padding-left: 55px;
-  }
-}
-
-@media screen and (max-width: 345px) {
-  .scrollable-container {
-    padding-left: 85px;
+    justify-content: flex-start;
   }
 }
 
@@ -435,6 +427,7 @@
   display: none; /* 隱藏滾動條 */
 }
 
+//
 .locationInfo {
   width: 100%;
   z-index: 30;
@@ -476,7 +469,6 @@
   top: 0; /* 當展開時，讓 div 滑動到視窗的頂部 */
   height: 100%;
   z-index: 1000;
-  // padding-top: 64px;
   padding-top: 113px;
   padding-bottom: 130px;
   border-radius: 0px;
@@ -524,11 +516,11 @@
 }
 
 .offcanvas.offcanvas-bottom {
-  bottom: 0; /* 讓 offcanvas 從頂部開始 */
+  bottom: 0;
 }
 
 .offcanvas.specialWarningOffcanvas {
-  --bs-offcanvas-height: 52vh; // 30 vh
+  --bs-offcanvas-height: 52vh;
   overflow-y: scroll;
   z-index: 1020;
   padding-bottom: 100px;
@@ -548,6 +540,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.cus-fixed {
+  position: fixed;
+  width: calc(100% - 48px);
+  height: 113px;
+  top: 0;
+  background-color: #fff;
 }
 
 // // 搜尋到時的彈跳畫面
@@ -577,13 +577,3 @@
 // // .searchAnimation {
 // //   animation: searchAnimation 1s 1; /* 应用动画 */
 // // }
-
-.cus-fixed {
-  position: fixed;
-  width: calc(100% - 48px);
-  // height: 49px;
-  height: 113px;
-  // top: 64px;
-  top: 0;
-  background-color: #fff;
-}
