@@ -1,31 +1,28 @@
 import "./assets/scss/all.scss";
 import "bootstrap/dist/js/bootstrap.min.js";
 
-// window.addEventListener("load", function () {
-//   // 檢查 sessionStorage 是否已經存在標記
-//   if (!sessionStorage.getItem("loadingShown")) {
-//     setTimeout(function () {
-//       document.getElementById("loading").style.display = "none";
-//       // 設定標記，表示已顯示過 loading 畫面
-//       sessionStorage.setItem("loadingShown", "true");
-//     }, 2000);
-//   } else {
-//     // 如果已經顯示過 loading 畫面，直接隱藏
-//     document.getElementById("loading").style.display = "none";
-//   }
-// });
+window.addEventListener("DOMContentLoaded", function () {
+  // 檢查 sessionStorage 中是否有 'loadingAnimationShown' 標記
+  if (!sessionStorage.getItem("loadingAnimationShown")) {
+    // 如果沒有，顯示 loading 畫面
+    document.getElementById("loading").style.display = "flex";
+  }
+});
 
-// window.addEventListener("load", function () {
-//   if (!localStorage.getItem("loadingScreenShown")) {
-//     document.getElementById("loading").style.display = "block"; // Show the loading element
-//     setTimeout(function () {
-//       document.getElementById("loading").style.display = "none";
-//       localStorage.setItem("loadingScreenShown", "true"); // Store flag in localStorage
-//     }, 2000);
-//   } else {
-//     document.getElementById("loading").style.display = "none"; // Ensure it's hidden on subsequent loads
-//   }
-// });
+window.addEventListener("load", function () {
+  // 檢查 sessionStorage 中是否有 'loadingAnimationShown' 標記
+  if (!sessionStorage.getItem("loadingAnimationShown")) {
+    // 如果沒有，執行動畫並將標記存入 sessionStorage
+    setTimeout(function () {
+      document.getElementById("loading").style.display = "none";
+      sessionStorage.setItem("loadingAnimationShown", "true");
+    }, 2000); // 動畫持續 2000 毫秒
+  } else {
+    // 如果有標記，確保 loading 元素不會顯示
+    document.getElementById("loading").style.display = "none";
+  }
+});
+
 window.onload = function () {
   const mapWrap = document.querySelector(".mapWrap");
   // 確保 mapWrap 先加載完
@@ -632,8 +629,6 @@ window.onload = function () {
     const myselfTakecareCommentIcon = document.querySelector(
       ".myselfTakecareCommentIcon"
     );
-    console.log(myselfSafeComment);
-    console.log(myselfSafeCommentIcon);
 
     myselfSafeComment.addEventListener("click", function (event) {
       event.stopPropagation(); // 防止全局點擊事件觸發
