@@ -267,13 +267,121 @@ window.onload = function () {
 
     // 註冊滑鼠事件
     mapWrap.addEventListener("mousedown", startDrag);
-    document.addEventListener("mousemove", dragMove);
-    document.addEventListener("mouseup", stopDrag);
+    mapWrap.addEventListener("mousemove", dragMove);
+    mapWrap.addEventListener("mouseup", stopDrag);
 
     // 註冊觸控事件
     mapWrap.addEventListener("touchstart", startDrag);
     mapWrap.addEventListener("touchmove", dragMove);
     mapWrap.addEventListener("touchend", stopDrag);
+
+    const preventMapWrapDrag = (e) => {
+      e.stopPropagation(); // 阻止事件傳遞到 mapWrap
+    };
+
+    // 註冊 scrollable-container 事件
+    const scrollableContainer = document.querySelector(".scrollable-container");
+    const specialWarningPreventMapWrapDrag = document.querySelector(
+      ".specialWarningPreventMapWrapDrag"
+    );
+    const policeStationOffIcon1PreventMapWrapDrag = document.querySelector(
+      ".policeStationOffIcon1PreventMapWrapDrag"
+    );
+    const policeStationOffIcon2PreventMapWrapDrag = document.querySelector(
+      ".policeStationOffIcon2PreventMapWrapDrag"
+    );
+    const policeStationOffIcon3PreventMapWrapDrag = document.querySelector(
+      ".policeStationOffIcon3PreventMapWrapDrag"
+    );
+    const hospitalOffIcon1PreventMapWrapDrag = document.querySelector(
+      ".hospitalOffIcon1PreventMapWrapDrag"
+    );
+    const hospitalOffIcon2PreventMapWrapDrag = document.querySelector(
+      ".hospitalOffIcon2PreventMapWrapDrag"
+    );
+    const hospitalOffIcon3PreventMapWrapDrag = document.querySelector(
+      ".hospitalOffIcon3PreventMapWrapDrag"
+    );
+    const hotelIconPreventMapWrapDrag = document.querySelector(
+      ".hotelIconPreventMapWrapDrag"
+    );
+    const countryInfoModalPreventMapWrapDrag = document.querySelector(
+      ".countryInfoModalPreventMapWrapDrag"
+    );
+    scrollableContainer.addEventListener("mousedown", preventMapWrapDrag);
+    scrollableContainer.addEventListener("touchstart", preventMapWrapDrag);
+    specialWarningPreventMapWrapDrag.addEventListener(
+      "mousedown",
+      preventMapWrapDrag
+    );
+    specialWarningPreventMapWrapDrag.addEventListener(
+      "touchstart",
+      preventMapWrapDrag
+    );
+    policeStationOffIcon1PreventMapWrapDrag.addEventListener(
+      "mousedown",
+      preventMapWrapDrag
+    );
+    policeStationOffIcon1PreventMapWrapDrag.addEventListener(
+      "touchstart",
+      preventMapWrapDrag
+    );
+    policeStationOffIcon2PreventMapWrapDrag.addEventListener(
+      "mousedown",
+      preventMapWrapDrag
+    );
+    policeStationOffIcon2PreventMapWrapDrag.addEventListener(
+      "touchstart",
+      preventMapWrapDrag
+    );
+    policeStationOffIcon3PreventMapWrapDrag.addEventListener(
+      "mousedown",
+      preventMapWrapDrag
+    );
+    policeStationOffIcon3PreventMapWrapDrag.addEventListener(
+      "touchstart",
+      preventMapWrapDrag
+    );
+    hospitalOffIcon1PreventMapWrapDrag.addEventListener(
+      "mousedown",
+      preventMapWrapDrag
+    );
+    hospitalOffIcon1PreventMapWrapDrag.addEventListener(
+      "touchstart",
+      preventMapWrapDrag
+    );
+    hospitalOffIcon2PreventMapWrapDrag.addEventListener(
+      "mousedown",
+      preventMapWrapDrag
+    );
+    hospitalOffIcon2PreventMapWrapDrag.addEventListener(
+      "touchstart",
+      preventMapWrapDrag
+    );
+    hospitalOffIcon3PreventMapWrapDrag.addEventListener(
+      "mousedown",
+      preventMapWrapDrag
+    );
+    hospitalOffIcon3PreventMapWrapDrag.addEventListener(
+      "touchstart",
+      preventMapWrapDrag
+    );
+    hotelIconPreventMapWrapDrag.addEventListener(
+      "mousedown",
+      preventMapWrapDrag
+    );
+    hotelIconPreventMapWrapDrag.addEventListener(
+      "touchstart",
+      preventMapWrapDrag
+    );
+    countryInfoModalPreventMapWrapDrag.addEventListener(
+      "mousedown",
+      preventMapWrapDrag
+    );
+    countryInfoModalPreventMapWrapDrag.addEventListener(
+      "touchstart",
+      preventMapWrapDrag
+    );
 
     // 確保視窗大小變更時，背景圖片仍然按比例拖曳
     window.addEventListener("resize", centerBackgroundToArrow);
