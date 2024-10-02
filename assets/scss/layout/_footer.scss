@@ -22,16 +22,18 @@
   }
 
   .nav-pills .nav-link.active,
-  .nav-pills .show>.nav-link {
+  .nav-pills .show > .nav-link {
     color: #1aa3dd !important;
     background: white;
 
     .footIcon-barChart {
-      background: url(/AAPDxHex-team19/assets/images/barChart-blue.svg) no-repeat;
+      background: url(/AAPDxHex-team19/assets/images/barChart-blue.svg)
+        no-repeat;
     }
 
     .footIcon-document {
-      background: url(/AAPDxHex-team19/assets/images/document-blue.svg) no-repeat;
+      background: url(/AAPDxHex-team19/assets/images/document-blue.svg)
+        no-repeat;
     }
 
     .footIcon-map {
