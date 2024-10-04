@@ -169,6 +169,7 @@ window.onload = function () {
       const hotelIconY = hotelIconOffsetY + currentPosY;
 
       centerArrowWrap.style.transform = `translate(${arrowX}px, ${arrowY}px)`;
+
       specialWarningOffIcon.style.transform = `translate(${specialWarningOffIconX}px, ${specialWarningOffIconY}px)`;
 
       securityLevel5OffIcon1.style.transform = `translate(${securityLevel5OffIcon1X}px, ${securityLevel5OffIcon1Y}px)`;
@@ -280,6 +281,8 @@ window.onload = function () {
     };
 
     // 註冊 scrollable-container 事件
+
+    const inputWrapper = document.querySelector(".input-wrapper");
     const scrollableContainer = document.querySelector(".scrollable-container");
     const specialWarningPreventMapWrapDrag = document.querySelector(
       ".specialWarningPreventMapWrapDrag"
@@ -308,6 +311,8 @@ window.onload = function () {
     const countryInfoModalPreventMapWrapDrag = document.querySelector(
       ".countryInfoModalPreventMapWrapDrag"
     );
+    inputWrapper.addEventListener("mousedown", preventMapWrapDrag);
+    inputWrapper.addEventListener("touchstart", preventMapWrapDrag);
     scrollableContainer.addEventListener("mousedown", preventMapWrapDrag);
     scrollableContainer.addEventListener("touchstart", preventMapWrapDrag);
     specialWarningPreventMapWrapDrag.addEventListener(
