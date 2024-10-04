@@ -788,6 +788,39 @@ window.onload = function () {
       travelertakecareComment.classList.remove("travelerCommentChangeStyle");
       travelertakecareCommentSpan.classList.add("text-neutrals-400");
     });
+
+    // 選擇所有具有 clickLocationTextTOSearch 類的圖片
+    const clickableIcons = document.querySelectorAll(
+      ".clickLocationTextTOSearch"
+    );
+
+    // 監聽每個圖標的點擊事件
+    clickableIcons.forEach((icon) => {
+      icon.addEventListener("click", function () {
+        // 找到觸發這個 img 對應的 offcanvas
+        const offcanvasID = this.getAttribute("data-bs-target");
+        const offcanvas = document.querySelector(offcanvasID);
+
+        // 在對應的 offcanvas 中找到 locationTextTOSearch 的 p 標籤
+        const locationText = offcanvas.querySelector(
+          ".locationTextTOSearch"
+        ).innerText;
+
+        // 將該文本設置為 input 輸入框的值
+        const inputField = document.querySelector(
+          ".locationTextTOSearch-input"
+        );
+        inputField.value = locationText;
+      });
+    });
+
+    document
+      .querySelector(".locationTextTOSearch-input")
+      .addEventListener("change", function () {
+        if (this.value.trim() === "") {
+          centerBackgroundToArrow();
+        }
+      });
   }
 };
 
