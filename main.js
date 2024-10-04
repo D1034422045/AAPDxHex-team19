@@ -169,6 +169,7 @@ window.onload = function () {
       const hotelIconY = hotelIconOffsetY + currentPosY;
 
       centerArrowWrap.style.transform = `translate(${arrowX}px, ${arrowY}px)`;
+
       specialWarningOffIcon.style.transform = `translate(${specialWarningOffIconX}px, ${specialWarningOffIconY}px)`;
 
       securityLevel5OffIcon1.style.transform = `translate(${securityLevel5OffIcon1X}px, ${securityLevel5OffIcon1Y}px)`;
@@ -280,6 +281,8 @@ window.onload = function () {
     };
 
     // 註冊 scrollable-container 事件
+
+    const inputWrapper = document.querySelector(".input-wrapper");
     const scrollableContainer = document.querySelector(".scrollable-container");
     const specialWarningPreventMapWrapDrag = document.querySelector(
       ".specialWarningPreventMapWrapDrag"
@@ -308,6 +311,8 @@ window.onload = function () {
     const countryInfoModalPreventMapWrapDrag = document.querySelector(
       ".countryInfoModalPreventMapWrapDrag"
     );
+    inputWrapper.addEventListener("mousedown", preventMapWrapDrag);
+    inputWrapper.addEventListener("touchstart", preventMapWrapDrag);
     scrollableContainer.addEventListener("mousedown", preventMapWrapDrag);
     scrollableContainer.addEventListener("touchstart", preventMapWrapDrag);
     specialWarningPreventMapWrapDrag.addEventListener(
@@ -788,6 +793,39 @@ window.onload = function () {
       travelertakecareComment.classList.remove("travelerCommentChangeStyle");
       travelertakecareCommentSpan.classList.add("text-neutrals-400");
     });
+
+    // 選擇所有具有 clickLocationTextTOSearch 類的圖片
+    const clickableIcons = document.querySelectorAll(
+      ".clickLocationTextTOSearch"
+    );
+
+    // 監聽每個圖標的點擊事件
+    clickableIcons.forEach((icon) => {
+      icon.addEventListener("click", function () {
+        // 找到觸發這個 img 對應的 offcanvas
+        const offcanvasID = this.getAttribute("data-bs-target");
+        const offcanvas = document.querySelector(offcanvasID);
+
+        // 在對應的 offcanvas 中找到 locationTextTOSearch 的 p 標籤
+        const locationText = offcanvas.querySelector(
+          ".locationTextTOSearch"
+        ).innerText;
+
+        // 將該文本設置為 input 輸入框的值
+        const inputField = document.querySelector(
+          ".locationTextTOSearch-input"
+        );
+        inputField.value = locationText;
+      });
+    });
+
+    document
+      .querySelector(".locationTextTOSearch-input")
+      .addEventListener("change", function () {
+        if (this.value.trim() === "") {
+          centerBackgroundToArrow();
+        }
+      });
   }
 };
 
